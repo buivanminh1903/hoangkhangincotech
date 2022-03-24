@@ -1,0 +1,318 @@
+
+
+/* Đầu chi tiết bài viết */
+.hk_breadcrumb {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #47474c;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  .hk_menu {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  
+  .hk_menu li {
+    display: inline;
+  }
+  
+  .hk_breadcrumb__dot {
+    height: 10px;
+    width: 10px;
+    background-color: #028bfe;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+
+  .contactus-left{
+    font-size: 20px;
+    color: rgb(71, 71, 76);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .title-home {
+    font-size: 16px;
+    color: rgb(112, 112, 112);
+    font-family: 'Istok Web', sans-serif;
+  }
+  .contact-us{
+      font-size: 16px;
+      font-family: 'Istok Web', sans-serif;
+      color: rgb(112, 112, 112);
+  }
+
+
+/* 
+
+CSS title OUR CONTACT INFO */
+.title-contactinfo{
+   margin-top: 100px;
+   text-align: center;
+   font-size: 16px;
+   color: rgb(2, 129, 255);
+   font-family: 'Istok Web', sans-serif;
+}
+
+/* CSS title Contact with Us */
+.title-contactus{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(48, 49, 50);
+    margin-bottom: 40px;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+/* CSS  Content */
+.contact-info{
+    margin-bottom: 100px;
+}
+
+/* CSS Background-Register */
+.register{
+    height: 851px;
+    margin-bottom: 60px;
+    background-color: rgb(240, 244, 248);
+}
+
+
+
+/* CSS Form address  */
+.list-address{
+    width: 100%;
+    height: 443px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    color: rgb(48, 48, 54);
+}
+
+/* CSS title address */
+.address{
+    margin-left: 40px;
+    padding-right: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    color: rgb(48, 48, 54);
+    font-weight: bold;
+    
+}
+
+/* CSS bottom icon address */
+.social {
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+
+/* CSS title address , phone , email , social */
+.title-addres{
+    margin-top: 25px;
+    font-size: 16px;
+    color: rgb(112, 112, 112);
+    line-height: 30px;
+    margin-left: 40px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 100;
+
+}
+
+
+
+
+/* CSS icon fb , instaram , ..*/
+#icon-address{
+    margin-right: 20px;
+    font-size: 18px;
+    color: rgb(162, 162, 162);
+}
+
+/* CSS title Get in touch */
+.title-getintouch{
+    font-size: 40px;
+    color: rgb(48, 49, 50);
+    text-align: center;
+    font-weight: bold;
+    padding-top: 88px;
+    padding-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+
+    
+}
+
+/* CSS Content Get in touch */
+
+.content{
+    text-align: center;
+    font-size: 16px;
+    color: rgb(112, 112, 112);
+    margin-bottom: 55px;
+    font-family: 'Istok Web', sans-serif;
+    
+}
+
+
+
+
+   
+   
+/* CSS Map */
+.contact-map{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.map {
+   border-radius: 10px;
+   width: 96%;
+
+
+}
+
+#form-contact {
+    margin: 0 auto !important;
+}
+
+
+.container-register{
+    max-width:770px;
+    margin: 0 auto;
+}
+
+.getintouch_section {
+    background-color: rgb(240, 244, 248);
+}
+
+.form-getintouch {
+    max-width: 794px; 
+    margin: 0 auto;
+}
+
+.title-getintouch {
+    padding-top: 95px;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(48, 49, 50);
+	font-weight: bold; 
+    text-align: center;
+}
+
+.content-intouch{
+    font-size: 16px;
+    font-family: 'Istok Web', sans-serif;
+    color: rgb(112, 112, 112); 
+    text-align: center;
+    padding-bottom: 60px;
+
+}
+
+.form-name {
+    padding-bottom: 30px;
+}
+
+#your-name {
+    font-size: 16px;
+    padding-left: 23px;
+    border: none;
+    height: 53px;
+    font-family: 'Istok Web', sans-serif;
+    color: rgb(112, 112, 112);
+   
+}
+
+#your-phone{
+    font-size: 16px;
+    font-family: 'Istok Web', sans-serif;
+    color: rgb(112, 112, 112);
+    padding-left: 23px;
+    border: none;
+    height: 53px;
+    
+}
+
+#selected{
+    font-size: 16px;
+    font-family: 'Istok Web', sans-serif;
+    color: rgb(112, 112, 112);
+    padding-left: 23px;
+    border: none;
+    height: 53px;
+    
+}
+
+#subject{
+    font-size: 16px;
+    font-family: 'Istok Web', sans-serif;
+    color: rgb(112, 112, 112);
+    padding-left: 23px;
+    border: none;
+    height: 53px;
+    
+}
+
+.form-subject {
+  padding-bottom: 30px;
+  
+}
+
+.form-meseage {
+    padding-bottom: 30px;
+}
+
+#meseage-register {
+   padding-top: 21px;
+   padding-left: 23px;
+   height: 142px;
+   border: none;
+   resize: none;
+   
+}
+
+.button-send {
+    padding-bottom: 100px;
+}
+
+#button-sendmessage{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    background-image: -moz-linear-gradient( 0deg, rgb(2,139,254) 0%, rgb(0,189,251) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(2,139,254) 0%, rgb(0,189,251) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(2,139,254) 0%, rgb(0,189,251) 100%);
+    width: 100%;
+    height: 50px;
+    transition: all 0.3s;
+    border: none;
+}
+
+#button-sendmessage:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+@media screen and (max-width: 1199px) {
+    .list-address {
+        height: auto;
+    }
+    .map {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .list-address {
+        margin-top: 40px;
+        height: auto;
+    }
+}

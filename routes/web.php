@@ -22,3 +22,6 @@ Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index'])
 
 /*Đối tác*/
 Route::get('doi-tac', [\App\Http\Controllers\PartnerController::class, 'index']);
+
+/*Liên hệ*/
+Route::get('lien-he', [\App\Http\Controllers\ContactController::class, 'index']);
