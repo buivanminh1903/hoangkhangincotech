@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+/*Trang chu*/
+Route::get('/', [\App\Http\Controllers\IndexController::class, 'index']);
 
 /*Danh sách dịch vụ*/
 Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index']);
@@ -25,3 +28,6 @@ Route::get('doi-tac', [\App\Http\Controllers\PartnerController::class, 'index'])
 
 /*Liên hệ*/
 Route::get('lien-he', [\App\Http\Controllers\ContactController::class, 'index']);
+
+/*Bài viết*/
+Route::get('bai-viet', [\App\Http\Controllers\BlogController::class, 'index']);
