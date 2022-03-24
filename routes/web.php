@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+/*Trang chu*/
+Route::get('/', [\App\Http\Controllers\IndexController::class, 'index']);
 
 /*Danh sách dịch vụ*/
 Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index']);

@@ -1,0 +1,688 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+    /*Slider */
+    .slider {
+        background: url('../image/back_slider_left.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height:690px;
+        position: relative;
+        background-position: center center;
+    }
+    
+    .slider-content {
+        padding: 50px 0 54px 49px;
+        border-radius: 7px;
+    }
+    .slider-content h4 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 500;
+        font-family: "Helvetica";
+        color: rgb(45, 74, 138);
+    }
+    .slider-content h1 {
+        font-size: 50px;
+        margin: 0;
+        font-weight: 800;
+        text-transform: capitalize;
+    }
+    .slider-content h2 {
+        margin: 0;
+        font-size: 45px;
+        color: #2F3032;
+    }
+    .slider-content span {
+        color: #253E74
+    }
+    .slider-content span i {
+        color: #fff
+    }
+    .slider-content p {
+        width: 85%;
+        line-height: 1.5;
+        font-size: 16px;
+        color: rgba(28, 40, 66, 0.851);
+        margin: 13px 0 43px;
+        font-family: Helvetica;
+    }
+    .slider-button a {
+        background-color: #253E74;
+        display: inline-block;
+        padding: 18px 23px;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 3px;
+        margin-right: 15px;
+        transition: .5s;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .slider-button a:hover {
+        background-image: linear-gradient( to right,  #028bfe, #b3e4ff);
+        text-decoration: none;
+    }
+    
+    a.slider-active {
+        border: 1px solid #253E74;
+        background: inherit;
+        color: #253E74;
+        transition: .5s;
+        position: relative;
+    }
+    a.slider-active:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+     .slider-thumb {
+        position: relative;
+        z-index: 1;
+    }
+    .slider-img-right{
+        height: 600px;
+        position: relative;
+        left: -60px;
+        margin-top: 50px;
+        
+    } 
+
+    .Client-Satisffation-content {
+        text-align: center;
+        height: 174px;
+        width: 174px;
+        line-height: 174px;
+        background: #2D4B8B;
+        display: inline-block;
+        position: absolute;
+        bottom: 108px;
+        left: -121px;
+        border-radius: 100%;
+    }
+    .Client-Satisffation-icon {
+        margin-top: -26px;
+    }
+    .Client-Satisffation-icon i {
+        font-size: 53px;
+        display: inline-block;
+        color: #fff;
+    }
+    .Client.Satisffation h2 {
+        font-size: 18px;
+        margin: -63px 0 0;
+        color: #fff;
+    }
+    .shape-img {
+        position: absolute;
+    }
+    .shape-img.shape1 {
+        top: -400px;
+        left: 285px;
+    }
+    .shape-img.shape2 {
+        right: -551px;
+        bottom: 68px;
+    }
+
+    /*Fearture */
+
+.feature {
+    background: #F8F8F8;
+    padding: 0 0 108px;
+}
+.row.margin-topper {
+    border: 11px solid#fff;
+    position: relative;
+    margin-top: -47px;
+    z-index: 1;
+}
+.single-feature-box {
+    background: #2D4B8B;
+    padding: 36px 30px 23px;
+}
+.single-feature-box.two {
+    background: #253E74;
+}
+.feature-icon {
+    margin-top: 31px;
+    margin-left: 9px;
+}
+.feature-icon i {
+    font-size: 60px;
+    display: inline-block;
+    color: #fff;
+}
+.feature-content {
+    margin-left: 31px;
+}
+.feature-title h2 {
+    font-size: 24px;
+    margin: 0 0 15px;
+    color: #fff;
+    font-weight: 600;
+}
+.feature-content-text p {
+    color: #fff;
+    line-height: 1.5;
+}
+
+
+
+   /*About */
+    .about {
+        background: url("../image/bg_about_right.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+    }
+    .about-thumb {
+        margin-left: -350px;
+        width: 90%;
+        position: relative;
+        z-index: 1;
+    }
+    .about .dreamit-section-sub-title h5 {
+        color: #2C4C89;
+        text-transform: capitalize;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .dreamit-section-title{
+        position: relative;
+        z-index: 1;
+    }
+    .about .dreamit-section-main-title h2 {
+        font-size: 32px;
+        margin-left: 20px;
+    }
+    .dreamit-section-main-title h1 {
+        position: absolute;
+        content: "";
+        top: -42px;
+        left: -6px;
+        color: #F0F1F6;
+        font-size: 70px;
+        text-transform: uppercase;
+        z-index: -1;
+        opacity: 1;
+        font-weight: 800;
+    }
+    .about-bg-bar {
+        position: relative;
+    }
+    .about-bg-bar:before {
+        position: absolute;
+        content: "";
+        top: 47px;
+        left: 0;
+        height: 57px;
+        width: 6px;
+        background: #1C2842;
+    }
+    .about-bg-bar:after {
+        position: absolute;
+        content: "";
+        top: 108px;
+        left: 0;
+        height: 9px;
+        width: 6px;
+        background: #1C2842;
+    }
+    
+    .dreamit-section-content-text p {
+        line-height: 1.3;
+        width: 70%;
+        font-size: 16px;
+        color: #707070;
+        margin: 27px 0 27px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+    }
+    .about-single-box {
+        margin-bottom: 10px;
+    }
+    .about-icon {
+        margin-top: 8px;
+    }
+    .about-icon i {
+        font-size: 50px;
+        color: #2D4B8B;
+        display: inline-block;
+    }
+    .about-content {
+        margin-left: 19px;
+    }
+    .about-content h2 {
+        font-size: 18px;
+        color: #1B2741;
+        margin: 0 0 12px;
+    }
+    .about-content p {
+        width: 71%;
+    }
+    .row.topper2 {
+        border-top: 1px solid#E8E9ED;
+        margin: 20px 0 0;
+        padding: 26px 0 0;
+    }
+    
+    .signature-content h2 {
+        font-size: 18px;
+        margin: 0 0 6px 30px;
+        position: relative;
+    }
+    
+    .about-signature-thumb img {
+        width: 140px;
+        height: 60px;
+    }
+    /*Why choose us*/
+    
+    .why-choose-us {
+        background: url("../image/bg_why-choose-us.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .why-choose-us.pb-90 {
+        padding-bottom: 90px;
+    }
+    .why-choose-us.pt-115 {
+        padding-top: 115px;
+    }
+    .why-choose-us .dreamit-section-main-title h1 {
+        top: -36px;
+        z-index: -1;
+        opacity: 0.1;
+    }
+    .why-choose-us .dreamit-section-sub-title h5 {
+        color: #00AEFF;
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 0 13px;
+    }
+    .why-choose-us .dreamit-section-main-title h2 {
+        font-size: 34px;
+        margin-left: 20px;
+    }
+    .why-choose-us .dreamit-section-content-text p {
+        line-height: 1.5;
+        width: 80%;
+        font-size: 14px;
+        color: #fff;
+        margin: 27px 0 36px;
+        
+    }
+    .why-choose-us .about-bg-bar:before {
+        background: #fff;
+    }
+    .why-choose-us .about-bg-bar:after {
+        background: #00AFFF;
+    }
+    .dreamit-section-main-title h2 span {
+        color: #00AFFF;
+    }
+    .choose-us-box {
+        margin-bottom: 7px;
+    }
+    .why-choose-us .choose-icon {
+        margin-top: -6px;
+        position: relative;
+    }
+    .choose-content {
+        margin-left: 11px;
+    }
+    .choose-title h2 {
+        font-size: 22px;
+        margin: 10px 0 8px;
+    }
+    .choose-icon i {
+        font-size: 28px;
+        display: inline-block;
+        color: #00AFFF;
+    }
+    .why-choose-us .single-choose-box {
+        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%);
+        background: #fff;
+        padding: 20px 20px 20px 40px;
+        margin-bottom: 30px;
+        border-bottom: 0;
+        border-radius: 0;
+        margin-right: 5px;
+        transition: .5s;
+        
+    }
+    .why-choose-us .single-choose-box:hover {
+        box-shadow: 0 0 20px 0 rgb(0 0 0 /30%);
+        transform:translateY(-10px);
+    }
+    .choose-content p {
+        color: #fff;
+        font-weight: 400;
+        font-style: italic;
+    }
+    .why-choose-us .choose-number {
+        position: absolute;
+        right: 40px;
+        top: 6px;
+    }
+    .why-choose-us .choose-number h1 {
+        float: right;
+    }
+    .why-choose-us .choose-number h1 {
+        font-size: 70px;
+        color: #F3F4F6;
+    }
+    .choose-us-icon i {
+        font-size: 60px;
+        display: inline-block;
+        margin: 22px 0 0px;
+        color: #1F3871;
+    }
+    .why-choose-us .choose-content-text p {
+        letter-spacing: 1px;
+        margin-top: 7px;
+        color: #888888;
+    }
+    /* Portfolio */
+    .dreamit-single-portfolio {
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+    .dreamit-single-portfolio {
+        margin-bottom: 30px;
+        overflow: hidden;
+        transition: .5s;
+    }
+    .dreamit-portfolio-thumb {
+        position: relative;
+        z-index: 1;
+        transition: .5s;
+        overflow: hidden;
+    }
+    .dreamit-portfolio-thumb img {
+        width: 100%;
+        transition: .5s;
+        border-radius: 5px;
+    }
+    
+    .portfolio-content-text p {
+        color: #fff;
+        line-height: 1.5;
+    }
+    
+    .portfolio-thumb img {
+        width: 100%;
+    }
+   
+    .port-button a {
+        padding: 17px 35px;
+        background-image: linear-gradient( to right, #0088ff, #33b8ff);
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        display: inline-block;
+        transition: .5s;
+        border-top-left-radius: 3px;
+        margin-top: 46px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+        border-bottom-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    .port-button a:hover {
+        background-image: linear-gradient( to right, #33b8ff, #0088ff);
+    }
+    
+    .port-button span {
+        font-size: 18px;
+        position: relative;
+        left: 6px;
+        top: 1px;
+    }
+    
+
+    div#portfolio  {
+        background: none;
+    }
+    .portfolio .align-items-center{
+        padding-bottom: 110px;
+    }
+    .pt-2 {
+        padding-top: 0.5rem!important; 
+    }
+    .pb-90 {
+        padding-bottom: 90px;
+    }
+    .pt-120 {
+        padding-top: 120px;
+    }
+    .portfolio .dreamit-single-portfolio {
+        box-shadow: 0 3px 19px rgb(0 0 0 / 8%);
+    }
+    .portfolio .dreamit-portfolio-thumb img {
+        border-radius: 0;
+    }
+    .portfolio .dreamit-portfolio-thumb img {
+        border-radius: 0;
+    }
+    .portfolio .dreamit-section-content-text p {
+        line-height: 1.5;
+        margin: 0px 0 0px;
+        width: 100%;
+    }
+    .portfolio .dreamit-section-main-title h2 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .port-content-icon span {
+        font-size: 16px;
+        color: #137AD7;
+    }
+    .portfolio .dreamit-section-sub-title h5 {
+        text-transform: capitalize;
+        font-size: 16px;
+        font-family: "Helvetica";
+        color: rgb(45, 74, 138);
+    }
+    .portfolio .dreamit-section-main-title h2 span {
+        color: #2d4a8a;
+        font-weight: bold;
+    }
+   
+    .portfolio .dreamit-single-portfolio:hover .dreamit-portfolio-thumb{
+        transform:scale(1.2);
+        
+    }
+    
+    .dreamit-portfolio-thumb:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgb(121,110,153,0.6);
+        opacity: 0;
+        transition: .5s;
+    }
+     .dreamit-single-portfolio:hover .dreamit-portfolio-thumb{
+        transform:scale(1.2);
+    }
+     .dreamit-single-portfolio:hover .dreamit-portfolio-thumb:before{
+        opacity: 1!important;
+    }
+    .portfolio-content{
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
+        background: #fff;
+        padding: 22px 0 22px 31px;
+        position: relative;
+        z-index: 1;
+    }
+    .portfolio-content:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        background: #1C376E;
+        height: 108px;
+        width: 85px;
+        opacity: 0;
+        transition: .5s;
+    }
+    .portfolio-content:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        background: #2d4989;
+        height: 108px;
+        width: 382px;
+        opacity: 0;
+        transition: .5s;
+        z-index: -1;
+    }
+    .dreamit-single-portfolio.three .portfolio-content:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        background: #2d4989;
+        height: 100px;
+        width: 552px;
+        opacity: 0;
+        transition: .5s;
+        z-index: -1;
+    }
+    .dreamit-single-portfolio:hover .portfolio-content:before{
+        opacity: 1;
+    }
+    .dreamit-single-portfolio:hover .portfolio-content:after{
+        opacity: 1;
+    }
+    .dreamit-single-portfolio:hover .portfolio-title h2,
+    .dreamit-single-portfolio:hover .portfolio-title a,
+    .dreamit-single-portfolio:hover .port-content-icon i,
+    .dreamit-single-portfolio:hover .portfolio-title span i,
+    .dreamit-single-portfolio:hover .portfolio-title span{
+        color: #fff;
+        text-decoration: none;
+    }
+    .portfolio-title h2 {
+        font-size: 20px;
+        color: #1A2940;
+        margin: 0 0 6px;
+        transition: .5s;
+        
+        
+    }
+    .portfolio-title span{
+        transition: .5s;
+    }
+    .portfolio-title span i {
+        font-size: 14px;
+        color: #6C7BA6;
+    }
+    .port-content-icon {
+        float: right;
+        position: relative;
+        top: -40px;
+        right: 23px;
+    }
+/*--==============================================->
+  <!--Start counter Area-->
+ ==================================================-*/
+ .bigfox-counter {
+    background: url("../image/bg-count.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.pb-90 {
+    padding-bottom: 90px;
+}
+
+.pt-90 {
+    padding-top: 90px;
+}
+.bigfox-single-counter {
+    margin-bottom: 40px;
+}
+.bigfox-counter-content {
+    margin-left: 139px;
+}
+.bigfox-counter-title h2 {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 0 14px;
+}
+.counter-content-text p {
+    color: #fff;
+    width: 80%;
+    font-size: 15px;
+}
+.counter-number h1 {
+    float: left;
+    height: 89px;
+    width: 89px;
+    line-height: 89px;
+    text-align: center;
+    border-radius: 100%;
+    background: #2C53A8;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    font-size: 35px;
+}
+.counter-number h1:before {
+    position: absolute;
+    content: "";
+    top: -11px;
+    left: -12px;
+    background: rgb(41,78,156,0.7);
+    height: 113px;
+    width: 113px;
+    z-index: -1;
+    text-align: center;
+    border-radius: 100%;
+}
+.counter-number h1:after {
+    position: absolute;
+    content: "";
+    top: -19px;
+    left: -21px;
+    background: rgb(37,70,140,0.5);
+    height: 130px;
+    width: 130px;
+    z-index: -1;
+    text-align: center;
+    border-radius: 100%;
+}
+.counter-thumb {
+    position: relative;
+    margin-left: -180px;
+    top: -22px;
+}
+
+
+
+
+
+
+    
+    
+    
