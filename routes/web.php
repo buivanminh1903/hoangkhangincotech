@@ -22,3 +22,6 @@ Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index'])
 
 /*Đối tác*/
 Route::get('doi-tac', [\App\Http\Controllers\PartnerController::class, 'index']);
+
+/*Chi Tiết Bài Viết*/
+Route::get('chi-tiet-bai-viet', [\App\Http\Controllers\BlogDetailsController::class, 'index']);
