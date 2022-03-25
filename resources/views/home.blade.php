@@ -11,6 +11,7 @@
 
 </head>
 <body>
+<div>@include('_header')</div>
 	<!--Slider-->
 	<div class="slider d-flex align-items-center">
 		<div class="container">

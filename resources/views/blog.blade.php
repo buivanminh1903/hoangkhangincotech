@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<div>@include('_header')</div>
     <!-- Start head -->
     <div class="card">
         <img src="image/background.png" class="card-img" alt="..." />
