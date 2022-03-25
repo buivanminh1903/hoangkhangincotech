@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<div>@include('_header')</div>
 <div style="background-color: #f0f4f8;">
     <!--Start breadcrumb-->
     <div class="hk_breadcrumb">
