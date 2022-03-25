@@ -37,4 +37,4 @@ Route::get('lien-he', [\App\Http\Controllers\ContactController::class, 'index'])
 
 /*Bài viết*/
 Route::get('bai-viet', [\App\Http\Controllers\BlogController::class, 'index']);
->>>>>>> 87e4f78a0ea4e2635a1ac82779117350395dabab
+
