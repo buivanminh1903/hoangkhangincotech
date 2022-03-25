@@ -1,206 +1,210 @@
 * {
-  padding: 0;
-  font-size: 14px;
+    padding: 0;
+    font-size: 14px;
 }
+
 
 /* Header */
 
 .header {
-  min-height: 370px;
-  width: 100%;
-  margin: 0 auto;
-  background-image: url("../image/bg.png");
-  background-size: cover;
-  background-position: center center;
-  color: #fff;
-  position: relative;
-  margin-bottom: 80px;
+    min-height: 370px;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url("../image/bg.png");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    position: relative;
+    margin-bottom: 80px;
 }
 
 .header_content h3 {
-  font-size: 38px;
-  font-family: "Montserrat";
-  font-weight: bold;
+    font-size: 38px;
+    font-family: "Montserrat";
+    font-weight: bold;
 }
+
 
 /* Breadcrumb */
 
 .hk_breadcrumb {
-  font-size: 20px;
-  font-family: "Istok Web";
-  font-weight: bold;
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
+    font-size: 20px;
+    font-family: "Istok Web";
+    font-weight: bold;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 
 .hk_breadcrumb a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 .hk_breadcrumb li {
-  margin-right: 10px;
-  float: left;
+    margin-right: 10px;
+    float: left;
 }
 
 .hk_breadcrumb li:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
 
+
 /* Background effect */
+
 .bg_overlay {
-  position: absolute;
-  min-height: 370px;
-  width: 100%;
-  background-color: #303132;
-  top: 0;
-  opacity: 0.7;
+    position: absolute;
+    min-height: 370px;
+    width: 100%;
+    background-color: #303132;
+    top: 0;
+    opacity: 0.7;
 }
 
 .breadcrumb {
-  margin-bottom: 0;
-  font-weight: 500;
+    margin-bottom: 0;
+    font-weight: 500;
 }
 
 .header_content {
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: absolute;
-  text-align: center;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 /* Main content */
 
 .container {
-  max-width: 1170px;
-  padding: 0;
+    max-width: 1170px;
+    padding: 0;
 }
 
 .maincontent {
-  background-color: #fff;
-  margin: 80px 10px;
-  text-align: center;
+    background-color: #fff;
+    margin: 80px 10px;
+    text-align: center;
 }
 
 .customerlogo_row {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .topheader p {
-  font-size: 16px;
-  font-family: "Istok Web";
-  margin-bottom: 0;
-  color: rgb(2, 129, 255);
+    font-size: 16px;
+    font-family: "Istok Web";
+    margin-bottom: 0;
+    color: rgb(2, 129, 255);
 }
 
 .topheader h2 {
-  font-size: 40px;
-  font-family: "Montserrat";
-  color: rgb(48, 49, 50);
-  font-weight: bold;
+    font-size: 40px;
+    font-family: "Montserrat";
+    color: rgb(48, 49, 50);
+    font-weight: bold;
 }
 
 .ourpartners {
-  width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 80px 10px;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 80px 10px;
 }
 
 .ourpartners_content {
-  background-color: #fff;
-  text-align: center;
+    background-color: #fff;
+    text-align: center;
 }
 
 .customerlogo {
-  height: auto;
-  width: 270px;
-  max-width: 100%;
-  padding: 40px;
+    height: auto;
+    width: 270px;
+    max-width: 100%;
+    padding: 40px;
 }
 
 .section_customers {
-  border-right: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-  display: flex;
-  align-items: center;
+    border-right: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
 }
 
+
 /* section_customers grid */
+
 .section_customers:nth-child(4) {
-  border-right: none;
+    border-right: none;
 }
 
 .section_customers:nth-child(8) {
-  border-right: none;
+    border-right: none;
 }
 
-.section_customers:nth-child(n + 5) {
-  border-bottom: none;
+.section_customers:nth-child(n+5) {
+    border-bottom: none;
 }
 
 .topheader p {
-  font-size: 16px;
-  font-family: "Istok Web";
-  color: rgb(2, 129, 255);
+    font-size: 16px;
+    font-family: "Istok Web";
+    color: rgb(2, 129, 255);
 }
 
 .topheader h2 {
-  font-size: 40px;
-  font-family: "Montserrat";
-  color: rgb(48, 49, 50);
-  font-weight: bold;
-  margin-bottom: 0;
+    font-size: 40px;
+    font-family: "Montserrat";
+    color: rgb(48, 49, 50);
+    font-weight: bold;
+    margin-bottom: 0;
 }
+
 
 /* Slider */
 
 .splide__slide {
-  width: calc(23%) !important;
-  display: flex;
-  align-items: center;
-  margin-right: 30px !important;
-  background-color: #fff;
-  border-radius: 8px;
-  transition: all 0.4s;
-  margin-bottom: 80px !important;
-  padding: 40px;
+    width: calc(23%) !important;
+    display: flex;
+    align-items: center;
+    margin-right: 30px !important;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: all 0.4s;
+    margin-bottom: 80px !important;
+    padding: 40px;
 }
 
 .splide__slide img {
-  object-fit: contain;
-  width: 100%;
+    object-fit: contain;
+    width: 100%;
 }
 
 .splide__slide:hover {
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.15);
 }
 
 @media only screen and (max-width: 767px) {
-  .section_customers:nth-child(7) {
-    border-top: 1px solid #d9d9d9;
-  }
-
-  .section_customers:nth-child(8) {
-    border-top: 1px solid #d9d9d9;
-  }
-
-  .section_customers:nth-child(2) {
-    border-right: none;
-  }
-
-  .section_customers:nth-child(6) {
-    border-right: none;
-  }
-
-  .splide__slide {
-    width: calc(50%) !important;
-  }
+    .section_customers:nth-child(7) {
+        border-top: 1px solid #d9d9d9;
+    }
+    .section_customers:nth-child(8) {
+        border-top: 1px solid #d9d9d9;
+    }
+    .section_customers:nth-child(2) {
+        border-right: none;
+    }
+    .section_customers:nth-child(6) {
+        border-right: none;
+    }
+    .splide__slide {
+        width: calc(50%) !important;
+    }
 }

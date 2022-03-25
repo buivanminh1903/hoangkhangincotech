@@ -22,3 +22,5 @@ Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index'])
 
 /*Đối tác*/
 Route::get('doi-tac', [\App\Http\Controllers\PartnerController::class, 'index']);
+// Chi tiết dịch vụ 
+Route::get('ct-dichvu', [\App\Http\Controllers\DetailsServiceController::class, 'details_serivce']);

@@ -1,0 +1,43 @@
+.hk_breadcrumb {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #47474c;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.hk_breadcrumb_left {
+    font-size: 20px;
+    font-family: "Montserrat";
+    color: rgb(71, 71, 76);
+}
+
+.hk_menu {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Istok Web";
+    color: rgb(112, 112, 112);
+}
+
+.hk_menu li {
+    display: inline;
+}
+
+.hk_menu li:last-child {
+    color: #0281ff;
+    margin-left: 5px;
+}
+
+.hk_breadcrumb__dot {
+    height: 10px;
+    width: 10px;
+    background-color: #028bfe;
+    border-radius: 50%;
+    display: inline-block;
+}
