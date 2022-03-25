@@ -39,7 +39,7 @@
         style="background-color: rgb(240, 244, 248);">
         <div id="header-news" class="container">
             <!-- icon news   -->
-            <a class="navbar-brand" href="index.html" style="display: flex; align-items: center;"><i id="dot-icon" class="fa-solid fa-circle"></i><span
+            <a class="navbar-brand" href="/" style="display: flex; align-items: center;"><i id="dot-icon" class="fa-solid fa-circle"></i><span
                     style="font-family: 'Montserrat';  color: rgb(71, 71, 76); font-size: 20px;">News</span> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
