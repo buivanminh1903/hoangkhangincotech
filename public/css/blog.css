@@ -209,7 +209,13 @@
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     }
     
-    .btn {
+    #button-loand {
+        height: 50px;
+        width: 250px;
+        background: rgb(2, 139, 242);
+        background: linear-gradient(128deg, rgba(2, 139, 242, 1) 24%, rgba(2, 180, 254, 1) 100%);
+    }
+    #button-search {
         height: 50px;
         width: 250px;
         background: rgb(2, 139, 242);

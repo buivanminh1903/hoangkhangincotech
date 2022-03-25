@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="loadmore">
-                    <button class="btn btn-primary" id="button" type="button"><a>Load More</a></button>
+                    <button class="btn btn-primary" id="button-loand" type="button"><a>Load More</a></button>
                 </div>
             </div>
             <!-- 2 -->
