@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 /*Trang chu*/
-Route::get('/', [\App\Http\Controllers\IndexController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
 /*Danh sách dịch vụ*/
 Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index']);
@@ -26,6 +26,8 @@ Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index'])
 /*Đối tác*/
 Route::get('doi-tac', [\App\Http\Controllers\PartnerController::class, 'index']);
 
+/*Chi Tiết Bài Viết*/
+Route::get('chi-tiet-bai-viet', [\App\Http\Controllers\BlogDetailsController::class, 'index']);
 /*Liên hệ*/
 Route::get('lien-he', [\App\Http\Controllers\ContactController::class, 'index']);
 
