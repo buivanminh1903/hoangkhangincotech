@@ -1,6 +1,6 @@
     /* Setting Service */
     /* Service-Top  */
-    
+
     .service-title {
         padding-bottom: 49px;
         padding-top: 98px;
@@ -10,12 +10,12 @@
         font-family: "Montserrat";
         color: rgb(48, 49, 50);
     }
-    
+
     .service-image {
         /* width: 99%; */
         padding-top: 30px;
     }
-    
+
     .service-title-open {
         padding-top: 15px;
         font-size: 16px;
@@ -23,7 +23,7 @@
         color: rgb(48, 48, 54);
         line-height: 1.625;
     }
-    
+
     .service-content {
         padding-top: 30px;
         font-size: 16px;
@@ -31,12 +31,12 @@
         color: rgb(48, 48, 54);
         line-height: 1.625;
     }
-    
+
     .service-content-image {
         padding-top: 40px;
         padding-bottom: 95px;
     }
-    
+
     .service-content-image h3 {
         font-size: 24px;
         font-family: "Montserrat";
@@ -45,7 +45,7 @@
         line-height: 1.083;
         text-align: left;
     }
-    
+
     .service-content-image ul li {
         display: block;
         padding-top: 15px;
@@ -54,31 +54,31 @@
         color: rgb(48, 48, 54);
         line-height: 1.625;
     }
-    
+
     .service-content-image ul li img {
         width: auto;
         padding-right: 5px;
     }
-    
+
     .service-content-image ul {
         padding-left: 0rem;
     }
     /* end service-top */
     /* Design Service Main  */
-    
+
     .service-main {
         background-color: #f0f4f8;
         width: 100%;
         height: 100%;
         padding-bottom: 1%;
     }
-    
+
     .service-main h3 {
         text-align: center;
         margin-bottom: 170px;
         top: 100px;
     }
-    
+
     .service-main .col-md-4 {
         margin: auto;
         background-color: #fff;
@@ -96,7 +96,7 @@
         transition: calc(0.3s)
     }
     /* design text Col */
-    
+
     .service-main .col-md-4 .service-main-box {
         background-color: #03affb;
         width: auto;
@@ -105,7 +105,7 @@
         border-bottom-right-radius: 0px;
         border-bottom-left-radius: 0px;
     }
-    
+
     .service-main-box1 {
         text-align: center;
         color: #b0dffc;
@@ -116,7 +116,7 @@
         color: rgba(255, 255, 255, 0.678);
         line-height: 1.231;
     }
-    
+
     .service-main-box2 {
         text-align: center;
         color: aliceblue;
@@ -127,7 +127,7 @@
         position: relative;
         top: 30px;
     }
-    
+
     .service-main-box3 {
         padding-top: 6px;
         font-weight: bold;
@@ -136,7 +136,7 @@
         color: rgb(48, 48, 54);
         line-height: 0.457;
     }
-    
+
     .service-main-box4 {
         padding-top: 20px;
         font-size: 14px;
@@ -144,7 +144,7 @@
         color: rgb(136, 135, 135);
         line-height: 1.143;
     }
-    
+
     .service-main-box5 {
         color: black;
         position: relative;
@@ -155,12 +155,12 @@
         color: rgb(48, 48, 54);
         line-height: 1;
     }
-    
+
     .service-main-box5 ul li {
         display: block;
         margin: 5px 0;
     }
-    
+
     .service-main-box5 ul li img {
         width: 10%;
         position: relative;
@@ -168,7 +168,7 @@
     }
     /* end design text col */
     /* design box text */
-    
+
     .box {
         margin: auto;
         background-color: white;
@@ -181,14 +181,14 @@
         top: 40px;
         margin-bottom: 38px;
     }
-    
+
     .box p {
         text-align: center;
         color: black;
         position: relative;
         margin: 0px;
     }
-    
+
     .button1:hover {
         background-color: #05adfb;
         color: white;
@@ -197,7 +197,7 @@
         top: 35px;
         border-radius: 40px;
     }
-    
+
     .button {
         color: #2ca3f7;
         text-align: center;
@@ -215,20 +215,20 @@
         background-color: #fff;
     }
     /* end design box text */
-    
+
     .service-main .col-md-4:hover {
         transform: translateY(-25px);
     }
     /* end design serivce Main */
     /* hiệu ứng làm mờ text */
-    
+
     .service_text_dark {
         font-size: 16px;
         font-family: "Istok Web";
         line-height: 1;
         color: #a2a2a2;
     }
-    
+
     .service_text_dark img {
         font-size: 16px;
         font-family: "Istok Web";
@@ -237,7 +237,7 @@
     }
     /* end text mơ */
     /* desing last service  */
-    
+
     .title {
         color: #303036;
         font-weight: bold;
@@ -249,12 +249,12 @@
         font-weight: bold;
         line-height: 0.619;
     }
-    
+
     .service {
         height: 100%;
         width: auto;
     }
-    
+
     .all-service-title {
         text-align: center;
         position: relative;
@@ -265,7 +265,7 @@
         font-weight: bold;
         line-height: 0.6;
     }
-    
+
     .textcol .row .col-md-4 {
         position: relative;
         top: 140px;
@@ -275,13 +275,13 @@
         width: 380px;
         height: 280px;
     }
-    
+
     .textcol .row .col-md-4 img {
         width: 100%;
         border-radius: 10px;
         object-fit: cover;
     }
-    
+
     .textcol .row .col-md-4 a {
         border-radius: 50%;
         width: 40px;
@@ -296,7 +296,7 @@
         margin-left: -20px;
         opacity: 0;
     }
-    
+
     .textcol .row .col-md-4 p {
         position: absolute;
         bottom: 111px;
@@ -308,7 +308,7 @@
         line-height: 1.625;
         text-align: center;
     }
-    
+
     .textcol .row .col-md-4 h4 {
         position: absolute;
         left: 80px;
@@ -319,23 +319,23 @@
         font-weight: bold;
         line-height: 4.792;
     }
-    
+
     .textcol .row .col-md-4:hover h4 {
         opacity: 1;
     }
-    
+
     .textcol .row .col-md-4:hover p {
         opacity: 1;
     }
-    
+
     .textcol .row .col-md-4:hover a {
         opacity: 1;
     }
-    
+
     .textcol .row .col-md-4:hover img {
         display: none;
     }
-    
+
     .textcol .row .col-md-4:hover {
         transition: calc(0.6s);
         border-radius: 15px;
@@ -345,7 +345,7 @@
         height: 280px;
     }
     /* reponsive text */
-    
+
     @media only screen and (min-width: 574px) and (max-width: 1170px) {
         .service-main {
             max-width: 100%;
@@ -354,7 +354,7 @@
             max-width: 100%;
         }
     }
-    
+
     @media only screen and (min-width: 100px) and (max-width: 574px) {
         .service-main {
             max-width: 100%;
@@ -363,13 +363,13 @@
             max-width: 100%;
         }
     }
-    
+
     @media only screen and (min-width: 350px) and (max-width: 1214px) {
         .all-service {
             height: 125rem;
         }
     }
-    
+
     @media only screen and (min-width: 1214px) and (max-width: 2000px) {
         .all-service {
             height: 850px;
