@@ -138,7 +138,7 @@
             <!-- 2 -->
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <!-- Sign Up -->
-                <div class="signing row">
+                <div class="signing row" style=" margin-left: 0; margin-right: 0;">
                     <div class="sign">
                         <div class="textsign">
                             <div class="signup">Sign Up to News</div>
@@ -258,6 +258,11 @@
                     </div>
                 </div>
             </div>
+</div>
+</div>
+ <div>
+     @include('footer')
+</div>
 
 </body>
 
