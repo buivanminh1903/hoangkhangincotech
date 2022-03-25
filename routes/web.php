@@ -25,13 +25,13 @@ Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index'])
 
 /*Đối tác*/
 Route::get('doi-tac', [\App\Http\Controllers\PartnerController::class, 'index']);
-<<<<<<< HEAD
+
 // Chi tiết dịch vụ 
 Route::get('ct-dichvu', [\App\Http\Controllers\DetailsServiceController::class, 'details_serivce']);
-=======
 
 /*Chi Tiết Bài Viết*/
 Route::get('chi-tiet-bai-viet', [\App\Http\Controllers\BlogDetailsController::class, 'index']);
+
 /*Liên hệ*/
 Route::get('lien-he', [\App\Http\Controllers\ContactController::class, 'index']);
 
