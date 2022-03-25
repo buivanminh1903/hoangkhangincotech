@@ -380,7 +380,7 @@
 						<div class="portfolio-content">
 							<div class="portfolio-title">
 								<a href="#"><h2>Mobile Apps Dashboard</h2></a>
-								<span>Design- <i class="fa fa-angle-rightt"></i> Softs</span>
+								<span>Design- <i class="fa fa-angle-right"></i> Softs</span>
 							</div>
 							<div class="port-content-icon">
 								<a href="#"><span><img src='image/arrow.png' alt=""></span></a>
