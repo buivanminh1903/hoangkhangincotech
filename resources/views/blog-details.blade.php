@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Chi Tiết Bài Viết </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -37,7 +37,7 @@
     <!-- nav new -->
     <nav class="navbar navbar-expand-lg navbar-light  text-capitalize main-font-family"
         style="background-color: rgb(240, 244, 248);">
-        <div id="header-news" class="container">
+        <div id="header-news" class="container" style="max-width: 1170px ;">
             <!-- icon news   -->
             <a class="navbar-brand" href="/" style="display: flex; align-items: center;"><i id="dot-icon" class="fa-solid fa-circle"></i><span
                     style="font-family: 'Montserrat';  color: rgb(71, 71, 76); font-size: 20px;">News</span> </a>
@@ -67,7 +67,7 @@
     </nav>
     <!-- Nội dung New 
         ---------------------->
-    <div class="container" style="    max-width: 1170px;">
+    <div class="container" style="max-width: 1170px;">
         <div id="new-connten" class="row">
             <!-- Nội Dung Bên Phải  -->
             <div class="col-md-8 col-sm-12 col-12">

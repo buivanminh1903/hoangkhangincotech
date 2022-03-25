@@ -28,6 +28,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&family=Montserrat:wght@500;700&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -69,7 +70,7 @@
             <div class="collapse navbar-collapse show-menu-new" id="show-menu-new" styles="justify-content: center;">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a id="" class="nav-link show-menu-new-tab" href="/" style="color: #0281ff;">Home +</a>
+                        <a id="show-menu-new-tab" class="nav-link " href="/" style="  color: rgb(45, 74, 138);">Home +</a>
                     </li>
                     <li class="nav-item">
                         <a id="show-menu-new-tab" class="nav-link" href="/dich-vu">Services +</a>
