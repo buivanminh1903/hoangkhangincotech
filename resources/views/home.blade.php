@@ -6,7 +6,7 @@
   @include('head')
     <!-- Custom CSS -->
 
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/home.css">
 
 
 </head>
