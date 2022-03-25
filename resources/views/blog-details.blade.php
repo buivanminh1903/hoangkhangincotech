@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Chi Tiết Bài Viết </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -33,78 +33,13 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <!-- ---------------------- -->
-    <!--Header dòng Trên -->
-    <nav class="navbar navbar-dark" style="background-color: rgb(48, 49, 50); ">
-        <div class="container" style="max-width: 1170px;">
-            <span class="header-top"><img id="icon-header" src="/image/time-header.png" />Mon-Fri : 09:00 am - 06:00pm
-            </span>
-            <div class="content">
-            </div>
-            <div>
-                <span class="header-top" style="font-family: Roboto"><img id="icon-header"
-                        src="/image/call-header.png" />Call Us +1556984538</span><span class="vline-icon"></span>
-                <span class="header-top"><img id="icon-header" src="/image/email-header.png" />e-mail us</span><span
-                    class="vline-icon"></span>
-                <span class="header-top"><button class="btn btn-dark dropdown-toggle"
-                        style="background-color: rgb(48, 49, 50);" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <span class="header-top"> <img id="icon-header"
-                                src="/image/english.png" />ENGLISH</span></button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                    </ul>
-                </span>
-            </div>
-        </div>
-
-    </nav>
-    <!--Header dòng dưới -->
-    <nav class="navbar navbar-expand-lg navbar-light  text-capitalize main-font-family" >
-        <div id="header-bottom" class="container">
-            <a class="navbar-brand" href="index.html"><img src="/image/thum.png" alt="#" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="show-menu-new">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a id="show-menu-new-tab" class="nav-link" href="#home" style="color: #0281ff;">Home +</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="show-menu-new-tab" class="nav-link" href="#room">Services +</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="show-menu-new-tab" class="nav-link" href="#room">Pages +</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="show-menu-new-tab" class="nav-link" href="#blog">Shop +</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="show-menu-new-tab" class="nav-link" href="#contact">News </a>
-                    </li>
-                    <li class="nav-item book d-flex align-items-center">
-                        <a id="show-menu-new-tab" class="nav-link" href="#">About Us</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="d-flex" style="align-items: center;">
-                <a style="justify-content: center;"><img class="Search-header" src="/image/search2.png" alt="#" /></a>
-                <div class="vline"></div>
-                <a><img class="Mess-header" src="/image/mess.png" alt="#" /></a>
-                <div class="btn-contact-header"><span style="font-size: 14px; font-family: 'Istok Web', sans-serif;">Do you need help?</span><a id="btn-contact-header" class="nav-link" href="#">
-                        CONTACT ME </a></div>
-            </div>
-        </div>
-    </nav>
+    <div>@include('_header')</div>
     <!-- nav new -->
     <nav class="navbar navbar-expand-lg navbar-light  text-capitalize main-font-family"
         style="background-color: rgb(240, 244, 248);">
-        <div id="header-news" class="container">
+        <div id="header-news" class="container" style="max-width: 1170px ;">
             <!-- icon news   -->
-            <a class="navbar-brand" href="index.html" style="display: flex; align-items: center;"><i id="dot-icon" class="fa-solid fa-circle"></i><span
+            <a class="navbar-brand" href="/" style="display: flex; align-items: center;"><i id="dot-icon" class="fa-solid fa-circle"></i><span
                     style="font-family: 'Montserrat';  color: rgb(71, 71, 76); font-size: 20px;">News</span> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,13 +67,13 @@
     </nav>
     <!-- Nội dung New 
         ---------------------->
-    <div class="container" style="    max-width: 1170px;">
+    <div class="container" style="max-width: 1170px;">
         <div id="new-connten" class="row">
             <!-- Nội Dung Bên Phải  -->
             <div class="col-md-8 col-sm-12 col-12">
                 <!-- chi tiết nội dung bài viết -->
                 <div class="detail-news">
-                    <img class="banner-new" src="/image/banner.png" alt="#" />
+                    <img class="banner-new" src="/image/banner-new.png" alt="#" />
                     <!-- --------------- -->
                     <div class="detail-connten">
                         <!-- ngày tháng đăng , người đăng -->
@@ -482,9 +417,8 @@
                 </div>
             </div>
         </div>
+</div>
 
-            </div>
-        </div>
   
 </body>
 

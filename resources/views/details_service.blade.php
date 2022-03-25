@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     @include('head')
-
+    <link rel="stylesheet" href="css/stylefooter.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/top_header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css ">
-    <link rel="stylesheet" href="css/stylefooter.css">
-    <link rel="stylesheet" href="css/top_header.css">
-
 
 </head>
 
 <body>
 <div style="background-color: #f0f4f8;">
-
     <div class="hk_breadcrumb">
         <div class="hk_breadcrumb_left">
             <span><span class="hk_breadcrumb__dot"></span> Services</span>
@@ -46,7 +39,7 @@
     <div class="service-content-image">
         <h3>Key features</h3>
         <ul>
-            <li> <img src="image/iconcheck.png" alt=""> <span> Custom installtion Process</li>
+            <li> <img src="image/iconcheck.png" alt=""> <span> Custom installtion Process</span></li>
             <li> <img src="image/iconcheck.png" alt=""> Custtomizable All Performance</li>
             <li> <img src="image/iconcheck.png" alt=""> Imprved All Performance</li>
             <li> <img src="image/iconcheck.png" alt=""> High Usablitily</li>
@@ -137,7 +130,7 @@
             <div class="textcol">
                 <div class="row">
 
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-4 col-6">
                         <div class="content">
                             <h4>Digital Marketing</h4>
                             <p>Conveniment predomiate sticky aligmi than lơw risk high methods of emp brand supeinos techno</p>
@@ -146,7 +139,7 @@
                         <a href=""><i style="margin: auto;" class="fa-solid fa-angle-right"></i></a>
 
                     </div>
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-4 col-6">
                         <div class="content">
                             <h4>Digital Marketing</h4>
                             <p>Conveniment predomiate sticky aligmi than lơw risk high methods of emp brand supeinos techno</p>
@@ -154,7 +147,7 @@
                             <a href=""><i style="margin: auto;" class="fa-solid fa-angle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-4 col-6">
                         <div class="content">
                             <h4>Digital Marketing</h4>
                             <p>Conveniment predomiate sticky aligmi than lơw risk high methods of emp brand supeinos techno</p>
@@ -162,7 +155,7 @@
                         <img src="image/allservice1.png" alt="">
                         <a href=""><i class="fa-solid fa-angle-right" style="margin: auto;"></i></a>
                     </div>
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-4 col-6">
                         <div class="content">
                             <h4>Digital Marketing</h4>
                             <p>Conveniment predomiate sticky aligmi than lơw risk high methods of emp brand supeinos techno</p>
@@ -170,7 +163,7 @@
                         <img src="image/allservice2.png" alt="">
                         <a href=""><i style="margin: auto;" class="fa-solid fa-angle-right"></i></a>
                     </div>
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-4 col-6">
                         <div class="content">
                             <h4>Digital Marketing</h4>
                             <p>Conveniment predomiate sticky aligmi than lơw risk high methods of emp brand supeinos techno</p>
@@ -178,7 +171,7 @@
                         <img src="image/allservice3.png" alt="">
                         <a href=""><i style="margin: auto;" class="fa-solid fa-angle-right"></i></a>
                     </div>
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-4 col-6">
                         <div class="content">
                             <h4>Digital Marketing</h4>
                             <p>Conveniment predomiate sticky aligmi than lơw risk high methods of emp brand supeinos techno</p>
@@ -196,6 +189,7 @@
 
 </div>
 @include('footer')
+
 
 </body>
 

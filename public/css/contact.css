@@ -1,4 +1,6 @@
-
+*{
+    padding: 0px;
+}
 
 /* Đầu chi tiết bài viết */
 .hk_breadcrumb {

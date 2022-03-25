@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<div>@include('_header')</div>
 	<!-- nav new -->
 	<div style="background-color: #f0f4f8;">
         <!--Start breadcrumb-->
