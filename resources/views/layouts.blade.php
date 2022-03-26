@@ -38,8 +38,10 @@
     <link rel="stylesheet" type="text/css" href="css/contact.css">
     <link rel="stylesheet" type="text/css" href="css/blog.css">
     <link rel="stylesheet" href="css/blogdetails.css"/>
-    <script src="js/splide.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/top_header.css">
     <link rel="stylesheet" href="css/stylefooter.css">
+    <script src="js/splide.min.js"></script>
     <title>{{$title}}</title>
 </head>
 <body>
