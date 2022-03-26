@@ -6,11 +6,12 @@
   @include('head')
     <!-- Custom CSS -->
 
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/home.css">
 
 
 </head>
 <body>
+<div>@include('_header')</div>
 	<!--Slider-->
 	<div class="slider d-flex align-items-center">
 		<div class="container">
@@ -24,7 +25,7 @@
 							<h1>Best <span> Digital Agency</span> <br> and Business</h1>
 						</div>
 						<div class="text" >
-							<p>Dynamically exploit resource leveling catalysts for change predominate focused infrastructures vis a vis efficient is our main focus but everybody is</p >	
+							<p>Dynamically exploit resource leveling catalysts for change predominate focused infrastructures vis a vis efficient is our main focus but everybody is</p >
 						</div>
 						<div class="text">
 							<div class="slider-button">
@@ -53,11 +54,11 @@
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
-	</div>	
-	
+	</div>
+
 	<!--feature -->
 
 	<div class="feature pb-80">
@@ -73,11 +74,11 @@
 								<h2>Android Apps Dev</h2>
 							</div>
 							<div class="feature-content-text">
-								<p>Muthoritatively morphan is develop bleeding edge meet robust niches has.</p> 
+								<p>Muthoritatively morphan is develop bleeding edge meet robust niches has.</p>
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 				<div class="col-lg-4 col-md-6 p-0">
 					<div class="single-feature-box two d-flex">
 						<div class="feature-icon">
@@ -88,11 +89,11 @@
 								<h2>Web App Develop</h2>
 							</div>
 							<div class="feature-content-text">
-								<p>Day by day web application develop very useful your any business.</p> 
+								<p>Day by day web application develop very useful your any business.</p>
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 				<div class="col-lg-4 col-md-6 p-0">
 					<div class="single-feature-box d-flex">
 						<div class="feature-icon">
@@ -103,7 +104,7 @@
 								<h2>Graphics Design</h2>
 							</div>
 							<div class="feature-content-text">
-								<p>design is very creative in our develop bleeding edge meet robust niches has.</p> 
+								<p>design is very creative in our develop bleeding edge meet robust niches has.</p>
 							</div>
 						</div>
 					</div>
@@ -111,9 +112,9 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!--about-->
-	
+
 	<div class="about pt-90 pb-80">
 		<div class="container">
 			<div class="row align-items-center">
@@ -178,17 +179,17 @@
 	</div>
 
 	<!--why choose us -->
-	
-	<div class="why-choose-us pt-115 pb-90">		
+
+	<div class="why-choose-us pt-115 pb-90">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 col-md-5">
 					<div class="dreamit-section-title  pb-30">
 						<div class="about-bg-bar"></div>
-						<div class="dreamit-section-sub-title">	
+						<div class="dreamit-section-sub-title">
 							<h5>Why Choose Us</h5>
 						</div>
-						
+
 						<div class="dreamit-section-main-title">
 							<h2 class="text-white">We deal with the aspects of <br>professional <span>IT Services</span></h2>
 						</div>
@@ -338,7 +339,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="row image_load pt-2">
 				<div class="col-lg-4 col-md-6 col-sm-12 grid-item  portfolio ">
 					<div class="dreamit-single-portfolio">
@@ -380,7 +381,7 @@
 						<div class="portfolio-content">
 							<div class="portfolio-title">
 								<a href="#"><h2>Mobile Apps Dashboard</h2></a>
-								<span>Design- <i class="fa fa-angle-rightt"></i> Softs</span>
+								<span>Design- <i class="fa fa-angle-right"></i> Softs</span>
 							</div>
 							<div class="port-content-icon">
 								<a href="#"><span><img src='image/arrow.png' alt=""></span></a>
@@ -419,7 +420,7 @@
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>

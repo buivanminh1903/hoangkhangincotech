@@ -1,0 +1,378 @@
+    /* Setting Service */
+    /* Service-Top  */
+
+    .service-title {
+        padding-bottom: 49px;
+        padding-top: 98px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 40px;
+        font-family: "Montserrat";
+        color: rgb(48, 49, 50);
+    }
+
+    .service-image {
+        /* width: 99%; */
+        padding-top: 30px;
+    }
+
+    .service-title-open {
+        padding-top: 15px;
+        font-size: 16px;
+        font-family: "Istok Web";
+        color: rgb(48, 48, 54);
+        line-height: 1.625;
+    }
+
+    .service-content {
+        padding-top: 30px;
+        font-size: 16px;
+        font-family: "Istok Web";
+        color: rgb(48, 48, 54);
+        line-height: 1.625;
+    }
+
+    .service-content-image {
+        padding-top: 40px;
+        padding-bottom: 95px;
+    }
+
+    .service-content-image h3 {
+        font-size: 24px;
+        font-family: "Montserrat";
+        color: rgb(48, 48, 54);
+        font-weight: bold;
+        line-height: 1.083;
+        text-align: left;
+    }
+
+    .service-content-image ul li {
+        display: block;
+        padding-top: 15px;
+        font-size: 16px;
+        font-family: "Istok Web";
+        color: rgb(48, 48, 54);
+        line-height: 1.625;
+    }
+
+    .service-content-image ul li img {
+        width: auto;
+        padding-right: 5px;
+    }
+
+    .service-content-image ul {
+        padding-left: 0rem;
+    }
+    /* end service-top */
+    /* Design Service Main  */
+
+    .service-main {
+        background-color: #f0f4f8;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1%;
+    }
+
+    .service-main h3 {
+        text-align: center;
+        margin-bottom: 170px;
+        top: 100px;
+    }
+
+    .service-main .col-md-4 {
+        margin: auto;
+        background-color: #fff;
+        margin-bottom: 99px;
+        border-radius: 6px;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+        width: 360px;
+        height: 545px;
+        border-bottom: 3px solid #03affb;
+        padding: 0px;
+        color: #f0f4f8;
+        border-radius: 17px;
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+        transition: calc(0.3s)
+    }
+    /* design text Col */
+
+    .service-main .col-md-4 .service-main-box {
+        background-color: #03affb;
+        width: auto;
+        height: 139px;
+        border-radius: 17px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .service-main-box1 {
+        text-align: center;
+        color: #b0dffc;
+        position: relative;
+        top: 30px;
+        font-size: 13px;
+        font-family: "Istok Web";
+        color: rgba(255, 255, 255, 0.678);
+        line-height: 1.231;
+    }
+
+    .service-main-box2 {
+        text-align: center;
+        color: aliceblue;
+        font-size: 28px;
+        font-family: "Montserrat";
+        color: rgb(254, 254, 255);
+        line-height: 0.607;
+        position: relative;
+        top: 30px;
+    }
+
+    .service-main-box3 {
+        padding-top: 6px;
+        font-weight: bold;
+        font-size: 35px;
+        font-family: "Montserrat";
+        color: rgb(48, 48, 54);
+        line-height: 0.457;
+    }
+
+    .service-main-box4 {
+        padding-top: 20px;
+        font-size: 14px;
+        font-family: "Istok Web";
+        color: rgb(136, 135, 135);
+        line-height: 1.143;
+    }
+
+    .service-main-box5 {
+        color: black;
+        position: relative;
+        top: 35px;
+        left: 20px;
+        font-size: 16px;
+        font-family: "Istok Web";
+        color: rgb(48, 48, 54);
+        line-height: 1;
+    }
+
+    .service-main-box5 ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .service-main-box5 ul li img {
+        width: 10%;
+        position: relative;
+        right: 3px;
+    }
+    /* end design text col */
+    /* design box text */
+
+    .box {
+        margin: auto;
+        background-color: white;
+        width: 167px;
+        height: 94px;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 3px;
+        padding-top: 13px;
+        position: relative;
+        top: 40px;
+        margin-bottom: 38px;
+    }
+
+    .box p {
+        text-align: center;
+        color: black;
+        position: relative;
+        margin: 0px;
+    }
+
+    .button1:hover {
+        background-color: #05adfb;
+        color: white;
+        position: relative;
+        left: 103px;
+        top: 35px;
+        border-radius: 40px;
+    }
+
+    .button {
+        color: #2ca3f7;
+        text-align: center;
+        width: 150px;
+        height: 45px;
+        border-radius: 40px;
+        border: 2px solid #07a6f9;
+        display: block;
+        position: relative;
+        left: 103px;
+        top: 35px;
+        font-size: 14px;
+        font-family: "Istok Web";
+        line-height: 1.143;
+        background-color: #fff;
+    }
+    /* end design box text */
+
+    .service-main .col-md-4:hover {
+        transform: translateY(-25px);
+    }
+    /* end design serivce Main */
+    /* hiệu ứng làm mờ text */
+
+    .service_text_dark {
+        font-size: 16px;
+        font-family: "Istok Web";
+        line-height: 1;
+        color: #a2a2a2;
+    }
+
+    .service_text_dark img {
+        font-size: 16px;
+        font-family: "Istok Web";
+        line-height: 1;
+        color: #a2a2a2;
+    }
+    /* end text mơ */
+    /* desing last service  */
+
+    .title {
+        color: #303036;
+        font-weight: bold;
+        position: relative;
+        bottom: 30px;
+        font-size: 42px;
+        font-family: "Montserrat";
+        color: rgb(48, 48, 54);
+        font-weight: bold;
+        line-height: 0.619;
+    }
+
+    .service {
+        height: 100%;
+        width: auto;
+    }
+
+    .all-service-title {
+        text-align: center;
+        position: relative;
+        top: 80px;
+        font-size: 40px;
+        font-family: "Montserrat";
+        color: rgb(48, 49, 50);
+        font-weight: bold;
+        line-height: 0.6;
+    }
+
+    .textcol .row .col-md-4 {
+        position: relative;
+        top: 140px;
+        margin: 13px 0;
+        position: relative;
+        border-radius: 15px;
+        width: 380px;
+        height: 280px;
+    }
+
+    .textcol .row .col-md-4 img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .textcol .row .col-md-4 a {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-color: #f0f4f8;
+        display: inline-block;
+        display: flex;
+        text-decoration: none;
+        position: absolute;
+        top: 190px;
+        left: 50%;
+        margin-left: -20px;
+        opacity: 0;
+    }
+
+    .textcol .row .col-md-4 p {
+        position: absolute;
+        bottom: 111px;
+        opacity: 0;
+        color: #fff;
+        font-size: 16px;
+        font-family: "Istok Web";
+        color: rgb(255, 255, 255);
+        line-height: 1.625;
+        text-align: center;
+    }
+
+    .textcol .row .col-md-4 h4 {
+        position: absolute;
+        left: 80px;
+        opacity: 0;
+        font-size: 24px;
+        font-family: "Montserrat";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        line-height: 4.792;
+    }
+
+    .textcol .row .col-md-4:hover h4 {
+        opacity: 1;
+    }
+
+    .textcol .row .col-md-4:hover p {
+        opacity: 1;
+    }
+
+    .textcol .row .col-md-4:hover a {
+        opacity: 1;
+    }
+
+    .textcol .row .col-md-4:hover img {
+        display: none;
+    }
+
+    .textcol .row .col-md-4:hover {
+        transition: calc(0.6s);
+        border-radius: 15px;
+        background-color: #03affb;
+        box-sizing: border-box;
+        width: 380px;
+        height: 280px;
+    }
+    /* reponsive text */
+
+    @media only screen and (min-width: 574px) and (max-width: 1170px) {
+        .service-main {
+            max-width: 100%;
+        }
+        .container {
+            max-width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 100px) and (max-width: 574px) {
+        .service-main {
+            max-width: 100%;
+        }
+        .container {
+            max-width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 350px) and (max-width: 1214px) {
+        .all-service {
+            height: 125rem;
+        }
+    }
+
+    @media only screen and (min-width: 1214px) and (max-width: 2000px) {
+        .all-service {
+            height: 850px;
+        }
+    }
+    /* end desig last service */

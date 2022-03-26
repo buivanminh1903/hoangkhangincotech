@@ -1,0 +1,250 @@
+/* chinh kich thuoc footer */
+
+.logo_footer {
+    position: relative;
+    bottom: 20px;
+}
+
+.footer {
+    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+    background-color: #303132;
+    border-bottom: 2px solid #0181ff;
+}
+
+
+/* end */
+
+
+/* footer-open css */
+
+.footer-title {
+    position: relative;
+    left: 18%;
+    top: -40px;
+    text-decoration: none;
+}
+
+.footer-title h3 {
+    color: #03affb;
+    font-size: 32px;
+    font-family: "Montserrat";
+    color: rgb(2, 139, 254);
+    font-weight: bold;
+    position: relative;
+    bottom: 5px;
+}
+
+
+/* design box 1 */
+
+.footer-box-firts .text {
+    position: relative;
+    bottom: 5px;
+    font-size: 16px;
+    font-family: "Istok Web";
+    color: rgba(255, 255, 255, 0.851);
+    line-height: 1.5;
+}
+
+.col-md-3 h3 {
+    font-weight: bold;
+    font-family: "Montserrat";
+    color: #fff;
+}
+
+.footer-box-firts a {
+    border-radius: 5px;
+    padding: 15px 18px;
+    margin-right: 5px;
+    background-color: #0181ff;
+    position: relative;
+    top: 40px;
+    color: #fff;
+}
+
+.footer-box-firts a:hover {
+    border-radius: 5px;
+    padding: 15px 18px;
+    background-color: #303132;
+    border: 1px solid #fff;
+    transition: calc(0.1s);
+    color: #fff;
+}
+
+
+/* end */
+
+
+/* design box2 */
+
+.footer-box-second ul li a {
+    margin-left: 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Istok Web";
+    color: rgb(255, 255, 255);
+    line-height: 35px;
+}
+
+.footer-box-second ul li {
+    display: block;
+    position: relative;
+    right: 20px;
+}
+
+.footer-box-second ul li i {
+    color: #0181ff;
+}
+
+.footer-box-second h3 {
+    position: relative;
+    left: 7px;
+    font-family: "Montserrat";
+}
+
+.footer-box-second hr {
+    position: relative;
+    bottom: 25px;
+}
+
+.footer-box-second hr {
+    width: 100px;
+    color: #0181ff;
+    position: relative;
+    left: 33px;
+    bottom: 11px;
+}
+
+
+/* end */
+
+.footer-box-three .post {
+    display: flex;
+    margin: auto;
+}
+
+.footer-box-three .post p {
+    position: relative;
+    bottom: 35px;
+    font-weight: 400;
+}
+
+.footer-box-three hr {
+    position: relative;
+    bottom: 30px;
+}
+
+hr:not([size]) {
+    height: 1px;
+    width: 85px;
+    left: 14px;
+}
+
+.footer-box-three {
+    position: relative;
+    top: 39px;
+    left: 20px;
+    font-size: 16px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    height: 250px;
+}
+
+.footer-box-three .post img {
+    position: relative;
+    bottom: 28px;
+    right: 15px;
+    width: 25%;
+    height: 1%;
+}
+
+
+/* design text box */
+
+.footer-text {
+    font-size: 16px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    line-height: 1.5;
+    position: relative;
+    left: 20px;
+}
+
+.footer-text img {
+    width: 18%;
+    position: relative;
+    /* line-height: 20px; */
+    top: 10px;
+    right: 7px;
+}
+
+.footer-text p {
+    position: relative;
+    left: 54px;
+    bottom: 10px;
+    font-size: small;
+    color: #919192;
+}
+
+.footer-text img a {
+    position: relative;
+    left: 6px;
+}
+
+
+/* design end footer */
+
+.footer-end {
+    background-color: #242424;
+    height: 100px;
+    position: relative;
+    color: #fff;
+}
+
+.footer-end .row {
+    position: relative;
+    top: 30px;
+}
+
+.footer-end-text {
+    float: right;
+}
+
+.footer-end-text a {
+    text-decoration: none;
+}
+
+.footer-end-text a i {
+    color: #0181ff;
+}
+
+
+/* end */
+
+
+/* design reponsive */
+
+@media only screen and (min-width: 100px) and (max-width: 1170px) {
+    .footer {
+        max-width: 100%;
+    }
+    .container {
+        max-width: 100%;
+    }
+    .footer-end {
+        max-width: 100%;
+    }
+}
+
+.place {
+    position: relative;
+    top: 50px;
+}
+
+
+/* end */

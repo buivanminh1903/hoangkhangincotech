@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<div>@include('_header')</div>
 	<!-- nav new -->
 	<div style="background-color: #f0f4f8;">
         <!--Start breadcrumb-->
@@ -117,7 +118,7 @@
 					</div>
 
 					<div class="col-lg-6 col-md-6 col-sm-12 form-name">
-						<select id="selected"  class="form-select text-select" id="exampleFormControlSelect1">
+						<select id="selected"  class="form-control text-select" id="exampleFormControlSelect1">
 							<option>---</option>
 							<option>2</option>
 							<option>3</option>

@@ -18,13 +18,16 @@ use Illuminate\Support\Facades\Route;
 // });
 
 /*Trang chủ*/
-Route::get('/', [\App\Http\Controllers\IndexController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
 /*Danh sách dịch vụ*/
 Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index']);
 
 /*Đối tác*/
 Route::get('doi-tac', [\App\Http\Controllers\PartnerController::class, 'index']);
+
+// Chi tiết dịch vụ 
+Route::get('ct-dichvu', [\App\Http\Controllers\DetailsServiceController::class, 'details_serivce']);
 
 /*Chi Tiết Bài Viết*/
 Route::get('chi-tiet-bai-viet', [\App\Http\Controllers\BlogDetailsController::class, 'index']);
@@ -34,3 +37,4 @@ Route::get('lien-he', [\App\Http\Controllers\ContactController::class, 'index'])
 
 /*Bài viết*/
 Route::get('bai-viet', [\App\Http\Controllers\BlogController::class, 'index']);
+

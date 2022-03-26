@@ -1,4 +1,6 @@
-
+*{
+    padding: 0px;
+}
 
 /* Đầu chi tiết bài viết */
 .hk_breadcrumb {
@@ -243,7 +245,8 @@ CSS title OUR CONTACT INFO */
     
 }
 
-#selected{
+#selected{  
+    width: 100%;
     font-size: 16px;
     font-family: 'Istok Web', sans-serif;
     color: rgb(112, 112, 112);
