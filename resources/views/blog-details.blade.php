@@ -1,37 +1,57 @@
 @extends('layouts')
 @section('content')
-    <!-- nav new -->
-    <nav class="navbar navbar-expand-lg navbar-light  text-capitalize main-font-family"
-         style="background-color: rgb(240, 244, 248);">
-        <div id="header-news" class="container" style="max-width: 1170px ;">
-            <!-- icon news   -->
-            <a class="navbar-brand" href="/" style="display: flex; align-items: center;"><i id="dot-icon"
-                                                                                            class="fa-solid fa-circle"></i><span
-                    style="font-family: 'Montserrat';  color: rgb(71, 71, 76); font-size: 20px;">News</span> </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Bảng Chọn -->
-            <div>
-                <span class="collapse navbar-collapse" id="show-menu">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#room"><i class="fa-solid fa-chevron-right" id="i-right"></i>
-                                News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#blog" style="color: #55ACEE;"><i
-                                    class="fa-solid fa-chevron-right" id="i-right"></i> Benifits of Apps Devlopment</a>
-                        </li>
-                    </ul>
-                </span>
+
+
+    <div style="background-color: #f0f4f8;">
+        <!--Start breadcrumb-->
+        <div class="hk_breadcrumb">
+            <div class="hk_breadcrumb_left">
+                <span class="hk_breadcrumb__dot"></span> News
+            </div>
+            <div class="hk_breadcrumb_right">
+                <ul class="hk_menu">
+                    <li>Home</li>
+                    <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;News</li>
+                    <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Benifits of Apps Devlopment</li>
+                </ul>
             </div>
         </div>
-    </nav>
+        <!--End breadcrumb-->
+    </div>
+
+
+    <!-- nav new -->
+{{--    <nav class="navbar navbar-expand-lg navbar-light  text-capitalize main-font-family"--}}
+{{--         style="background-color: rgb(240, 244, 248);">--}}
+{{--        <div id="header-news" class="container" style="max-width: 1170px ;">--}}
+{{--            <!-- icon news   -->--}}
+{{--            <a class="navbar-brand" href="/" style="display: flex; align-items: center;"><i id="dot-icon"--}}
+{{--                                                                                            class="fa-solid fa-circle"></i><span--}}
+{{--                    style="font-family: 'Montserrat';  color: rgb(71, 71, 76); font-size: 20px;">News</span> </a>--}}
+{{--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu"--}}
+{{--                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">--}}
+{{--                <span class="navbar-toggler-icon"></span>--}}
+{{--            </button>--}}
+{{--            <!-- Bảng Chọn -->--}}
+{{--            <div>--}}
+{{--                <span class="collapse navbar-collapse" id="show-menu">--}}
+{{--                    <ul class="navbar-nav ml-auto">--}}
+{{--                        <li class="nav-item active">--}}
+{{--                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="#room"><i class="fa-solid fa-chevron-right" id="i-right"></i>--}}
+{{--                                News</a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="#blog" style="color: #55ACEE;"><i--}}
+{{--                                    class="fa-solid fa-chevron-right" id="i-right"></i> Benifits of Apps Devlopment</a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </span>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </nav>--}}
     <!-- Nội dung New
         ---------------------->
     <div class="container" style="max-width: 1170px;">

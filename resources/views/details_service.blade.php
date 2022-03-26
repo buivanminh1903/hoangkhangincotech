@@ -1,17 +1,20 @@
 @extends('layouts')
 @section('content')
     <div style="background-color: #f0f4f8;">
+        <!--Start breadcrumb-->
         <div class="hk_breadcrumb">
             <div class="hk_breadcrumb_left">
-                <span><span class="hk_breadcrumb__dot"></span> Services</span>
+                <span class="hk_breadcrumb__dot"></span> Services
             </div>
             <div class="hk_breadcrumb_right">
                 <ul class="hk_menu">
                     <li>Home</li>
                     <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Services</li>
+                    <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Mobile Apps Develop</li>
                 </ul>
             </div>
         </div>
+        <!--End breadcrumb-->
     </div>
     <div class="container" style="width: 1170px;">
         <h1 class="service-title"> Mobile Apps Development</h1>
