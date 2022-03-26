@@ -73,6 +73,7 @@
         padding-bottom: 1%;
     }
 
+
     .service-main h3 {
         text-align: center;
         margin-bottom: 170px;
@@ -129,6 +130,8 @@
     }
 
     .service-main-box3 {
+        position: relative;
+        left: 48px;
         padding-top: 6px;
         font-weight: bold;
         font-size: 35px;
@@ -138,7 +141,8 @@
     }
 
     .service-main-box4 {
-        padding-top: 20px;
+        right: 12px;
+        padding-top: 40px;
         font-size: 14px;
         font-family: "Istok Web";
         color: rgb(136, 135, 135);
@@ -344,6 +348,13 @@
         width: 380px;
         height: 280px;
     }
+    .col-md-4 .contentt {
+        text-align: center;
+        font-size: 16px;
+        color: rgb(112, 112, 112);
+        font-family: 'Istok Web', sans-serif;
+    }
+
     /* reponsive text */
 
     @media only screen and (min-width: 574px) and (max-width: 1170px) {
