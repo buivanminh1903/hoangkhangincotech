@@ -35,7 +35,7 @@
         </div>
 
         <!-- item -->
-        <div class="box row">
+        <div class="box-main row">
             <!-- 1 -->
             <div class="col-lg-8 col-md-12 col-sm-12" style="padding-right: 18px;">
                 <div class="item">

@@ -194,8 +194,9 @@
     }
     /* Box */
 
-    .box {
+    .box-main {
         display: flex;
+
     }
     /* Load more */
 
