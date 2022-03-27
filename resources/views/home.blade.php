@@ -343,7 +343,7 @@
                                 <span>Design- <i class="fa fa-angle-right"></i> Softs</span>
                             </div>
                             <div class="port-content-icon">
-                                <a href="#"><span><img src='image/arrow.png' alt=""></span></a>
+                                <a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -359,7 +359,7 @@
                                 <span>Design- <i class="fa fa-angle-right"></i> Softs</span>
                             </div>
                             <div class="port-content-icon">
-                                <a href="#"><span><img src='image/arrow.png' alt=""></span></a>
+                                <a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -375,7 +375,7 @@
                                 <span>Design- <i class="fa fa-angle-right"></i> Softs</span>
                             </div>
                             <div class="port-content-icon">
-                                <a href="#"><span><img src='image/arrow.png' alt=""></span></a>
+                                <a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -391,7 +391,7 @@
                                 <span>Design- <i class="fa fa-angle-right"></i> Softs</span>
                             </div>
                             <div class="port-content-icon">
-                                <a href="#"><span><img src='image/arrow.png' alt=""></span></a>
+                                <a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -407,7 +407,7 @@
                                 <span>Design- <i class="fa fa-angle-right"></i> Softs</span>
                             </div>
                             <div class="port-content-icon">
-                                <a href="#"><span><img src='image/arrow.png' alt=""></span></a>
+                                <a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
                             </div>
                         </div>
                     </div>

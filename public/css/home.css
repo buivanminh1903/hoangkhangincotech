@@ -190,7 +190,7 @@ html,body
 
     }
     .about-thumb {
-        margin-left: -350px;
+        margin-left: -300px;
         width: 90%;
         position: relative;
         z-index: 1;
@@ -554,7 +554,7 @@ html,body
         left: 0;
         background: #2d4989;
         height: 108px;
-        width: 382px;
+        width: 600px;
         opacity: 0;
         transition: .5s;
         z-index: -1;
@@ -566,7 +566,7 @@ html,body
         left: 0;
         background: #2d4989;
         height: 100px;
-        width: 552px;
+        width: 652px;
         opacity: 0;
         transition: .5s;
         z-index: -1;
