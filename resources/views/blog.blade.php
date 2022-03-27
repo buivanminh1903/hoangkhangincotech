@@ -35,7 +35,7 @@
         </div>
 
         <!-- item -->
-        <div class="box-main row">
+        <div class="box-main row mb-5">
             <!-- 1 -->
             <div class="col-lg-8 col-md-12 col-sm-12" style="padding-right: 18px;">
                 <div class="item">
@@ -164,7 +164,7 @@
                     <div class="recentpost">
                         <div class="post">
                             <div class="post_img">
-                                <a href=""><img src="image/post.jpg"></a>
+                                <a href=""><img src="image/blog_galary_04.png"></a>
                             </div>
                             <div class="postline">
                                 <div class="textpost">
@@ -180,7 +180,7 @@
                     <div class="postfile">
                         <div class="post">
                             <div class="post_img">
-                                <a href=""><img src="image/post1.jpg"></a>
+                                <a href=""><img src="image/blog_galary_07.png"></a>
                             </div>
                             <div class="postline">
                                 <div class="textpost">
@@ -197,7 +197,7 @@
                     <div class="postfull">
                         <div class="post">
                             <div class="post_img">
-                                <a href=""><img src="image/post2.jpg"></a>
+                                <a href=""><img src="image/blog_galary_08.png"></a>
                             </div>
                             <div class="postline">
                                 <div class="textpost">
@@ -223,15 +223,22 @@
                     </div>
                     <!-- Galary -->
                     <div class="galary">Galary</div>
-                    <div class="grid-container galaryly">
-                        <div class="postimg"><img src="image/post.jpg"></div>
-                        <div class="postimg"><img src="image/post2.jpg"></div>
-                        <div class="postimg"><img src="image/post.jpg"></div>
-                        <div class="postimg"><img src="image/post2.jpg"></div>
-                        <div class="postimg"><img src="image/post2.jpg"></div>
-                        <div class="postimg"><img src="image/post.jpg"></div>
-
+                    <div class="blog_galary">
+                        <div class="postimg"><img src="image/blog_galary_01.png"></div>
+                        <div class="postimg"><img src="image/blog_galary_02.png"></div>
+                        <div class="postimg"><img src="image/blog_galary_03.png"></div>
+                        <div class="postimg"><img src="image/blog_galary_04.png"></div>
+                        <div class="postimg"><img src="image/blog_galary_05.png"></div>
+                        <div class="postimg"><img src="image/blog_galary_06.png"></div>
                     </div>
+{{--                    <div class="grid-container galarylyy">--}}
+{{--                        <div class="postimg"><img src="image/post.jpg"></div>--}}
+{{--                        <div class="postimg"><img src="image/post2.jpg"></div>--}}
+{{--                        <div class="postimg"><img src="image/post.jpg"></div>--}}
+{{--                        <div class="postimg"><img src="image/post2.jpg"></div>--}}
+{{--                        <div class="postimg"><img src="image/post2.jpg"></div>--}}
+{{--                        <div class="postimg"><img src="image/post.jpg"></div>--}}
+{{--                    </div>--}}
                     <!-- Archives -->
                     <div class="archive">Archives</div>
                     <div class="archives">

@@ -15,7 +15,7 @@
         </div>
         <!--End breadcrumb-->
     </div>
-    <div class="container">
+    <div class="container" style="padding: 0">
         <!--Start main content-->
         <div class="maincontent">
             <!--Title-->

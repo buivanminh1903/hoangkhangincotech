@@ -1,12 +1,11 @@
 /* chinh kich thuoc footer */
 
 .logo_footer {
-    position: relative;
-    bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .footer {
-    padding-top: 20px;
+    padding: 70px 0;
     width: 100%;
     background-color: #303132;
     border-bottom: 2px solid #0181ff;
@@ -39,28 +38,28 @@
 /* design box 1 */
 
 .footer-box-firts .text {
-    position: relative;
-    bottom: 5px;
     font-size: 16px;
     font-family: "Istok Web";
     color: rgba(255, 255, 255, 0.851);
     line-height: 1.5;
 }
 
-.col-md-3 h3 {
+.col-lg-3 h3 {
     font-weight: bold;
     font-family: "Montserrat";
     color: #fff;
 }
 
 .footer-box-firts a {
-    border-radius: 5px;
-    padding: 15px 18px;
-    margin-right: 5px;
-    background-color: #0181ff;
-    position: relative;
-    top: 40px;
+    border-radius: 4px;
+    padding: 10px 13px;
+    background-image: -moz-linear-gradient( 104deg, rgb(5,176,255) 0%, rgb(2,139,254) 100%);
+    background-image: -webkit-linear-gradient( 104deg, rgb(5,176,255) 0%, rgb(2,139,254) 100%);
+    background-image: -ms-linear-gradient( 104deg, rgb(5,176,255) 0%, rgb(2,139,254) 100%);
+    margin: 5px;
     color: #fff;
+    border: 1px solid transparent;
+    display: inline-block;
 }
 
 .footer-box-firts a:hover {
@@ -68,7 +67,7 @@
     padding: 15px 18px;
     background-color: #303132;
     border: 1px solid #fff;
-    transition: calc(0.1s);
+    transition: all 0.3s;
     color: #fff;
 }
 
@@ -80,7 +79,6 @@
 
 .footer-box-second ul li a {
     margin-left: 10px;
-    position: relative;
     text-decoration: none;
     font-size: 16px;
     font-family: "Istok Web";
@@ -88,19 +86,13 @@
     line-height: 35px;
 }
 
-.footer-box-second ul li {
-    display: block;
-    position: relative;
-    right: 20px;
-}
+.footer-box-second ul li {}
 
 .footer-box-second ul li i {
     color: #0181ff;
 }
 
 .footer-box-second h3 {
-    position: relative;
-    left: 7px;
     font-family: "Montserrat";
 }
 
@@ -111,7 +103,8 @@
 
 .footer-box-second hr {
     width: 100px;
-    color: #0181ff;
+    color: rgb(2, 129, 255);
+    opacity: 1;
     position: relative;
     left: 33px;
     bottom: 11px;
@@ -122,13 +115,24 @@
 
 .footer-box-three .post {
     display: flex;
-    margin: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.post p {
+    margin-bottom: 0;
+}
+
+.footer-box-three .post:last-child {
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .footer-box-three .post p {
-    position: relative;
-    bottom: 35px;
     font-weight: 400;
+    margin-left: 20px;
 }
 
 .footer-box-three hr {
@@ -139,13 +143,10 @@
 hr:not([size]) {
     height: 1px;
     width: 85px;
-    left: 14px;
+    left: 2px;
 }
 
 .footer-box-three {
-    position: relative;
-    top: 39px;
-    left: 20px;
     font-size: 16px;
     font-family: "Montserrat";
     color: rgb(255, 255, 255);
@@ -154,11 +155,9 @@ hr:not([size]) {
 }
 
 .footer-box-three .post img {
-    position: relative;
-    bottom: 28px;
-    right: 15px;
-    width: 25%;
-    height: 1%;
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
 }
 
 
@@ -170,22 +169,19 @@ hr:not([size]) {
     color: rgb(255, 255, 255);
     font-weight: 400;
     line-height: 1.5;
-    position: relative;
-    left: 20px;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.footer-text:last-child {
+    margin-bottom: 0;
 }
 
 .footer-text img {
-    width: 18%;
-    position: relative;
-    /* line-height: 20px; */
-    top: 10px;
-    right: 7px;
+    width: 59px;
 }
 
 .footer-text p {
-    position: relative;
-    left: 54px;
-    bottom: 10px;
     font-size: small;
     color: #919192;
 }
@@ -200,17 +196,15 @@ hr:not([size]) {
 
 .footer-end {
     background-color: #242424;
-    height: 100px;
-    position: relative;
     color: #fff;
 }
 
 .footer-end .row {
-    position: relative;
-    top: 30px;
+
 }
 
 .footer-end-text {
+    font-family: 'Istok Web', sans-serif;
     float: right;
 }
 
@@ -245,5 +239,25 @@ hr:not([size]) {
     top: 50px;
 }
 
+@media only screen and (max-width: 991px) {
+    .quicklinks {
+        margin-top: 30px;
+    }
 
+    .popular {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 623px) {
+    .popular {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .quicklinks {
+        margin-top: 30px;
+    }
+}
 /* end */
