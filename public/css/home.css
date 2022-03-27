@@ -847,7 +847,7 @@ span.active i {
 .team-member .team-content span.active {
     position: relative;
     z-index: 1;
-    left: 245px;
+    left: 241px;
     top: 4px;
     opacity: 0;
     transition: .5s;

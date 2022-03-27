@@ -490,7 +490,7 @@
 	<div class="team-member pt-120 pb-90">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-lg-4 col-md-4">
+				<div class="col-lg-4 col-md-12">
 					<div class="dreamit-section-title pb-30">
 						<div class="dreamit-section-sub-title">
 							<h5>Meet Our Team</h5>
@@ -500,7 +500,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-8 col-md-8 p-0">
+				<div class="col-lg-8 col-md-8 ">
 					<div class="dreamit-section-content-text">
 						<p>Software development outsourcing is just a tool to achieve business goals. But there is no way to get worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to achieve business.</p>
 					</div>
