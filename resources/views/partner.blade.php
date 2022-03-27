@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div>@include('_header')</div>
 <!--Start header-->
 <div class="header">
     <div class="header_content">
