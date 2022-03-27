@@ -65,6 +65,7 @@ html,body
         overflow: hidden;
         position: relative;
         z-index: 1;
+        text-decoration: none;
     }
 
     .slider-button a:hover {

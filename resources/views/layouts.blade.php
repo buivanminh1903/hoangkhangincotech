@@ -28,11 +28,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!--Custom css-->
     <link rel="stylesheet" href="css/_header.css"/>
@@ -51,9 +53,9 @@
 </head>
 <body>
 <!-- Top header -->
-<nav class="navbar navbar-dark" style=" background-color: rgb(48, 49, 50); ">
+<nav class="navbar navbar-dark" style=" background-color: rgb(48, 49, 50); font-family: 'Istok Web', sans-serif";>
     <div class="container" style="max-width: 1170px; ">
-            <span class="header-top"><img id="icon-header" src="/image/time-header.png"/>Mon-Fri : 09:00 am - 06:00pm
+            <span class="header-top"><img id="icon-header" src="/image/time-header.png"/>Mon-Fri: 09.00 am-06:00 pm
             </span>
         <div class="content">
         </div>
@@ -64,7 +66,7 @@
             <span class="header-top"><img id="icon-header" src="/image/email-header.png"/>e-mail us</span><span
                 class="vline-icon"></span>
             <span class="header-top"><button class="btn btn-dark dropdown-toggle"
-                                             style="background-color: rgb(48, 49, 50);" type="button"
+                                             style="background-color: rgb(48, 49, 50); border: none" type="button"
                                              data-bs-toggle="dropdown"
                                              aria-expanded="false">
                         <span class="header-top"> <img id="icon-header"
@@ -78,7 +80,7 @@
 
 </nav>
 <!-- Bottom header -->
-<nav class="navbar navbar-expand-lg navbar-light  text-capitalize main-font-family">
+<nav class="navbar navbar-expand-lg navbar-light  text-capitalize ">
     <div id="header-bottom" class="container">
         <a class="navbar-brand" href="/"><img src="/image/thum.png" alt="#"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu"
@@ -111,8 +113,8 @@
             <a style="justify-content: center;"><img class="Search-header" src="/image/search2.png" alt="#"/></a>
             <div class="vline"></div>
             <a><img class="Mess-header" src="/image/mess.png" alt="#"/></a>
-            <div class="btn-contact-header"><span style="font-size: 14px; font-family: 'Istok Web', sans-serif;">Do you need help?</span><a
-                    id="btn-contact-header" class="nav-link" href="/lien-he">
+            <div class="btn-contact-header" style="text-align: left"><span style="font-size: 14px; font-family: 'Istok Web', sans-serif">Do you need help?</span><a
+                    id="btn-contact-header" class="nav-link" href="/lien-he" style="padding: 5px 0">
                     CONTACT ME </a></div>
         </div>
     </div>

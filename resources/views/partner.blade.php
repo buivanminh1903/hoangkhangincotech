@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="vi">
-
-<head>
-    <!-- Include head from heade.blade.php -->
-    @include('head')
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/doitac.css">
-    <link rel="stylesheet" href="css/splide.min.css">
-    <script src="js/splide.min.js"></script>
-    <title>Đối Tác</title>
-</head>
-
-<body>
-    <div>@include('_header')</div>
-<!--Start header-->
-<div class="header">
-    <div class="header_content">
-        <h3>Brand</h3>
-        <ul class="hk_breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li>/</li>
-            <li>Brand</li>
-        </ul>
-    </div>
-</div>
-<div class="bg_overlay"></div>
-<!--End header-->
-<!--Start container-->
-<div class="container">
-    <div class="maincontent">
-        <div class="topheader">
-            <p>CUSTOMERS AREA</p>
-            <h2 style="font-weight: 700;">Our Customers</h2>
-=======
 @extends('layouts')
 @section('content')
     <!--Start header-->
@@ -45,7 +9,6 @@
                 <li>/</li>
                 <li>Brand</li>
             </ul>
->>>>>>> 75960a414ec89bdaccf9ba4a1d799bebdd29e8f9
         </div>
     </div>
     <div class="bg_overlay"></div>

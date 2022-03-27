@@ -7,8 +7,8 @@
 
 .Search-header{
     width: 50%;
-    margin-right: 0px;  
-    margin-left: 20px;  
+    margin-right: 0px;
+    margin-left: 20px;
 }
 .Mess-header{
     width: 50%;
@@ -24,7 +24,7 @@
     text-align: left;
     z-index: 580;
     background: rgb(48, 49, 50);
- 
+
 
  }
  /* CSS kẻ dọc */
@@ -43,7 +43,7 @@
 #icon-header{
     margin-right: 10px;
     margin-left: 10px;
-    
+
 }
 
 
@@ -58,10 +58,9 @@
 #show-menu-new-tab{
     justify-content: center;
     padding-left:25px;
-    color: rgb(112, 112, 112);
-    font-family: 'Poppins', sans-serif;
+    color: rgb(2, 129, 255);
     font-weight: 300;
-    
+    font-family: 'Istok Web', sans-serif;
 }
 #show-menu{
 
@@ -75,7 +74,7 @@
     color: rgb(2, 129, 255);
     font-size: 16px;
     font-family: 'Istok Web', sans-serif;
-    
+
 }
 .btn-contact-header{
     font-size: 15px;
@@ -144,7 +143,7 @@
 #icon-header{
     margin-right: 10px;
     margin-left: 10px;
-    
+
 }
 .nav-new{
     margin-left: 400px;
