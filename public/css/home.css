@@ -196,7 +196,7 @@ html,body
         margin-left: -300px;
         width: 90%;
         position: relative;
-        z-index: 1;
+        /* z-index: 1; */
     }
     .about .dreamit-section-sub-title h5 {
         color: #2C4C89;
