@@ -52,11 +52,11 @@
                         </div>
                         <div class="service-main-box5">
                             <ul>
-                                <li><img src="image/iconcheckk.png" alt="">Conpect Development</li>
-                                <li><img src="image/iconcheckk.png" alt="">UI/UX Design</li>
-                                <li class="service_text_dark"><img src="image/iconcheckmo.png" alt="">Configuration Management</li>
-                                <li class="service_text_dark"><img src="image/iconcheckmo.png" alt="">App intergition</li>
-                                <li class="service_text_dark"><img src="image/iconcheckmo.png" alt="">App Intergition</li>
+                                <li><img src="image/checked.png" alt="">Conpect Development</li>
+                                <li><img src="image/checked.png" alt="">UI/UX Design</li>
+                                <li class="service_text_dark"><img src="image/check.png" alt="">Configuration Management</li>
+                                <li class="service_text_dark"><img src="image/check.png" alt="">App intergition</li>
+                                <li class="service_text_dark"><img src="image/check.png" alt="">App Intergition</li>
                             </ul>
 
                         </div>
@@ -74,11 +74,11 @@
                         </div>
                         <div class="service-main-box5">
                             <ul>
-                                <li><img src="image/iconcheckk.png" alt="">Conpect Development</li>
-                                <li><img src="image/iconcheckk.png" alt="">UI/UX Design</li>
-                                <li><img src="image/iconcheckk.png" alt="">Configuration Management</li>
-                                <li class="service_text_dark"><img src="image/iconcheckmo.png" alt="">App intergition</li>
-                                <li class="service_text_dark"><img src="image/iconcheckmo.png" alt="">App Intergition</li>
+                                <li><img src="image/checked.png" alt="">Conpect Development</li>
+                                <li><img src="image/checked.png" alt="">UI/UX Design</li>
+                                <li><img src="image/checked.png" alt="">Configuration Management</li>
+                                <li class="service_text_dark"><img src="image/check.png" alt="">App intergition</li>
+                                <li class="service_text_dark"><img src="image/check.png" alt="">App Intergition</li>
                             </ul>
 
                         </div>
@@ -97,11 +97,11 @@
                         </div>
                         <div class="service-main-box5">
                             <ul>
-                                <li> <img src="image/iconcheckk.png" alt="">Conpect Development</li>
-                                <li><img src="image/iconcheckk.png" alt="">UI/UX Design</li>
-                                <li ><img src="image/iconcheckk.png" alt="">Configuration Management</li>
-                                <li ><img src="image/iconcheckk.png" alt="">App intergition</li>
-                                <li ><img src="image/iconcheckk.png" alt="">App Intergition</li>
+                                <li> <img src="image/checked.png" alt="">Conpect Development</li>
+                                <li><img src="image/checked.png" alt="">UI/UX Design</li>
+                                <li ><img src="image/checked.png" alt="">Configuration Management</li>
+                                <li ><img src="image/checked.png" alt="">App intergition</li>
+                                <li ><img src="image/checked.png" alt="">App Intergition</li>
                             </ul>
 
                         </div>
