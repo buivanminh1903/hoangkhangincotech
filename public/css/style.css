@@ -130,8 +130,6 @@
     }
 
     .service-main-box3 {
-        position: relative;
-        left: 48px;
         padding-top: 6px;
         font-weight: bold;
         font-size: 35px;
@@ -141,8 +139,8 @@
     }
 
     .service-main-box4 {
-        right: 12px;
-        padding-top: 40px;
+        left: 2px;
+        padding-top: 20px;
         font-size: 14px;
         font-family: "Istok Web";
         color: rgb(136, 135, 135);

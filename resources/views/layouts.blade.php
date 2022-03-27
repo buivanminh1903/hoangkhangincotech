@@ -195,7 +195,7 @@
 
     </div>
 </div>
-<div class="footer-end " style="height: 127px;">
+<div class="footer-end " >
     <div class="container " style="width: 1170px; ">
         <div class="row ">
             <div class="col-md-6 col-6 ">
