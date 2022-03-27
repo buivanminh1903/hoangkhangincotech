@@ -1,6 +1,9 @@
 a {
     text-decoration: none;
 }
+ul li{
+    list-style: none;
+}
 
 html,body
 {
@@ -681,6 +684,213 @@ html,body
     position: relative;
     margin-left: -180px;
     top: -22px;
+}
+/* team */
+.pt-120{
+    padding-top: 120px;
+}
+ .pb-90{
+     padding-bottom: 90px;
+ }
+ .pt-30{
+     padding-top: 30px;
+ }
+ .pb-30{
+     padding-bottom: 30px;
+ }
+.team-member-single-box {
+    margin-bottom: 30px;
+    transition: .5s;
+    position: relative;
+}
+.team-member-thumb{
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+}
+.team-member-thumb img {
+    width: 100%;
+}
+.team-social-address {
+    position: absolute;
+    left: 50px;
+    top: 92%;
+    opacity: 0;
+    transition: .5s;
+}
+.team-social-address ul li a {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    background: #2D4B8B;
+    color: #fff;
+    display: inline-block;
+    margin: 0 0 6px;
+    text-align: center;
+    border-radius: 100%;
+    transition: .5s;
+    
+}
+.team-member-single-box:hover .team-social-address {
+    top: 48%;
+    opacity: 1;
+}
+.team-content {
+    background: #fff;
+    text-align: center;
+    position: relative;
+    margin: -30px auto 0;
+    width: 85%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0px 0 25px;
+    transition: .5s;
+}
+.team-content span.active {
+    position: relative;
+    z-index: 1;
+    left: -89px;
+    top: -6px;
+    opacity: 0;
+    transition: .5s;
+}
+span.active i {
+    color: #0281ff;
+}
+.team-member-single-box:hover .team-content span.active{
+    opacity: 1;
+}
+.fa-plus:before {
+    position: absolute;
+    left: -32px;
+    top: -4px;
+    
+}
+.team-content span.active:before {
+    position: absolute;
+    content: "";
+    left: -42px;
+    top: -15px;
+    background: #fff;
+    height: 36px;
+    width: 35px;
+    z-index: -1;
+    text-align: center;
+    transform: rotate(45deg);
+}
+.team-member-single-box:hover .team-content {
+    box-shadow: 0 9px 31px rgb(12 12 12 / 16%);
+}
+.team-title h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    transition: .5s;
+}
+.team-title h2:hover {
+    color: #0281ff;
+}
+
+.team-member {
+    background: #F0F3F8;
+}
+.team-member .dreamit-section-content-text p {
+    width: 100%;
+    margin: 0px 0 0px;
+}
+.team-member .dreamit-section-main-title h2 {
+    font-size: 32px;
+}
+.team-member .dreamit-section-sub-title h5 {
+    color: #304A85;
+    text-transform: capitalize;
+}
+.team-member .dreamit-section-main-title h2 span {
+    color: #2d4a8a;
+    font-weight: 800;
+}
+.team-member .team-member-thumb:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(126,140,167,0.6);
+    transition: .5s;
+    opacity: 0;
+}
+.team-member .team-member-single-box:hover .team-member-thumb:before{
+    opacity: 1;
+}
+.team-member .team-social-address ul li a {
+    border-radius: 0;
+}
+.team-social-address ul li a:hover {
+    background: #fff;
+    color: #2C4B8B;
+    
+}
+.team-member .team-content {
+    text-align: left;
+    border-radius: 0;
+    padding: 0px 27px 25px;
+    width: 100%;
+    transition: .5s;
+    position: relative;
+    z-index: 1;
+}
+.team-member span.active i {
+    color: #fff;
+}
+.team-member .team-content span.active {
+    position: relative;
+    z-index: 1;
+    left: 245px;
+    top: 4px;
+    opacity: 0;
+    transition: .5s;
+    color: #fff;
+}
+.team-member .team-social-address {
+    position: absolute;
+    right: 10px;
+    top: 92%;
+    opacity: 0;
+    transition: .5s;
+    left: inherit;
+}
+.team-member .team-member-single-box:hover .team-social-address{
+    opacity: 1;
+    top: 40%;
+}
+.team-member .team-member-single-box:hover .team-content span.active {
+    opacity: 1;
+}
+.team-member .team-content:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #2D4B8B;
+    z-index: -1;
+    opacity: 0;
+    transition: .5s;
+}
+.team-member .team-content span.active:before {
+    background: #2D4B8B;
+    z-index: -1;
+}
+.team-member .team-member-single-box:hover .team-content:before{
+    opacity: 1;
+}
+.team-member .team-member-single-box:hover .team-title h2,
+.team-member .team-member-single-box:hover .team-content span.active,
+.team-member .team-member-single-box:hover .team-title span{
+   color: #fff;
 }
 
 

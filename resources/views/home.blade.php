@@ -415,9 +415,9 @@
             </div>
         </div>
     </div>
-    <!--==================================================-->
+    
     <!--  counter  -->
-    <!--==================================================-->
+    
     <div class="bigfox-counter pt-90 pb-90">
         <div class="container">
             <div class="row align-items-center">
@@ -484,4 +484,114 @@
             </div>
         </div>
     </div>
+   
+				<!--Start team member -->
+
+	<div class="team-member pt-120 pb-90">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-4 col-md-4">
+					<div class="dreamit-section-title pb-30">
+						<div class="dreamit-section-sub-title">
+							<h5>Meet Our Team</h5>
+						</div>
+						<div class="dreamit-section-main-title">
+							<h2>Our Leadership <span>Team</span></h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-8 p-0">
+					<div class="dreamit-section-content-text">
+						<p>Software development outsourcing is just a tool to achieve business goals. But there is no way to get worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to achieve business.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row pt-30">
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member-single-box">
+						<div class="team-member-thumb">
+							<img src='image/team.png' alt="">
+							<div class="team-social-address">
+								<ul>
+									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<span class="active"><i class="fa fa-plus"></i></span>
+							<div class="team-title">
+								<h2>Anjelina M</h2>
+								<span>Professional UI Designer</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member-single-box">
+						<div class="team-member-thumb">
+							<img src='image/team2.png' alt="">
+							<div class="team-social-address">
+								<ul>
+									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<span class="active"><i class="fa fa-plus"></i></span>
+							<div class="team-title">
+								<h2>Moris Barbar</h2>
+								<span>Web Application Developer</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member-single-box">
+						<div class="team-member-thumb">
+							<img src='image/team3.png' alt="">
+							<div class="team-social-address">
+								<ul>
+									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<span class="active"><i class="fa fa-plus"></i></span>
+							<div class="team-title">
+								<h2>John Doe</h2>
+								<span>Moblie UI/UX Designer</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member-single-box">
+						<div class="team-member-thumb">
+							<img src='image/team.png' alt="">
+							<div class="team-social-address">
+								<ul>
+									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<span class="active"><i class="fa fa-plus"></i></span>
+							<div class="team-title">
+								<h2>Sonia Sara</h2>
+								<span>Professional UI Designer</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 @endsection
