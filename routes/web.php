@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-/*Trang chu*/
+/*Trang chủ*/
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
 /*Danh sách dịch vụ*/

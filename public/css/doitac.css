@@ -18,6 +18,14 @@
     margin-bottom: 80px;
 }
 
+.header:before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: rgba(48, 49, 50, 0.8);
+}
+
 .header_content h3 {
     font-size: 38px;
     font-family: "Montserrat";
@@ -27,7 +35,7 @@
 
 /* Breadcrumb */
 
-.hk_breadcrumb {
+.hk_breadcrumb_partner {
     font-size: 20px;
     font-family: "Istok Web";
     font-weight: bold;
@@ -36,23 +44,24 @@
     margin-bottom: 0;
 }
 
-.hk_breadcrumb a {
+.hk_breadcrumb_partner a {
     color: #fff;
     text-decoration: none;
 }
 
-.hk_breadcrumb li {
+.hk_breadcrumb_partner li {
     margin-right: 10px;
     float: left;
 }
 
-.hk_breadcrumb li:last-child {
+.hk_breadcrumb_partner li:last-child {
     margin-right: 0;
 }
 
 
 /* Background effect */
 
+<<<<<<< HEAD
 .bg_overlay {
     position: absolute;
     min-height: 370px;
@@ -61,6 +70,15 @@
     top: 148px;
     opacity: 0.7;
 }
+=======
+/*.bg_overlay {*/
+/*    position: absolute;*/
+/*    min-height: 370px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(48, 49, 50, 0.8);*/
+/*    top: 0;*/
+/*}*/
+>>>>>>> 75960a414ec89bdaccf9ba4a1d799bebdd29e8f9
 
 .breadcrumb {
     margin-bottom: 0;
