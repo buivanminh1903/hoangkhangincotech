@@ -63,9 +63,7 @@
 }
 
 .footer-box-firts a:hover {
-    border-radius: 5px;
-    padding: 15px 18px;
-    background-color: #303132;
+    background-image: unset;
     border: 1px solid #fff;
     transition: all 0.3s;
     color: #fff;

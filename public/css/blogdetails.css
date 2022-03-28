@@ -370,18 +370,24 @@
     position: absolute;
     position: relative;
     bottom: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     left: 43%;
     right: auto;
     border-radius: 50%;
-    width: 14%;
+    width: 50px;
+    height: 50px;
     justify-content: center;
     background-image: -moz-linear-gradient( 131deg, rgb(6,175,255) 0%, rgb(2,139,254) 100%);
     background-image: -webkit-linear-gradient( 131deg, rgb(6,175,255) 0%, rgb(2,139,254) 100%);
     background-image: -ms-linear-gradient( 131deg, rgb(6,175,255) 0%, rgb(2,139,254) 100%);-color: #028bfe;
-
-
 }
 
+.btn-join-post i {
+    color: #fff;
+    font-size: 19px;
+}
 
 
 .recent-post-box:hover h4{

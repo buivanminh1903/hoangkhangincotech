@@ -109,7 +109,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            
+
                             <p class="text-new-content">
                                 Drawings can followed improved out sociable not.
                                 Earnestly so do instantly pretended.
@@ -179,7 +179,7 @@
 
                                 </div>
                                 <div class="btn-join-post">
-                                    <div style="padding: 14px; "><img width="110%" src="/image/Shape-post.png"/></div>
+                                    <i class="fa-solid fa-arrow-right-long"></i>
                                 </div>
 
                             </a>
@@ -201,8 +201,7 @@
 
                                     </div>
                                     <div class="btn-join-post">
-                                        <div style="padding: 14px; "><img width="110%" src="/image/Shape-post.png"/>
-                                        </div>
+                                        <i class="fa-solid fa-arrow-right-long"></i>
                                     </div>
                             </a>
 
