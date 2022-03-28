@@ -1,6 +1,12 @@
 /** {*/
+
+
 /*    padding: 0;*/
+
+
 /*    font-size: 14px;*/
+
+
 /*}*/
 
 
@@ -21,8 +27,10 @@
 .header:before {
     content: "";
     position: absolute;
-    left: 0; right: 0;
-    top: 0; bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background: rgba(48, 49, 50, 0.8);
 }
 
@@ -61,7 +69,6 @@
 
 /* Background effect */
 
-<<<<<<< HEAD
 .bg_overlay {
     position: absolute;
     min-height: 370px;
@@ -70,15 +77,27 @@
     top: 148px;
     opacity: 0.7;
 }
-=======
+
+
 /*.bg_overlay {*/
+
+
 /*    position: absolute;*/
+
+
 /*    min-height: 370px;*/
+
+
 /*    width: 100%;*/
+
+
 /*    background-color: rgba(48, 49, 50, 0.8);*/
+
+
 /*    top: 0;*/
+
+
 /*}*/
->>>>>>> 75960a414ec89bdaccf9ba4a1d799bebdd29e8f9
 
 .breadcrumb {
     margin-bottom: 0;
