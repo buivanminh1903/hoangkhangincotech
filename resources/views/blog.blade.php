@@ -151,7 +151,7 @@
                         <div class="textsign">
                             <div class="signup">Sign Up to News</div>
                             <div class="sign_text">Subscribe to our news to get the latest updates and offers</div>
-                            <div class="mess"><input class="form-control" placeholder="Your Email"/></div>
+                            <div class="mess"><input class="form-control" style="border: 1px solid transparent;" placeholder="Your Email"/></div>
                             <button class="btn btn-primary" id="button-search" type="button">Send Message</button>
                         </div>
                     </div>
