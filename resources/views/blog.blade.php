@@ -41,16 +41,16 @@
                 <div class="item">
                     <div class="blog">
                         <div class="blog_img">
-                            <a href=""><img src="image/item1.jpg"></a>
+                            <a href="/chi-tiet-bai-viet"><img src="image/item1.jpg"></a>
                         </div>
                         <div class="blogtext">
                             <h3>Benfits of App Developed</h3>
                             <div class="blogtag"><img src="image/iconclander.png"></i> 31 Dec, 2021 By </i><a
-                                    class="blogfill" href="#">John Doe</a></div>
+                                    class="blogfill" href="/chi-tiet-bai-viet">John Doe</a></div>
                             <div class="blogtitle">Compellingly aggregate proactive core competencies lever visualize
                                 resource maximizing architectures front core development compet.
                             </div>
-                            <a class="read" href="#!">READ MORE →</a>
+                            <a class="read" href="/chi-tiet-bai-viet">READ MORE →</a>
                         </div>
                     </div>
                 </div>
@@ -58,16 +58,16 @@
                 <div class="itemm">
                     <div class="blog">
                         <div class="blog_img">
-                            <a href=""><img src="image/item2.jpg"></a>
+                            <a href="/chi-tiet-bai-viet"><img src="image/item2.jpg"></a>
                         </div>
                         <div class="blogtext">
                             <h3>UI/UX Design Services</h3>
                             <div class="blogtag"><img src="image/iconclander.png"></i> 31 Dec, 2021 By </i><a
-                                    class="blogfill" href="#">John Doe</a></div>
+                                    class="blogfill" href="/chi-tiet-bai-viet">John Doe</a></div>
                             <div class="blogtitle">Appropriately syndicate end-to-end functionalities after maximizing
                                 architectures without front highly efficient partnerships with
                             </div>
-                            <a class="read" href="#!">READ MORE →</a>
+                            <a class="read" href="/chi-tiet-bai-viet">READ MORE →</a>
                         </div>
                     </div>
                 </div>

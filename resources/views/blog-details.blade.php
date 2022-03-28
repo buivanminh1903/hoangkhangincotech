@@ -93,7 +93,6 @@
                                 Deal say over you age from. Comparison new ham melancholy son themselves
                             </p>
                             <!-- Trích lời  -->
-                            <div style="padding: 1px;">
                                 <div class="vline-new">
                                     <div class="row">
                                         <div class="col-md-2 " style="width: 11%;">
@@ -110,7 +109,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            
                             <p class="text-new-content">
                                 Drawings can followed improved out sociable not.
                                 Earnestly so do instantly pretended.
@@ -213,7 +212,7 @@
                 </div>
             </div>
             <!-- Bình Luận -->
-            <div>
+            <div class="comments-box-full">
                 <H3 id="title-news">5 Comments</H3>
                 <div class="comnents-news-box">
                     <div class="comment-flex">
