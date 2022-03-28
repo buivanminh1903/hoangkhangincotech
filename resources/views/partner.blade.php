@@ -11,7 +11,6 @@
             </ul>
         </div>
     </div>
-    <div class="bg_overlay"></div>
     <!--End header-->
     <!--Start container-->
     <div class="container">
