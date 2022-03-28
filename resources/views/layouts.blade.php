@@ -106,7 +106,7 @@
                     <a id="show-menu-new-tab" class="nav-link" href="/bai-viet">News </a>
                 </li>
                 <li class="nav-item book d-flex align-items-center">
-                    <a id="show-menu-new-tab" class="nav-link" href="#">About Us</a>
+                    <a id="show-menu-new-tab" class="nav-link" href="/doi-tac">About Us</a>
                 </li>
             </ul>
         </div>

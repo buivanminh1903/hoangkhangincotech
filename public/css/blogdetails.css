@@ -816,7 +816,11 @@
     .comments-box-full{
         margin-top: 800px;
     }
+    .follow-icon-news{
+       line-height: 3;
+    }
 }
+
 @media screen and (max-width: 450px) {
 
     .vline-new{
@@ -826,6 +830,7 @@
     .comments-box-full{
         margin-top: 600px;
     }
+
  }
  @media screen and (max-width: 333px) {
 

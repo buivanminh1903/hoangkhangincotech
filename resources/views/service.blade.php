@@ -43,7 +43,7 @@
                     <!--Fade background while hover-->
                     <img class="fade_background" src="image/digital_marketing.png" alt="">
                     <!--Button-->
-                    <a href="#" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
+                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
                 </div>
                 <!--Card-->
                 <div class="servicescard_item">
@@ -57,7 +57,7 @@
                             superior techno</p>
                     </div>
                     <img class="fade_background" src="image/web_develop.png" alt="">
-                    <a href="#" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
+                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
                 </div>
                 <!--Card-->
                 <div class="servicescard_item">
@@ -71,7 +71,7 @@
                             value</p>
                     </div>
                     <img class="fade_background" src="image/app_design.png" alt="">
-                    <a href="#" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
+                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
                 </div>
                 <!--Card-->
                 <div class="servicescard_item">
@@ -85,7 +85,7 @@
                             Synergistically with</p>
                     </div>
                     <img class="fade_background" src="image/graphic_design.png" alt="">
-                    <a href="#" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
+                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
                 </div>
                 <!--Card-->
                 <div class="servicescard_item">
