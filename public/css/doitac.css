@@ -16,8 +16,10 @@
 .header:before {
     content: "";
     position: absolute;
-    left: 0; right: 0;
-    top: 0; bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background: rgba(48, 49, 50, 0.8);
 }
 
@@ -50,6 +52,17 @@
 
 .hk_breadcrumb_partner li:last-child {
     margin-right: 0;
+}
+
+/* Background effect */
+
+.bg_overlay {
+    position: absolute;
+    min-height: 370px;
+    width: 100%;
+    background-color: #303132;
+    top: 148px;
+    opacity: 0.7;
 }
 
 .breadcrumb {

@@ -461,7 +461,7 @@
 }
 #leav-comments-fn{
     margin-bottom: 30px;
-    padding: 10px;
+    padding: 20px;
     padding-left: 20px;
     padding-bottom: 100px;
     opacity: 80%;
@@ -791,3 +791,49 @@
         font-family: 'Montserrat', sans-serif;
     }
  /* list */
+
+ @media screen and (max-width: 1061px) {
+
+    .vline-new{
+        margin-bottom: 50px;
+        height: 200px;
+    }
+ }
+ @media screen and (max-width: 767px) {
+    .comments-box-full{
+        margin-top: 950px;
+    }
+
+ }
+@media screen and (max-width: 710px) {
+
+    .comments-box-full{
+        margin-top: 900px;
+    }
+}
+@media screen and (max-width: 650px) {
+
+    .comments-box-full{
+        margin-top: 800px;
+    }
+}
+@media screen and (max-width: 450px) {
+
+    .vline-new{
+        margin-bottom: 50px;
+        height: 300px;
+    }
+    .comments-box-full{
+        margin-top: 600px;
+    }
+ }
+ @media screen and (max-width: 333px) {
+
+    .vline-new{
+        margin-bottom: 50px;
+        height: 350px;
+    }
+    .comments-box-full{
+        margin-top: 500px;
+    }
+ }

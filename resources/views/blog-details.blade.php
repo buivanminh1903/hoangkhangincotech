@@ -93,7 +93,6 @@
                                 Deal say over you age from. Comparison new ham melancholy son themselves
                             </p>
                             <!-- Trích lời  -->
-                            <div style="padding: 1px;">
                                 <div class="vline-new">
                                     <div class="row">
                                         <div class="col-md-2 " style="width: 11%;">
@@ -110,7 +109,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            
                             <p class="text-new-content">
                                 Drawings can followed improved out sociable not.
                                 Earnestly so do instantly pretended.
@@ -213,7 +212,7 @@
                 </div>
             </div>
             <!-- Bình Luận -->
-            <div>
+            <div class="comments-box-full">
                 <H3 id="title-news">5 Comments</H3>
                 <div class="comnents-news-box">
                     <div class="comment-flex">
@@ -279,7 +278,7 @@
                     <div class="col-md-6"><input id="leav-comments" style="    margin-left: auto;" class="form-control"
                                                  placeholder="Your Email"/></div>
                 </div>
-                <div class="col-md-12"><input id="leav-comments-fn" class="form-control" placeholder="Your Comments"/>
+                <div class="col-md-12" style="padding :0px"><input id="leav-comments-fn" class="form-control" placeholder="Your Comments"/>
                 </div>
                 <div>
                     <button id="btn-add-comments" type="form-control" class="btn btn-primary"><b class="send-mess">ADD
@@ -303,7 +302,7 @@
                 <div class="container" style="width: 90%;">
                     <h3 id="title-news" style="font-size: 20px;">Sign Up To News</h3>
                     <p style="color: gray;">Subscribe to our news to get the latest updates and offers</p>
-                    <div class="mess-mail"><input class="form-control" style="height: 55px; border: #eff3f7;"
+                    <div class="mess-mail"><input class="form-control" style="border: 1px solid transparent;height: 55px; border: #eff3f7;"
                                                   placeholder="Your Email"/></div>
                     <button id="btn-mess" type="form-control" class="btn btn-primary"><b class="send-mess">Send
                             Message</b></button>
