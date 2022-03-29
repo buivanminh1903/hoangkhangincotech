@@ -212,6 +212,9 @@ html,body
         font-size: 32px;
         margin-left: 20px;
     }
+    .about .dreamit-section-main-title h2 span{
+        color: #2d4a8a;
+    }
     .dreamit-section-main-title h1 {
         position: absolute;
         content: "";
@@ -243,7 +246,7 @@ html,body
         left: 0;
         height: 9px;
         width: 6px;
-        background: #1C2842;
+        background: #2d4a8a;
     }
 
     .dreamit-section-content-text p {
@@ -338,7 +341,7 @@ html,body
         background: #00AFFF;
     }
     .dreamit-section-main-title h2 span {
-        color: #00AEFF;
+        color: #00aeff;;
     }
     .choose-us-box {
         margin-bottom: 7px;
@@ -893,10 +896,111 @@ span.active i {
    color: #fff;
 }
 
+/*--==============================================->
+  <!--Start Client reivew -->
+ ==================================================-*/
+ .pt-110{
+     padding-top: 110px;
+ } .pb-162{
+     padding-bottom: 162px;
+ }
+ .client-reivew {
+    background: url("../image/client.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.client-reivew .dreamit-section-main-title h2 {
+    font-size: 32px;
+    color: #fff;
+}
+.client-reivew .dreamit-section-sub-title h5 {
+    color: #CCCAD5;
+    text-transform: capitalize;
+}
+.client-reivew .dreamit-section-content-text p {
+    width: 24%;
+    font-size: 15px;
+    margin: 28px auto 0px;
+    color: #fff;
+    line-height: 1.6;
+}
+.review-button a {
+    padding: 19px 25px;
+    background: #fff;
+    font-size: 14px;
+    display: inline-block;
+    transition: .5s;
+    color: #2D4B8B;
+    margin-top: 31px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.review-button a:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 101px;
+    background: #028BFF;
+    height: 85px;
+    width: 91px;
+    transform: skewX(-58deg);
+    z-index: -1;
+    opacity: 0;
+}
+.review-button a:hover {
+    background-image: linear-gradient( to right,  #028bfe, #b3e4ff);
+    color: #fff;
+}
+.review-button a:hover:before {
+    background-image: linear-gradient( to right,  #028bfe, #b3e4ff);
+    opacity: 1;
+}
 
-
-
-
+/* Start testimonial */
+.pb-70{
+    padding-bottom: 70px;
+}
+.testimonial {
+    background: none;
+}
+.row.upper {
+    position: relative;
+    margin-top: -99px;
+}
+.testimonial .testimonial-single-box {
+    background: #fff;
+    padding: 31px 0 37px;
+    border: 1px solid#EEEEEE;
+    text-align: center;
+}
+.testimonial .testimonial-thumb {
+    position: relative;
+    margin-top: 0;
+}
+.testimonial .testomonial-content {
+    padding: 8px 49px 0px;
+    border-radius:0;
+}
+.testimonial .testimonial-content-text p {
+    line-height: 1.5;
+    margin: 21px 0 0;
+    color: #707070;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+}
+.testi-icon-menu {
+    margin-top: 20px;
+}
+.testi-icon-menu ul li {
+    display: inline-block;
+}
+.testi-icon-menu ul li i {
+    font-size: 13px;
+    color: #30498B;
+    display: inline-block;
+}
 
 
 
