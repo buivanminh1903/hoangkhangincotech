@@ -1,0 +1,5 @@
+.backend__card {
+    box-shadow: 0 2px 6px 0 rgb(67 89 113 / 12%);
+    border-radius: 6px;
+    background-color: #fff;
+}
