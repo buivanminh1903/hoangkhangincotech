@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 /*Trang chủ*/
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
@@ -26,7 +22,7 @@ Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index'])
 /*Đối tác*/
 Route::get('doi-tac', [\App\Http\Controllers\PartnerController::class, 'index']);
 
-// Chi tiết dịch vụ 
+// Chi tiết dịch vụ
 Route::get('ct-dichvu', [\App\Http\Controllers\DetailsServiceController::class, 'details_serivce']);
 
 /*Chi Tiết Bài Viết*/
@@ -38,3 +34,13 @@ Route::get('lien-he', [\App\Http\Controllers\ContactController::class, 'index'])
 /*Bài viết*/
 Route::get('bai-viet', [\App\Http\Controllers\BlogController::class, 'index']);
 
+/*-----------Backend------------*/
+
+/* Trang chủ */
+Route::get('/backend', [\App\Http\Controllers\Backend\HomeController::class, 'index']);
+
+/* Post */
+Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class, 'index']);
+
+/* Create Post */
+Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
