@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,3 +45,20 @@ Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class,
 
 /* Create Post */
 Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+
+/* Contactus add */
+Route::get('backend/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
+
+Route::get('backend/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
+
+Route::post('backend/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'postAdd']);
+
+// Edit Contactus
+Route::get('backend/contactus-edit/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'edit_contactus']);
+Route::put('backend/contactus-update/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'update']);
+
+// Delete Contactus
+Route::delete('backend/contactus-delete/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'delete']);
+
+//Form contactus
+Route::post('backend/contactus-submit', [\App\Http\Controllers\Backend\ContactusController::class, 'submit']);
