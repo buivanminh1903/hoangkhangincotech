@@ -48,20 +48,6 @@ Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class,
 
 Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
-/* Contactus add */
-<<<<<<< HEAD
-Route::get('backend/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
-
-Route::get('backend/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
-
-Route::post('backend/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'postAdd']);
-
-// Edit Contactus
-Route::get('backend/contactus-edit/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'edit_contactus']);
-Route::put('backend/contactus-update/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'update']);
-
-// Delete Contactus
-Route::delete('backend/contactus-delete/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'delete']);
 
 //Reviews 
 Route::get('backend/Review/reviews', [\App\Http\Controllers\Backend\ReviewsController::class, 'index']);
@@ -74,7 +60,7 @@ Route::post('backend/Review/reviews-add', [\App\Http\Controllers\Backend\Reviews
 Route::get('backend/Review/reviews-edit/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'edit_reviews']);
 Route::put('backend/Review/reviews-update/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'update']);
 Route::delete('backend/Review/reviews-delete/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'delete']);
-=======
+
 Route::get('backend/Contactus/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
 
 Route::get('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
@@ -148,4 +134,4 @@ Route::delete('backend/photo-delete/{id}', [\App\Http\Controllers\Backend\PhotoC
 
 
 
->>>>>>> f67e7f3c58ccfd9193e4a733ddace564b5f8dcb3
+
