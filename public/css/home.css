@@ -13,7 +13,7 @@ html,body
     padding: 0px;
     overflow-x: hidden;
 }
-    /*Slider */
+    /*-------------------------------Slider----------------------------------- */
     .slider {
         background: url('../image/back_slider_left.png');
         background-size: cover;
@@ -140,7 +140,7 @@ html,body
         bottom: 68px;
     }
 
-    /*Fearture */
+    /*-----------------------------Fearture --------------------------------------*/
 
 .feature {
     background: #F8F8F8;
@@ -184,7 +184,7 @@ html,body
 
 
 
-   /*About */
+   /*--------------------------------------------About ----------------------------------------------*/
     .about {
         background: url("../image/bg_about_right.png");
         background-position: center;
@@ -211,6 +211,7 @@ html,body
     .about .dreamit-section-main-title h2 {
         font-size: 32px;
         margin-left: 20px;
+        
     }
     .about .dreamit-section-main-title h2 span{
         color: #2d4a8a;
@@ -405,7 +406,7 @@ html,body
         margin-top: 7px;
         color: #888888;
     }
-    /* Portfolio */
+    /*--------------------------------------- Portfolio----------------------------------- */
     .dreamit-single-portfolio {
         margin-bottom: 30px;
         overflow: hidden;
@@ -612,9 +613,7 @@ html,body
         top: -40px;
         right: 23px;
     }
-/*--==============================================->
-  <!--Start counter Area-->
- ==================================================-*/
+/*----------------------------------Start counter Area----------------------------------*/
  .bigfox-counter {
     background: url("../image/bg-count.png");
     background-position: center center;
@@ -688,7 +687,7 @@ html,body
     margin-left: -180px;
     top: -22px;
 }
-/* team */
+/* ---------------------------------------team------------------------------------------------ */
 .pt-120{
     padding-top: 120px;
 }
@@ -896,9 +895,7 @@ span.active i {
    color: #fff;
 }
 
-/*--==============================================->
-  <!--Start Client reivew -->
- ==================================================-*/
+/*------------------------------Start Client reivew ------------------------*/
  .pt-110{
      padding-top: 110px;
  } .pb-162{
@@ -958,7 +955,7 @@ span.active i {
     opacity: 1;
 }
 
-/* Start testimonial */
+/*------------------- Start testimonial----------------------------------- */
 .pb-70{
     padding-bottom: 70px;
 }
@@ -1001,6 +998,247 @@ span.active i {
     color: #30498B;
     display: inline-block;
 }
+/*-----------------------------blog style------------------------------------------ */
+.pb-110{
+    padding-bottom: 110px;
+}
+.pt-45{
+    padding-top: 45px;
+}
+.pt-35{
+    padding-top: 35px;
+}
+.blog-single-box {
+    transition: .5s;
+    margin-bottom: 22px;
+}
+.blog-thumb{
+    position: relative;
+   overflow: hidden;
+}
+.blog-thumb img {
+    width: 100%;
+}
+.blog.style-two {
+    background: #F0F3F8;
+}
+.blog.style-two .dreamit-section-sub-title h5 {
+    color: rgb(45, 74, 138);
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 1.5; 
+    text-align: left;
+}
+.blog.style-two .dreamit-section-main-title h2 {
+    font-size: 32px;
+    margin: 3px 0 0;
+    color: rgb(28, 40, 66); 
+    font-weight: bold; 
+    line-height: 1.313; 
+    text-align: left;
+}
+.blog.style-two .dreamit-section-content-text p{
+    font-size: 15px; 
+    width: 90%;
+    color: rgb(112, 112, 112); 
+    line-height: 1.6;
+}
+.blog.style-two .blog-thumb:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(46, 129, 201, 0.7);
+    transform: scaleX(0);
+    transition: .3s;
+}
+.blog.style-two .blog-single-box:hover {
+    box-shadow: 0 8px 18px rgb(12 12 12 / 7%);
+}
+.blog.style-two .blog-single-box:hover .blog-thumb:before{
+     transform: scale(1.1);
+     opacity: 1;
+}
+.blog.style-two .blog-title h2 {
+    margin: 6px 0 10px;
+    font-family: "Helvetica";  
+    font-size: 20px; 
+    color: rgb(28, 40, 66); 
+    font-weight: bold; 
+    line-height: 1.2; 
+    text-align: left;
+}
+.blog.style-two .blog-content {
+    box-shadow: 0 3px 19px rgb(0 0 0 / 8%);
+    padding: 17px 47px 0px 32px;
+    width: 100%;
+    border-radius: 0;
+}
+.blog.style-two .blog-content-text p {
+    line-height: 1.5;
+    margin-top: 13px;
+    margin-bottom: 0;
+    color: #7C7C7C;
+    letter-spacing: 0.1px;
+    font-size: 16px; 
+    font-family: "Helvetica";  
+    text-align: left;
+}
+.blog.style-two .blog-title a h2:hover {
+    color: #2C4A88;
+}
+.blog.style-two .blog-button {
+    position: relative;
+    top: 16px;
+}
+.blog-meta-box span img {
+    margin-right: 6px;
+}
+.blog-meta-box span {
+    margin-right: 13px;
+    color: #B3B3B3;
+}
+.blog-meta-box a {
+    color: #A5A5A5;
+}
+.blog-meta-box a img {
+    margin-right: 6px;
+}
+.blog.style-two .blog-button a {
+    background: #2D4B8B;
+    opacity: 0;
+    font-size: 16px;
+}
+.blog-single-box:hover .blog-button a {
+    opacity: 1;
+}
+.blog.style-two .blog-button a:hover {
+    background-image: linear-gradient( to right, #0088ff, #33b8ff);
+}
+.blog.style-two .port-button a {
+    background: #2D4B8B;
+    border-radius: 0;
+    margin-top: 41px;
+}
+.blog.style-two .port-button a::before {
+    opacity: 0
+}
+.blog.style-two .blog-button a:hover {
+    background-image: linear-gradient( to right, #0088ff, #33b8ff);
+}
+.blog.style-two .port-button a:hover:before{
+    opacity: 1;
+}
+.blog.style-two .port-button a:hover {
+    background-image: linear-gradient( to right, #33b8ff, #0088ff);
+}
+.blog-button a {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background: #47b7fe;
+    display: inline-block;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 100%;
+    margin-top: 6px;
+    transition: .5s;
+}
+.blog-button a:hover {
+    background-image: linear-gradient( to right, #0088ff, #33b8ff);
+}
 
-
-
+/* --------------------subscribe------------------------------ */
+.pt-40{
+    padding-top: 40px;
+}
+.pb-30{
+    padding-bottom: 30px;
+}
+.bigfox-subscribe {
+    background: #1c376e;
+}
+.subscribe-title h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+.subscribe-content-text p {
+    color: #fff;
+}
+.subscribe-icon {
+    position: relative;
+    z-index: 1;
+    top: -2px;
+    left: 59px;
+    background: #2C53A8;
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    border-radius: 100%;
+}
+.subscribe-icon:before {
+    position: absolute;
+    content: "";
+    top: -11px;
+    left: -11px;
+    background: rgb(41,78,156,0.5);
+    height: 113px;
+    width: 113px;
+    z-index: -1;
+    text-align: center;
+    border-radius: 100%;
+}
+.subscribe-icon:after {
+    position: absolute;
+    content: "";
+    top: -19px;
+    left: -20px;
+    background: rgb(37,70,140,0.3);
+    height: 130px;
+    width: 130px;
+    z-index: -1;
+    text-align: center;
+    border-radius: 100%;
+}
+.subscribe-icon i {
+    color: #fff;
+    font-size: 47px;
+    display: inline-block;
+    margin-top: 21px;
+}
+.subscribe {
+    position: relative;
+    margin-top: 15px;
+    padding-left: 50px;
+}
+.subscribe-mail-box {
+    border: none;
+    padding: 18px 36px;
+    width: 100%;
+    border-radius: 0;
+    background: #fff;
+}
+.subscribe button {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 0px 0px;
+    background: #263045;
+    font-weight: 500;
+    font-size: 14px;
+    border-color: inherit;
+    margin: 0;
+    bottom: 0;
+    border-top-right-radius: 0;
+    border: none;
+    color: #fff;
+    height: 60px;
+    border-bottom-right-radius: 0;
+    text-transform: uppercase;
+    width: 28%;
+}
