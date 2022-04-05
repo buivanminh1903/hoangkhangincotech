@@ -28,7 +28,7 @@ class ContactusController extends Controller
 
         // $contactus = DB::select('SELECT * FROM contactus');
 
-        return view ('backend.contactus', compact('title','contactusList'));
+        return view ('backend.Contactus.contactus', compact('title','contactusList'));
 
     }
 
@@ -36,7 +36,7 @@ class ContactusController extends Controller
 
         $title = "Thêm người liên hệ";
 
-        return view('backend.contactus-add', compact('title'));
+        return view('backend.Contactus.contactus-add', compact('title'));
 
 
     }
@@ -70,12 +70,12 @@ class ContactusController extends Controller
 
         $dataAdd=$request->all();
         contactus::create($dataAdd);
-        return redirect('backend/contactus-add')-> with('msg', 'Thêm người dùng thành công');
+        return redirect('backend/Contactus/contactus-add')-> with('msg', 'Thêm người dùng thành công');
     }
 
     public function edit_contactus($id){
         $update = contactus :: find($id);
-        return view('backend/contactus-edit',['title'=>'Update contact us']) -> with('update',$update);
+        return view('backend/Contactus/contactus-edit',['title'=>'Update contact us']) -> with('update',$update);
     }
 
     public function update(Request $request, $id)
@@ -83,13 +83,13 @@ class ContactusController extends Controller
         $update = contactus::find($id);
         $Edit = $request->all();
         $update->update($Edit);
-        return redirect('backend/contactus')->with('msg', 'Update người liên hệ thành công');
+        return redirect('backend/Contactus/contactus')->with('msg', 'Update người liên hệ thành công');
     }
 
     public function delete($id)
     {
         contactus::destroy($id);
-        return redirect('backend/contactus')->with('msg', 'Xóa người liên hệ thành công!');  
+        return redirect('backend/Contactus/contactus')->with('msg', 'Xóa người liên hệ thành công!');  
     }
 
     public function submit(Request $request){

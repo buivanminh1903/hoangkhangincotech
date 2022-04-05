@@ -46,7 +46,14 @@
                         <a class="nav-link" href="/backend/post">Post</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a class="nav-link"  href="/backend/contactus">Contact</a>
+=======
+                        <a class="nav-link" href="/backend/newletter">New Letter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/backend/photo">Photo</a>
+>>>>>>> 4f7e92a8e43165e0fa4ab1cf1741d038c52d0385
                     </li>
                 </ul>
                 <form class="d-flex">

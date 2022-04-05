@@ -47,18 +47,58 @@ Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class,
 Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
 /* Contactus add */
-Route::get('backend/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
+Route::get('backend/Contactus/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
 
-Route::get('backend/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
+Route::get('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
 
-Route::post('backend/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'postAdd']);
+Route::post('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'postAdd']);
 
 // Edit Contactus
-Route::get('backend/contactus-edit/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'edit_contactus']);
-Route::put('backend/contactus-update/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'update']);
+Route::get('backend/Contactus/contactus-edit/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'edit_contactus']);
+Route::put('backend/Contactus/contactus-update/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'update']);
 
 // Delete Contactus
-Route::delete('backend/contactus-delete/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'delete']);
+Route::delete('backend/Contactus/contactus-delete/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'delete']);
 
 //Form contactus
-Route::post('backend/contactus-submit', [\App\Http\Controllers\Backend\ContactusController::class, 'submit']);
+Route::post('backend/Contactus/contactus-submit', [\App\Http\Controllers\Backend\ContactusController::class, 'submit']);
+Route::get('backend/Contactus/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+
+
+
+
+/* New Letter */
+Route::get('backend/newletter', [\App\Http\Controllers\Backend\NewlettersController::class, 'index']);
+/* Create  */
+Route::get('backend/newletter-create', [\App\Http\Controllers\Backend\NewlettersController::class, 'create']);
+Route::POST('backend/newletter-create', [\App\Http\Controllers\Backend\NewlettersController::class, 'newletter_Create']);
+
+Route::post('backend/email-submit', [\App\Http\Controllers\Backend\NewlettersController::class, 'emailadd']);
+/* Edit  */
+Route::get('backend/newletter-edit/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'edit']);
+Route::put('backend/newletter-update/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'update']);
+/* Delete  */
+Route::delete('backend/newletter-delete/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'delete']);
+/* End New Letter */
+
+
+
+
+/* Photo */
+Route::get('backend/photo', [\App\Http\Controllers\Backend\PhotoController::class, 'index']);
+/* Create  */
+Route::get('backend/photo-create', [\App\Http\Controllers\Backend\PhotoController::class, 'create']);
+Route::POST('backend/photo-create', [\App\Http\Controllers\Backend\PhotoController::class, 'photo_Create']);
+/* Edit  */
+Route::get('backend/photo-edit/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'edit']);
+Route::put('backend/photo-update/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'update']);
+/* Delete  */
+Route::delete('backend/photo-delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
+/* End Photo */
+
+
+
+
+
+
+

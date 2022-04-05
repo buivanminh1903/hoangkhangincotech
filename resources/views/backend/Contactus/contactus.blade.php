@@ -15,7 +15,7 @@
                 @endif
                 
                 </div>
-                <a class="btn btn-outline-info m-2" href="/backend/contactus-add"><i class="bx bx-plus-circle me-1"></i>
+                <a class="btn btn-outline-info m-2" href="/backend/Contactus/contactus-add"><i class="bx bx-plus-circle me-1"></i>
                     Thêm liên hệ
                 </a>
                 <div class="card-body">
@@ -52,10 +52,10 @@
                                 </td>
                                 <td>
                                 <a class="btn btn-info btn-sm"
-                                       href="{{'/backend/contactus-edit/' . $item->id}}">
+                                       href="{{'/backend/Contactus/contactus-edit/' . $item->id}}">
                                        <i class="bx bx-edit-alt me-1"></i> Sửa</a>
 
-                                    <form method="POST" action="{{url ('backend/contactus-delete/' .$item->id)}}"
+                                    <form method="POST" action="{{url ('backend/Contactus/contactus-delete/' .$item->id)}}"
                                           accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
