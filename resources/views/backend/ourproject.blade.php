@@ -3,7 +3,7 @@
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a href="/backend">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Post List</li>
+            <li class="breadcrumb-item active" aria-current="page">Our Project</li>
         </ol>
     </nav>
     <div class="container mb-3">
@@ -17,38 +17,44 @@
                         </div>
                     @endif
                 </div>
-                <a class="btn btn-outline-info m-2" href="/backend/post-create"><i class="bx bx-plus-circle me-1"></i>
+                <div style="float: right; padding-top: 20px" >
+                <a   class="btn btn-outline-info m-2" href="/backend/insert_project"><i class="bx bx-plus-circle me-1"></i>
                     Thêm dịch
                     vụ</a>
-                <div class="card-body">
+                </div>
+                <div style="padding-top: 80px" class="card-body">
                     <div class="table-responsive text-nowrap">
                         <table class="table table-bordered">
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Name</th>
+                                <th>Title</th>
                                 <th>Description</th>
                                 <th>Image</th>
-                                <th>Create At</th>
-                                <th>Actions</th>
+                                <th>Category</th>
+                                <th>Functions</th>
+
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($our_project as $item)
                             <tr>
                                 <td>
-                                    <strong>1</strong>
+                                    <strong>{{$item->id}}</strong>
                                 </td>
-                                <td>Minh</td>
-                                <td>Mieu ta</td>
-                                <td><img src="../image/back_slider.png" width="50px"
+                                <td>{{$item ->titles}}</td>
+                                <td>{{$item->descriptions}}</td>
+                                <td><img src="{{$item->images}}" width="50px"
                                          style="border-radius: 4px"></td>
-                                <td>29/03/2022</td>
+                                <td>{{$item ->categorys}}</td>
+
                                 <td>
+
                                     <a class="btn btn-info btn-sm"
-                                       href=""
+                                       href="/backend/edit_project/{{$item->id}}"
                                     ><i class="bx bx-edit-alt me-1"></i> Sửa</a
                                     >
-                                    <form method="POST" action=""
+                                    <form method="POST" action="{{url('/delete-project'. '/' . $item -> id)}}"
                                           accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
@@ -61,6 +67,7 @@
                                     </form>
                                 </td>
                             </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
