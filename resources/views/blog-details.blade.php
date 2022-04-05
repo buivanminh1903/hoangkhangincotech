@@ -299,12 +299,18 @@
             <!-- send mail box -->
             <div id="send-mail-new">
                 <div class="container" style="width: 90%;">
+                <form action="{{url('/backend/email-submit')}}" method="POST">
+                        @csrf
                     <h3 id="title-news" style="font-size: 20px;">Sign Up To News</h3>
                     <p style="color: gray;">Subscribe to our news to get the latest updates and offers</p>
-                    <div class="mess-mail"><input class="form-control" style="border: 1px solid transparent;height: 55px; border: #eff3f7;"
-                                                  placeholder="Your Email"/></div>
+                    <div class="mess-mail"><input class="form-control" name="email"style="border: 1px solid transparent;height: 55px; border: #eff3f7;"
+                                                  placeholder="Your Email"/>
+                             @error('email')
+                            <span style="color :red;">{{$message}}</span>
+                            @enderror</div>
                     <button id="btn-mess" type="form-control" class="btn btn-primary"><b class="send-mess">Send
                             Message</b></button>
+</form>
                 </div>
             </div>
             <!-- Recent Post -->

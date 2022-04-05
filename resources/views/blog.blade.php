@@ -149,11 +149,17 @@
                 <div class="signing row" style=" margin-left: 0; margin-right: 0;">
                     <div class="sign">
                         <div class="textsign">
+                        <form action="{{url('/backend/email-submit')}}" method="POST">
+                        @csrf
                             <div class="signup">Sign Up to News</div>
                             <div class="sign_text">Subscribe to our news to get the latest updates and offers</div>
-                            <div class="mess"><input class="form-control" style="border: 1px solid transparent;" placeholder="Your Email"/></div>
-                            <button class="btn btn-primary" id="button-search" type="button">Send Message</button>
+                            <div class="mess"><input class="form-control" name="email" style="border: 1px solid transparent;" placeholder="Your Email"/> 
+                            @error('email')
+                            <span style="color :red;">{{$message}}</span>
+                            @enderror</div>
+                            <button class="btn btn-primary" id="button-search" type="submit">Send Message</button>
                         </div>
+                    </form>
                     </div>
                 </div>
 
