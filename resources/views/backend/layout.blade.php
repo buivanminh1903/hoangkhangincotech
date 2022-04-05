@@ -20,10 +20,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <!-- Custom Css -->
+<<<<<<< HEAD
+    <link rel="stylesheet" href="{{ asset('../css/backend/layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/backend/post.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/stylefooter.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/backend/core.css') }}">
+=======
     <link rel="stylesheet" href="{{asset('../css/backend/layout.css')}}">
     <link rel="stylesheet" href="{{asset('../css/backend/post.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('../css/stylefooter.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('../css/backend/core.css')}}">
+>>>>>>> 4f7e92a8e43165e0fa4ab1cf1741d038c52d0385
 
     <title>{{$title}}</title>
 </head>
@@ -47,7 +54,11 @@
                     </li>
                     <li class="nav-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a class="nav-link"  href="/backend/contactus">Contact</a>
+=======
+                        <a class="nav-link" href="/backend/ourproject">Project</a>
+>>>>>>> cb7b3c9b274261f1308ee3421e5ff4a512de5cb2
 =======
                         <a class="nav-link" href="/backend/newletter">New Letter</a>
                     </li>

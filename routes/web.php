@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 /*Trang chủ*/
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
+
 /*Danh sách dịch vụ*/
 Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index']);
 
@@ -44,6 +45,7 @@ Route::get('/backend', [\App\Http\Controllers\Backend\HomeController::class, 'in
 Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class, 'index']);
 
 /* Create Post */
+<<<<<<< HEAD
 Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
 /* Contactus add */
@@ -63,6 +65,24 @@ Route::delete('backend/Contactus/contactus-delete/{id}', [\App\Http\Controllers\
 //Form contactus
 Route::post('backend/Contactus/contactus-submit', [\App\Http\Controllers\Backend\ContactusController::class, 'submit']);
 Route::get('backend/Contactus/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+=======
+
+Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+/* Our Project index By Tran Quan */
+Route::get('backend/ourproject',[\App\Http\Controllers\Backend\ProjectController::class,'index']);
+// creare insert
+Route::get('backend/insert_project',[\App\Http\Controllers\Backend\ProjectController::class,'create']);
+// them our project
+Route::post('input',[\App\Http\Controllers\Backend\ProjectController::class,'store']);
+//delete project
+Route::delete('delete-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'destroy']);
+// edit project
+Route::get('backend/edit_project/{id}',[\App\Http\Controllers\Backend\ProjectController::class,'edit']);
+//update project
+Route::put('update-project/{id}',[\App\Http\Controllers\Backend\ProjectController::class,'update']);
+/* End  Our Project index By Tran Quan */
+Route::get('backend/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+>>>>>>> cb7b3c9b274261f1308ee3421e5ff4a512de5cb2
 
 
 
@@ -95,6 +115,7 @@ Route::put('backend/photo-update/{id}', [\App\Http\Controllers\Backend\PhotoCont
 /* Delete  */
 Route::delete('backend/photo-delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
 /* End Photo */
+
 
 
 
