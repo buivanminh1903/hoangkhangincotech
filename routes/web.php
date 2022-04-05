@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 /*Trang chủ*/
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
+
 /*Danh sách dịch vụ*/
 Route::get('dich-vu', [\App\Http\Controllers\ServiceController::class, 'index']);
 
@@ -44,3 +45,18 @@ Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class,
 
 /* Create Post */
 Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+/* Our Project index By Tran Quan */
+Route::get('backend/ourproject',[\App\Http\Controllers\Backend\ProjectController::class,'index']);
+// creare insert
+Route::get('backend/insert_project',[\App\Http\Controllers\Backend\ProjectController::class,'create']);
+// them our project
+Route::post('input',[\App\Http\Controllers\Backend\ProjectController::class,'store']);
+//delete project
+Route::delete('delete-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'destroy']);
+// edit project
+Route::get('backend/edit_project/{id}',[\App\Http\Controllers\Backend\ProjectController::class,'edit']);
+//update project
+Route::put('update-project/{id}',[\App\Http\Controllers\Backend\ProjectController::class,'update']);
+/* End  Our Project index By Tran Quan */
+
+

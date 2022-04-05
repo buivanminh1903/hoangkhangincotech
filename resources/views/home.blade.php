@@ -332,6 +332,7 @@
             </div>
 
             <div class="row image_load pt-2">
+                @foreach($out_projectlm3 as $item)
                 <div class="col-lg-4 col-md-6 col-sm-12 grid-item  portfolio ">
                     <div class="dreamit-single-portfolio">
                         <div class="dreamit-portfolio-thumb">
@@ -339,7 +340,7 @@
                         </div>
                         <div class="portfolio-content">
                             <div class="portfolio-title">
-                                <a href="#"><h2>Social Media App</h2></a>
+                                <a href="#"><h2>{{$item ->titles}}</h2></a>
                                 <span>Design- <i class="fa fa-angle-right"></i> Softs</span>
                             </div>
                             <div class="port-content-icon">
@@ -348,54 +349,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 grid-item branding">
-                    <div class="dreamit-single-portfolio">
-                        <div class="dreamit-portfolio-thumb">
-                            <img src='image/phone2.png' alt="">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-title">
-                                <a href="#"><h2>Food Apps Interface</h2></a>
-                                <span>Design- <i class="fa fa-angle-right"></i> Softs</span>
-                            </div>
-                            <div class="port-content-icon">
-                                <a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 grid-item  portfolio">
-                    <div class="dreamit-single-portfolio">
-                        <div class="dreamit-portfolio-thumb">
-                            <img src='image/phone3.png' alt="">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-title">
-                                <a href="#"><h2>Mobile Apps Dashboard</h2></a>
-                                <span>Design- <i class="fa fa-angle-right"></i> Softs</span>
-                            </div>
-                            <div class="port-content-icon">
-                                <a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 grid-item portfolio">
-                    <div class="dreamit-single-portfolio three">
-                        <div class="dreamit-portfolio-thumb">
-                            <img src='image/lap1.png' alt="">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-title">
-                                <a href="#"><h2>Web Application Development</h2></a>
-                                <span>Design- <i class="fa fa-angle-right"></i> Softs</span>
-                            </div>
-                            <div class="port-content-icon">
-                                <a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                @foreach($out_projectlm2 as $item)
                 <div class="col-lg-6 col-md-6 col-sm-12 grid-item  portfolio">
                     <div class="dreamit-single-portfolio three">
                         <div class="dreamit-portfolio-thumb">
@@ -403,7 +358,7 @@
                         </div>
                         <div class="portfolio-content">
                             <div class="portfolio-title">
-                                <a href="#"><h2>Custom Software Development</h2></a>
+                                <a href="#"><h2>{{$item->titles}}</h2></a>
                                 <span>Design- <i class="fa fa-angle-right"></i> Softs</span>
                             </div>
                             <div class="port-content-icon">
@@ -412,12 +367,13 @@
                         </div>
                     </div>
                 </div>
+                    @endforeach
             </div>
         </div>
     </div>
-    
+
     <!--  counter  -->
-    
+
     <div class="bigfox-counter pt-90 pb-90">
         <div class="container">
             <div class="row align-items-center">
@@ -484,7 +440,7 @@
             </div>
         </div>
     </div>
-   
+
 				<!--Start team member -->
 
 	<div class="team-member pt-120 pb-90">
@@ -624,7 +580,7 @@
 	<div class="testimonial pb-70">
 		<div class="container">
 			<div class="row upper">
-					
+
 					<div class="col-lg-4 col-sm-12">
 						<div class="testimonial-single-box">
 							<div class="testimonial-thumb">
@@ -712,7 +668,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 			</div>
 		</div>
 	</div>
