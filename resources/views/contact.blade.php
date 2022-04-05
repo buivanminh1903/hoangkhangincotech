@@ -107,39 +107,46 @@
                 for extensive <br> growth strategies. Professinonally
             </div>
 
-            <form>
+            @if (session('msg'))
+                <div class="alert alert-success">{{session('msg')}}</div>
+                @endif
+            <form action="{{url('/backend/contactus-submit')}}" method="POST">
+            @csrf
                 <div class="row" style="margin-left: 0; margin-right: 0;">
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
-                        <input id="your-name" name="name" type="text" class="form-control" placeholder="Your Name"
+                        <input id="your-name" name="names" type="text" class="form-control" placeholder="Your Name"
                                required="">
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
-                        <input id="your-name" name="name" type="text" class="form-control" placeholder="Your Email"
+                        <input id="your-name" name="email" type="text" class="form-control" placeholder="Your Email"
                                required="">
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
-                        <input id="your-phone" name="name" type="text" class="form-control" id="input-register"
+                        <input id="your-phone" name="phone" type="text" class="form-control" id="input-register"
                                placeholder="Phone" required="">
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
-                        <select id="selected" class="form-control text-select" id="exampleFormControlSelect1">
+                        <select id="selected" class="form-control text-select" id="exampleFormControlSelect1"
+                        name="position">
                             <option>---</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option>Trưởng phòng</option>
+                            <option>Kế toán</option>
+                            <option>Quản lý</option>
+                            <option>Nhân viên</option>
+                            <option>Tiếp tân</option>>
                         </select>
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 form-subject">
-                        <input id="subject" type="text" class="form-control" placeholder="Subject">
+                        <input id="subject" type="text" class="form-control" placeholder="Subject" name=
+                        "subject">
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 form-meseage">
-                        <textarea id="meseage-register" class="form-control" name="subject"
+                        <textarea id="meseage-register" class="form-control" name="messages"
                                   placeholder="Your Messeage: "></textarea>
                     </div>
 
