@@ -24,14 +24,14 @@ class PhotoController extends Controller
 
         $photolist = $this -> photo -> getAllPhoto();
 
-        return view('backend.photo', compact('title', 'photolist'));
+        return view('backend.Photo.photo', compact('title', 'photolist'));
     }
 
     public function create()
     {
         $title = 'Add Photo List';
 
-        return view('backend.photo-create', compact('title'));
+        return view('backend.Photo.photo-create', compact('title'));
     }
 
     public function photo_Create(Request $request)
@@ -55,14 +55,14 @@ class PhotoController extends Controller
             $dataInsert['images'] = $image_name;
         }
         Photo::create($dataInsert);
-        return redirect('/backend/photo')->with('msg', 'Employee Addedd!');  
+        return redirect('/backend/Photo/photo')->with('msg', 'Employee Addedd!');  
     }
 
     public function edit($id){
 
         $dataEdit = Photo::find($id);
   
-        return view('backend/photo-edit', ['title' => 'Edit Photo'])->with('dataEdit', $dataEdit);
+        return view('backend/Photo/photo-edit', ['title' => 'Edit Photo'])->with('dataEdit', $dataEdit);
     }
 
       public function update(Request $request, $id){
@@ -75,13 +75,13 @@ class PhotoController extends Controller
             $request->file('images')->move(public_path('image/uploads/post'), $image_name);
             $dataInsert['images'] = $image_name;
         }
-        return redirect('backend/photo')->with('msg', 'Update photo thành công');  
+        return redirect('backend/Photo/photo')->with('msg', 'Update photo thành công');  
     }
 
     public function delete($id)
     {
       Photo::destroy($id);
-        return redirect('backend/photo')->with('msg', 'Xóa hình ảnh thành công!');  
+        return redirect('backend/Photo/photo')->with('msg', 'Xóa hình ảnh thành công!');  
     }
     
 }

@@ -26,7 +26,7 @@ class NewlettersController extends Controller
 
         $new_letter_list = $this -> new_letter -> getAllNewletter();
 
-        return view('backend.newletter', compact('title', 'new_letter_list'));
+        return view('backend.NewLetter.newletter', compact('title', 'new_letter_list'));
     }
 
     // Add Newletter
@@ -34,7 +34,7 @@ class NewlettersController extends Controller
     {
         $title = 'Add Newletter List';
 
-        return view('backend.newletter-create', compact('title'));
+        return view('backend.NewLetter.newletter-create', compact('title'));
     }
 
     public function newletter_Create(Request $request)
@@ -50,7 +50,7 @@ class NewlettersController extends Controller
       $dataInsert=$request->all();
       Newletter::create($dataInsert);
 
-        return redirect('/backend/newletter-create')->with('msg', 'Thêm email thành công');
+        return redirect('/backend/NewLetter/newletter-create')->with('msg', 'Thêm email thành công');
     }
 
     public function emailadd(Request $request){
@@ -72,7 +72,7 @@ class NewlettersController extends Controller
 
       $dataEdit = Newletter::find($id);
 
-      return view('backend/newletter-edit', ['title' => 'Edit New Letter'])->with('dataEdit', $dataEdit);
+      return view('backend/NewLetter/newletter-edit', ['title' => 'Edit New Letter'])->with('dataEdit', $dataEdit);
     }
 
     public function update(Request $request, $id)
@@ -80,13 +80,13 @@ class NewlettersController extends Controller
         $dataEdit = Newletter::find($id);
         $Edit = $request->all();
         $dataEdit->update($Edit);
-        return redirect('backend/newletter')->with('msg', 'Email update thành công');  
+        return redirect('backend/NewLetter/newletter')->with('msg', 'Email update thành công');  
     }
     
     public function delete($id)
     {
       Newletter::destroy($id);
-        return redirect('backend/newletter')->with('msg', 'Xóa Email thành công!');  
+        return redirect('backend/NewLetter/newletter')->with('msg', 'Xóa Email thành công!');  
     }
 
 }

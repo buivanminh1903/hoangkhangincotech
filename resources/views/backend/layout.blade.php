@@ -46,10 +46,10 @@
                         <a class="nav-link" href="/backend/post">Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/backend/newletter">New Letter</a>
+                        <a class="nav-link" href="/backend/NewLetter/newletter">New Letter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/backend/photo">Photo</a>
+                        <a class="nav-link" href="/backend/Photo/photo">Photo</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -61,7 +61,7 @@
     </nav>
     <div class="backend__content_wrapper">
         <!-- Content Wrapper -->
-        <div>
+        <div>`
         @yield('content')
 
         <!-- Footer -->
