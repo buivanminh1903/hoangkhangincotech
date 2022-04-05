@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,6 +47,26 @@ Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class,
 /* Create Post */
 
 Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+
+/* Contactus add */
+Route::get('backend/Contactus/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
+
+Route::get('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
+
+Route::post('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'postAdd']);
+
+// Edit Contactus
+Route::get('backend/Contactus/contactus-edit/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'edit_contactus']);
+Route::put('backend/Contactus/contactus-update/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'update']);
+
+// Delete Contactus
+Route::delete('backend/Contactus/contactus-delete/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'delete']);
+
+//Form contactus
+Route::post('backend/Contactus/contactus-submit', [\App\Http\Controllers\Backend\ContactusController::class, 'submit']);
+Route::get('backend/Contactus/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+
+Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 /* Our Project index By Tran Quan */
 Route::get('backend/ourproject',[\App\Http\Controllers\Backend\ProjectController::class,'index']);
 // creare insert
@@ -60,6 +81,7 @@ Route::get('backend/edit_project/{id}',[\App\Http\Controllers\Backend\ProjectCon
 Route::put('update-project/{id}',[\App\Http\Controllers\Backend\ProjectController::class,'update']);
 /* End  Our Project index By Tran Quan */
 Route::get('backend/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+
 
 
 
