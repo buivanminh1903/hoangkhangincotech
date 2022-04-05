@@ -1,11 +1,11 @@
     /* head */
-    
+
     .card {
         position: relative;
         border: none;
         border-radius: 0;
     }
-    
+
     .card:before {
         content: "";
         position: absolute;
@@ -15,13 +15,13 @@
         bottom: 0;
         background: rgba(48, 49, 50, 0.8);
     }
-    
+
     .card-img {
         object-fit: cover;
         height: 320px;
         border-radius: 0;
     }
-    
+
     .head {
         padding: 20px 60px;
         background-color: rgb(2, 139, 254);
@@ -36,27 +36,27 @@
         text-align: center;
         font-weight: bold;
     }
-    
+
     .head_title {
         font-size: 35px;
         font-family: 'Montserrat', sans-serif;
         line-height: 1.8;
         margin-bottom: 0;
     }
-    
+
     .head a {
         color: #fff;
         text-decoration: none;
         font-size: 15px;
         font-family: 'Istok Web', sans-serif;
     }
-    
+
     .head span {
         color: #fff;
         font-size: 15px;
         font-family: 'Istok Web', sans-serif;
     }
-    
+
     HEAD .background {
         position: absolute;
         min-height: 320px;
@@ -74,23 +74,23 @@
     /*    opacity: 0.7;*/
     /*}*/
     /* News  */
-    
+
     .headnew {
         margin-bottom: 100px;
     }
-    
+
     .heading {
         padding-top: 100px;
         display: flex;
     }
-    
+
     .left {
         font-family: 'Istok Web', sans-serif;
         color: rgb(2, 129, 255);
         font-size: 16px;
         padding-right: 18px
     }
-    
+
     .left h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
@@ -98,14 +98,14 @@
         font-size: 40px;
     }
     /* Input search */
-    
+
     .form-input {
         display: flex;
         align-items: center;
         border: 1px solid #e5e5e5;
         border-radius: 5px;
     }
-    
+
     .form-input input {
         outline: none;
         border: none;
@@ -114,23 +114,23 @@
         padding: 15px;
         width: 100%;
     }
-    
+
     #searchicon {
         border: 1px solid rgb(255, 255, 255);
         background: rgb(255, 255, 255);
         color: rgb(2, 139, 254);
     }
     /* Box */
-    
+
     .item {
         padding-top: 60px;
     }
-    
+
     .itemm {
         padding-top: 20px;
     }
     /* Blog */
-    
+
     .blog {
         display: flex;
         transition: box-shadow .3s;
@@ -140,22 +140,22 @@
         box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+
     .blog:hover {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
-    
-    .blog:hover .blogtext h3 {
+
+    .blog:hover .blogtext h3 a {
         color: #018bfd;
     }
-    
+
     .blog_img img {
         border-radius: 5px;
         width: 270px;
         height: 210px;
     }
     /* Blog text */
-    
+
     .blogtext {
         font-size: 15px;
         margin-left: 20px;
@@ -163,25 +163,26 @@
         flex-direction: column;
         justify-content: space-between
     }
-    
-    .blogtext h3 {
+
+    .blogtext h3 a {
         color: rgb(48, 49, 50);
         font-weight: bold;
         font-family: 'Montserrat', sans-serif;
         font-size: 24px;
         transition: all 0.3s;
+        word-break: break-word;
     }
-    
+
     .blogtext:hover h3 {
         color: #018bfd;
     }
-    
+
     .blogtag {
         color: rgb(112, 112, 112);
         font-family: 'Istok Web', sans-serif;
         font-size: 16px;
     }
-    
+
     .blogtitle {
         padding-top: 25px;
         padding-bottom: 20px;
@@ -189,13 +190,13 @@
         color: rgb(112, 112, 112);
         font-family: 'Istok Web', sans-serif;
     }
-    
+
     .blogfill {
         text-decoration: none;
         color: #028bfe;
     }
     /* Read more */
-    
+
     .read {
         text-decoration: none;
         font-size: 14px;
@@ -203,37 +204,37 @@
         font-family: 'Istok Web', sans-serif;
     }
     /* Box */
-    
+
     .box-main {
         display: flex;
     }
     /* Load more */
-    
+
     .loadmore {
         margin-top: 60px;
         text-align: center;
     }
-    
+
     .loadmore a {
         font-size: 14px;
         font-family: 'Montserrat', sans-serif;
     }
-    
+
     .loadmore button {
         border: none;
     }
-    
+
     .loadmore button:hover {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     }
-    
+
     #button-loand {
         height: 50px;
         width: 250px;
         background: rgb(2, 139, 242);
         background: linear-gradient(128deg, rgba(2, 139, 242, 1) 24%, rgba(2, 180, 254, 1) 100%);
     }
-    
+
     #button-search {
         height: 50px;
         width: 250px;
@@ -241,12 +242,12 @@
         background: linear-gradient(128deg, rgba(2, 139, 242, 1) 24%, rgba(2, 180, 254, 1) 100%);
     }
     /* Sign  up*/
-    
+
     .textsign {
         margin: 0 auto;
         padding: 30px 18px;
     }
-    
+
     .sign {
         margin-top: 30px;
         padding-left: 18px !important;
@@ -255,7 +256,7 @@
         border-radius: 10px;
         background-color: #f0f4f8;
     }
-    
+
     .signup {
         padding-bottom: 10px;
         font-size: 20px;
@@ -263,13 +264,13 @@
         color: rgb(48, 49, 50);
         font-family: 'Montserrat', sans-serif;
     }
-    
+
     .sign_text {
         padding-bottom: 10px;
         color: rgb(112, 112, 112);
         font-family: 'Istok Web', sans-serif;
     }
-    
+
     .mess input {
         margin-top: 10px;
         width: 100%;
@@ -277,23 +278,23 @@
         outline: none;
         margin-bottom: 20px;
     }
-    
+
     .mess {
         border: 1px solid transparent;
     }
-    
+
     #button-search {
         width: 100%;
         color: rgb(255, 255, 255);
         font-family: 'Montserrat', sans-serif;
         border: none;
     }
-    
+
     .sign button:hover {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     }
     /* menu */
-    
+
     .righttitle {
         font-size: 20px;
         border-left: 3px solid #028bfe;
@@ -305,32 +306,32 @@
         font-family: 'Montserrat', sans-serif;
     }
     /* Recent Post */
-    
+
     .recentpost {
         border-bottom: 1px solid #eaeaea;
         padding-top: 25px;
         padding-bottom: 20px;
     }
-    
+
     .postfile {
         border-bottom: 1px solid #eaeaea;
         padding-top: 25px;
     }
-    
+
     .postfull {
         padding-top: 25px;
     }
-    
+
     .post_img img {
         border-radius: 10px;
         width: 100px;
         height: 100px;
     }
-    
+
     .post {
         display: flex;
     }
-    
+
     .textpost {
         font-weight: bold;
         font-size: 16px;
@@ -339,26 +340,26 @@
         color: rgb(48, 49, 50);
         font-family: 'Montserrat', sans-serif;
     }
-    
+
     .clock {
         margin-left: 25px;
     }
-    
+
     .designpost {
         position: relative;
         margin: 15px 0;
     }
-    
+
     .designpost img {
         position: relative;
     }
-    
+
     .designpost span {
         color: rgb(112, 112, 112);
         font-family: 'Istok Web', sans-serif;
     }
     /* Catagory List */
-    
+
     .list ul li {
         display: flex;
         line-height: 35px;
@@ -369,14 +370,14 @@
         color: rgb(95, 95, 95);
         font-family: 'Istok Web', sans-serif;
     }
-    
+
     .list ul li span {
         color: #c9c7c7;
         margin-left: 15px;
         font-family: 'Istok Web', sans-serif;
         font-weight: bold;
     }
-    
+
     .catagory {
         font-size: 20px;
         border-left: 3px solid #028bfe;
@@ -388,28 +389,28 @@
         font-family: 'Montserrat', sans-serif;
     }
     /* Galary */
-    
+
     .blog_galary {
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     .blog_galary .postimg {
-        margin: 3px;
+        margin: 2px;
     }
-    
+
     .blog_galary .postimg:first-child {
         margin-left: 0;
     }
-    
+
     .blog_galary .postimg:last-child {
         margin-right: 0;
     }
-    
+
     .blog_galary .postimg:nth-child(4) {
         margin-left: 0;
     }
-    
+
     .galaryy {
         font-size: 20px;
         border-left: 3px solid #028bfe;
@@ -422,7 +423,7 @@
         font-family: 'Montserrat', sans-serif;
     }
     /* Archives */
-    
+
     .archive {
         font-size: 20px;
         border-left: 3px solid #028bfe;
@@ -434,7 +435,7 @@
         position: relative;
         font-family: 'Montserrat', sans-serif;
     }
-    
+
     .archives ul li {
         display: flex;
         line-height: 35px;
@@ -444,22 +445,22 @@
         font-weight: bold;
         font-size: 16px;
     }
-    
+
     .archives ul li img {
         color: rgb(124, 125, 126);
     }
-    
+
     .archives span {
         color: #7b7d7e;
     }
-    
+
     .archives ul li span a {
         position: relative;
         left: 10px;
         font-family: 'Istok Web', sans-serif;
     }
     /* Follow us */
-    
+
     .followus {
         font-size: 20px;
         border-left: 3px solid #028bfe;
@@ -471,11 +472,11 @@
         position: relative;
         font-family: 'Montserrat', sans-serif;
     }
-    
+
     .follow {
         display: flex;
     }
-    
+
     .follow_icon {
         width: 50px;
         height: 50px;
@@ -488,38 +489,38 @@
         border-radius: 5px;
         transition: 0.3s;
     }
-    
+
     .follow_icon:hover {
         color: #fff;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
-    
+
     .follow_icon:first-child {
         background-color: #3b5998;
         text-decoration: none;
     }
-    
+
     .follow_icon:nth-child(2) {
         background-color: #1da1f2;
         text-decoration: none;
     }
-    
+
     .follow_icon:nth-child(3) {
         background-color: #0077b5;
         text-decoration: none;
     }
-    
+
     .follow_icon:nth-child(4) {
         background-color: #bd081c;
         text-decoration: none;
     }
-    
+
     .follow_icon:nth-child(5) {
         background-color: #db4437;
         text-decoration: none;
     }
     /* Tags */
-    
+
     .btn-tag {
         width: 120px;
         padding: 10px;
@@ -537,12 +538,12 @@
         font-family: 'Istok Web', sans-serif;
         transition: 0.3s;
     }
-    
+
     .btn-tag:hover {
         color: #028bfe;
         border-color: #028bfe;
     }
-    
+
     .tag {
         font-size: 20px;
         border-left: 3px solid #028bfe;
@@ -554,7 +555,7 @@
         position: relative;
         font-family: 'Montserrat', sans-serif;
     }
-    
+
     @media only screen and (max-width: 767px) {
         .right {
             padding-left: 12px;
@@ -573,9 +574,9 @@
             margin-top: 30px;
         }
     }
-    
+
     @media only screen and (max-width: 1160px) {
         .blog_galary .postimg:nth-child(4) {
-            margin: 3px;
+            margin: 2px;
         }
     }

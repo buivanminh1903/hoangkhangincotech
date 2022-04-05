@@ -10,7 +10,9 @@
     {{--          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">--}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
@@ -21,9 +23,14 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
 
     <!-- Font Awesome 6.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -38,23 +45,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!--Custom css-->
-    <link rel="stylesheet" href="css/_header.css"/>
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/doitac.css">
-    <link rel="stylesheet" href="css/services.css">
-    <link rel="stylesheet" href="css/splide.min.css">
-    <link rel="stylesheet" type="text/css" href="css/contact.css">
-    <link rel="stylesheet" type="text/css" href="css/blog.css">
-    <link rel="stylesheet" href="css/blogdetails.css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/top_header.css">
-    <link rel="stylesheet" href="css/stylefooter.css">
-    <script src="js/splide.min.js"></script>
+    <link rel="stylesheet" href="{{asset('css/_header.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/doitac.css')}}">
+    <link rel="stylesheet" href="{{asset('css/services.css')}}">
+    <link rel="stylesheet" href="{{asset('css/splide.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/contact.css')}}">
+    <link rel="stylesheet" href="{{asset('css/blog.css')}}">
+    <link rel="stylesheet" href="{{asset('css/blogdetails.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/top_header.css')}}">
+    <link rel="stylesheet" href="{{asset('css/stylefooter.css')}}">
+    <script src="{{asset('js/splide.min.js')}}"></script>
     <title>{{$title}}</title>
 </head>
 <body>
 <!-- Top header -->
-<nav class="navbar navbar-dark" style=" background-color: rgb(48, 49, 50); font-family: 'Istok Web', sans-serif";>
+<nav class="navbar navbar-dark"
+     style=" background-color: rgb(48, 49, 50); font-family: 'Istok Web', sans-serif;">
     <div class="container" style="max-width: 1170px; ">
             <span class="header-top"><img id="icon-header" src="/image/time-header.png"/>Mon-Fri: 09.00 am-06:00 pm
             </span>
@@ -81,7 +89,8 @@
 
 </nav>
 <!-- Bottom header -->
-<nav class="navbar navbar-expand-lg navbar-light  text-capitalize ">
+<nav class="navbar navbar-expand-lg navbar-light text-capitalize "
+     style="box-shadow: 0px 0px 23.75px 1.25px rgba(0, 0, 0, 0.08);">
     <div id="header-bottom" class="container">
         <a class="navbar-brand" href="/"><img src="/image/thum.png" alt="#"/></a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#show-menu-new"
@@ -114,7 +123,8 @@
             <a style="justify-content: center;"><img class="Search-header" src="/image/search2.png" alt="#"/></a>
             <div class="vline"></div>
             <a><img class="Mess-header" src="/image/mess.png" alt="#"/></a>
-            <div class="btn-contact-header" style="text-align: left"><span style="font-size: 14px; font-family: 'Istok Web', sans-serif">Do you need help?</span><a
+            <div class="btn-contact-header" style="text-align: left"><span
+                    style="font-size: 14px; font-family: 'Istok Web', sans-serif">Do you need help?</span><a
                     id="btn-contact-header" class="nav-link" href="/lien-he" style="padding: 5px 0">
                     CONTACT ME </a></div>
         </div>
@@ -125,107 +135,6 @@
     @yield('content')
 </div>
 <!-- Footer -->
-<div class="footer">
-    <div class="container" style="max-width: 1170px">
-        <div class="row">
-            <div class="col-lg-3 col-md-12 col-sm-12">
-                <div class="logo_footer">
-                    <img src="Image/logo_footer.png" alt="">
-                </div>
-
-                <div class="footer-box-firts">
-                    <p class="text mb-5">Our company has been developing high-quality and reliable software for corporate
-                        needs since 2008.We are renowed processionals of software developement.</p>
-                    <a href="#" style="padding: 10px 16px"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" style="padding: 10px 14px"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-
-            </div>
-            <div class="col-lg-3 col-md-12 col-sm-12">
-                <div class="footer-box-second quicklinks">
-                    <h3>Quick Links</h3>
-                    <hr>
-                    <ul class="mb-0" style="padding-left: 0">
-                        <li><i class="fa-solid fa-angles-right"></i><a href="/">About Us</a></li>
-                        <li><i class="fa-solid fa-angles-right"></i><a href="/">Our Service</a></li>
-                        <li><i class="fa-solid fa-angles-right"></i><a href="/">Pricing Plan</a></li>
-                        <li><i class="fa-solid fa-angles-right"></i><a href="/">Blog Classic</a></li>
-                        <li><i class="fa-solid fa-angles-right"></i><a href="/">Contact Us</a></li>
-                        <li><i class="fa-solid fa-angles-right"></i><a href="/"> Faqs</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-12 col-sm-12">
-
-                <div class="footer-box-second popular">
-                    <h3>Popular Post</h3>
-                    <hr>
-                </div>
-                <div class="footer-box-three">
-                    <div class="post">
-                        <img src="Image/footer1.png" alt="">
-                        <p> Android Application<br>Program-2021 <br> <i style="font-size: small;color: #919192;"> August
-                                24 , 2021</i></p>
-
-                    </div>
-                    <div class="post">
-                        <img src="Image/footer1.png" alt="">
-                        <p> Android Application<br>Program-2021 <br> <i style="font-size: small; color: #919192;">
-                                August 24 , 2021</i></p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-12 col-sm-12">
-                <div class="footer-box-second">
-                    <h3>Our contacts</h3>
-                    <hr>
-                </div>
-                <div class="footer-text">
-                    <img src="Image/address.png" alt="">
-                    <div>
-                        <a> Address</a>
-                        <p>125,Suitand Street,USA</p>
-                    </div>
-                </div>
-                <div class="footer-text">
-                    <img src="Image/phone.JPG" alt="">
-                    <div>
-                        <a>Phone</a>
-                        <p>+0397181527</p>
-                    </div>
-                </div>
-                <div class="footer-text">
-                    <img src="Image/email.JPG " alt=" ">
-                    <div>
-                        <a>E-Mail</a>
-                        <p class="mb-0">tranquan12a8@gmai.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-<div class="footer-end " >
-    <div class="container " style="max-width: 1170px; ">
-        <div class="row" style="align-items: center; padding: 40px 0;">
-            <div class="col-md-6 col-6 ">
-                <div class="footer-end-text " style="float: left; ">
-                    <p class="mb-0">&copy; CoppyRight 2021. All Rights Reserved. Designed by <a href="/ "><i> Dream IT </i></a></p>
-                </div>
-            </div>
-            <div class="col-md-6 col-6 ">
-                <div class="footer-end-text ">
-                    <p class="mb-0">Powered By
-                        <a href=" "> <i> Wordpress </i> </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@include('footer')
 </body>
 </html>

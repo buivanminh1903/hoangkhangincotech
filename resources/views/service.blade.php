@@ -26,95 +26,96 @@
             <!--End Title-->
             <div class="servicescard">
                 <!--Card-->
-                <div class="servicescard_item">
-                    <!--Card header-->
-                    <div class="headericon">
-                        <img class="headericonfirst" src="image/digital_marketing.png" alt="">
-                        <img class="second" src="image/digital_marketing_color.png" alt="">
+                @foreach($service as $item)
+                    <div class="servicescard_item">
+                        <!--Card header-->
+                        <div class="headericon">
+                            <img class="headericonfirst" src="image/digital_marketing.png" alt="">
+                            <img class="second" src="image/digital_marketing_color.png" alt="">
+                        </div>
+                        <!--End card header-->
+                        <!--Card section-->
+                        <div class="carddetail">
+                            <h4>{{$item->title}}</h4>
+                            <p>{{$item->short_content}}</p>
+                        </div>
+                        <!--End card section-->
+                        <!--Fade background while hover-->
+                        <img class="fade_background" src="image/digital_marketing.png" alt="">
+                        <!--Button-->
+                        <a href="/dich-vu/{{$item->id}}-{{Str::slug($item->title, '-')}}.html" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
                     </div>
-                    <!--End card header-->
-                    <!--Card section-->
-                    <div class="carddetail">
-                        <h4>Digital Marketing</h4>
-                        <p>Distinctively communicate areexcellent content and ubiquileApp have become
-                            Synergistically with</p>
-                    </div>
-                    <!--End card section-->
-                    <!--Fade background while hover-->
-                    <img class="fade_background" src="image/digital_marketing.png" alt="">
-                    <!--Button-->
-                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
-                </div>
-                <!--Card-->
-                <div class="servicescard_item">
-                    <div class="headericon">
-                        <img class="first" src="image/web_develop.png" alt="">
-                        <img class="second" src="image/web_development.png" alt="">
-                    </div>
-                    <div class="carddetail">
-                        <h4>Web Development</h4>
-                        <p>Conveniently predominate sticky ali than low risk high yield methods of emp brand
-                            superior techno</p>
-                    </div>
-                    <img class="fade_background" src="image/web_develop.png" alt="">
-                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
-                </div>
-                <!--Card-->
-                <div class="servicescard_item">
-                    <div class="headericon">
-                        <img class="first" src="image/app_design.png" alt="">
-                        <img class="second" src="image/app_design_color.png" alt="">
-                    </div>
-                    <div class="carddetail">
-                        <h4>Apps Design</h4>
-                        <p>Energistically target dynamic technolog content and ubiquileApp have become future-proof
-                            value</p>
-                    </div>
-                    <img class="fade_background" src="image/app_design.png" alt="">
-                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
-                </div>
-                <!--Card-->
-                <div class="servicescard_item">
-                    <div class="headericon">
-                        <img class="first" src="image/graphic_design.png" alt="">
-                        <img class="second" src="image/graphic_design_color.png" alt="">
-                    </div>
-                    <div class="carddetail">
-                        <h4>Graphic Design</h4>
-                        <p>Distinctively communicate areexcellent content and ubiquileApp have become
-                            Synergistically with</p>
-                    </div>
-                    <img class="fade_background" src="image/graphic_design.png" alt="">
-                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
-                </div>
-                <!--Card-->
-                <div class="servicescard_item">
-                    <div class="headericon">
-                        <img class="first" src="image/custom_dev.png" alt="">
-                        <img class="second" src="image/custom_dev_color.png" alt="">
-                    </div>
-                    <div class="carddetail">
-                        <h4>Custom Soft Dev</h4>
-                        <p>Conveniently predominate sticky ali than low risk high yield methods of emp brand
-                            superior techno</p>
-                    </div>
-                    <img class="fade_background" src="image/custom_dev.png" alt="">
-                    <a href="#" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
-                </div>
-                <!--Card-->
-                <div class="servicescard_item">
-                    <div class="headericon">
-                        <img class="first" src="image/ecommerce.png" alt="">
-                        <img class="second" src="image/ecommerce_color.png" alt="">
-                    </div>
-                    <div class="carddetail">
-                        <h4>e-Commerce Service</h4>
-                        <p>Energistically target dynamic technolog content and ubiquileApp have become future-proof
-                            value</p>
-                    </div>
-                    <img class="fade_background" src="image/ecommerce.png" alt="">
-                    <a href="#" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>
-                </div>
+            @endforeach
+            <!--Card-->
+{{--                <div class="servicescard_item">--}}
+{{--                    <div class="headericon">--}}
+{{--                        <img class="first" src="image/web_develop.png" alt="">--}}
+{{--                        <img class="second" src="image/web_development.png" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="carddetail">--}}
+{{--                        <h4>Web Development</h4>--}}
+{{--                        <p>Conveniently predominate sticky ali than low risk high yield methods of emp brand--}}
+{{--                            superior techno</p>--}}
+{{--                    </div>--}}
+{{--                    <img class="fade_background" src="image/web_develop.png" alt="">--}}
+{{--                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>--}}
+{{--                </div>--}}
+{{--                <!--Card-->--}}
+{{--                <div class="servicescard_item">--}}
+{{--                    <div class="headericon">--}}
+{{--                        <img class="first" src="image/app_design.png" alt="">--}}
+{{--                        <img class="second" src="image/app_design_color.png" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="carddetail">--}}
+{{--                        <h4>Apps Design</h4>--}}
+{{--                        <p>Energistically target dynamic technolog content and ubiquileApp have become future-proof--}}
+{{--                            value</p>--}}
+{{--                    </div>--}}
+{{--                    <img class="fade_background" src="image/app_design.png" alt="">--}}
+{{--                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>--}}
+{{--                </div>--}}
+{{--                <!--Card-->--}}
+{{--                <div class="servicescard_item">--}}
+{{--                    <div class="headericon">--}}
+{{--                        <img class="first" src="image/graphic_design.png" alt="">--}}
+{{--                        <img class="second" src="image/graphic_design_color.png" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="carddetail">--}}
+{{--                        <h4>Graphic Design</h4>--}}
+{{--                        <p>Distinctively communicate areexcellent content and ubiquileApp have become--}}
+{{--                            Synergistically with</p>--}}
+{{--                    </div>--}}
+{{--                    <img class="fade_background" src="image/graphic_design.png" alt="">--}}
+{{--                    <a href="/ct-dichvu" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>--}}
+{{--                </div>--}}
+{{--                <!--Card-->--}}
+{{--                <div class="servicescard_item">--}}
+{{--                    <div class="headericon">--}}
+{{--                        <img class="first" src="image/custom_dev.png" alt="">--}}
+{{--                        <img class="second" src="image/custom_dev_color.png" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="carddetail">--}}
+{{--                        <h4>Custom Soft Dev</h4>--}}
+{{--                        <p>Conveniently predominate sticky ali than low risk high yield methods of emp brand--}}
+{{--                            superior techno</p>--}}
+{{--                    </div>--}}
+{{--                    <img class="fade_background" src="image/custom_dev.png" alt="">--}}
+{{--                    <a href="#" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>--}}
+{{--                </div>--}}
+{{--                <!--Card-->--}}
+{{--                <div class="servicescard_item">--}}
+{{--                    <div class="headericon">--}}
+{{--                        <img class="first" src="image/ecommerce.png" alt="">--}}
+{{--                        <img class="second" src="image/ecommerce_color.png" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="carddetail">--}}
+{{--                        <h4>e-Commerce Service</h4>--}}
+{{--                        <p>Energistically target dynamic technolog content and ubiquileApp have become future-proof--}}
+{{--                            value</p>--}}
+{{--                    </div>--}}
+{{--                    <img class="fade_background" src="image/ecommerce.png" alt="">--}}
+{{--                    <a href="#" class="detailbutton"><i class="fa-solid fa-angle-right"></i></a>--}}
+{{--                </div>--}}
                 <!--End card-->
             </div>
         </div>

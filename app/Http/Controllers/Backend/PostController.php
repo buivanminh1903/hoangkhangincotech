@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class PostController extends Controller
 {
@@ -14,8 +17,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('backend.post', [
-            'title' => 'Post List'
+        $categories = DB::table('categories')->orderBy('id', 'desc')->get();
+        $post = DB::table('post')->get();
+        return view('backend.blog.post', [
+            'title' => 'Post List', 'post' => $post, 'categories' => $categories
         ]);
     }
 
@@ -26,64 +31,169 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('backend.post-create', [
-            'title' => 'Add Post'
-        ]);
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|unique:post',
+            'image' => 'required|image|mimes:jpeg,png,jpg'
+        ]);
+        $input = $request->all();
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $image_name = $image->getClientOriginalName();
+            $request->file('image')->move(public_path('image/uploads/post'), $image_name);
+            $input['image'] = $image_name;
+        }
+        Post::create($input);
+        return redirect('/backend/post')->with('success', 'Đã Thêm Bài Đăng!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+
+    public function show()
     {
-        //
+        $categories = DB::table('categories')->orderBy('id', 'desc')->get();
+
+        $post = DB::table('post')
+            ->orderByDesc('id')
+            ->get();
+
+        $popular_post = DB::table('post')
+            ->orderByDesc('id')
+            ->limit('2')
+            ->get();
+
+        $post_total_by_category = DB::table('post')
+            ->selectRaw('categories.name, COUNT(*) AS total')
+            ->join('categories', 'post.category_id', '=', 'categories.id')
+            ->groupBy('categories.name')
+            ->get();
+
+        return view('blog', [
+            'title' => 'Blog',
+            'post' => $post,
+            'categories' => $categories,
+            'post_total_by_category' => $post_total_by_category,
+            'popular_post' => $popular_post
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $categories = DB::table('categories')->orderBy('id', 'desc')->get();
+        $post = Post::find($id);
+        return view('backend.blog.post_edit', ['title' => 'Edit Post', 'categories' => $categories])->with('post', $post);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+        $input = $request->all();
+        $post->update($input);
+        return redirect('/backend/post')->with('success', 'Đã cập nhật bài viết!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        Post::destroy($id);
+        return redirect('/backend/post')->with('success', 'Đã Xoá Bài Đăng!');
+    }
+
+    public function detail($id = '', $slug = '')
+    {
+        $recent_post = DB::table('post')
+            ->orderByDesc('id')
+            ->where('id', '!=', $id)
+            ->limit('2')
+            ->get();
+
+        $popular_post = DB::table('post')
+            ->orderByDesc('id')
+            ->limit('2')
+            ->get();
+
+        $post_detail = DB::table('post')
+            ->where('id', $id)
+            ->first();
+
+        $post_total_by_category = DB::table('post')
+            ->selectRaw('categories.name, COUNT(*) AS total')
+            ->join('categories', 'post.category_id', '=', 'categories.id')
+            ->groupBy('categories.name')
+            ->get();
+
+        return view('blog-details', [
+            'title' => $post_detail->title,
+            'post_detail' => $post_detail,
+            'recent_post' => $recent_post,
+            'post_total_by_category' => $post_total_by_category,
+            'popular_post' => $popular_post
+        ]);
+    }
+
+    public function search()
+    {
+        $key = $_GET['key'];
+        $post = DB::table('post')
+            ->where('title', 'LIKE', '%' . $key . '%')
+            ->get();
+
+        $result_total = DB::table('post')
+            ->select(DB::raw('COUNT(*) AS total'))
+            ->where('title', 'LIKE', '%' . $key . '%')
+            ->get();
+
+        $popular_post = DB::table('post')
+            ->orderByDesc('id')
+            ->limit('2')
+            ->get();
+
+        $post_total_by_category = DB::table('post')
+            ->selectRaw('categories.name, COUNT(*) AS total')
+            ->join('categories', 'post.category_id', '=', 'categories.id')
+            ->groupBy('categories.name')
+            ->get();
+
+        return view('search', [
+            'title' => 'Kết quả tìm kiếm cho "' . $key . '"',
+            'post' => $post,
+            'post_total_by_category' => $post_total_by_category,
+            'key' => $key,
+            'result_total' => $result_total,
+            'popular_post' => $popular_post
+        ]);
     }
 }

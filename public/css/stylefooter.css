@@ -113,18 +113,22 @@
 
 .footer-box-three .post {
     display: flex;
+}
+
+.footer__popular-post {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 30px;
     margin-bottom: 30px;
+    display: block;
 }
 
-.post p {
+.footer__popular-post:last-child {
+    border: none;
+    padding-bottom: 0;
     margin-bottom: 0;
 }
 
-.footer-box-three .post:last-child {
-    border: none;
-    padding-bottom: 0;
+.post p {
     margin-bottom: 0;
 }
 

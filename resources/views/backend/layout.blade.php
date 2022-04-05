@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,10 +20,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <!-- Custom Css -->
-    <link rel="stylesheet" href="../css/backend/layout.css">
-    <link rel="stylesheet" href="../css/backend/post.css">
-    <link rel="stylesheet" type="text/css" href="../css/stylefooter.css">
-    <link rel="stylesheet" type="text/css" href="../css/backend/core.css">
+    <link rel="stylesheet" href="{{ asset('../css/backend/layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/backend/post.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/stylefooter.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/backend/core.css') }}">
+
+    <!-- CKEditor -->
+    <script src="{{url('//cdn.ckeditor.com/4.18.0/full/ckeditor.js')}}"></script>
 
     <title>{{$title}}</title>
 </head>
@@ -40,10 +43,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Service</a>
+                        <a class="nav-link" aria-current="page" href="/backend/service">Service</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/backend/post">Post</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Post
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/backend/categories">Categories</a></li>
+                            <li><a class="dropdown-item" href="/backend/post">All Post</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -56,9 +65,11 @@
     <div class="backend__content_wrapper">
         <!-- Content Wrapper -->
         <div>
-        @yield('content')
+            <div>
+                @yield('content')
+            </div>
 
-        <!-- Footer -->
+            <!-- Footer -->
             <div class="container-fluid"
                  style="border-radius: 4px;">
                 <div class="row" style="align-items: center; padding: 20px 0;">
