@@ -44,7 +44,7 @@ Route::get('/backend', [\App\Http\Controllers\Backend\HomeController::class, 'in
 Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class, 'index']);
 
 /* Create Post */
-<<<<<<< HEAD
+
 Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 /* Our Project index By Tran Quan */
 Route::get('backend/ourproject',[\App\Http\Controllers\Backend\ProjectController::class,'index']);
@@ -59,7 +59,6 @@ Route::get('backend/edit_project/{id}',[\App\Http\Controllers\Backend\ProjectCon
 //update project
 Route::put('update-project/{id}',[\App\Http\Controllers\Backend\ProjectController::class,'update']);
 /* End  Our Project index By Tran Quan */
-=======
 Route::get('backend/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
 
@@ -98,6 +97,6 @@ Route::delete('backend/photo-delete/{id}', [\App\Http\Controllers\Backend\PhotoC
 
 
 
->>>>>>> 4f7e92a8e43165e0fa4ab1cf1741d038c52d0385
+
 
 
