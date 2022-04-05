@@ -550,7 +550,7 @@
 			</div>
 		</div>
 	</div>
-    <!--Start team member Area-->
+    <!--Start team member-->
     <div class="client-reivew pt-110 pb-162">
 		<div class="container">
 			<div class="row">
@@ -574,9 +574,9 @@
 			</div>
 		</div>
 	</div>
-    <!--==================================================-->
-				<!--Start testimonial Area-->
-	<!--==================================================-->
+    
+				<!--Start testimonial-->
+	
 	<div class="testimonial pb-70">
 		<div class="container">
 			<div class="row upper">
@@ -669,6 +669,143 @@
 						</div>
 					</div>
 
+			</div>
+		</div>
+	</div>
+    			<!--Start blog-->
+    <div class="blog style-two pt-120 pb-110">
+		<div class="container">
+				<div class="row align-items-center">
+				<div class="col-lg-4 col-md-4">
+					<div class="dreamit-section-title">
+						<div class="dreamit-section-sub-title">
+							<h5>Latest Blog Post</h5>
+						</div>
+						<div class="dreamit-section-main-title">
+							<h2>Our Latest Blog Post</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-8 p-0">
+					<div class="dreamit-section-content-text">
+						<p>Software development outsourcing is just a tool to achieve business goals. But there is no
+							way to get worthwhile results without cooperation and trust between a client company.
+						outsourcing is just a tool to achieve business.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row pt-45">
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-single-box">
+						<div class="blog-thumb">
+                            <img src='image/blog1.png' alt="">
+						</div>
+						<div class="blog-content">
+							<div class="blog-title">
+								<a href=#><h2>Benefits Of Apps Develop</h2></a>
+							</div>
+							<div class="blog-meta-box">
+								<span><img src='image/calendar-ico.png' alt=""><span>June  7, 2021</span></span>
+								<a href="#"><img src='image/admin-ico.png' alt=""></i><span>Admin</span></a>
+							</div>
+							<div class="blog-content-text">
+								<p>Competently incentivize multifun with his
+									expertise with holistic users main in that
+								Monotonectally product.</p>
+							</div>
+							<div class="blog-button text-center">
+								<a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+							</div>
+						</div>
+					</div>	
+				</div>	
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-single-box">
+						<div class="blog-thumb">
+                            <img src='image/blog2.png' alt="">
+						</div>
+						<div class="blog-content">
+							<div class="blog-title">
+								<a href=#><h2>Web Applications Dev</h2></a>
+							</div>
+							<div class="blog-meta-box">
+								<span><img src='image/calendar-ico.png' alt=""><span>June  7, 2021</span></span>
+								<a href="#"><img src='image/admin-ico.png' alt=""><span>Admin</span></a>
+							</div>
+							<div class="blog-content-text">
+								<p>Competently incentivize multifun with his
+									expertise with holistic users main in that
+								Monotonectally product.</p>
+							</div>
+							<div class="blog-button text-center">
+								<a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-single-box">
+						<div class="blog-thumb">
+                            <img src='image/blog3.png' alt="">
+						</div>
+						<div class="blog-content">
+							<div class="blog-title">
+								<a href=#><h2>Hibernate Query Language</h2></a>
+							</div>
+							<div class="blog-meta-box">
+								<span><img src='image/calendar-ico.png' alt=""><span>June 7, 2021</span></span>
+								<a href="#"><img src='image/admin-ico.png' alt=""><span>Admin</span></a>
+							</div>
+							<div class="blog-content-text">
+								<p>Competently incentivize multifun with his
+									expertise with holistic users main in that
+								Monotonectally product.</p>
+							</div>
+							<div class="blog-button text-center">
+								<a href="#"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div class="row pt-35">
+				<div class="col-lg-12">
+					<div class="port-button text-center">
+						<a href="#">View all news <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-----------------Start Subscribe --------------------->
+    <div class="bigfox-subscribe pt-40 pb-30">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-5 col-md-5">
+					<div class="subscribe-content">
+						<div class="subscribe-title">
+							<h2>Subscribe Our Newsletter</h2>
+						</div>
+						<div class="subscribe-content-text">
+							<p>Please Subscribe our news letter and and get update.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2">
+					<div class="subscribe-single-box">
+						<div class="subscribe-icon">
+                            <i class="fa-regular fa-envelope"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-5">
+					<form>
+						<div class="subscribe">
+							<input class="subscribe-mail-box" type="email"  placeholder="Enter Your E-mail" required="">
+							<button type="submit">Subscribe</button>						
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
