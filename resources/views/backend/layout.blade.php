@@ -20,17 +20,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <!-- Custom Css -->
-<<<<<<< HEAD
+
     <link rel="stylesheet" href="{{ asset('../css/backend/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/backend/post.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/stylefooter.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/backend/core.css') }}">
-=======
+
     <link rel="stylesheet" href="{{asset('../css/backend/layout.css')}}">
     <link rel="stylesheet" href="{{asset('../css/backend/post.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('../css/stylefooter.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('../css/backend/core.css')}}">
->>>>>>> 4f7e92a8e43165e0fa4ab1cf1741d038c52d0385
+
 
     <title>{{$title}}</title>
 </head>
@@ -53,14 +53,16 @@
                         <a class="nav-link" href="/backend/post">Post</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
+
                         <a class="nav-link" href="/backend/ourproject">Project</a>
-=======
+                    </li>
+                    <li>
+
                         <a class="nav-link" href="/backend/newletter">New Letter</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/backend/photo">Photo</a>
->>>>>>> 4f7e92a8e43165e0fa4ab1cf1741d038c52d0385
+
                     </li>
                 </ul>
                 <form class="d-flex">
