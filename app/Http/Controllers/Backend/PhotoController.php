@@ -52,18 +52,23 @@ class PhotoController extends Controller
         if ($request->hasFile('images')) {
             $image = $request->file('images');
             $image_name = $image->getClientOriginalName();
+
             $request->file('images')->move(public_path('image/uploads/photo_blog'), $image_name);
             $dataInsert['images'] = $image_name;
         }
+
         Photo::create($dataInsert);
-        return redirect('/backend/Photo/photo')->with('msg', 'Thêm hình ảnh thành công ');  
+        return redirect('/backend/photo')->with('msg', 'Employee Addedd!');
+
     }
 
     public function edit($id){
 
         $dataEdit = Photo::find($id);
-  
-        return view('backend/Photo/photo-edit', ['title' => 'Edit Photo'])->with('dataEdit', $dataEdit);
+
+
+        return view('backend/photo-edit', ['title' => 'Edit Photo'])->with('dataEdit', $dataEdit);
+
     }
 
       public function update(Request $request, $id){
@@ -83,12 +88,16 @@ class PhotoController extends Controller
             $request->file('images')->move(public_path('image/uploads/photo_blog'), $image_name);
             $edit['images'] = $image_name;
         }
+
         $dataEdit->update($edit);
-        return redirect('backend/Photo/photo')->with('msg', 'Update photo thành công');  
+
+        return redirect('backend/photo')->with('msg', 'Update photo thành công');
+
     }
 
     public function delete($id)
     {
+
         $photo= DB::table('photos') ->find($id);
         $path ='image/uploads/photo_blog/' .$photo->images;
         File::delete($path);
@@ -110,3 +119,6 @@ class PhotoController extends Controller
             ]);
     }
 }
+
+ 
+

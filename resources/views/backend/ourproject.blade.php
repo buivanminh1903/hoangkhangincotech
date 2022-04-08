@@ -44,12 +44,13 @@
                                 </td>
                                 <td>{{$item ->titles}}</td>
                                 <td>{{$item->descriptions}}</td>
-                                <td><img src="{{$item->images}}" width="50px"
-                                         style="border-radius: 4px"></td>
+                                <td><img src="{{ asset('image/uploads/ourproject/' . $item->images) }}" Height="100"  class="img img-responsive" /></td>
+
+                                
                                 <td>{{$item ->categorys}}</td>
 
-                                <td>
-
+                              
+<td>
                                     <a class="btn btn-info btn-sm"
                                        href="/backend/edit_project/{{$item->id}}"
                                     ><i class="bx bx-edit-alt me-1"></i> Sửa</a

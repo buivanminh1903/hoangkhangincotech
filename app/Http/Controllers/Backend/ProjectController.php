@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\ourprojectModel;
+use Faker\Core\File;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -43,6 +44,13 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
+
+        if ($request->hasFile('images')) {
+            $image = $request->file('images');
+            $image_name = $image->getClientOriginalName();
+            $request->file('images')->move(public_path('image/uploads/ourproject'), $image_name);
+            $input['images'] = $image_name;
+        }
         ourprojectModel::create($input);
 
         return redirect('backend/ourproject')->with('succress','đã thêm Our Project');
@@ -91,6 +99,16 @@ class ProjectController extends Controller
     {
         $our_project = ourprojectModel::find($id);
         $input = $request->all();
+        if ($request->hasFile('images')) {
+            $old_image_path = 'image/uploads/ourproject/'.$our_project ->images;
+            if (\Illuminate\Support\Facades\File::exists($old_image_path)){
+                \Illuminate\Support\Facades\File::delete($old_image_path);
+            }
+            $image = $request->file('images');
+            $image_name = $image->getClientOriginalName();
+            $request->file('images')->move(public_path('image/uploads/ourproject'), $image_name);
+            $input['images'] = $image_name;
+        }
         $our_project->update($input);
         return redirect('backend/ourproject')->with('success', 'Đã cập nhật!');
     }
