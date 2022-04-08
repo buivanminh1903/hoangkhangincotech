@@ -48,7 +48,19 @@ Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class,
 
 Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
-/* Contactus add */
+
+//Reviews 
+Route::get('backend/Review/reviews', [\App\Http\Controllers\Backend\ReviewsController::class, 'index']);
+
+Route::get('backend/Review/reviews-add', [\App\Http\Controllers\Backend\ReviewsController::class, 'add']);
+
+Route::post('backend/Review/reviews-add', [\App\Http\Controllers\Backend\ReviewsController::class, 'postAdd']);
+
+// Edit Reviews
+Route::get('backend/Review/reviews-edit/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'edit_reviews']);
+Route::put('backend/Review/reviews-update/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'update']);
+Route::delete('backend/Review/reviews-delete/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'delete']);
+
 Route::get('backend/Contactus/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
 
 Route::get('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
@@ -114,6 +126,7 @@ Route::put('backend/photo-update/{id}', [\App\Http\Controllers\Backend\PhotoCont
 /* Delete  */
 Route::delete('backend/photo-delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
 /* End Photo */
+
 
 
 
