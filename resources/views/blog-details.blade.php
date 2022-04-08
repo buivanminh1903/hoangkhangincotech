@@ -299,7 +299,7 @@
             <!-- send mail box -->
             <div id="send-mail-new">
                 <div class="container" style="width: 90%;">
-                <form action="{{url('/backend/email-submit')}}" method="POST">
+                <form action="{{url('/blog')}}" method="POST">
                         @csrf
                     <h3 id="title-news" style="font-size: 20px;">Sign Up To News</h3>
                     <p style="color: gray;">Subscribe to our news to get the latest updates and offers</p>

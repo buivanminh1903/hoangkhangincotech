@@ -149,7 +149,7 @@
                 <div class="signing row" style=" margin-left: 0; margin-right: 0;">
                     <div class="sign">
                         <div class="textsign">
-                        <form action="{{url('/backend/email-submit')}}" method="POST">
+                        <form action="{{url('/blog')}}" method="POST">
                         @csrf
                             <div class="signup">Sign Up to News</div>
                             <div class="sign_text">Subscribe to our news to get the latest updates and offers</div>
@@ -230,21 +230,12 @@
                     <!-- Galary -->
                     <div class="galary">Galary</div>
                     <div class="blog_galary">
-                        <div class="postimg"><img src="image/blog_galary_01.png"></div>
-                        <div class="postimg"><img src="image/blog_galary_02.png"></div>
-                        <div class="postimg"><img src="image/blog_galary_03.png"></div>
-                        <div class="postimg"><img src="image/blog_galary_04.png"></div>
-                        <div class="postimg"><img src="image/blog_galary_05.png"></div>
-                        <div class="postimg"><img src="image/blog_galary_06.png"></div>
+                    @foreach ($photolist as $item) 
+                        <div class="postimg"><img src="{{asset('image/uploads/photo_blog/' .$item->images)}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{$item->title}}"></div>
+                        @endforeach
+                        
                     </div>
-{{--                    <div class="grid-container galarylyy">--}}
-{{--                        <div class="postimg"><img src="image/post.jpg"></div>--}}
-{{--                        <div class="postimg"><img src="image/post2.jpg"></div>--}}
-{{--                        <div class="postimg"><img src="image/post.jpg"></div>--}}
-{{--                        <div class="postimg"><img src="image/post2.jpg"></div>--}}
-{{--                        <div class="postimg"><img src="image/post2.jpg"></div>--}}
-{{--                        <div class="postimg"><img src="image/post.jpg"></div>--}}
-{{--                    </div>--}}
+                  
                     <!-- Archives -->
                     <div class="archive">Archives</div>
                     <div class="archives">

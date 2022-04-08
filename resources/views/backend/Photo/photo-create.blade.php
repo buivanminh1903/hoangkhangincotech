@@ -16,7 +16,7 @@
                 @endif
             
                 @if ($errors->any())
-                <div class="alert alert-danger"> Vui lòng nhập Email</div>
+                <div class="alert alert-danger"> Vui lòng nhập thông tin hình ảnh</div>
                 @endif
                 <form action="" enctype="multipart/form-data" method="POST">
                     @csrf

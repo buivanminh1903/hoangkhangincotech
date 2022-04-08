@@ -10,12 +10,10 @@
         <div class="row">
             <div class="backend__card p-3">
                 <div class="m-2">
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
-                            <strong>{{ $message }}</strong>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
+                @if (session('msg'))
+                <div class="alert alert-success">{{session('msg')}}</div>
+                @endif
+
                 </div>
                 <a class="btn btn-outline-info m-2" href="/backend/Photo/photo-create"><i class="bx bx-plus-circle me-1"></i>
                     Add Photo</a>
@@ -35,7 +33,7 @@
                             <tr>
                                 <td> <strong> {{$key+1}} </strong> </td>
                                 <td> {{$item->title}} </td>
-                                <td><img src="{{ asset('image/uploads/post/' . $item->images) }}" Height="100"  class="img img-responsive" /></td>
+                                <td><img src="{{ asset('image/uploads/photo_blog/' . $item->images) }}" Height="100"  class="img img-responsive" /></td>
                                
                                 <td>
                                     <a class="btn btn-info btn-sm"

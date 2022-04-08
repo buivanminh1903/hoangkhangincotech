@@ -21,15 +21,19 @@
 
     <!-- Custom Css -->
 
+
+
     <link rel="stylesheet" href="{{ asset('../css/backend/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/backend/post.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/stylefooter.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/backend/core.css') }}">
 
+
     <link rel="stylesheet" href="{{asset('../css/backend/layout.css')}}">
     <link rel="stylesheet" href="{{asset('../css/backend/post.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('../css/stylefooter.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('../css/backend/core.css')}}">
+
 
 
     <title>{{$title}}</title>
@@ -53,7 +57,6 @@
                         <a class="nav-link" href="/backend/post">Post</a>
                     </li>
                     <li class="nav-item">
-
                         <a class="nav-link" href="/backend/NewLetter/newletter">New Letter</a>
                     </li>
                     <li class="nav-item">
@@ -63,7 +66,12 @@
                         <a class="nav-link" href="/backend/Contactus/contactus">Contact Us</a>
                     </li>
                     <li>
-
+                        <a class="nav-link"  href="/backend/Review/reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/backend/Contactus/contactus">Contact Us</a>
+                    </li>
+                    <li>
                         <a class="nav-link" href="/backend/ourproject">Project</a>
                     </li>
                    

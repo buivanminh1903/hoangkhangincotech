@@ -110,7 +110,7 @@
             @if (session('msg'))
                 <div class="alert alert-success">{{session('msg')}}</div>
                 @endif
-            <form action="{{url('/backend/contactus-submit')}}" method="POST">
+            <form action="{{url('/backend/Contactus/contactus-submit')}}" method="POST">
             @csrf
                 <div class="row" style="margin-left: 0; margin-right: 0;">
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">

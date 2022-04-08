@@ -799,9 +799,10 @@
 					</div>
 				</div>
 				<div class="col-lg-5 col-md-5">
-					<form>
+                <form action="{{url('/')}}" method="POST">
+                        @csrf
 						<div class="subscribe">
-							<input class="subscribe-mail-box" type="email"  placeholder="Enter Your E-mail" required="">
+							<input class="subscribe-mail-box" type="email" name="email" placeholder="Enter Your E-mail" required="">
 							<button type="submit">Subscribe</button>						
 						</div>
 					</form>

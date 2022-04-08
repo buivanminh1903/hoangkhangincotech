@@ -48,7 +48,19 @@ Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class,
 
 Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
-/* Contactus add */
+
+//Reviews 
+Route::get('backend/Review/reviews', [\App\Http\Controllers\Backend\ReviewsController::class, 'index']);
+
+Route::get('backend/Review/reviews-add', [\App\Http\Controllers\Backend\ReviewsController::class, 'add']);
+
+Route::post('backend/Review/reviews-add', [\App\Http\Controllers\Backend\ReviewsController::class, 'postAdd']);
+
+// Edit Reviews
+Route::get('backend/Review/reviews-edit/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'edit_reviews']);
+Route::put('backend/Review/reviews-update/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'update']);
+Route::delete('backend/Review/reviews-delete/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'delete']);
+
 Route::get('backend/Contactus/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
 
 Route::get('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
@@ -67,6 +79,9 @@ Route::post('backend/Contactus/contactus-submit', [\App\Http\Controllers\Backend
 Route::get('backend/Contactus/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
 Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+
+
+
 /* Our Project index By Tran Quan */
 Route::get('backend/ourproject',[\App\Http\Controllers\Backend\ProjectController::class,'index']);
 // creare insert
@@ -92,12 +107,18 @@ Route::get('backend/NewLetter/newletter', [\App\Http\Controllers\Backend\Newlett
 Route::get('backend/NewLetter/newletter-create', [\App\Http\Controllers\Backend\NewlettersController::class, 'create']);
 Route::POST('backend/NewLetter/newletter-create', [\App\Http\Controllers\Backend\NewlettersController::class, 'newletter_Create']);
 
-Route::post('backend/NewLetter/email-submit', [\App\Http\Controllers\Backend\NewlettersController::class, 'emailadd']);
+Route::post('/blog', [\App\Http\Controllers\Backend\NewlettersController::class, 'emailadd']);
+
+// Subscribe Our Newsletter
+Route::post('/', [\App\Http\Controllers\Backend\NewlettersController::class, 'subscribe']);
+
 /* Edit  */
 Route::get('backend/NewLetter/newletter-edit/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'edit']);
 Route::put('backend/NewLetter/newletter-update/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'update']);
+
 /* Delete  */
 Route::delete('backend/NewLetter/newletter-delete/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'delete']);
+
 /* End New Letter */
 
 
@@ -108,12 +129,17 @@ Route::get('backend/Photo/photo', [\App\Http\Controllers\Backend\PhotoController
 /* Create  */
 Route::get('backend/Photo/photo-create', [\App\Http\Controllers\Backend\PhotoController::class, 'create']);
 Route::POST('backend/Photo/photo-create', [\App\Http\Controllers\Backend\PhotoController::class, 'photo_Create']);
+
+Route::get('blog', [\App\Http\Controllers\Backend\PhotoController::class, 'photoshow']);
 /* Edit  */
 Route::get('backend/Photo/photo-edit/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'edit']);
 Route::put('backend/Photo/photo-update/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'update']);
 /* Delete  */
 Route::delete('backend/Photo/photo-delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
 /* End Photo */
+
+
+
 
 
 

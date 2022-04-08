@@ -65,7 +65,23 @@ class NewlettersController extends Controller
       $dataInsert=$request->all();
       Newletter::create($dataInsert);
 
-        return redirect('/bai-viet')->with('msg', 'Thêm email thành công');
+        return redirect('/blog')->with('msg', 'Thêm email thành công');
+    }
+
+    public function subscribe(Request $request){
+      $request -> validate([
+        'email' => 'required|email|unique:newletter'
+  ], [
+    'email.required' => 'Email bắt buộc phải nhập',
+    'email.email' => 'Email không đúng định dạng',
+    'email.unique' => 'Email đã tồn tại trên hệ thống'
+  ]);
+
+  $dataInsert=$request->all();
+  Newletter::create($dataInsert);
+
+    return redirect('/')->with('msg', 'Thêm email thành công');
+
     }
 
     public function edit($id){
