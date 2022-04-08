@@ -103,7 +103,7 @@
                     <a id="show-menu-new-tab" class="nav-link" href="#blog">Shop +</a>
                 </li>
                 <li class="nav-item">
-                    <a id="show-menu-new-tab" class="nav-link" href="/bai-viet">News </a>
+                    <a id="show-menu-new-tab" class="nav-link" href="/blog">News </a>
                 </li>
                 <li class="nav-item book d-flex align-items-center">
                     <a id="show-menu-new-tab" class="nav-link" href="/doi-tac">About Us</a>

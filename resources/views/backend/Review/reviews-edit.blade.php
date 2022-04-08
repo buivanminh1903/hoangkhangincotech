@@ -3,7 +3,7 @@
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a href="/backend">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Contact-us</li>
+            <li class="breadcrumb-item active" aria-current="page">Reviews</li>
         </ol>
     </nav>
     <div class="container mb-3">
@@ -18,10 +18,10 @@
                     <div class="alert alert-danger">  Dữ liệu nhập không hợp lệ </div>
                 @endif
 
-                <form action="{{url ('backend/Review/reviews-update/' .$update->id)}}" method="POST">
+                <form action="{{url ('backend/Review/reviews-update/' .$update->id)}}" enctype="multipart/form-data" method="POST">
                     @method ("put")
                     <div class="mb-3">
-                        <label for=""> Subject  </label>
+                        <label for=""> Names  </label>
                         <input type="text" class="form-control" name="names" placeholder="names" 
                         value='{{$update->names}}'/>
                         @error('names')
@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for=""> Email </label>
+                        <label for=""> Position </label>
                         <input type="text" class="form-control" name="position" placeholder="position"
                         value='{{$update->position}}'/>
                         @error('position')
@@ -56,17 +56,26 @@
                         @enderror
                     </div>
 
-                    <div class="mb-3"> 
-                        <label for=""> image </label>
+                    <div class="row mb-3">
+                        <label  for="basic-default-name">Image</label>
+                        <div class="col-sm-12">
+                        <input class="form-control" name="image" type="file" id="photo" value='{{$update->image}}'>
+                        @error('image')
+                            <span style="color :red;">{{$message}}</span>
+                        @enderror
+                        </div>
+                        <div class="mb-3">
+                        <label for=""> star  </label>
                         <input type="text" class="form-control" name="image" placeholder="image"
                         value='{{$update->image}}'/>
-                        @error('phone')
+                        @error('image')
                         <span style="color: red;">{{$message}}</span>
                         @enderror
                     </div>
+</div>
 
                     <button type="submit" class="btn btn-info">  Update Review  </button>
-                    <a href="/backend/contactus" class="btn btn-warning"> Back </a>
+                    <a href="/backend" class="btn btn-warning"> Back </a>
                 @csrf
                 </form>
              

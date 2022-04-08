@@ -67,7 +67,7 @@ class PhotoController extends Controller
         $dataEdit = Photo::find($id);
 
 
-        return view('backend/photo-edit', ['title' => 'Edit Photo'])->with('dataEdit', $dataEdit);
+        return view('backend/Photo/photo-edit', ['title' => 'Edit Photo'])->with('dataEdit', $dataEdit);
 
     }
 
@@ -78,7 +78,7 @@ class PhotoController extends Controller
 
         if ($request->hasFile('images')) {
 
-            $image_path = 'image/uploads/photo_blog/' . $dataEdit->images;
+            $image_path = 'image/uploads/photo_blog/'.$dataEdit->images;
             if (File::exists($image_path)) {
                 File::delete($image_path);
             }
@@ -91,7 +91,7 @@ class PhotoController extends Controller
 
         $dataEdit->update($edit);
 
-        return redirect('backend/photo')->with('msg', 'Update photo thành công');
+        return redirect('backend/Photo/photo')->with('msg', 'Update photo thành công');
 
     }
 

@@ -580,37 +580,64 @@
 	<div class="testimonial pb-70">
 		<div class="container">
 			<div class="row upper">
-
+                @foreach ($reviews as $item)
 					<div class="col-lg-4 col-sm-12">
 						<div class="testimonial-single-box">
 							<div class="testimonial-thumb">
-                                <img src='image/testi1.png' alt="">
+                            <img src="{{ asset('image/uploads/reviews/' . $item->image) }}"  class="img img-responsive" />
 							</div>
 							<div class="testomonial-content">
 								<div class="testimonial-title">
-									<h2>Anjelina Santha</h2>
-									<span>Graphic Designer</span>
+									<h2>{{$item->names}}</h2>
+									<span>{{$item->position}}</span>
 								</div>
 								<div class="testimonial-content-text">
-									<p>Lorem ipsum dolor sit amet, consect
-										adipisicing elit, sed do eiusmod has a
-										incididunt ut labore et dolore magna is
-										Ut enim ad minim veniam, quis that
-									exercitation ullamco.</p>
+									<p>{{$item->content}}</p>
 								</div>
 								<div class="testi-icon-menu">
-									<ul>
+									<ul style="padding-left:0">
+                                        @if($item->star==1)
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+                                        @endif
+                                        @if($item->star==2)
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+                                        @endif
+                                        @if($item->star==3)
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+                                        @endif
+                                        @if($item->star==4)
 										<li><i class="fas fa-star"></i></li>
 										<li><i class="fas fa-star"></i></li>
 										<li><i class="fas fa-star"></i></li>
 										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star-half-alt"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+                                        @endif
+                                        @if($item->star==5)
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+                                        @endif
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-                    <div class="col-lg-4 col-sm-12">
+                    @endforeach
+                    <!-- <div class="col-lg-4 col-sm-12">
 						<div class="testimonial-single-box">
 							<div class="testimonial-thumb">
                                 <img src='image/testi2.png' alt="">
@@ -667,7 +694,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 			</div>
 		</div>
