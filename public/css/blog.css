@@ -435,6 +435,13 @@ HEAD .background {
     margin: 2px;
 }
 
+.postimg img {
+    width: 116px;
+    height: 116px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 .blog_galary .postimg:first-child {
     margin-left: 0;
 }

@@ -17,7 +17,8 @@
                     <form class="form-input" type="get" action="{{url('/bai-viet/search')}}">
                         <input type="search" placeholder="Search here..." name="key" autocomplete="off"/>
                         <span id="searchicon" class="input-group-text bg-white">
-                            <button type="submit" class="blog_searhicon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button type="submit" class="blog_searhicon"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
 {{--                        <img src="{{asset('image/iconsearch.png')}}">--}}
                     </span>
                     </form>
@@ -38,7 +39,8 @@
                             <form class="form-input" type="get" action="{{url('/bai-viet/search')}}">
                                 <input type="search" placeholder="Search here..." name="key" autocomplete="off"/>
                                 <span id="searchicon" class="input-group-text bg-white">
-                                    <button type="submit" class="blog_searhicon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    <button type="submit" class="blog_searhicon"><i
+                                            class="fa-solid fa-magnifying-glass"></i></button>
 {{--                                    <img src="{{asset('image/iconsearch.png')}}">--}}
                                 </span>
                             </form>
@@ -81,16 +83,22 @@
                             <div class="signing row" style=" margin-left: 0; margin-right: 0;">
                                 <div class="sign">
                                     <div class="textsign">
-                                        <div class="signup">Sign Up to News</div>
-                                        <div class="sign_text">Subscribe to our news to get the latest updates and
-                                            offers
-                                        </div>
-                                        <div class="mess"><input class="form-control"
-                                                                 style="border: 1px solid transparent;"
-                                                                 placeholder="Your Email"/></div>
-                                        <button class="btn btn-primary" id="button-search" type="button">Send
-                                            Message
-                                        </button>
+                                        <form action="{{url('bai-viet')}}" method="POST">
+                                            @csrf
+                                            <div class="signup">Sign Up to News</div>
+                                            <div class="sign_text">Subscribe to our news to get the latest updates and
+                                                offers
+                                            </div>
+                                            <div class="mess"><input class="form-control" name="email"
+                                                                     style="border: 1px solid transparent;"
+                                                                     placeholder="Your Email"/>
+                                                @error('email')
+                                                <span style="color :red;">{{$message}}</span>
+                                                @enderror</div>
+                                            <button class="btn btn-primary" id="button-search" type="submit">Send
+                                                Message
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

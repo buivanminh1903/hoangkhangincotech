@@ -43,9 +43,7 @@
                                 <td>{{$item->star}}</td>
                                 <td>{{$item->content}}</td>
                                 <td>{{$item->position}}</td>
-                                <td>
-                                   {{$item->image}}
-                                </td>
+                                <td><img src="{{ asset('image/uploads/reviews/' . $item->image) }}" Height="100"  class="img img-responsive" /></td>
                                 <td>
                                 <a class="btn btn-info btn-sm"
                                        href="{{'/backend/Review/reviews-edit/' . $item->id}}">
@@ -66,7 +64,7 @@
                                 @endforeach
                                 @else
                                 <tr>
-                                    <td colspan="4"> Không có Review </td>
+                                    <td colspan="4"> Không có Review nào </td>
                                 </tr>
                                 @endif
                             </tr>

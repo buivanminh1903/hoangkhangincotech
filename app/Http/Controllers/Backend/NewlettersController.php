@@ -26,7 +26,7 @@ class NewlettersController extends Controller
 
         $new_letter_list = $this -> new_letter -> getAllNewletter();
 
-        return view('backend.newletter', compact('title', 'new_letter_list'));
+        return view('backend.NewLetter.newletter', compact('title', 'new_letter_list'));
     }
 
     // Add Newletter
@@ -34,7 +34,7 @@ class NewlettersController extends Controller
     {
         $title = 'Add Newletter List';
 
-        return view('backend.newletter-create', compact('title'));
+        return view('backend.NewLetter.newletter-create', compact('title'));
     }
 
     public function newletter_Create(Request $request)
@@ -50,7 +50,7 @@ class NewlettersController extends Controller
       $dataInsert=$request->all();
       Newletter::create($dataInsert);
 
-        return redirect('/backend/newletter-create')->with('msg', 'Thêm email thành công');
+        return redirect('/backend/NewLetter/newletter-create')->with('msg', 'Thêm email thành công');
     }
 
     public function emailadd(Request $request){
@@ -65,14 +65,35 @@ class NewlettersController extends Controller
       $dataInsert=$request->all();
       Newletter::create($dataInsert);
 
-        return redirect('/bai-viet')->with('msg', 'Thêm email thành công');
+      $popular_post = DB::table('post')
+            ->orderByDesc('id')
+            ->limit('2')
+            ->get();
+
+        return view('submit-email-succes', ['title'=> 'Cảm ơn bạn', 'popular_post' => $popular_post, 'message'=>'Cảm ơn bạn, thêm email thành công'])->with('msg', 'Đăng ký thành công, cảm ơn bạn');
+    }
+
+    public function subscribe(Request $request){
+      $request -> validate([
+        'email' => 'required|email|unique:newletter'
+  ], [
+    'email.required' => 'Email bắt buộc phải nhập',
+    'email.email' => 'Email không đúng định dạng',
+    'email.unique' => 'Email đã tồn tại trên hệ thống'
+  ]);
+
+  $dataInsert=$request->all();
+  Newletter::create($dataInsert);
+
+    return redirect('/')->with('msg', 'Thêm email thành công');
+
     }
 
     public function edit($id){
 
       $dataEdit = Newletter::find($id);
 
-      return view('backend/newletter-edit', ['title' => 'Edit New Letter'])->with('dataEdit', $dataEdit);
+      return view('backend/NewLetter/newletter-edit', ['title' => 'Edit New Letter'])->with('dataEdit', $dataEdit);
     }
 
     public function update(Request $request, $id)
@@ -80,13 +101,13 @@ class NewlettersController extends Controller
         $dataEdit = Newletter::find($id);
         $Edit = $request->all();
         $dataEdit->update($Edit);
-        return redirect('backend/newletter')->with('msg', 'Email update thành công');  
+        return redirect('backend/NewLetter/newletter')->with('msg', 'Email update thành công');  
     }
     
     public function delete($id)
     {
       Newletter::destroy($id);
-        return redirect('backend/newletter')->with('msg', 'Xóa Email thành công!');  
+        return redirect('backend/NewLetter/newletter')->with('msg', 'Xóa Email thành công!');  
     }
 
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use App\Models\Photo;
 
 class PhotoController extends Controller
@@ -24,14 +25,14 @@ class PhotoController extends Controller
 
         $photolist = $this -> photo -> getAllPhoto();
 
-        return view('backend.photo', compact('title', 'photolist'));
+        return view('backend.Photo.photo', compact('title', 'photolist'));
     }
 
     public function create()
     {
         $title = 'Add Photo List';
 
-        return view('backend.photo-create', compact('title'));
+        return view('backend.Photo.photo-create', compact('title'));
     }
 
     public function photo_Create(Request $request)
@@ -51,37 +52,73 @@ class PhotoController extends Controller
         if ($request->hasFile('images')) {
             $image = $request->file('images');
             $image_name = $image->getClientOriginalName();
-            $request->file('images')->move(public_path('image/uploads/post'), $image_name);
+
+            $request->file('images')->move(public_path('image/uploads/photo_blog'), $image_name);
             $dataInsert['images'] = $image_name;
         }
+
         Photo::create($dataInsert);
-        return redirect('/backend/photo')->with('msg', 'Employee Addedd!');  
+        return redirect('/backend/Photo/photo')->with('msg', 'Employee Addedd!');
+
     }
 
     public function edit($id){
 
         $dataEdit = Photo::find($id);
-  
-        return view('backend/photo-edit', ['title' => 'Edit Photo'])->with('dataEdit', $dataEdit);
+
+
+        return view('backend/Photo/photo-edit', ['title' => 'Edit Photo'])->with('dataEdit', $dataEdit);
+
     }
 
       public function update(Request $request, $id){
 
         $dataEdit = Photo::find($id);
         $edit = $request->all();
+
         if ($request->hasFile('images')) {
+
+            $image_path = 'image/uploads/photo_blog/'.$dataEdit->images;
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+            }
+
             $image = $request->file('images');
             $image_name = $image->getClientOriginalName();
-            $request->file('images')->move(public_path('image/uploads/post'), $image_name);
-            $dataInsert['images'] = $image_name;
+            $request->file('images')->move(public_path('image/uploads/photo_blog'), $image_name);
+            $edit['images'] = $image_name;
         }
-        return redirect('backend/photo')->with('msg', 'Update photo thành công');  
+
+        $dataEdit->update($edit);
+
+        return redirect('backend/Photo/photo')->with('msg', 'Update photo thành công');
+
     }
 
     public function delete($id)
     {
-      Photo::destroy($id);
-        return redirect('backend/photo')->with('msg', 'Xóa hình ảnh thành công!');  
+
+        $photo= DB::table('photos') ->find($id);
+        $path ='image/uploads/photo_blog/' .$photo->images;
+        File::delete($path);
+
+        Photo::destroy($id);
+        return redirect('backend/Photo/photo')->with('msg', 'Xóa hình ảnh thành công!');  
     }
+
+    public function photoshow (){
     
+        $photolist = DB::table('photos')
+            ->orderByDesc('id')
+            ->limit(6)
+            ->get();
+
+            return view('blog', [
+                'title' => 'Blog',
+                'photolist' => $photolist
+            ]);
+    }
 }
+
+ 
+

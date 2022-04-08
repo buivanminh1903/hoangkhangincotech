@@ -3,7 +3,7 @@
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a href="/backend">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Contact-us</li>
+            <li class="breadcrumb-item active" aria-current="page">Reviews</li>
         </ol>
     </nav>
     <div class="container mb-3">
@@ -18,7 +18,7 @@
                     <div class="alert alert-danger">  Dữ liệu nhập không hợp lệ </div>
                 @endif
 
-                <form action="" method="POST">
+                <form action=""  enctype="multipart/form-data" method="POST">
                     <div class="mb-3">
                         <label for=""> names  </label>
                         <input type="text" class="form-control" name="names" placeholder="names" 
@@ -55,14 +55,15 @@
                         @enderror
                     </div>
 
-                    <div class="mb-3"> 
-                        <label for=""> image </label>
-                        <input type="text" class="form-control" name="image" placeholder="image"
-                        value="{{old('image')}}"/>
+                    <div class="row mb-3">
+                        <label  for="basic-default-name">Image</label>
+                        <div class="col-sm-12">
+                        <input class="form-control" name="image" type="file" id="photo">
                         @error('image')
-                        <span style="color: red;">{{$message}}</span>
+                            <span style="color :red;">{{$message}}</span>
                         @enderror
-                    </div>
+                        </div>
+</div>
 
                     <button type="submit" class="btn btn-info">  Add-Reviews  </button>
                     <a href="/backend/Review/reviews" class="btn btn-warning"> Back </a>

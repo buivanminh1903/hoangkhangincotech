@@ -556,122 +556,151 @@
     </div>
     <!--Start team member-->
     <div class="client-reivew pt-110 pb-162">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="dreamit-section-title text-center pb-30">
-                        <div class="dreamit-section-sub-title">
-                            <h5>Client Review</h5>
-                        </div>
-                        <div class="dreamit-section-main-title">
-                            <h2>We Deliver Solution with the Goal of <br>A Trusting Relationship</h2>
-                        </div>
-                        <div class="dreamit-section-content-text">
-                            <p>Lorem Ipsom is a dolar site amet which is
-                                a large field in the world but every</p>
-                        </div>
-                        <div class="review-button">
-                            <a href="#">VIEW ALL REVIEW</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="dreamit-section-title text-center pb-30">
+						<div class="dreamit-section-sub-title">
+							<h5>Client Review</h5>
+						</div>
+						<div class="dreamit-section-main-title">
+							<h2>We Deliver Solution with the Goal of <br>A Trusting Relationship</h2>
+						</div>
+						<div class="dreamit-section-content-text">
+							<p>Lorem Ipsom is a dolar site amet which is
+							a large field in the world but every</p>
+						</div>
+						<div class="review-button">
+							<a href="#">VIEW ALL REVIEW</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+				<!--Start testimonial-->
+	
+	<div class="testimonial pb-70">
+		<div class="container">
+			<div class="row upper">
+                @foreach ($reviews as $item)
+					<div class="col-lg-4 col-sm-12">
+						<div class="testimonial-single-box">
+							<div class="testimonial-thumb">
+                            <img src="{{ asset('image/uploads/reviews/' . $item->image) }}"  class="img img-responsive" />
+							</div>
+							<div class="testomonial-content">
+								<div class="testimonial-title">
+									<h2>{{$item->names}}</h2>
+									<span>{{$item->position}}</span>
+								</div>
+								<div class="testimonial-content-text">
+									<p>{{$item->content}}</p>
+								</div>
+								<div class="testi-icon-menu">
+									<ul style="padding-left:0">
+                                        @if($item->star==1)
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+                                        @endif
+                                        @if($item->star==2)
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+                                        @endif
+                                        @if($item->star==3)
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+                                        @endif
+                                        @if($item->star==4)
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fa-regular fa-star"></i></li>
+                                        @endif
+                                        @if($item->star==5)
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+                                        @endif
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+                    @endforeach
+                    <!-- <div class="col-lg-4 col-sm-12">
+						<div class="testimonial-single-box">
+							<div class="testimonial-thumb">
+                                <img src='image/testi2.png' alt="">
+							</div>
+							<div class="testomonial-content">
+								<div class="testimonial-title">
+									<h2>Moris Barbar</h2>
+									<span>UI Designer</span>
+								</div>
+								<div class="testimonial-content-text">
+									<p>Lorem ipsum dolor sit amet, consect
+										adipisicing elit, sed do eiusmod has a
+										incididunt ut labore et dolore magna is
+										Ut enim ad minim veniam, quis that
+									exercitation ullamco. </p>
+								</div>
+								<div class="testi-icon-menu">
+									<ul>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star-half-alt"></i></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-12">
+						<div class="testimonial-single-box">
+							<div class="testimonial-thumb">
+                                <img src='image/testi3.png' alt="">
+							</div>
+							<div class="testomonial-content">
+								<div class="testimonial-title">
+									<h2>John Doe</h2>
+									<span>Web Developer</span>
+								</div>
+								<div class="testimonial-content-text">
+									<p>Lorem ipsum dolor sit amet, consect
+										adipisicing elit, sed do eiusmod has a
+										incididunt ut labore et dolore magna is
+										Ut enim ad minim veniam, quis that
+									exercitation ullamco. </p>
+								</div>
+								<div class="testi-icon-menu">
+									<ul>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star-half-alt"></i></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div> -->
 
-    <!--Start testimonial-->
-
-    <div class="testimonial pb-70">
-        <div class="container">
-            <div class="row upper">
-
-                <div class="col-lg-4 col-sm-12">
-                    <div class="testimonial-single-box">
-                        <div class="testimonial-thumb">
-                            <img src='image/testi1.png' alt="">
-                        </div>
-                        <div class="testomonial-content">
-                            <div class="testimonial-title">
-                                <h2>Anjelina Santha</h2>
-                                <span>Graphic Designer</span>
-                            </div>
-                            <div class="testimonial-content-text">
-                                <p>Lorem ipsum dolor sit amet, consect
-                                    adipisicing elit, sed do eiusmod has a
-                                    incididunt ut labore et dolore magna is
-                                    Ut enim ad minim veniam, quis that
-                                    exercitation ullamco.</p>
-                            </div>
-                            <div class="testi-icon-menu">
-                                <ul>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star-half-alt"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-12">
-                    <div class="testimonial-single-box">
-                        <div class="testimonial-thumb">
-                            <img src='image/testi2.png' alt="">
-                        </div>
-                        <div class="testomonial-content">
-                            <div class="testimonial-title">
-                                <h2>Moris Barbar</h2>
-                                <span>UI Designer</span>
-                            </div>
-                            <div class="testimonial-content-text">
-                                <p>Lorem ipsum dolor sit amet, consect
-                                    adipisicing elit, sed do eiusmod has a
-                                    incididunt ut labore et dolore magna is
-                                    Ut enim ad minim veniam, quis that
-                                    exercitation ullamco. </p>
-                            </div>
-                            <div class="testi-icon-menu">
-                                <ul>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star-half-alt"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-12">
-                    <div class="testimonial-single-box">
-                        <div class="testimonial-thumb">
-                            <img src='image/testi3.png' alt="">
-                        </div>
-                        <div class="testomonial-content">
-                            <div class="testimonial-title">
-                                <h2>John Doe</h2>
-                                <span>Web Developer</span>
-                            </div>
-                            <div class="testimonial-content-text">
-                                <p>Lorem ipsum dolor sit amet, consect
-                                    adipisicing elit, sed do eiusmod has a
-                                    incididunt ut labore et dolore magna is
-                                    Ut enim ad minim veniam, quis that
-                                    exercitation ullamco. </p>
-                            </div>
-                            <div class="testi-icon-menu">
-                                <ul>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star-half-alt"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    
 
             </div>
         </div>
@@ -807,12 +836,13 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-5">
-                    <form>
-                        <div class="subscribe">
-                            <input class="subscribe-mail-box" type="email" placeholder="Enter Your E-mail" required="">
-                            <button type="submit">Subscribe</button>
-                        </div>
-                    </form>
+                <form action="{{url('/')}}" method="POST">
+                        @csrf
+						<div class="subscribe">
+							<input class="subscribe-mail-box" type="email" name="email" placeholder="Enter Your E-mail" required="">
+							<button type="submit">Subscribe</button>						
+						</div>
+					</form>
                 </div>
             </div>
         </div>

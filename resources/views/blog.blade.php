@@ -66,174 +66,175 @@
                 </div>
             </div>
             <!-- 2 -->
-            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
-                <!-- send mail box -->
-                <div id="send-mail-new">
-                    <div class="container" style="width: 90%;">
-                        <form action="{{url('/backend/email-submit')}}" method="POST">
-                            @csrf
-                            <h3 id="title-news" style="font-size: 20px;">Sign Up To News</h3>
-                            <p style="color: gray;">Subscribe to our news to get the latest updates and offers</p>
-                            <div class="mess-mail"><input class="form-control" name="email"
-                                                          style="border: 1px solid transparent;height: 55px; border: #eff3f7;"
-                                                          placeholder="Your Email"/>
-                                @error('email')
-                                <span style="color :red;">{{$message}}</span>
-                                @enderror</div>
-                            <button id="btn-mess" type="form-control" class="btn btn-primary"><b class="send-mess">Send
-                                    Message</b></button>
-                        </form>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <!-- Sign Up -->
+                <div class="signing row" style=" margin-left: 0; margin-right: 0;">
+                    <div class="sign">
+                        <div class="textsign">
+                            <form action="{{url('bai-viet')}}" method="POST">
+                                @csrf
+                                <div class="signup">Sign Up to News</div>
+                                <div class="sign_text">Subscribe to our news to get the latest updates and offers</div>
+                                <div class="mess"><input class="form-control" name="email"
+                                                         style="border: 1px solid transparent;"
+                                                         placeholder="Your Email"/>
+                                    @error('email')
+                                    <span style="color :red;">{{$message}}</span>
+                                    @enderror</div>
+                                <button class="btn btn-primary" id="button-search" type="submit">Send Message</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <!-- Recent Post -->
-                <div class="Recent">
-                    <!-- 1 -->
-                    <div class="righttitle">Recent Post</div>
+                    <!-- Recent Post -->
+                    <div class="Recent">
+                        <!-- 1 -->
+                        <div class="righttitle">Recent Post</div>
 
-                    <div class="recent_post_box">
-                        @foreach($popular_post as $item)
-                            <a href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}.html">
-                                <div class="recentpost">
-                                    <div class="post">
-                                        <div class="post_img">
-                                            <img src="{{asset('image/uploads/post/'.$item->image)}}">
-                                        </div>
-                                        <div class="postline">
-                                            <div class="textpost">
-                                                {{$item->title}}
+                        <div class="recent_post_box">
+                            @foreach($popular_post as $item)
+                                <a href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}.html">
+                                    <div class="recentpost">
+                                        <div class="post">
+                                            <div class="post_img">
+                                                <img src="{{asset('image/uploads/post/'.$item->image)}}">
                                             </div>
-                                            <div class="designpost"><img class="clock" src="/image/icon-clock.png" alt="{{$item->image}}">
-                                                <span>{{date('d M, Y', strtotime($item->created_at))}}</span>
+                                            <div class="postline">
+                                                <div class="textpost">
+                                                    {{$item->title}}
+                                                </div>
+                                                <div class="designpost"><img class="clock" src="/image/icon-clock.png"
+                                                                             alt="{{$item->image}}">
+                                                    <span>{{date('d M, Y', strtotime($item->created_at))}}</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        @endforeach
-                    </div>
-
-
-                    <!-- 2 -->
-                {{--                    <div class="postfile">--}}
-                {{--                        <div class="post">--}}
-                {{--                            <div class="post_img">--}}
-                {{--                                <a href=""><img src="/image/img-recent-tag1.png"></a>--}}
-                {{--                            </div>--}}
-                {{--                            <div class="postline">--}}
-                {{--                                <div class="textpost">--}}
-                {{--                                    Dramatically provide access schemas without extensive back compatible--}}
-                {{--                                </div>--}}
-                {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
-                {{--                                    <span>24 Jan, 2021</span>--}}
-                {{--                                </div>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                <!-- 3 -->
-
-                {{--                    <div class="postfull">--}}
-                {{--                        <div class="post">--}}
-                {{--                            <div class="post_img">--}}
-                {{--                                <a href=""><img src="/image/img-recent-tag2.png"></a>--}}
-                {{--                            </div>--}}
-                {{--                            <div class="postline">--}}
-                {{--                                <div class="textpost">--}}
-                {{--                                    Participate in staff meet ingness manage dedicated--}}
-                {{--                                </div>--}}
-                {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
-                {{--                                    <span>24 Jan, 2021</span>--}}
-                {{--                                </div>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-
-                <!-- Catagory List -->
-                    <div class="catagory">Catagory List</div>
-                    <div class="list">
-                        <ul>
-                            @foreach($post_total_by_category as $item)
-                                <li>{{$item->name}} <span> ({{$item->total}}) </span></li>
+                                </a>
                             @endforeach
-                        </ul>
-                    </div>
-                    <!-- Galary -->
-                    <div class="galary">Galary</div>
-                    <div class="blog_galary">
-                        <div class="postimg"><img src="{{asset('image/blog_galary_01.png')}}"></div>
-                        <div class="postimg"><img src="{{asset('image/blog_galary_02.png')}}"></div>
-                        <div class="postimg"><img src="{{asset('image/blog_galary_03.png')}}"></div>
-                        <div class="postimg"><img src="{{asset('image/blog_galary_04.png')}}"></div>
-                        <div class="postimg"><img src="{{asset('image/blog_galary_05.png')}}"></div>
-                        <div class="postimg"><img src="{{asset('image/blog_galary_06.png')}}"></div>
-                    </div>
-                    <!-- Archives -->
-                    <div class="archive">Archives</div>
-                    <div class="archives">
-                        <ul>
-                            <li><span><img class="file" src="/image/Archives-tag.png"><a>Sep 2020</a></span></li>
-                            <li><span><img class="file" src="/image/Archives-tag.png"><a>Oct 2021</a></span></li>
-                            <li><span><img class="file" src="/image/Archives-tag.png"><a>Jan 2020</a></span></li>
-                            <li><span><img class="file" src="/image/Archives-tag.png"><a>Nov 2019</a></span></li>
-                            <li><span><img class="file" src="/image/Archives-tag.png"><a>Dec 2018</a></span></li>
-                        </ul>
-                    </div>
-                    <!-- Follow Us -->
-                    <div class="followus">Follow Us</div>
-                    <div class="follow">
-                        <a href="#" class="follow_icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="follow_icon"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="follow_icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="follow_icon"><i class="fa-brands fa-pinterest-p"></i></a>
-                        <a href="#" class="follow_icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    </div>
-                    <!-- Tags -->
-                    <div class="tag">Tags</div>
-                    <div>
-                        <a href="#" class="btn-tag">Fashion</a>
-                        <a class="btn-tag">Nation</a>
-                        <a class="btn-tag">Company</a>
-                        <a class="btn-tag">Business </a>
-                        <a class="btn-tag">Computer </a>
-                        <a class="btn-tag">Travell </a>
-                        <a class="btn-tag">Company</a>
-                        <a class="btn-tag">Science </a>
+                        </div>
+
+
+                        <!-- 2 -->
+                    {{--                    <div class="postfile">--}}
+                    {{--                        <div class="post">--}}
+                    {{--                            <div class="post_img">--}}
+                    {{--                                <a href=""><img src="/image/img-recent-tag1.png"></a>--}}
+                    {{--                            </div>--}}
+                    {{--                            <div class="postline">--}}
+                    {{--                                <div class="textpost">--}}
+                    {{--                                    Dramatically provide access schemas without extensive back compatible--}}
+                    {{--                                </div>--}}
+                    {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
+                    {{--                                    <span>24 Jan, 2021</span>--}}
+                    {{--                                </div>--}}
+                    {{--                            </div>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
+                    <!-- 3 -->
+
+                    {{--                    <div class="postfull">--}}
+                    {{--                        <div class="post">--}}
+                    {{--                            <div class="post_img">--}}
+                    {{--                                <a href=""><img src="/image/img-recent-tag2.png"></a>--}}
+                    {{--                            </div>--}}
+                    {{--                            <div class="postline">--}}
+                    {{--                                <div class="textpost">--}}
+                    {{--                                    Participate in staff meet ingness manage dedicated--}}
+                    {{--                                </div>--}}
+                    {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
+                    {{--                                    <span>24 Jan, 2021</span>--}}
+                    {{--                                </div>--}}
+                    {{--                            </div>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
+
+                    <!-- Catagory List -->
+                        <div class="catagory">Catagory List</div>
+                        <div class="list">
+                            <ul>
+                                @foreach($post_total_by_category as $item)
+                                    <li>{{$item->name}} <span> ({{$item->total}}) </span></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <!-- Galary -->
+                        <div class="galary">Galary</div>
+                        <div class="blog_galary">
+                            @foreach ($photolist as $item)
+                                <div class="postimg"><img src="{{asset('image/uploads/photo_blog/' .$item->images)}}"
+                                                          data-bs-toggle="tooltip" data-bs-placement="top"
+                                                          title="{{$item->title}}"></div>
+                            @endforeach
+                        </div>
+
+                        <!-- Archives -->
+                        <div class="archive">Archives</div>
+                        <div class="archives">
+                            <ul>
+                                <li><span><img class="file" src="/image/Archives-tag.png"><a>Sep 2020</a></span></li>
+                                <li><span><img class="file" src="/image/Archives-tag.png"><a>Oct 2021</a></span></li>
+                                <li><span><img class="file" src="/image/Archives-tag.png"><a>Jan 2020</a></span></li>
+                                <li><span><img class="file" src="/image/Archives-tag.png"><a>Nov 2019</a></span></li>
+                                <li><span><img class="file" src="/image/Archives-tag.png"><a>Dec 2018</a></span></li>
+                            </ul>
+                        </div>
+                        <!-- Follow Us -->
+                        <div class="followus">Follow Us</div>
+                        <div class="follow">
+                            <a href="#" class="follow_icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="follow_icon"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="follow_icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="follow_icon"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a href="#" class="follow_icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        </div>
+                        <!-- Tags -->
+                        <div class="tag">Tags</div>
+                        <div>
+                            <a href="#" class="btn-tag">Fashion</a>
+                            <a class="btn-tag">Nation</a>
+                            <a class="btn-tag">Company</a>
+                            <a class="btn-tag">Business </a>
+                            <a class="btn-tag">Computer </a>
+                            <a class="btn-tag">Travell </a>
+                            <a class="btn-tag">Company</a>
+                            <a class="btn-tag">Science </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <script type="text/javascript">
-            var paginate = 1;
-            loadMoreData(paginate);
+            <script type="text/javascript">
+                var paginate = 1;
+                loadMoreData(paginate);
 
-            $('#load-more').click(function () {
-                var page = $(this).data('paginate');
-                loadMoreData(page);
-                $(this).data('paginate', page + 1);
-            });
+                $('#load-more').click(function () {
+                    var page = $(this).data('paginate');
+                    loadMoreData(page);
+                    $(this).data('paginate', page + 1);
+                });
 
-            // run function when user click load more button
-            function loadMoreData(paginate) {
-                $.ajax({
-                    url: '?page=' + paginate,
-                    type: 'get',
-                    datatype: 'html',
-                    beforeSend: function () {
-                        $('#load-more').text('Loading...');
-                    }
-                })
-                    .done(function (data) {
-                        if (data.length == 0) {
-                            $('.invisible').removeClass('invisible');
-                            $('#load-more').hide();
-                            return;
-                        } else {
-                            $('#load-more').text('Load more...');
-                            $('#post').append(data);
+                // run function when user click load more button
+                function loadMoreData(paginate) {
+                    $.ajax({
+                        url: '?page=' + paginate,
+                        type: 'get',
+                        datatype: 'html',
+                        beforeSend: function () {
+                            $('#load-more').text('Loading...');
                         }
                     })
-                    .fail(function (jqXHR, ajaxOptions, thrownError) {
-                        alert('Something went wrong.');
-                    });
-            }
-        </script>
+                        .done(function (data) {
+                            if (data.length == 0) {
+                                $('.invisible').removeClass('invisible');
+                                $('#load-more').hide();
+                                return;
+                            } else {
+                                $('#load-more').text('Load more...');
+                                $('#post').append(data);
+                            }
+                        })
+                        .fail(function (jqXHR, ajaxOptions, thrownError) {
+                            alert('Something went wrong.');
+                        });
+                }
+            </script>
 @endsection

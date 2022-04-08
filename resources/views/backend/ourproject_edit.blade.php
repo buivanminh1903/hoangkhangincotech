@@ -17,7 +17,7 @@
                         <small class="text-muted float-end">Hoàng Khang IncoTech</small>
                     </div>
                     <div class="card-body">
-                        <form action="{{url('update-project/'.$our_project->id)}}" method="post">
+                        <form action="{{url('update-project/'.$our_project->id)}}" method="post" enctype="multipart/form-data">
                             {!! csrf_field() !!}
                             @method("PUT")
                             <input type="hidden" name="id" id="id" value="" id="id"/>
@@ -45,20 +45,20 @@
                                 <label class="col-sm-2 col-form-label" for="basic-default-email">Image</label>
                                 <div class="col-sm-10">
                                     <div class="input-group input-group-merge">
-                                        <input
-                                            type="text"
-                                            id="basic-default-email"
-                                            class="form-control"
-                                            placeholder=""
-                                            aria-describedby="basic-default-email2"
-                                            name="image"
-                                            value="{{$our_project->images}}"
-                                        />
+                                        <td><img src="{{ asset('image/uploads/ourproject/' . $our_project->images) }}" Height="100"  class="img img-responsive" /></td>
+
+                                        <td>
+
+                                            <input class="form-control" name="images" type="file" id="photo">
+                                            @error('images')
+                                            <span style="color :red;">{{$message}}</span>
+                                            @enderror
+                                        </div>
                                         <span class="input-group-text" id="basic-default-email2">.png</span>
                                     </div>
                                     <div class="form-text">Kích thước ảnh tối đa 100Mb</div>
                                 </div>
-                            </div>
+
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="basic-default-company">Categorys</label>
                                 <div class="col-sm-10">

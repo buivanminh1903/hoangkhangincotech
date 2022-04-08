@@ -28,12 +28,18 @@ class HomeController extends Controller
             ->limit('3')
             ->get();
 
+        $reviews = DB::table('reviews')
+            ->orderByDesc('id')
+            ->limit('3')
+            ->get();
+
         return view('home', [
             'title' => 'Hoàng Khang Incotech',
             'popular_post' => $popular_post,
             'out_projectlm3' => $out_projectlm3,
             'out_projectlm2' => $out_projectlm2,
-            'latestblog' => $latestblog
+            'latestblog' => $latestblog,
+            'reviews' => $reviews
         ]);
     }
 }

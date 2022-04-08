@@ -184,7 +184,7 @@
                 <!-- send mail box -->
                 <div id="send-mail-new">
                     <div class="container" style="width: 90%;">
-                        <form action="{{url('/backend/email-submit')}}" method="POST">
+                        <form action="{{url('bai-viet')}}" method="POST">
                             @csrf
                             <h3 id="title-news" style="font-size: 20px;">Sign Up To News</h3>
                             <p style="color: gray;">Subscribe to our news to get the latest updates and offers</p>
@@ -209,7 +209,8 @@
                                 <div class="recentpost">
                                     <div class="post">
                                         <div class="post_img">
-                                            <img src="{{asset('image/uploads/post/'.$item->image)}}" alt="{{$item->image}}">
+                                            <img src="{{asset('image/uploads/post/'.$item->image)}}"
+                                                 alt="{{$item->image}}">
                                         </div>
                                         <div class="postline">
                                             <div class="textpost">
