@@ -17,7 +17,7 @@
                         <small class="text-muted float-end">Hoàng Khang InCotech</small>
                     </div>
                     <div class="card-body">
-                        <form action="{{url('input')}}" method="post">
+                        <form action="{{url('input')}}" method="post" enctype="multipart/form-data">
                             {!! csrf_field() !!}
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="basic-default-name">Title</label>
@@ -42,16 +42,10 @@
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="basic-default-email">Image</label>
                                 <div class="col-sm-10">
-                                    <div class="input-group input-group-merge">
-                                        <input
-                                            type="file"
-                                            id="photo"
-                                            class="form-control-file"
-                                            name="images"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="form-text">Kích thước ảnh tối đa 100Mb</div>
+                                    <input class="form-control" name="images" type="file" id="photo">
+                                    @error('images')
+                                    <span style="color :red;">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="row mb-3">

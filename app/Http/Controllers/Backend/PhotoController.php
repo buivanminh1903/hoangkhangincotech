@@ -51,17 +51,17 @@ class PhotoController extends Controller
         if ($request->hasFile('images')) {
             $image = $request->file('images');
             $image_name = $image->getClientOriginalName();
-            $request->file('images')->move(public_path('image/uploads/post'), $image_name);
+            $request->file('images')->move(public_path('image/uploads/ourproject'), $image_name);
             $dataInsert['images'] = $image_name;
         }
         Photo::create($dataInsert);
-        return redirect('/backend/photo')->with('msg', 'Employee Addedd!');  
+        return redirect('/backend/photo')->with('msg', 'Employee Addedd!');
     }
 
     public function edit($id){
 
         $dataEdit = Photo::find($id);
-  
+
         return view('backend/photo-edit', ['title' => 'Edit Photo'])->with('dataEdit', $dataEdit);
     }
 
@@ -75,13 +75,13 @@ class PhotoController extends Controller
             $request->file('images')->move(public_path('image/uploads/post'), $image_name);
             $dataInsert['images'] = $image_name;
         }
-        return redirect('backend/photo')->with('msg', 'Update photo thành công');  
+        return redirect('backend/photo')->with('msg', 'Update photo thành công');
     }
 
     public function delete($id)
     {
       Photo::destroy($id);
-        return redirect('backend/photo')->with('msg', 'Xóa hình ảnh thành công!');  
+        return redirect('backend/photo')->with('msg', 'Xóa hình ảnh thành công!');
     }
-    
+
 }
