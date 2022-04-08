@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 
 class PostController extends Controller
@@ -116,6 +117,20 @@ class PostController extends Controller
     {
         $post = Post::find($id);
         $input = $request->all();
+
+        if ($request->hasFile('image')) {
+
+            $old_image_path = 'image/uploads/post/' . $post->image;
+            if (File::exists($old_image_path)) {
+                File::delete($old_image_path);
+            }
+
+            $image = $request->file('image');
+            $image_name = $image->getClientOriginalName();
+            $request->file('image')->move(public_path('image/uploads/post'), $image_name);
+            $input['image'] = $image_name;
+        }
+
         $post->update($input);
         return redirect('/backend/post')->with('success', 'Đã cập nhật bài viết!');
     }
@@ -128,7 +143,11 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        Post::destroy($id);
+        $post = DB::table('post')->find($id);
+        $path = 'image/uploads/post/' . $post->image;
+        File::delete($path);
+
+            Post::destroy($id);
         return redirect('/backend/post')->with('success', 'Đã Xoá Bài Đăng!');
     }
 

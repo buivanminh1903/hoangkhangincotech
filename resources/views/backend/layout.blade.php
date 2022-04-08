@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('../css/backend/core.css') }}">
 
     <!-- CKEditor -->
-    <script src="{{url('//cdn.ckeditor.com/4.18.0/full/ckeditor.js')}}"></script>
+    <script src="//cdn.ckeditor.com/4.18.0/full/ckeditor.js"></script>
 
     <title>{{$title}}</title>
 </head>
@@ -53,6 +53,22 @@
                             <li><a class="dropdown-item" href="/backend/categories">Categories</a></li>
                             <li><a class="dropdown-item" href="/backend/post">All Post</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="/backend/Review/reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/backend/Contactus/contactus">Contact Us</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/backend/ourproject">Project</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/backend/newletter">New Letter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/backend/photo">Photo</a>
+
                     </li>
                 </ul>
                 <form class="d-flex">

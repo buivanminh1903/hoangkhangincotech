@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class ServiceController extends Controller
 {
@@ -106,6 +107,18 @@ class ServiceController extends Controller
     {
         $service = Service::find($id);
         $input = $request->all();
+        if ($request->hasFile('image')) {
+
+            $old_image_path = 'image/uploads/service/' . $service->image;
+            if (File::exists($old_image_path)) {
+                File::delete($old_image_path);
+            }
+
+            $image = $request->file('image');
+            $image_name = $image->getClientOriginalName();
+            $request->file('image')->move(public_path('image/uploads/service'), $image_name);
+            $input['image'] = $image_name;
+        }
         $service->update($input);
         return redirect('/backend/service')->with('success', 'Đã cập nhật Service!');
     }
@@ -118,6 +131,9 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
+        $service = DB::table('service')->find($id);
+        $path = 'image/uploads/service/' . $service->image;
+        File::delete($path);
         Service::destroy($id);
         return redirect('/backend/service')->with('success', 'Đã Xoá Service!');
     }

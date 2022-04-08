@@ -44,7 +44,7 @@
                                     </td>
                                     <td>{{$item->title}}</td>
                                     <td>{{$item->short_content}}</td>
-                                    <td>{{$item->content}}</td>
+                                    <td>{{\Illuminate\Support\Str::limit($item->content, $limit = 100, $end = '...')}}</td>
                                     <td style="display: flex; flex-direction: column"><img
                                             src="{{ asset('image/uploads/service/' . $item->image) }}" width="100"
                                             class="rounded m-1"><span class="text-muted">{{ $item->image }}</span></td>

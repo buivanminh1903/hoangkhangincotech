@@ -17,7 +17,8 @@
                     <form class="form-input" type="get" action="{{url('/bai-viet/search')}}">
                         <input type="search" placeholder="Search here..." name="key" autocomplete="off"/>
                         <span id="searchicon" class="input-group-text bg-white">
-                        <img src="{{asset('image/iconsearch.png')}}">
+                            <button type="submit" class="blog_searhicon"><i class="fa-solid fa-magnifying-glass"></i></button>
+{{--                        <img src="{{asset('image/iconsearch.png')}}">--}}
                     </span>
                     </form>
                 </div>
@@ -37,7 +38,8 @@
                             <form class="form-input" type="get" action="{{url('/bai-viet/search')}}">
                                 <input type="search" placeholder="Search here..." name="key" autocomplete="off"/>
                                 <span id="searchicon" class="input-group-text bg-white">
-                                    <img src="{{asset('image/iconsearch.png')}}">
+                                    <button type="submit" class="blog_searhicon"><i class="fa-solid fa-magnifying-glass"></i></button>
+{{--                                    <img src="{{asset('image/iconsearch.png')}}">--}}
                                 </span>
                             </form>
                         </div>
@@ -50,12 +52,14 @@
                                 <div class="itemm">
                                     <div class="blog">
                                         <div class="blog_img">
-                                            <a href="{{$item->id}}-{{Str::slug($item->title, '-')}}.html"><img
+                                            <a href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}.html"><img
                                                     src="{{'../image/uploads/post/' . $item->image}}"
                                                     style="object-fit: cover"></a>
                                         </div>
                                         <div class="blogtext">
-                                            <h3>{{$item->title}}</h3>
+                                            <h3>
+                                                <a href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}.html">{{$item->title}}</a>
+                                            </h3>
                                             <div class="blogtag"><img
                                                     src="{{asset('image/iconclander.png')}}"></i> {{date('d M, Y', strtotime($item->created_at))}}
                                                 By </i><a
@@ -63,7 +67,7 @@
                                             <div
                                                 class="blogtitle">{{ \Illuminate\Support\Str::limit($item->short_content, $limit = 130, $end = '...')}}</div>
                                             <a class="read"
-                                               href="{{$item->id}}-{{Str::slug($item->title, '-')}}.html">READ
+                                               href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}.html">READ
                                                 MORE
                                                 →</a>
                                         </div>

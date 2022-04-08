@@ -23,9 +23,11 @@
             <!-- Search -->
             <div class="col-md-4 col-sm-12 col-12 right">
                 <form class="form-input" type="get" action="{{url('/bai-viet/search')}}">
-                    <input type="search" placeholder="Search here..." name="key" autocomplete="off"/>
+                    <input type="search" placeholder="Search here..." name="key" autocomplete="off" required/>
                     <span id="searchicon" class="input-group-text bg-white">
-                        <img src="{{asset('image/iconsearch.png')}}">
+                        <button type="submit" class="blog_searhicon"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+{{--                        <img src="{{asset('image/iconsearch.png')}}">--}}
                     </span>
                 </form>
             </div>
@@ -34,7 +36,7 @@
         <!-- item -->
         <div class="box-main row mb-5">
             <!-- 1 -->
-            <div class="col-lg-8 col-md-12 col-sm-12" style="padding-right: 18px;">
+            <div class="col-lg-8 col-md-12 col-sm-12" style="padding-right: ">
                 @foreach($post as $item)
                     <div class="itemm">
                         <div class="blog">
@@ -64,74 +66,88 @@
                 </div>
             </div>
             <!-- 2 -->
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <!-- Sign Up -->
-                <div class="signing row" style=" margin-left: 0; margin-right: 0;">
-                    <div class="sign">
-                        <div class="textsign">
-                            <div class="signup">Sign Up to News</div>
-                            <div class="sign_text">Subscribe to our news to get the latest updates and offers</div>
-                            <div class="mess"><input class="form-control" style="border: 1px solid transparent;"
-                                                     placeholder="Your Email"/></div>
-                            <button class="btn btn-primary" id="button-search" type="button">Send Message</button>
-                        </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                <!-- send mail box -->
+                <div id="send-mail-new">
+                    <div class="container" style="width: 90%;">
+                        <form action="{{url('/backend/email-submit')}}" method="POST">
+                            @csrf
+                            <h3 id="title-news" style="font-size: 20px;">Sign Up To News</h3>
+                            <p style="color: gray;">Subscribe to our news to get the latest updates and offers</p>
+                            <div class="mess-mail"><input class="form-control" name="email"
+                                                          style="border: 1px solid transparent;height: 55px; border: #eff3f7;"
+                                                          placeholder="Your Email"/>
+                                @error('email')
+                                <span style="color :red;">{{$message}}</span>
+                                @enderror</div>
+                            <button id="btn-mess" type="form-control" class="btn btn-primary"><b class="send-mess">Send
+                                    Message</b></button>
+                        </form>
                     </div>
                 </div>
-
                 <!-- Recent Post -->
                 <div class="Recent">
                     <!-- 1 -->
                     <div class="righttitle">Recent Post</div>
-                    <div class="recentpost">
-                        <div class="post">
-                            <div class="post_img">
-                                <a href=""><img src="{{asset('image/blog_galary_04.png')}}"></a>
-                            </div>
-                            <div class="postline">
-                                <div class="textpost">
-                                    Participate in staff meet ingness manage dedicated
+
+                    <div class="recent_post_box">
+                        @foreach($popular_post as $item)
+                            <a href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}.html">
+                                <div class="recentpost">
+                                    <div class="post">
+                                        <div class="post_img">
+                                            <img src="{{asset('image/uploads/post/'.$item->image)}}">
+                                        </div>
+                                        <div class="postline">
+                                            <div class="textpost">
+                                                {{$item->title}}
+                                            </div>
+                                            <div class="designpost"><img class="clock" src="/image/icon-clock.png" alt="{{$item->image}}">
+                                                <span>{{date('d M, Y', strtotime($item->created_at))}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="designpost"><img class="clock" src="{{asset('image/iconclock.png')}}">
-                                    <span>24 Jan, 2021</span>
-                                </div>
-                            </div>
-                        </div>
+                            </a>
+                        @endforeach
                     </div>
+
+
                     <!-- 2 -->
-                    <div class="postfile">
-                        <div class="post">
-                            <div class="post_img">
-                                <a href=""><img src="{{asset('image/blog_galary_07.png')}}"></a>
-                            </div>
-                            <div class="postline">
-                                <div class="textpost">
-                                    Dramatically provide access schemas without extensive back compatible
-                                </div>
-                                <div class="designpost"><img class="clock" src="{{asset('image/iconclock.png')}}">
-                                    <span>24 Jan, 2021</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 3 -->
+                {{--                    <div class="postfile">--}}
+                {{--                        <div class="post">--}}
+                {{--                            <div class="post_img">--}}
+                {{--                                <a href=""><img src="/image/img-recent-tag1.png"></a>--}}
+                {{--                            </div>--}}
+                {{--                            <div class="postline">--}}
+                {{--                                <div class="textpost">--}}
+                {{--                                    Dramatically provide access schemas without extensive back compatible--}}
+                {{--                                </div>--}}
+                {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
+                {{--                                    <span>24 Jan, 2021</span>--}}
+                {{--                                </div>--}}
+                {{--                            </div>--}}
+                {{--                        </div>--}}
+                {{--                    </div>--}}
+                <!-- 3 -->
 
-                    <div class="postfull">
-                        <div class="post">
-                            <div class="post_img">
-                                <a href=""><img src="{{asset('image/blog_galary_08.png')}}"></a>
-                            </div>
-                            <div class="postline">
-                                <div class="textpost">
-                                    Participate in staff meet ingness manage dedicated
-                                </div>
-                                <div class="designpost"><img class="clock" src="{{asset('image/iconclock.png')}}">
-                                    <span>24 Jan, 2021</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                {{--                    <div class="postfull">--}}
+                {{--                        <div class="post">--}}
+                {{--                            <div class="post_img">--}}
+                {{--                                <a href=""><img src="/image/img-recent-tag2.png"></a>--}}
+                {{--                            </div>--}}
+                {{--                            <div class="postline">--}}
+                {{--                                <div class="textpost">--}}
+                {{--                                    Participate in staff meet ingness manage dedicated--}}
+                {{--                                </div>--}}
+                {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
+                {{--                                    <span>24 Jan, 2021</span>--}}
+                {{--                                </div>--}}
+                {{--                            </div>--}}
+                {{--                        </div>--}}
+                {{--                    </div>--}}
 
-                    <!-- Catagory List -->
+                <!-- Catagory List -->
                     <div class="catagory">Catagory List</div>
                     <div class="list">
                         <ul>
@@ -154,16 +170,11 @@
                     <div class="archive">Archives</div>
                     <div class="archives">
                         <ul>
-                            <li><span><img class="file" src="{{asset('image/iconfile.png')}}"><a>Sep 2020</a></span>
-                            </li>
-                            <li><span><img class="file" src="{{asset('image/iconfile.png')}}"><a>Oct 2021</a></span>
-                            </li>
-                            <li><span><img class="file" src="{{asset('image/iconfile.png')}}"><a>Jan 2020</a></span>
-                            </li>
-                            <li><span><img class="file" src="{{asset('image/iconfile.png')}}"><a>Nov 2019</a></span>
-                            </li>
-                            <li><span><img class="file" src="{{asset('image/iconfile.png')}}"><a>Dec 2018</a></span>
-                            </li>
+                            <li><span><img class="file" src="/image/Archives-tag.png"><a>Sep 2020</a></span></li>
+                            <li><span><img class="file" src="/image/Archives-tag.png"><a>Oct 2021</a></span></li>
+                            <li><span><img class="file" src="/image/Archives-tag.png"><a>Jan 2020</a></span></li>
+                            <li><span><img class="file" src="/image/Archives-tag.png"><a>Nov 2019</a></span></li>
+                            <li><span><img class="file" src="/image/Archives-tag.png"><a>Dec 2018</a></span></li>
                         </ul>
                     </div>
                     <!-- Follow Us -->
@@ -178,7 +189,7 @@
                     <!-- Tags -->
                     <div class="tag">Tags</div>
                     <div>
-                        <a class="btn-tag">Fashion</a>
+                        <a href="#" class="btn-tag">Fashion</a>
                         <a class="btn-tag">Nation</a>
                         <a class="btn-tag">Company</a>
                         <a class="btn-tag">Business </a>
@@ -190,40 +201,39 @@
                 </div>
             </div>
         </div>
-    </div>
-    <script type="text/javascript">
-        var paginate = 1;
-        loadMoreData(paginate);
+        <script type="text/javascript">
+            var paginate = 1;
+            loadMoreData(paginate);
 
-        $('#load-more').click(function () {
-            var page = $(this).data('paginate');
-            loadMoreData(page);
-            $(this).data('paginate', page + 1);
-        });
+            $('#load-more').click(function () {
+                var page = $(this).data('paginate');
+                loadMoreData(page);
+                $(this).data('paginate', page + 1);
+            });
 
-        // run function when user click load more button
-        function loadMoreData(paginate) {
-            $.ajax({
-                url: '?page=' + paginate,
-                type: 'get',
-                datatype: 'html',
-                beforeSend: function () {
-                    $('#load-more').text('Loading...');
-                }
-            })
-                .done(function (data) {
-                    if (data.length == 0) {
-                        $('.invisible').removeClass('invisible');
-                        $('#load-more').hide();
-                        return;
-                    } else {
-                        $('#load-more').text('Load more...');
-                        $('#post').append(data);
+            // run function when user click load more button
+            function loadMoreData(paginate) {
+                $.ajax({
+                    url: '?page=' + paginate,
+                    type: 'get',
+                    datatype: 'html',
+                    beforeSend: function () {
+                        $('#load-more').text('Loading...');
                     }
                 })
-                .fail(function (jqXHR, ajaxOptions, thrownError) {
-                    alert('Something went wrong.');
-                });
-        }
-    </script>
+                    .done(function (data) {
+                        if (data.length == 0) {
+                            $('.invisible').removeClass('invisible');
+                            $('#load-more').hide();
+                            return;
+                        } else {
+                            $('#load-more').text('Load more...');
+                            $('#post').append(data);
+                        }
+                    })
+                    .fail(function (jqXHR, ajaxOptions, thrownError) {
+                        alert('Something went wrong.');
+                    });
+            }
+        </script>
 @endsection

@@ -24,6 +24,15 @@
     line-height: 1.625;
 }
 
+.service-title-open ul li {
+    list-style: unset;
+    list-style-image: url("../image/iconcheck.png");
+}
+
+.service-title-open ul {
+    padding-left: 22px;
+}
+
 .service-content {
     padding-top: 30px;
     font-size: 16px;

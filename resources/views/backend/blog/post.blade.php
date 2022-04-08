@@ -46,9 +46,14 @@
                                     <td>{{ $item->title }}</td>
                                     <td>{{ \Illuminate\Support\Str::limit($item->short_content, $limit = 130, $end = '...') }}</td>
                                     <td>{{ \Illuminate\Support\Str::limit($item->content, $limit = 130, $end = '...') }}</td>
-                                    <td style="display: flex; flex-direction: column"><img
-                                            src="{{ asset('image/uploads/post/' . $item->image) }}" width="100"
-                                            class="rounded m-1"><span class="text-muted">{{ $item->image }}</span></td>
+                                    <td style="display: flex; flex-direction: column">
+                                        <a href="{{ asset('image/uploads/post/' . $item->image) }}" target="_blank">
+                                            <img
+                                                src="{{ asset('image/uploads/post/' . $item->image) }}" width="100"
+                                                class="rounded m-1">
+                                        </a>
+                                        <span class="text-muted">{{ $item->image }}</span>
+                                    </td>
                                     <td>{{ $item->category_id }}</td>
                                     <td>{{ date('d-m-Y', strtotime($item->created_at)) }}</td>
                                     <td>

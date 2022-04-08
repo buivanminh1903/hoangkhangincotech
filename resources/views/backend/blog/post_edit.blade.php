@@ -5,7 +5,7 @@
         <div class="col-xxl">
             <div class="card mb-4">
                 <div class="card-body">
-                    <form action="{{ url('/backend/post/update/' .$post->id) }}" method="post">
+                    <form action="{{ url('/backend/post/update/' .$post->id) }}" method="post" enctype="multipart/form-data">
                         {!! csrf_field() !!}
                         @method("put")
                         <input type="hidden" value="{{$post->id}}">
@@ -36,6 +36,7 @@
                             <label class="col-sm-2 col-form-label"
                                    for="basic-default-name">Image</label>
                             <div class="col-sm-10">
+                                <img alt="{{$post->image}}" style="border-radius: 4px; margin-bottom: 16px" src="{{asset('image/uploads/post/' . $post->image)}}" height="200">
                                 <input type="file" class="form-control" id="basic-default-name"
                                        name="image">
                             </div>
