@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-12 col-sm-12">
                 <div class="logo_footer">
-                    <img src="{{asset('Image/logo_footer.png')}}" alt="">
+                    <img src="{{asset('image/logo_footer.png')}}" alt="">
                 </div>
                 <div class="footer-box-firts">
                     <p class="text mb-5">Our company has been developing high-quality and reliable software for
@@ -65,21 +65,21 @@
                     <hr>
                 </div>
                 <div class="footer-text">
-                    <img src="{{asset('Image/address.png')}}" alt="">
+                    <img src="{{asset('image/address.png')}}" alt="">
                     <div style="margin-left: 20px">
                         <a> Address</a>
                         <p>125, Suitand Street,USA</p>
                     </div>
                 </div>
                 <div class="footer-text">
-                    <img src="{{asset('Image/phone.JPG')}}" alt="">
+                    <img src="{{asset('image/phone.JPG')}}" alt="">
                     <div style="margin-left: 20px">
                         <a>Phone</a>
                         <p>+0397181527</p>
                     </div>
                 </div>
                 <div class="footer-text">
-                    <img src="{{asset('Image/email.JPG')}}" alt=" ">
+                    <img src="{{asset('image/email.JPG')}}" alt=" ">
                     <div style="margin-left: 20px">
                         <a>E-Mail</a>
                         <p class="mb-0">tranquan12a8@gmai.com</p>

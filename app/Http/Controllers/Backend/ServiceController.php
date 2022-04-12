@@ -108,12 +108,6 @@ class ServiceController extends Controller
         $service = Service::find($id);
         $input = $request->all();
         if ($request->hasFile('image')) {
-
-            $old_image_path = 'image/uploads/service/' . $service->image;
-            if (File::exists($old_image_path)) {
-                File::delete($old_image_path);
-            }
-
             $image = $request->file('image');
             $image_name = $image->getClientOriginalName();
             $request->file('image')->move(public_path('image/uploads/service'), $image_name);

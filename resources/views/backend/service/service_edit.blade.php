@@ -36,8 +36,11 @@
                             <label class="col-sm-2 col-form-label"
                                    for="basic-default-name">Image</label>
                             <div class="col-sm-10">
+
+                                    <img src="{{ asset('image/uploads/service/' . $service->image) }}" Height="100"  class="img img-responsive" />
+
                                 <input type="file" class="form-control" id="basic-default-name"
-                                       name="image" required>
+                                       name="image" >
                             </div>
                         </div>
                         <input type="submit" class="btn btn-outline-success" value="Cập Nhật">

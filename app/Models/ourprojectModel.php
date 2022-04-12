@@ -11,16 +11,9 @@ class ourprojectModel extends Model
     use HasFactory;
 
     protected $table = 'project';
-    protected $primaryKey = 'id';
     protected $fillable = ['titles', 'descriptions', 'images', 'categorys'];
-    public $timestamps = false;
+    public $timestamps = true;
 
 
-    public function getAllPhoto()
-    {
 
-        $outproject = DB::select('SELECT * FROM project ');
-
-        return $outproject;
-    }
 }
