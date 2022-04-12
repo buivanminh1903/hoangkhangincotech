@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 
-use App\Models\NewLetter;
+use App\Models\Newletter;
 use Illuminate\Support\Facades\DB;
 
 class NewlettersController extends Controller
@@ -15,7 +15,7 @@ class NewlettersController extends Controller
 
     public function __construct(){
 
-        $this -> new_letter = new NewLetter();
+        $this -> new_letter = new Newletter();
 
     }
     // Newletter
