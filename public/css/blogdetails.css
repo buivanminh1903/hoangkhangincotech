@@ -663,6 +663,7 @@
 
 .post_img img {
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .post {
