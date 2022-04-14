@@ -30,8 +30,14 @@
 
                     <div class="mb-3">
                         <label for=""> star  </label>
-                        <input type="text" class="form-control" name="star" placeholder="star"
-                        value="{{old('star')}}"/>
+                        <select  class="form-control text-select" name="star" id="exampleFormControlSelect1"
+                        value="{{old('star')}}">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>        
+                        </select>
                         @error('star')
                         <span style="color: red;">{{$message}}</span>
                         @enderror
@@ -62,15 +68,6 @@
                         @enderror
                     </div>
 
-                    <div class="row mb-3">
-                        <label  for="basic-default-name">Image</label>
-                        <div class="col-sm-12">
-                        <input class="form-control" name="image" type="file" id="photo">
-                        @error('image')
-                            <span style="color :red;">{{$message}}</span>
-                        @enderror
-                        </div>
-</div>
 
                     <button type="submit" class="btn btn-info">  Add-Reviews  </button>
                     <a href="/backend/Review/reviews" class="btn btn-warning"> Back </a>
