@@ -49,8 +49,14 @@
 
                     <div class="mb-3">
                         <label for=""> Position </label>
-                        <input type="text" class="form-control" name="position" placeholder="position"
-                        value='{{$update->position}}'/>
+                        <select  class="form-control text-select" name="position" id="exampleFormControlSelect1"
+                        value="{{$update->position}}">
+                            <option>Trưởng phòng</option>
+                            <option>Kế toán</option>
+                            <option>Quản lý</option>
+                            <option>Nhân viên</option>
+                            <option>Tiếp tân</option>        
+                        </select>
                         @error('position')
                         <span style="color: red;">{{$message}}</span>
                         @enderror

@@ -48,8 +48,15 @@
 
                     <div class="mb-3">
                         <label for=""> position </label>
-                        <input type="text" class="form-control" name="position" placeholder="position"
-                        value="{{old('position')}}"/>
+                        <select id="" class="form-control text-select" name="position" id="exampleFormControlSelect1"
+                        value="{{old('position')}}">
+                            <option>Trưởng phòng</option>
+                            <option>Kế toán</option>
+                            <option>Quản lý</option>
+                            <option>Nhân viên</option>
+                            <option>Tiếp tân</option>
+                         
+                        </select>
                         @error('position')
                         <span style="color: red;">{{$message}}</span>
                         @enderror
