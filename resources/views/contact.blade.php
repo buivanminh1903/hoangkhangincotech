@@ -130,7 +130,7 @@
 
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
                         <select id="selected" class="form-control text-select" id="exampleFormControlSelect1"
-                        name="position">
+                        name="position" required="">
                             <option>---</option>
                             <option>Trưởng phòng</option>
                             <option>Kế toán</option>
@@ -142,12 +142,12 @@
 
                     <div class="col-lg-12 col-md-12 col-sm-12 form-subject">
                         <input id="subject" type="text" class="form-control" placeholder="Subject" name=
-                        "subject">
+                        "subject" required="">
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 form-meseage">
                         <textarea id="meseage-register" class="form-control" name="messages"
-                                  placeholder="Your Messeage: "></textarea>
+                                  placeholder="Your Messeage: " required=""></textarea>
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 button-send">
