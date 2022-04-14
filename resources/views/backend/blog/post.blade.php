@@ -7,84 +7,111 @@
         </ol>
     </nav>
     <div class="container mb-3">
-        <div class="row">
-            <div class="backend__card p-3">
-                <div class="m-2">
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
-                            <strong>{{ $message }}</strong>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
+        <div class="row" style="border-bottom: 1px solid #ddd">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-12">
+                        @if ($message = Session::get('success'))
+                            <div class="alert alert-success alert-dismissible fade show mb-3" role="alert">
+                                <strong>{{ $message }}</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                            </div>
+                        @endif
+                    </div>
                 </div>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-success m-2" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                    Thêm Bài Đăng
-                </button>
-                <div class="card-body m-2 p-0">
-                    <div class="table-responsive text-nowrap">
-                        <table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Title</th>
-                                <th>Short Content</th>
-                                <th>Content</th>
-                                <th>Image</th>
-                                <th>Category id</th>
-                                <th>Created at</th>
-                                <th>Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($post as $item)
-                                <tr>
-                                    <td>
-                                        <strong>{{ $item->id }}</strong>
-                                    </td>
-                                    <td>{{ $item->title }}</td>
-                                    <td>{{ \Illuminate\Support\Str::limit($item->short_content, $limit = 130, $end = '...') }}</td>
-                                    <td>{{ \Illuminate\Support\Str::limit($item->content, $limit = 130, $end = '...') }}</td>
-                                    <td style="display: flex; flex-direction: column">
-                                        <a href="{{ asset('image/uploads/post/' . $item->image) }}" target="_blank">
-                                            <img
-                                                src="{{ asset('image/uploads/post/' . $item->image) }}" width="100"
-                                                class="rounded m-1">
-                                        </a>
-                                        <span class="text-muted">{{ $item->image }}</span>
-                                    </td>
-                                    <td>{{ $item->category_id }}</td>
-                                    <td>{{ date('d-m-Y', strtotime($item->created_at)) }}</td>
-                                    <td>
-                                        <a class="btn btn-info btn-sm"
-                                           href="{{'/backend/post/edit/' . $item->id}}"
-                                        ><i class="fa-regular fa-pen-to-square"></i> Sửa</a
-                                        >
-                                        <form method="POST" action="{{url('/backend/post/delete/' . $item->id)}}"
-                                              accept-charset="UTF-8" style="display:inline">
-                                            {{ method_field('DELETE') }}
-                                            {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-danger btn-sm" title="Xoá"
-                                                    onclick="return confirm(&quot;Xác nhận xoá bài đăng {{ $item->id }}?&quot;)">
-                                                <i class="fa-regular fa-trash-can"></i> Xoá
-                                            </button>
-                                        </form>
-                                    </td>
-                                    @endforeach
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success mb-3 w-100" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">
+                            Thêm Bài Đăng
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        @foreach($post as $item)
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('image/uploads/post/' . $item->image) }}"
+                                             class="img-fluid rounded-start" alt="..."
+                                             style="height: 100%; width: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a
+                                                    href="/backend/post/detail/{{$item->id}}">{{$item->title}}</a>
+                                            </h5>
+                                            <p class="card-text">This is a wider card with supporting text below as a
+                                                natural
+                                                lead-in to additional content. This content is a little bit longer.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header">Tìm kiếm</div>
+                    <div class="card-body">
+                        <form class="input-group" type="get" action="{{url('/backend/post/search')}}">
+                            <input class="form-control" type="search" placeholder="Enter search key..." name="key"
+                                   autocomplete="off" required/>
+                            <button class="btn btn-outline-success" id="button-search" type="submit">Tìm</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">Categories</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="list-unstyled mb-0">
+                                    @foreach($categories as $item)
+                                        <li><a href="#!">{{$item->name}}</a></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">Archives</div>
+                    <div class="card-body">
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="#">March 2021</a></li>
+                            <li><a href="#">February 2021</a></li>
+                            <li><a href="#">January 2021</a></li>
+                            <li><a href="#">December 2020</a></li>
+                            <li><a href="#">November 2020</a></li>
+                            <li><a href="#">October 2020</a></li>
+                            <li><a href="#">September 2020</a></li>
+                            <li><a href="#">August 2020</a></li>
+                            <li><a href="#">July 2020</a></li>
+                            <li><a href="#">June 2020</a></li>
+                            <li><a href="#">May 2020</a></li>
+                            <li><a href="#">April 2020</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <!-- Create Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Thêm Danh Mục</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel">Thêm Bài Đăng</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body p-0">
