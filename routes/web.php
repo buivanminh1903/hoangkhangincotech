@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
 
 /*
@@ -43,7 +44,25 @@ Route::get('bai-viet', [\App\Http\Controllers\Backend\PostController::class, 'sh
 //Route::get('bai-viet/tim-kiem', [\App\Http\Controllers\Backend\PostController::class, 'search']);
 Route::get('bai-viet/search', [\App\Http\Controllers\Backend\PostController::class, 'search']);
 
-/*-----------Backend------------*/
+
+
+
+
+Route::post('/auth/save', [MainController::class, 'save'])->name ('auth.save');
+Route::post('/auth/check', [MainController::class, 'check'])->name ('auth.check');
+Route::get('auth/logout',[MainController::class, 'logout'])->name('auth.logout');
+
+
+
+
+Route::group(['middleware'=>['AuthCheck']], function(){
+    Route::get('/auth/login', [MainController::class, 'login'])->name ('auth.login');
+    Route::get('/auth/register', [MainController::class, 'register'])->name ('auth.register');
+    
+    Route::get('/admin/dashboard',[MainController::class,'dashboard']);
+
+
+    /*-----------Backend------------*/
 
 /* Trang chủ */
 Route::get('/backend', [\App\Http\Controllers\Backend\HomeController::class, 'index']);
@@ -182,6 +201,10 @@ Route::put('backend/Photo/photo-update/{id}', [\App\Http\Controllers\Backend\Pho
 /* Delete  */
 Route::delete('backend/Photo/photo-delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
 /* End Photo */
+   
+});
+
+
 
 
 
