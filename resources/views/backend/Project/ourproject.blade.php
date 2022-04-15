@@ -18,7 +18,7 @@
                     @endif
                 </div>
                 <div style="float: right; padding-top: 20px" >
-                <a   class="btn btn-outline-info m-2" href="/backend/insert_project"><i class="bx bx-plus-circle me-1"></i>
+                <a   class="btn btn-outline-info m-2" href="/admin/insert_project"><i class="bx bx-plus-circle me-1"></i>
                     Thêm dịch
                     vụ</a>
                 </div>
@@ -46,13 +46,13 @@
                                 <td>{{$item->descriptions}}</td>
                                 <td><img src="{{ asset('image/uploads/ourproject/' . $item->images) }}" Height="100"  class="img img-responsive" /></td>
 
-                                
+
                                 <td>{{$item ->categorys}}</td>
 
-                              
+
 <td>
                                     <a class="btn btn-info btn-sm"
-                                       href="/backend/edit_project/{{$item->id}}"
+                                       href="/admin/edit_project/{{$item->id}}"
                                     ><i class="bx bx-edit-alt me-1"></i> Sửa</a
                                     >
                                     <form method="POST" action="{{url('/delete-project'. '/' . $item -> id)}}"
