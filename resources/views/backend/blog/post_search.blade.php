@@ -2,7 +2,7 @@
 @section('content')
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/backend">Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
             <li class="breadcrumb-item" aria-current="page">Post</li>
             <li class="breadcrumb-item active" aria-current="page">Search</li>
         </ol>
@@ -40,7 +40,7 @@
                                         <div class="col-md-8">
                                             <div class="card-body">
                                                 <h5 class="card-title"><a
-                                                        href="/backend/post/detail/{{$item->id}}.html">{{$item->title}}</a>
+                                                        href="/admin/post/detail/{{$item->id}}.html">{{$item->title}}</a>
                                                 </h5>
                                                 <p class="card-text">This is a wider card with supporting text below as
                                                     a
@@ -64,7 +64,7 @@
                     <div class="card-header">Tìm kiếm</div>
                     <div class="card-body">
                         <div class="input-group">
-                            <form class="input-group" type="get" action="{{url('/backend/post/search')}}">
+                            <form class="input-group" type="get" action="{{url('/admin/post/search')}}">
                                 <input class="form-control" type="search" placeholder="Enter search key..." name="key"
                                        autocomplete="off" required/>
                                 <button class="btn btn-outline-success" id="button-search" type="submit">Tìm</button>

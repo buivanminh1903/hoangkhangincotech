@@ -46,7 +46,7 @@ class CategoryController extends Controller
         ]);
         $input = $request->all();
         Categories::create($input);
-        return redirect('/backend/categories')->with('success', 'Đã Thêm Danh Mục!');
+        return redirect('/admin/categories')->with('success', 'Đã Thêm Danh Mục!');
     }
 
     /**
@@ -84,7 +84,7 @@ class CategoryController extends Controller
         $categories = Categories::find($id);
         $input = $request->all();
         $categories->update($input);
-        return redirect('/backend/categories')->with('success', 'Đã cập nhật danh mục!');
+        return redirect('/admin/categories')->with('success', 'Đã cập nhật danh mục!');
     }
 
     /**
@@ -96,6 +96,6 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Categories::destroy($id);
-        return redirect('/backend/categories')->with('success', 'Đã Xoá Danh Mục!');
+        return redirect('/admin/categories')->with('success', 'Đã Xoá Danh Mục!');
     }
 }

@@ -2,7 +2,7 @@
 @section('content')
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/backend">Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
             <li class="breadcrumb-item" aria-current="page">Post List</li>
             <li class="breadcrumb-item active" aria-current="page">{{$title}}</li>
         </ol>
@@ -13,11 +13,11 @@
                 <div class="row mb-3">
                     <div class="col-6">
                         <a class="btn btn-info w-100"
-                           href="{{'/backend/post/edit/' . $post_detail->post_id}}"
+                           href="{{'/admin/post/edit/' . $post_detail->post_id}}"
                         ><i class="fa-regular fa-pen-to-square"></i> Sửa</a>
                     </div>
                     <div class="col-6">
-                        <form method="POST" action="{{url('/backend/post/delete/' . $post_detail->post_id)}}"
+                        <form method="POST" action="{{url('/admin/post/delete/' . $post_detail->post_id)}}"
                               accept-charset="UTF-8" style="display:inline">
                             {{ method_field('DELETE') }}
                             {{ csrf_field() }}
@@ -60,7 +60,7 @@
                     <div class="card-header">Tìm kiếm</div>
                     <div class="card-body">
                         <div class="input-group">
-                            <form class="input-group" type="get" action="{{url('/backend/post/search')}}">
+                            <form class="input-group" type="get" action="{{url('/admin/post/search')}}">
                                 <input class="form-control" type="search" placeholder="Enter search key..." name="key"
                                        autocomplete="off" required/>
                                 <button class="btn btn-outline-success" id="button-search" type="submit">Tìm</button>
