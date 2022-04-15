@@ -2,7 +2,7 @@
 @section('content')
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/backend">Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Post List</li>
         </ol>
     </nav>
@@ -42,7 +42,7 @@
                                     <div class="col-md-8">
                                         <div class="card-body">
                                             <h5 class="card-title"><a
-                                                    href="/backend/post/detail/{{$item->id}}">{{$item->title}}</a>
+                                                    href="/admin/post/detail/{{$item->id}}">{{$item->title}}</a>
                                             </h5>
                                             <p class="card-text">This is a wider card with supporting text below as a
                                                 natural
@@ -62,7 +62,7 @@
                 <div class="card mb-4">
                     <div class="card-header">Tìm kiếm</div>
                     <div class="card-body">
-                        <form class="input-group" type="get" action="{{url('/backend/post/search')}}">
+                        <form class="input-group" type="get" action="{{url('/admin/post/search')}}">
                             <input class="form-control" type="search" placeholder="Enter search key..." name="key"
                                    autocomplete="off" required/>
                             <button class="btn btn-outline-success" id="button-search" type="submit">Tìm</button>
@@ -118,7 +118,7 @@
                             <div class="col-xl">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form action="{{ url('/backend/add-post') }}" method="post"
+                                        <form action="{{ url('/admin/post/add') }}" method="post"
                                               enctype="multipart/form-data">
                                             {!! csrf_field() !!}
                                             <div class="row mb-3">

@@ -11,13 +11,13 @@ use App\Models\contactus;
 
 class ContactusController extends Controller
 {
-   private $contactus;
+    private $contactus;
 
-   public function __construct()
-   {
-     $this->contactus = new contactus();
+    public function __construct()
+    {
+        $this->contactus = new contactus();
 
-   }
+    }
 
     public function index()
     {
@@ -29,12 +29,13 @@ class ContactusController extends Controller
         // $contactus = DB::select('SELECT * FROM contactus');
 
 
-        return view ('backend.Contactus.contactus', compact('title','contactusList'));
+        return view('backend.Contactus.contactus', compact('title', 'contactusList'));
 
 
     }
 
-    public function add(){
+    public function add()
+    {
 
         $title = "Thêm người liên hệ";
 
@@ -42,61 +43,54 @@ class ContactusController extends Controller
         return view('backend.Contactus.contactus-add', compact('title'));
 
 
-
     }
 
-    public function postAdd(Request $request){
+    public function postAdd(Request $request)
+    {
         $request->validate([
-            'subject'  => 'required',
+            'subject' => 'required',
             'messages' => 'required',
-
-          
-
             'names' => 'required',
             'email' => 'required|email|unique:contactus',
             'phone' => 'required|regex:/(0)[0-9]{9}/',
             'position' => 'required',
-
         ],
 
-        [
-            'subject.required'=> 'Môn học bắt buộc phải nhập',
-            'messages.required' => 'Lời nhắn bắt buộc phải nhập',
+            [
+                'subject.required' => 'Môn học bắt buộc phải nhập',
+                'messages.required' => 'Lời nhắn bắt buộc phải nhập',
 
 
-          
-
-            'names.required' => 'Họ và tên không được bỏ trống',
-            'names.min' => 'Họ và tên phải từ 6 ký tự trở lên',
+                'names.required' => 'Họ và tên không được bỏ trống',
+                'names.min' => 'Họ và tên phải từ 6 ký tự trở lên',
 
 
-            'email.required' => 'Email không được bỏ trống',
-            'email.email' => 'Email không đúng định dạng ',
-            'email.unique' => 'Email đã tồn tại trên hệ thống',
+                'email.required' => 'Email không được bỏ trống',
+                'email.email' => 'Email không đúng định dạng ',
+                'email.unique' => 'Email đã tồn tại trên hệ thống',
 
-            'phone.required' => 'Số điện thoại chỉ được nhập số',
-            'phone.regex' => 'Số điện thoại không hợp lệ',
+                'phone.required' => 'Số điện thoại chỉ được nhập số',
+                'phone.regex' => 'Số điện thoại không hợp lệ',
 
 
+                'position' => 'Vị trí liên hệ không hợp lệ',
 
-            'position' => 'Vị trí liên hệ không hợp lệ',
+            ]);
 
-        ]);
-
-        $dataAdd=$request->all();
+        $dataAdd = $request->all();
         contactus::create($dataAdd);
 
 
-        return redirect('backend/Contactus/contactus-add')-> with('msg', 'Thêm người dùng thành công');
+        return redirect('backend/Contactus/contactus-add')->with('msg', 'Thêm người dùng thành công');
 
     }
 
-    public function edit_contactus($id){
-        $update = contactus :: find($id);
+    public function edit_contactus($id)
+    {
+        $update = contactus:: find($id);
 
 
-
-        return view('backend/Contactus/contactus-edit',['title'=>'Update contact us']) -> with('update',$update);
+        return view('backend/Contactus/contactus-edit', ['title' => 'Update contact us'])->with('update', $update);
 
     }
 
@@ -118,36 +112,38 @@ class ContactusController extends Controller
         return redirect('backend/Contactus/contactus')->with('msg', 'Xóa người liên hệ thành công!');
     }
 
-    public function submit(Request $request){
+    public function submit(Request $request)
+    {
         $request->validate([
-            'subject'  => 'required',
+            'subject' => 'required',
             'messages' => 'required',
-            'names' => 'required|min:10',
+            'names' => 'required',
             'email' => 'required|email|unique:contactus',
             'phone' => 'required|regex:/(0)[0-9]{9}/',
-            'position' => 'required',
+            'position' => 'required|min:4',
+            
         ],
 
-        [
-            'subject.required'=> 'Môn học bắt buộc phải nhập',
-            'messages.required' => 'Lời nhắn bắt buộc phải nhập',
+            [
+                'subject.required' => 'Môn học bắt buộc phải nhập',
+                'messages.required' => 'Lời nhắn bắt buộc phải nhập',
 
-            'names.required' => 'Họ và tên không được bỏ trống',
-            'names.min' => 'Họ và tên phải từ 6 ký tự trở lên',
+                'names.required' => 'Họ và tên không được bỏ trống',
 
-            'email.required' => 'Email không được bỏ trống',
-            'email.email' => 'Email không đúng định dạng ',
-            'email.unique' => 'Email đã tồn tại trên hệ thống',
+                'email.required' => 'Email không được bỏ trống',
+                'email.email' => 'Email không đúng định dạng ',
+                'email.unique' => 'Email đã tồn tại trên hệ thống',
 
-            'phone.required' => 'Số điện thoại bắt buộc phải nhập',
-            'phone.regex' => 'Số điện thoại không hợp lệ',
+                'phone.required' => 'Số điện thoại bắt buộc phải nhập',
+                'phone.regex' => 'Số điện thoại không hợp lệ',
 
-            'position' => 'Vị trí liên hệ không hợp lệ',
-        ]);
+                'position.required' => 'Vị trí liên hệ không hợp lệ',
+                'position.min' => 'Chọn vị trí liên hệ',
+            ]);
 
-        $dataAdd=$request->all();
+        $dataAdd = $request->all();
         contactus::create($dataAdd);
-        return redirect('/lien-he')-> with('msg', 'Thêm người dùng thành công');
+        return redirect('/lien-he')->with('msg', 'Thêm người dùng thành công');
 
     }
 

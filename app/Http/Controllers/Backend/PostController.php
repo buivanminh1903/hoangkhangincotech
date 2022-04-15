@@ -60,7 +60,7 @@ class PostController extends Controller
             $input['image'] = $image_name;
         }
         Post::create($input);
-        return redirect('/backend/post')->with('success', 'Đã Thêm Bài Đăng!');
+        return redirect('/admin/post')->with('success', 'Đã Thêm Bài Đăng!');
     }
 
     /**
@@ -143,7 +143,7 @@ class PostController extends Controller
         }
 
         $post->update($input);
-        return redirect('/backend/post')->with('success', 'Đã cập nhật bài viết!');
+        return redirect('/admin/post')->with('success', 'Đã cập nhật bài viết!');
     }
 
     /**
@@ -159,7 +159,7 @@ class PostController extends Controller
         File::delete($path);
 
         Post::destroy($id);
-        return redirect('/backend/post')->with('success', 'Đã Xoá Bài Đăng!');
+        return redirect('/admin/post')->with('success', 'Đã Xoá Bài Đăng!');
     }
 
     public function detail($id = '', $slug = '')

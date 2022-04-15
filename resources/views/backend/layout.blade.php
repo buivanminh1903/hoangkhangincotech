@@ -37,7 +37,8 @@
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light backend_navbar">
         <div class="container-fluid">
-            <a class="navbar-brand {{'backend' == request()->path() ? 'navbar_backend_active' : ''}}" href="/backend">Hoangkhang Incotech Backend</a>
+            <a class="navbar-brand {{'backend' == request()->path() ? 'navbar_backend_active' : ''}}" href="/backend">Hoangkhang
+                Incotech Backend</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -46,33 +47,40 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {{'backend/service' == request()->path() ? 'navbar_backend_active' : ''}}" aria-current="page" href="/backend/service">Service</a>
+                        <a class="nav-link {{'admin/service' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           aria-current="page" href="/admin/service">Service</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{'backend/post' == request()->path() ? 'navbar_backend_active' : ''}}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle {{'admin/post' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Post
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/backend/categories">Categories</a></li>
-                            <li><a class="dropdown-item" href="/backend/post">All Post</a></li>
+                            <li><a class="dropdown-item" href="/admin/categories">Categories</a></li>
+                            <li><a class="dropdown-item" href="/admin/post">All Post</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{'backend/NewLetter/newletter' == request()->path() ? 'navbar_backend_active' : ''}}" href="/backend/NewLetter/newletter">New Letter</a>
+                        <a class="nav-link {{'admin/NewLetter/newletter' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           href="/admin/NewLetter/newletter">New Letter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{'backend/Photo/photo' == request()->path() ? 'navbar_backend_active' : ''}}" href="/backend/Photo/photo">Photo</a>
+                        <a class="nav-link {{'admin/Photo/photo' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           href="/admin/Photo/photo">Photo</a>
                     </li>
                     <li>
-                        <a class="nav-link {{'backend/Contactus/contactus' == request()->path() ? 'navbar_backend_active' : ''}}" href="/backend/Contactus/contactus">Contact Us</a>
+                        <a class="nav-link {{'admin/Contactus/contactus' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           href="/admin/Contactus/contactus">Contact Us</a>
                     </li>
                     <li>
-                        <a class="nav-link {{'backend/Review/reviews' == request()->path() ? 'navbar_backend_active' : ''}}"  href="/backend/Review/reviews">Reviews</a>
+                        <a class="nav-link {{'admin/Review/reviews' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           href="/admin/Review/reviews">Reviews</a>
                     </li>
                     <li>
-                        <a class="nav-link {{'backend/ourproject' == request()->path() ? 'navbar_backend_active' : ''}}" href="/backend/ourproject">Project</a>
+                        <a class="nav-link {{'admin/ourproject' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           href="/admin/ourproject">Project</a>
                     </li>
-                   
+
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

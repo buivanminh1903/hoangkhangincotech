@@ -2,7 +2,7 @@
 @section('content')
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/backend">Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Category List</li>
         </ol>
     </nav>
@@ -43,10 +43,10 @@
                                     <td>{{ date('d-m-Y', strtotime($item->created_at)) }}</td>
                                     <td>
                                         <a class="btn btn-info btn-sm"
-                                           href="{{'/backend/category/edit/' . $item->id}}"
+                                           href="{{'/admin/category/edit/' . $item->id}}"
                                         ><i class="fa-regular fa-pen-to-square"></i> Sửa</a
                                         >
-                                        <form method="POST" action="{{url('/backend/category/delete/' . $item->id)}}"
+                                        <form method="POST" action="{{url('/admin/category/delete/' . $item->id)}}"
                                               accept-charset="UTF-8" style="display:inline">
                                             {{ method_field('DELETE') }}
                                             {{ csrf_field() }}
@@ -76,7 +76,7 @@
                             <div class="col-xl">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form action="{{ url('/backend/add-category') }}" method="post">
+                                        <form action="{{ url('/admin/category/add') }}" method="post">
                                             {!! csrf_field() !!}
                                             <div class="mb-3">
                                                 <label class="form-label" for="basic-default-fullname">Tên danh

@@ -18,8 +18,8 @@
                         </div>
                         <div class="text">
                             <div class="slider-button">
-                                <a href="#">Learn more <span> <i class="fa fa-long-arrow-right"></i> </span></a>
-                                <a class="slider-active" href="#">Get in touch <span
+                                <a href="/dich-vu">Learn more <span> <i class="fa fa-long-arrow-right"></i> </span></a>
+                                <a class="slider-active" href="/bai-viet">Get in touch <span
                                         class="fa fa-long-arrow-right"></span></a>
                             </div>
                         </div>
@@ -578,9 +578,9 @@
 			</div>
 		</div>
 	</div>
-    
+
 				<!--Start testimonial-->
-	
+
 	<div class="testimonial pb-70">
 		<div class="container">
 			<div class="row upper">
@@ -700,7 +700,7 @@
 						</div>
 					</div> -->
 
-    
+
 
             </div>
         </div>
@@ -840,7 +840,7 @@
                         @csrf
 						<div class="subscribe">
 							<input class="subscribe-mail-box" type="email" name="email" placeholder="Enter Your E-mail" required="">
-							<button type="submit">Subscribe</button>						
+							<button type="submit">Subscribe</button>
 						</div>
 					</form>
                 </div>

@@ -7,7 +7,7 @@
             <div class="col-xxl">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <form action="{{ url('/backend/category/update/' .$categories->id) }}" method="post">
+                        <form action="{{ url('/admin/category/update/' .$categories->id) }}" method="post">
                             {!! csrf_field() !!}
                             @method("put")
                             <input type="hidden" name="id" value="{{$categories->id}}">
