@@ -15,23 +15,23 @@
         </div>
         <!--End breadcrumb-->
     </div>
-{{--    <div style="background-color: #f0f4f8;">--}}
-{{--        <!--Start breadcrumb-->--}}
-{{--        <div class="hk_breadcrumb">--}}
-{{--            <div class="hk_breadcrumb_left">--}}
-{{--                <span class="contactus-left" style="font-weight: 500;"><span class="hk_breadcrumb__dot"></span> Contact Us </span>--}}
-{{--            </div>--}}
-{{--            <div class="hk_breadcrumb_right">--}}
-{{--                <ul class="hk_menu">--}}
-{{--                    <li class="title-home">Home</li>--}}
-{{--                    <li class="contact-us" style="color: #028bfe; margin-left: 5px;"><i--}}
-{{--                            class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Contact Us--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <!--End breadcrumb-->--}}
-{{--    </div>--}}
+    {{--    <div style="background-color: #f0f4f8;">--}}
+    {{--        <!--Start breadcrumb-->--}}
+    {{--        <div class="hk_breadcrumb">--}}
+    {{--            <div class="hk_breadcrumb_left">--}}
+    {{--                <span class="contactus-left" style="font-weight: 500;"><span class="hk_breadcrumb__dot"></span> Contact Us </span>--}}
+    {{--            </div>--}}
+    {{--            <div class="hk_breadcrumb_right">--}}
+    {{--                <ul class="hk_menu">--}}
+    {{--                    <li class="title-home">Home</li>--}}
+    {{--                    <li class="contact-us" style="color: #028bfe; margin-left: 5px;"><i--}}
+    {{--                            class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Contact Us--}}
+    {{--                    </li>--}}
+    {{--                </ul>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--        <!--End breadcrumb-->--}}
+    {{--    </div>--}}
 
 
     <div class="container">
@@ -107,12 +107,16 @@
                 for extensive <br> growth strategies. Professinonally
             </div>
 
-            @if (session('msg'))
-                <div class="alert alert-success">{{session('msg')}}</div>
-                @endif
             <form action="{{url('/backend/Contactus/contactus-submit')}}" method="POST">
-            @csrf
+                @csrf
+
                 <div class="row" style="margin-left: 0; margin-right: 0;">
+                    @if (session('msg'))
+                        <div class="alert alert-danger" role="alert">{{session('msg')}}</div>
+                    @endif
+                    @error('email')
+                    <div class="alert alert-danger" role="alert">{{$message}}</div>
+                    @enderror
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
                         <input id="your-name" name="names" type="text" class="form-control" placeholder="Your Name"
                                required="">
@@ -130,19 +134,20 @@
 
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
                         <select id="selected" class="form-control text-select" id="exampleFormControlSelect1"
-                        name="position" required="">
+                                name="position" required="">
                             <option>---</option>
                             <option>Trưởng phòng</option>
                             <option>Kế toán</option>
                             <option>Quản lý</option>
                             <option>Nhân viên</option>
-                            <option>Tiếp tân</option>>
+                            <option>Tiếp tân</option>
+                            >
                         </select>
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 form-subject">
                         <input id="subject" type="text" class="form-control" placeholder="Subject" name=
-                        "subject" required="">
+                            "subject" required="">
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 form-meseage">
