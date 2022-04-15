@@ -5,7 +5,7 @@
         <div class="col-xxl">
             <div class="card mb-4">
                 <div class="card-body">
-                    <form action="{{ url('/backend/service/update/' .$service->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ url('/admin/service/update/' .$service->id) }}" method="post" enctype="multipart/form-data">
                         {!! csrf_field() !!}
                         @method("put")
                         <input type="hidden" value="{{$service->id}}">

@@ -1,10 +1,24 @@
 @extends('backend.layout')
 @section('content')
-    <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Category/ </span> Edit</h4>
+    <div class="container-xxl flex-grow-1 container-p-y pt-0">
+        <!--Start breadcrumb-->
+        <div class="hk_breadcrumb" style="max-width: unset; padding: unset">
+            <div class="hk_breadcrumb_left">
+                <span class="hk_breadcrumb__dot"></span>{{$categories->name}}
+            </div>
+            <div class="hk_breadcrumb_right">
+                <ul class="hk_menu" style="font-family: unset;">
+                    <li>Admin</li>
+                    <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Categories</li>
+                    <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Edit</li>
+                    <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;{{$categories->name}}</li>
+                </ul>
+            </div>
+        </div>
+        <!--End breadcrumb-->
         <div class="row">
             <!-- Basic Layout -->
-            <div class="col-xxl">
+            <div class="col">
                 <div class="card mb-4">
                     <div class="card-body">
                         <form action="{{ url('/admin/category/update/' .$categories->id) }}" method="post">
@@ -23,5 +37,4 @@
                 </div>
             </div>
         </div>
-    </div>
 @endsection

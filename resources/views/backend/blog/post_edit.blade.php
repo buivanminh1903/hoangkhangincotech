@@ -1,11 +1,26 @@
 @extends('backend.layout')
 @section('content')
-    <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Post/ </span> Edit</h4>
+    <div class="container-xxl flex-grow-1 container-p-y pt-0">
+        <!--Start breadcrumb-->
+        <div class="hk_breadcrumb" style="max-width: unset; padding: unset">
+            <div class="hk_breadcrumb_left">
+                <span class="hk_breadcrumb__dot"></span> Post
+            </div>
+            <div class="hk_breadcrumb_right">
+                <ul class="hk_menu" style="font-family: unset;">
+                    <li>Admin</li>
+                    <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Post</li>
+                    <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Edit</li>
+                    <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;{{$post->title}}</li>
+                </ul>
+            </div>
+        </div>
+        <!--End breadcrumb-->
         <div class="col-xxl">
             <div class="card mb-4">
                 <div class="card-body">
-                    <form action="{{ url('/admin/post/update/' .$post->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ url('/admin/post/update/' .$post->id) }}" method="post"
+                          enctype="multipart/form-data">
                         {!! csrf_field() !!}
                         @method("put")
                         <input type="hidden" value="{{$post->id}}">
@@ -36,7 +51,9 @@
                             <label class="col-sm-2 col-form-label"
                                    for="basic-default-name">Image</label>
                             <div class="col-sm-10">
-                                <img alt="{{$post->image}}" style="border-radius: 4px; margin-bottom: 16px" src="{{asset('image/uploads/post/' . $post->image)}}" height="200">
+                                <img alt="{{$post->image}}"
+                                     style="border-radius: 4px; margin-bottom: 16px; width: 100%; height: auto"
+                                     src="{{asset('image/uploads/post/' . $post->image)}}">
                                 <input type="file" class="form-control" id="basic-default-name"
                                        name="image">
                             </div>

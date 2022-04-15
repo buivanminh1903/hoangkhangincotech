@@ -1,12 +1,19 @@
 @extends('backend.layout')
 @section('content')
-    <nav aria-label="breadcrumb" class="fw-bold py-3">
-        <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page">Post</li>
-            <li class="breadcrumb-item active" aria-current="page">Search</li>
-        </ol>
-    </nav>
+    <!--Start breadcrumb-->
+    <div class="hk_breadcrumb" style="max-width: unset; padding: unset">
+        <div class="hk_breadcrumb_left">
+            <span class="hk_breadcrumb__dot"></span> Post
+        </div>
+        <div class="hk_breadcrumb_right">
+            <ul class="hk_menu" style="font-family: unset;">
+                <li>Admin</li>
+                <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Post</li>
+                <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Search</li>
+            </ul>
+        </div>
+    </div>
+    <!--End breadcrumb-->
     <div class="container mb-3">
         <div class="row" style="border-bottom: 1px solid #ddd">
             <div class="col-md-8">
@@ -93,15 +100,6 @@
                             <li><a href="#">March 2021</a></li>
                             <li><a href="#">February 2021</a></li>
                             <li><a href="#">January 2021</a></li>
-                            <li><a href="#">December 2020</a></li>
-                            <li><a href="#">November 2020</a></li>
-                            <li><a href="#">October 2020</a></li>
-                            <li><a href="#">September 2020</a></li>
-                            <li><a href="#">August 2020</a></li>
-                            <li><a href="#">July 2020</a></li>
-                            <li><a href="#">June 2020</a></li>
-                            <li><a href="#">May 2020</a></li>
-                            <li><a href="#">April 2020</a></li>
                         </ol>
                     </div>
                 </div>

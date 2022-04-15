@@ -49,16 +49,25 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|unique:post',
-            'image' => 'required|image|mimes:jpeg,png,jpg'
+            'title' => 'unique:post',
+            'image' => 'required|image|mimes:jpeg,png,jpg',
+            'content' => 'required',
+
+        ], [
+            'image.required' => 'Vui lòng thêm hình ảnh',
+            'content.required' => 'Vui lòng nhập nội dung bài viết',
+            'title.unique' => 'Tiêu đề đã tồn tại'
         ]);
+
         $input = $request->all();
+
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $image_name = $image->getClientOriginalName();
             $request->file('image')->move(public_path('image/uploads/post'), $image_name);
             $input['image'] = $image_name;
         }
+
         Post::create($input);
         return redirect('/admin/post')->with('success', 'Đã Thêm Bài Đăng!');
     }

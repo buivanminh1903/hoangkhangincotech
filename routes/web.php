@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 /*Trang chủ*/
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
-
 
 /*Danh sách dịch vụ*/
 Route::get('dich-vu', [\App\Http\Controllers\Backend\ServiceController::class, 'show']);
@@ -83,9 +81,6 @@ Route::delete('backend/Contactus/contactus-delete/{id}', [\App\Http\Controllers\
 Route::post('backend/Contactus/contactus-submit', [\App\Http\Controllers\Backend\ContactusController::class, 'submit']);
 Route::get('backend/Contactus/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
-Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
-
-
 /* Our Project index By Tran Quan */
 Route::get('backend/ourproject', [\App\Http\Controllers\Backend\ProjectController::class, 'index']);
 // creare insert
@@ -100,7 +95,6 @@ Route::get('backend/edit_project/{id}', [\App\Http\Controllers\Backend\ProjectCo
 Route::put('update-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'update']);
 /* End  Our Project index By Tran Quan */
 Route::get('backend/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
-
 
 /* New Letter */
 Route::get('backend/NewLetter/newletter', [\App\Http\Controllers\Backend\NewlettersController::class, 'index']);
@@ -122,7 +116,6 @@ Route::delete('backend/NewLetter/newletter-delete/{id}', [\App\Http\Controllers\
 
 /* End New Letter */
 
-
 /* Photo */
 Route::get('backend/Photo/photo', [\App\Http\Controllers\Backend\PhotoController::class, 'index']);
 /* Create  */
@@ -136,7 +129,6 @@ Route::put('backend/Photo/photo-update/{id}', [\App\Http\Controllers\Backend\Pho
 /* Delete  */
 Route::delete('backend/Photo/photo-delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
 /* End Photo */
-
 
 /* Admin */
 Route::prefix('admin')->group(function () {
@@ -157,5 +149,25 @@ Route::prefix('admin')->group(function () {
     // Delete
     Route::delete('/post/delete/{id}', [\App\Http\Controllers\Backend\PostController::class, 'destroy']);
 
+    /* Categories */
+    Route::get('/categories', [\App\Http\Controllers\Backend\CategoryController::class, 'index']);
+    // Add
+    Route::post('/category/add', [\App\Http\Controllers\Backend\CategoryController::class, 'store']);
+    // Update
+    Route::get('/category/edit/{id}', [\App\Http\Controllers\Backend\CategoryController::class, 'edit']);
+    Route::put('/category/update/{id}', [\App\Http\Controllers\Backend\CategoryController::class, 'update']);
+    // Delete
+    Route::delete('/category/delete/{id}', [\App\Http\Controllers\Backend\CategoryController::class, 'destroy']);
 
+    /* Sevice */
+    Route::get('/service', [\App\Http\Controllers\Backend\ServiceController::class, 'index']);
+    // Detail
+    Route::get('/service/detail/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'backend_detail']);
+    // Add
+    Route::post('/service/add', [\App\Http\Controllers\Backend\ServiceController::class, 'store']);
+    // Update
+    Route::get('/service/edit/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'edit']);
+    Route::put('/service/update/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'update']);
+    // Delete
+    Route::delete('/service/delete/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'destroy']);
 });

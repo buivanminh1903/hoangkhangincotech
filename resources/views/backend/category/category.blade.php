@@ -1,11 +1,18 @@
 @extends('backend.layout')
 @section('content')
-    <nav aria-label="breadcrumb" class="fw-bold py-3">
-        <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Category List</li>
-        </ol>
-    </nav>
+    <!--Start breadcrumb-->
+    <div class="hk_breadcrumb" style="max-width: unset; padding: unset">
+        <div class="hk_breadcrumb_left">
+            <span class="hk_breadcrumb__dot"></span> Categories
+        </div>
+        <div class="hk_breadcrumb_right">
+            <ul class="hk_menu" style="font-family: unset;">
+                <li>Admin</li>
+                <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Categories</li>
+            </ul>
+        </div>
+    </div>
+    <!--End breadcrumb-->
     <div class="container mb-3">
         <div class="row">
             <div class="backend__card p-3">
@@ -14,6 +21,18 @@
                         <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
                             <strong>{{ $message }}</strong>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+                </div>
+                <div class="m-2">
+                    @if($errors->any())
+                        <div class="text-capitalize alert alert-danger"
+                             style="border-radius: 0.375rem; box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
                         </div>
                     @endif
                 </div>
@@ -82,7 +101,8 @@
                                                 <label class="form-label" for="basic-default-fullname">Tên danh
                                                     mục</label>
                                                 <input type="text" class="form-control" id="basic-default-fullname"
-                                                       placeholder="Phần mềm" name="name" required value="{{old('name')}}"/>
+                                                       placeholder="Phần mềm" name="name" required
+                                                       value="{{old('name')}}"/>
                                                 @if($errors->has('name'))
                                                     <p class="text-warning">{{$errors->first('name')}}</p>
                                                 @endif

@@ -8,7 +8,7 @@
         <div class="hk_breadcrumb_right">
             <ul class="hk_menu" style="font-family: unset;">
                 <li>Admin</li>
-                <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Post</li>
+                <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Service</li>
                 <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;{{$title}}</li>
             </ul>
         </div>
@@ -20,16 +20,16 @@
                 <div class="row mb-3">
                     <div class="col-6">
                         <a class="btn btn-info w-100"
-                           href="{{'/admin/post/edit/' . $post_detail->post_id}}"
+                           href="{{'/admin/service/edit/' . $service_detail->id}}"
                         ><i class="fa-regular fa-pen-to-square"></i> Sửa</a>
                     </div>
                     <div class="col-6">
-                        <form method="POST" action="{{url('/admin/post/delete/' . $post_detail->post_id)}}"
+                        <form method="POST" action="{{url('/admin/service/delete/' . $service_detail->id)}}"
                               accept-charset="UTF-8" style="display:inline">
                             {{ method_field('DELETE') }}
                             {{ csrf_field() }}
                             <button type="submit" class="btn btn-danger w-100" title="Xoá"
-                                    onclick="return confirm(&quot;Xác nhận xoá bài đăng {{ $post_detail->post_id }}?&quot;)">
+                                    onclick="return confirm(&quot;Xác nhận xoá bài đăng {{ $service_detail->id }}?&quot;)">
                                 <i class="fa-regular fa-trash-can"></i> Xoá
                             </button>
                         </form>
@@ -41,23 +41,23 @@
                         <!-- Post header-->
                         <header class="mb-4">
                             <!-- Post title-->
-                            <h1 class="fw-bolder mb-1">{{$post_detail->title}}</h1>
+                            <h1 class="fw-bolder mb-1">{{$service_detail->title}}</h1>
                             <!-- Post meta content-->
                             <div class="text-muted fst-italic mb-2">Posted
-                                on {{date('d M, Y', strtotime($post_detail->post_created_at))}}
+                                on {{date('d M, Y', strtotime($service_detail->created_at))}}
                             </div>
                             <!-- Post categories-->
                             Tag: <a class="badge bg-secondary text-decoration-none link-light"
-                               href="#!">{{$post_detail->category_name}}</a>
+                                    href="#!"></a>
                         </header>
                         <!-- Preview image figure-->
                         <figure class="mb-4"><img class="img-fluid rounded"
-                                                  src="{{ asset('image/uploads/post/' . $post_detail->image) }}"
+                                                  src="{{ asset('image/uploads/post/' . $service_detail->image) }}"
                                                   alt="..." style="height: 400px; width: 900px; object-fit: cover;">
                         </figure>
                         <!-- Post content-->
                         <section class="mb-1">
-                            <p class="fs-5">{!!$post_detail->content!!}</p>
+                            <p class="fs-5">{!!$service_detail->content!!}</p>
                         </section>
                     </article>
                 </div>
@@ -81,9 +81,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <ul class="list-unstyled mb-0">
-                                    @foreach($categories as $item)
-                                        <li><a href="#!">{{$item->name}}</a></li>
-                                    @endforeach
+
                                 </ul>
                             </div>
                         </div>

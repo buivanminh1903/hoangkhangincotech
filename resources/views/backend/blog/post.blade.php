@@ -1,13 +1,20 @@
 @extends('backend.layout')
 @section('content')
-    <nav aria-label="breadcrumb" class="fw-bold py-3">
-        <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Post List</li>
-        </ol>
-    </nav>
+    <!--Start breadcrumb-->
+    <div class="hk_breadcrumb" style="max-width: unset; padding: unset">
+        <div class="hk_breadcrumb_left">
+            <span class="hk_breadcrumb__dot"></span> Post
+        </div>
+        <div class="hk_breadcrumb_right">
+            <ul class="hk_menu" style="font-family: unset;">
+                <li>Admin</li>
+                <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;All Post</li>
+            </ul>
+        </div>
+    </div>
+    <!--End breadcrumb-->
     <div class="container mb-3">
-        <div class="row" style="border-bottom: 1px solid #ddd">
+        <div class="row">
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-12">
@@ -20,6 +27,16 @@
                         @endif
                     </div>
                 </div>
+                @if($errors->any())
+                    <div class="text-capitalize alert alert-danger"
+                         style="border-radius: 0.375rem; box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;">
+                        <ul class="mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="row">
                     <div class="col-12">
                         <!-- Button trigger modal -->
@@ -90,15 +107,6 @@
                             <li><a href="#">March 2021</a></li>
                             <li><a href="#">February 2021</a></li>
                             <li><a href="#">January 2021</a></li>
-                            <li><a href="#">December 2020</a></li>
-                            <li><a href="#">November 2020</a></li>
-                            <li><a href="#">October 2020</a></li>
-                            <li><a href="#">September 2020</a></li>
-                            <li><a href="#">August 2020</a></li>
-                            <li><a href="#">July 2020</a></li>
-                            <li><a href="#">June 2020</a></li>
-                            <li><a href="#">May 2020</a></li>
-                            <li><a href="#">April 2020</a></li>
                         </ol>
                     </div>
                 </div>
@@ -126,7 +134,8 @@
                                                        for="basic-default-name">Title</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" id="basic-default-name"
-                                                           placeholder="*" name="title" required>
+                                                           placeholder="*" name="title" value="{{old('title')}}"
+                                                           required>
                                                     @if($errors->has('title'))
                                                         <p class="text-warning">{{$errors->first('title')}}</p>
                                                     @endif
@@ -137,14 +146,17 @@
                                                        for="basic-default-name">Short Content</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" id="basic-default-name"
-                                                           placeholder="*" name="short_content" required>
+                                                           placeholder="*" name="short_content" value="{{old('short_content')}}" required>
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
                                                 <label class="col-sm-2 col-form-label"
                                                        for="basic-default-name">Content</label>
                                                 <div class="col-sm-10">
-                                                    <textarea name="content" required></textarea>
+                                                    <textarea name="content">{{old('content')}}</textarea>
+                                                    @if($errors->has('content'))
+                                                        <p class="text-warning">{{$errors->first('content')}}</p>
+                                                    @endif
                                                 </div>
                                                 <script>
                                                     CKEDITOR.replace('content');
@@ -155,7 +167,10 @@
                                                        for="basic-default-name">Image</label>
                                                 <div class="col-sm-10">
                                                     <input type="file" class="form-control" id="basic-default-name"
-                                                           name="image">
+                                                           name="image" required>
+                                                    @if($errors->has('image'))
+                                                        <p class="text-warning">{{$errors->first('image')}}</p>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class=" row mb-3">

@@ -24,6 +24,18 @@ class ServiceController extends Controller
         ]);
     }
 
+    public function backend_detail($id = '')
+    {
+        $service_detail = DB::table('service')
+            ->where('id', $id)
+            ->first();
+
+        return view('backend.service.service_detail', [
+            'title' => $service_detail->title,
+            'service_detail' => $service_detail,
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -43,10 +55,15 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|unique:service',
+            'title' => 'unique:service',
             'image' => 'unique:service',
             'content' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg'
+        ], [
+            'image.required' => 'Vui lòng thêm hình ảnh',
+            'image.unique' => 'Vui lòng đổi tên ảnh',
+            'content.required' => 'Vui lòng nhập nội dung bài viết',
+            'title.unique' => 'Tiêu đề đã tồn tại'
         ]);
         $input = $request->all();
         if ($request->hasFile('image')) {
@@ -56,7 +73,7 @@ class ServiceController extends Controller
             $input['image'] = $image_name;
         }
         Service::create($input);
-        return redirect('/backend/service')->with('success', 'Đã Thêm Service!');
+        return redirect('/admin/service')->with('success', 'Đã Thêm Service!');
     }
 
     /**
@@ -114,7 +131,7 @@ class ServiceController extends Controller
             $input['image'] = $image_name;
         }
         $service->update($input);
-        return redirect('/backend/service')->with('success', 'Đã cập nhật Service!');
+        return redirect('/admin/service')->with('success', 'Đã cập nhật Service!');
     }
 
     /**
@@ -129,7 +146,7 @@ class ServiceController extends Controller
         $path = 'image/uploads/service/' . $service->image;
         File::delete($path);
         Service::destroy($id);
-        return redirect('/backend/service')->with('success', 'Đã Xoá Service!');
+        return redirect('/admin/service')->with('success', 'Đã Xoá Service!');
     }
 
     public function detail($id = '', $slug = '')

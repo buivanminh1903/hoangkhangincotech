@@ -1,74 +1,77 @@
 @extends('backend.layout')
 @section('content')
-    <nav aria-label="breadcrumb" class="fw-bold py-3">
-        <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/backend">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Post List</li>
-        </ol>
-    </nav>
+    <!--Start breadcrumb-->
+    <div class="hk_breadcrumb" style="max-width: unset; padding: unset">
+        <div class="hk_breadcrumb_left">
+            <span class="hk_breadcrumb__dot"></span> Service
+        </div>
+        <div class="hk_breadcrumb_right">
+            <ul class="hk_menu" style="font-family: unset;">
+                <li>Admin</li>
+                <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;All Service</li>
+            </ul>
+        </div>
+    </div>
+    <!--End breadcrumb-->
     <div class="container mb-3">
+
+
         <div class="row">
-            <div class="backend__card p-3">
-                <div class="m-2">
+            <div class="">
+                <div class="row">
                     @if ($message = Session::get('success'))
-                        <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
-                            <strong>{{ $message }}</strong>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <div class="col-12">
+                            <div class="alert alert-success alert-dismissible fade show mb-3" role="alert" style="margin: 8px">
+                                <strong>{{ $message }}</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                            </div>
                         </div>
                     @endif
-                </div>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-success m-2" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                    Thêm Service
-                </button>
-                <div class="card-body m-2 p-0">
-                    <div class="table-responsive text-nowrap">
-                        <table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Title</th>
-                                <th>Short Content</th>
-                                <th>Content</th>
-                                <th>Image</th>
-                                <th>Created at</th>
-                                <th>Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($service as $item)
-                                <tr>
-                                    <td>
-                                        <strong>{{$item->id}}</strong>
-                                    </td>
-                                    <td>{{$item->title}}</td>
-                                    <td>{{$item->short_content}}</td>
-                                    <td>{{\Illuminate\Support\Str::limit($item->content, $limit = 100, $end = '...')}}</td>
-                                    <td style="display: flex; flex-direction: column"><img
-                                            src="{{ asset('image/uploads/service/' . $item->image) }}" width="100"
-                                            class="rounded m-1"><span class="text-muted">{{ $item->image }}</span></td>
-                                    <td>{{date('d-m-Y', strtotime($item->created_at))}}</td>
-                                    <td>
-                                        <a class="btn btn-info btn-sm"
-                                           href="{{'/backend/service/edit/' . $item->id }}"
-                                        ><i class="fa-regular fa-pen-to-square"></i> Sửa</a
-                                        >
-                                        <form method="POST" action="{{url('/backend/service/delete/' . $item->id )}}"
-                                              accept-charset="UTF-8" style="display:inline">
-                                            {{ method_field('DELETE') }}
-                                            {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-danger btn-sm" title="Xoá"
-                                                    onclick="return confirm(&quot;Xác nhận xoá Service {{$item->title}}?&quot;)">
-                                                <i class="fa-regular fa-trash-can"></i> Xoá
-                                            </button>
-                                        </form>
-                                    </td>
+                    @if($errors->any())
+                        <div class="col-12">
+                            <div class="text-capitalize alert alert-danger"
+                                 style="border-radius: 0.375rem; box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px; margin: 8px">
+                                <ul class="mb-0">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
                                     @endforeach
-                                </tr>
-                            </tbody>
-                        </table>
+                                </ul>
+                            </div>
+                        </div>
+                    @endif
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="margin: 8px">
+                                Thêm Service
+                            </button>
+                        </div>
                     </div>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center">
+                    @foreach($service as $item)
+                        <div class="card admin__service_card">
+                            <img src="{{ asset('image/uploads/service/' . $item->image) }}" class="card-img-top"
+                                 alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$item->title}}</h5>
+                                <p class="card-text">{{$item->short_content}}</p>
+                                <a href="/admin/service/detail/{{$item->id}}" class="btn btn-sm btn-info"><i
+                                        class="fa-regular fa-eye"></i> Xem</a>
+                                <form method="POST" action="{{url('/admin/service/delete/' . $item->id )}}"
+                                      accept-charset="UTF-8" style="display:inline">
+                                    {{ method_field('DELETE') }}
+                                    {{ csrf_field() }}
+                                    <button type="submit" class="btn btn-danger btn-sm" title="Xoá"
+                                            onclick="return confirm(&quot;Xác nhận xoá Service {{$item->title}}?&quot;)">
+                                        <i class="fa-regular fa-trash-can"></i> Xoá
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <!-- Create Modal -->
@@ -84,7 +87,7 @@
                             <div class="col-xl">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form action="{{ url('/backend/add-service') }}" method="post"
+                                        <form action="{{ url('/admin/service/add') }}" method="post"
                                               enctype="multipart/form-data">
                                             {!! csrf_field() !!}
                                             <div class="row mb-3">
@@ -92,7 +95,7 @@
                                                        for="basic-default-name">Title</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" id="basic-default-name"
-                                                           placeholder="*" name="title" required>
+                                                           placeholder="*" name="title" value="{{old('title')}}" required>
                                                     @if($errors->has('title'))
                                                         <p class="text-warning">{{$errors->first('title')}}</p>
                                                     @endif
@@ -103,14 +106,14 @@
                                                        for="basic-default-name">Short Content</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" id="basic-default-name"
-                                                           placeholder="*" name="short_content" required>
+                                                           placeholder="*" name="short_content" value="{{old('short_content')}}" required>
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
                                                 <label class="col-sm-2 col-form-label"
                                                        for="basic-default-name">Content</label>
                                                 <div class="col-sm-10">
-                                                    <textarea name="content" required></textarea>
+                                                    <textarea name="content">{{old('content')}}</textarea>
                                                     @if($errors->has('content'))
                                                         <p class="text-warning">{{$errors->first('content')}}</p>
                                                     @endif

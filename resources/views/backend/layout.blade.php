@@ -21,99 +21,94 @@
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="{{ asset('../css/backend/layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/backend/service.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/backend/post.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/stylefooter.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/backend/core.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/services.css') }}">
 
     <!-- CKEditor -->
     <script src="//cdn.ckeditor.com/4.18.0/full/ckeditor.js"></script>
 
     <title>{{$title}}</title>
 </head>
-<body style="background-color: #f5f5f9; margin-top: 12px">
-<div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light backend_navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand {{'backend' == request()->path() ? 'navbar_backend_active' : ''}}" href="/backend">Hoangkhang
-                Incotech Backend</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link {{'admin/service' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           aria-current="page" href="/admin/service">Service</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{'admin/post' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Post
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/admin/categories">Categories</a></li>
-                            <li><a class="dropdown-item" href="/admin/post">All Post</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{'admin/NewLetter/newletter' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           href="/admin/NewLetter/newletter">New Letter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{'admin/Photo/photo' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           href="/admin/Photo/photo">Photo</a>
-                    </li>
-                    <li>
-                        <a class="nav-link {{'admin/Contactus/contactus' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           href="/admin/Contactus/contactus">Contact Us</a>
-                    </li>
-                    <li>
-                        <a class="nav-link {{'admin/Review/reviews' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           href="/admin/Review/reviews">Reviews</a>
-                    </li>
-                    <li>
-                        <a class="nav-link {{'admin/ourproject' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           href="/admin/ourproject">Project</a>
-                    </li>
+<body style="background-color: #f5f5f9;">
+<nav class="navbar navbar-expand-lg navbar-light backend_navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand {{'admin' == request()->path() ? 'navbar_backend_active' : ''}}" href="/admin">Hoangkhang
+            Incotech Backend</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {{'admin/service' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       aria-current="page" href="/admin/service">Service</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{'admin/categories' == request()->path() ? 'navbar_backend_active' : ''}} {{'admin/post' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Post
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/admin/categories">Categories</a></li>
+                        <li><a class="dropdown-item" href="/admin/post">All Post</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{'admin/NewLetter/newletter' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       href="/admin/NewLetter/newletter">New Letter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{'admin/Photo/photo' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       href="/admin/Photo/photo">Photo</a>
+                </li>
+                <li>
+                    <a class="nav-link {{'admin/Contactus/contactus' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       href="/admin/Contactus/contactus">Contact Us</a>
+                </li>
+                <li>
+                    <a class="nav-link {{'admin/Review/reviews' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       href="/admin/Review/reviews">Reviews</a>
+                </li>
+                <li>
+                    <a class="nav-link {{'admin/ourproject' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       href="/admin/ourproject">Project</a>
+                </li>
 
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
-    </nav>
+    </div>
+</nav>
+<div class="container-fluid">
     <div class="backend__content_wrapper">
         <!-- Content Wrapper -->
-        <div>
-            <div>
-                @yield('content')
+        @yield('content')
+    </div>
+    <!-- Footer -->
+    <div class="row" style="align-items: center; padding: 20px 0;">
+        <div class="col-md-6 col-6 ">
+            <div class="footer-end-text " style="float: left; ">
+                <p class="mb-0">&copy; Copyright 2021. All Rights Reserved.</p>
             </div>
-
-            <!-- Footer -->
-            <div class="container-fluid"
-                 style="border-radius: 4px;">
-                <div class="row" style="align-items: center; padding: 20px 0;">
-                    <div class="col-md-6 col-6 ">
-                        <div class="footer-end-text " style="float: left; ">
-                            <p class="mb-0">&copy; Copyright 2021. All Rights Reserved.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-6 ">
-                        <div class="footer-end-text ">
-                            <p class="mb-0">Designed by <a href="#"><i>Hoangkhang Incotech </i></a></p>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="col-md-6 col-6 ">
+            <div class="footer-end-text ">
+                <p class="mb-0">Designed by <a href="#"><i>Hoangkhang Incotech </i></a></p>
             </div>
         </div>
     </div>
+
 </div>
 
-<!-- Option 1: Bootstrap Bundle with Popper -->
+<!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
