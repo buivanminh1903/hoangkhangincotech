@@ -76,7 +76,7 @@
                             <span style="color :red;">{{$message}}</span>
                         @enderror
 
-</div>
+</div></div>
 
                     <button type="submit" class="btn btn-info">  Update Review  </button>
                     <a href="/backend" class="btn btn-warning"> Back </a>
