@@ -237,4 +237,7 @@
                         });
                 }
             </script>
+        </div>
+    </div>
+
 @endsection
