@@ -2,7 +2,7 @@
 @section('content')
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/backend">Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Newletter List</li>
         </ol>
     </nav>
@@ -15,7 +15,7 @@
                 @endif
                 
                 </div>
-                <a class="btn btn-outline-info m-2" href="/backend/NewLetter/newletter-create"><i class="bx bx-plus-circle me-1"></i>
+                <a class="btn btn-outline-info m-2" href="/admin/newletter/create"><i class="bx bx-plus-circle me-1"></i>
                     Add Letter</a>
                     
                 <div class="card-body">
@@ -40,10 +40,10 @@
                                 
                                 <td>
                                     <a class="btn btn-info btn-sm"
-                                       href="{{'/backend/NewLetter/newletter-edit/' . $item->id}}"
+                                       href="{{'/admin/newletter/edit/' . $item->id}}"
                                     ><i class="bx bx-edit-alt me-1"></i> Edit</a
                                     >
-                                    <form method="POST" action="{{url ('backend/NewLetter/newletter-delete/' .$item->id)}}"
+                                    <form method="POST" action="{{url ('/admin/newletter/delete/' .$item->id)}}"
                                           accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}

@@ -58,6 +58,19 @@ Route::group(['middleware'=>['AuthCheck']], function(){
     Route::get('/admin/dashboard',[MainController::class,'dashboard']);
 
 
+//     /*-----------Backend------------*/
+
+
+
+
+// Front end Newletter
+Route::post('/bai-viet', [\App\Http\Controllers\Backend\NewlettersController::class, 'emailadd']);
+    // Subscribe Our Newsletter
+Route::post('/', [\App\Http\Controllers\Backend\NewlettersController::class, 'subscribe']);
+// End
+
+
+
 
 
 /* Admin */
@@ -110,6 +123,36 @@ Route::prefix('admin')->group(function () {
     Route::delete('/reviews/delete/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'delete']);
 
 
+    /* New Letter */
+
+    Route::get('/newletter', [\App\Http\Controllers\Backend\NewlettersController::class, 'index']);
+    /* Create  */
+    Route::get('/newletter/create', [\App\Http\Controllers\Backend\NewlettersController::class, 'create']);
+    Route::POST('/newletter/create', [\App\Http\Controllers\Backend\NewlettersController::class, 'newletter_Create']);
+    /* Edit  */
+    Route::get('/newletter/edit/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'edit']);
+    Route::put('/newletter/update/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'update']);
+    /* Delete  */
+    Route::delete('/newletter/delete/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'delete']);
+
+    /* End New Letter */
+
+
+    /* Photo */
+
+    Route::get('/photo', [\App\Http\Controllers\Backend\PhotoController::class, 'index']);
+    /* Create  */
+    Route::get('/photo/create', [\App\Http\Controllers\Backend\PhotoController::class, 'create']);
+    Route::POST('/photo/create', [\App\Http\Controllers\Backend\PhotoController::class, 'photo_Create']);
+
+    // Route::get('bai-viet', [\App\Http\Controllers\Backend\PhotoController::class, 'photoshow']);
+    /* Edit  */
+    Route::get('/photo/edit/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'edit']);
+    Route::put('/photo/update/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'update']);
+    /* Delete  */
+    Route::delete('/photo/delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
+
+    /* End Photo */
 });
 
    

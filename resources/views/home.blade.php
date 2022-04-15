@@ -841,6 +841,9 @@
 						<div class="subscribe">
 							<input class="subscribe-mail-box" type="email" name="email" placeholder="Enter Your E-mail" required="">
 							<button type="submit">Subscribe</button>
+                            @error('email')
+                            <span style="color :red;">{{$message}}</span>
+                            @enderror
 						</div>
 					</form>
                 </div>

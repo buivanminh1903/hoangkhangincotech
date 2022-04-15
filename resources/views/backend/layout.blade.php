@@ -61,12 +61,12 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{'admin/NewLetter/newletter' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           href="/admin/NewLetter/newletter">New Letter</a>
+                        <a class="nav-link {{'admin/newletter' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           href="/admin/newletter">New Letter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{'admin/Photo/photo' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           href="/admin/Photo/photo">Photo</a>
+                        <a class="nav-link {{'admin/photo' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           href="/admin/photo">Photo</a>
                     </li>
                     <li>
                         <a class="nav-link {{'admin/contactus' == request()->path() ? 'navbar_backend_active' : ''}}"

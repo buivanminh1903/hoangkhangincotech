@@ -2,7 +2,7 @@
 @section('content')
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/backend">Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Photo List</li>
         </ol>
     </nav>
@@ -15,7 +15,7 @@
                 @endif
 
                 </div>
-                <a class="btn btn-outline-info m-2" href="/backend/Photo/photo-create"><i class="bx bx-plus-circle me-1"></i>
+                <a class="btn btn-outline-info m-2" href="/admin/photo/create"><i class="bx bx-plus-circle me-1"></i>
                     Add Photo</a>
                 <div class="card-body">
                     <div class="table-responsive text-nowrap">
@@ -37,10 +37,10 @@
                                
                                 <td>
                                     <a class="btn btn-info btn-sm"
-                                       href="{{'/backend/Photo/photo-edit/' . $item->id}}"
+                                       href="{{'/admin/photo/edit/' . $item->id}}"
                                     ><i class="bx bx-edit-alt me-1"></i> Edit</a
                                     >
-                                    <form method="POST" action="{{url ('backend/Photo/photo-delete/' .$item->id)}}"
+                                    <form method="POST" action="{{url ('/admin/photo/delete/' .$item->id)}}"
                                           accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
