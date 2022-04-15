@@ -120,7 +120,8 @@ class ContactusController extends Controller
             'names' => 'required',
             'email' => 'required|email|unique:contactus',
             'phone' => 'required|regex:/(0)[0-9]{9}/',
-            'position' => 'required',
+            'position' => 'required|min:4',
+            
         ],
 
             [
@@ -136,7 +137,8 @@ class ContactusController extends Controller
                 'phone.required' => 'Số điện thoại bắt buộc phải nhập',
                 'phone.regex' => 'Số điện thoại không hợp lệ',
 
-                'position' => 'Vị trí liên hệ không hợp lệ',
+                'position.required' => 'Vị trí liên hệ không hợp lệ',
+                'position.min' => 'Chọn vị trí liên hệ',
             ]);
 
         $dataAdd = $request->all();
