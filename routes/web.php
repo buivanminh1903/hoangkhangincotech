@@ -87,27 +87,18 @@ Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController:
 
 
 /* Our Project index By Tran Quan */
-    /* Dashboard */
-    Route::get('/', [\App\Http\Controllers\Backend\HomeController::class, 'index']);
-
-    /* Project */
-    Route::get('admin/ourproject', [\App\Http\Controllers\Backend\ProjectController::class, 'index']);
+Route::get('admin/ourproject', [\App\Http\Controllers\Backend\ProjectController::class, 'index']);
 // creare insert
-    Route::get('admin/insert_project', [\App\Http\Controllers\Backend\ProjectController::class, 'create']);
+Route::get('admin/insert_project', [\App\Http\Controllers\Backend\ProjectController::class, 'create']);
 // them our project
-    Route::post('input', [\App\Http\Controllers\Backend\ProjectController::class, 'store']);
+Route::post('input', [\App\Http\Controllers\Backend\ProjectController::class, 'store']);
 //delete project
-    Route::delete('delete-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'destroy']);
+Route::delete('delete-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'destroy']);
 // edit project
-    Route::get('admin/edit_project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'edit']);
+Route::get('admin/edit_project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'edit']);
 //update project
-    Route::put('update-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'update']);
-
-
-    /* End  Our Project index By Tran Quan */
-
-
-
+Route::put('update-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'update']);
+/* End  Our Project index By Tran Quan */
 Route::get('backend/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
 
