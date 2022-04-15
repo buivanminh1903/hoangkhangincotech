@@ -53,7 +53,7 @@ class ProjectController extends Controller
         }
         ourprojectModel::create($input);
 
-        return redirect('backend/ourproject')->with('succress','đã thêm Our Project');
+        return redirect('admin/ourproject')->with('succress','đã thêm Our Project');
     }
 
     /**
@@ -110,7 +110,7 @@ class ProjectController extends Controller
             $input['images'] = $image_name;
         }
         $our_project->update($input);
-        return redirect('backend/ourproject')->with('success', 'Đã cập nhật!');
+        return redirect('admin/ourproject')->with('success', 'Đã cập nhật!');
     }
 
     /**
@@ -122,6 +122,6 @@ class ProjectController extends Controller
     public function destroy($id)
     {
         ourprojectModel::destroy($id);
-        return redirect('backend/ourproject')->with('success', 'Đã xoá dịch vụ!');
+        return redirect('admin/ourproject')->with('success', 'Đã xoá dịch vụ!');
     }
 }
