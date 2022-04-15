@@ -2,7 +2,7 @@
 @section('content')
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/backend">Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin/">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Contact-us</li>
         </ol>
     </nav>
@@ -41,7 +41,7 @@
                         <label for=""> Name </label>
                         <input type="text" class="form-control" name="names" placeholder="Name"
                         value="{{old('names')}}"/>
-                        @error('name')
+                        @error('names')
                         <span style="color: red;">{{$message}}</span>
                         @enderror
                     </div>
@@ -81,7 +81,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-info">  Add-Contact  </button>
-                    <a href="/backend/Contactus/contactus" class="btn btn-warning"> Back </a>
+                    <a href="/admin/contactus" class="btn btn-warning"> Back </a>
                 @csrf
                 </form>
              

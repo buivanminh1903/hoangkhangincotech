@@ -2,7 +2,7 @@
 @section('content')
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/backend">Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Review</li>
         </ol>
     </nav>
@@ -15,7 +15,7 @@
                 @endif
                 
                 </div>
-                <a class="btn btn-outline-info m-2" href="/backend/Review/reviews-add"><i class="bx bx-plus-circle me-1"></i>
+                <a class="btn btn-outline-info m-2" href="/admin/reviews/add"><i class="bx bx-plus-circle me-1"></i>
                     Thêm Reivew
                 </a>
                 <div class="card-body">
@@ -46,10 +46,10 @@
                                 <td><img src="{{ asset('image/uploads/reviews/' . $item->image) }}" Height="100"  class="img img-responsive" /></td>
                                 <td>
                                 <a class="btn btn-info btn-sm"
-                                       href="{{'/backend/Review/reviews-edit/' . $item->id}}">
+                                       href="{{'/admin/reviews/edit/' . $item->id}}">
                                        <i class="bx bx-edit-alt me-1"></i> Sửa</a>
 
-                                    <form method="POST" action="{{url ('backend/Review/reviews-delete/' .$item->id)}}"
+                                    <form method="POST" action="{{url ('admin/reviews/delete/' .$item->id)}}"
                                           accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}

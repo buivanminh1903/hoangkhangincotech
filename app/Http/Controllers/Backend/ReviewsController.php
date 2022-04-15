@@ -70,11 +70,11 @@ class ReviewsController extends Controller
         }
 
       reviews::create($dataAdd);
-      return redirect('backend/Review/reviews-add')-> with('msg', 'Thêm đánh giá công');
+      return redirect('admin/reviews/add')-> with('msg', 'Thêm đánh giá công');
   }
   public function edit_reviews($id){
     $update = reviews :: find($id);
-    return view('backend/Review/reviews-edit',['title'=>'Update Reviews']) -> with('update',$update);
+    return view('backend.Review.reviews-edit',['title'=>'Update Reviews']) -> with('update',$update);
 }
 
 public function update(Request $request, $id)
@@ -94,7 +94,7 @@ public function update(Request $request, $id)
         $edit['image'] = $image_name;
     }
     $update->update($edit);
-    return redirect('backend/Review/reviews')->with('msg', 'Update đánh giá thành công');
+    return redirect('admin/reviews')->with('msg', 'Update đánh giá thành công');
 }
 
 public function delete($id)
@@ -103,7 +103,7 @@ public function delete($id)
     $path ='image/uploads/reviews/' .$photo->image;
     File::delete($path);
   reviews::destroy($id);
-    return redirect('backend/Review/reviews')->with('msg', 'Xóa đánh giá thành công!');  
+    return redirect('admin/reviews')->with('msg', 'Xóa đánh giá thành công!');  
 }
 
 

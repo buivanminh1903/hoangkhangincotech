@@ -107,7 +107,7 @@
                 for extensive <br> growth strategies. Professinonally
             </div>
 
-            <form action="{{url('/backend/Contactus/contactus-submit')}}" method="POST">
+            <form action="{{url('/admin/contactus/submit')}}" method="POST">
                 @csrf
 
                 <div class="row" style="margin-left: 0; margin-right: 0;">
