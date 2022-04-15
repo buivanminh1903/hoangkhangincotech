@@ -2,8 +2,8 @@
 @section('content')
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/backend">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page"><a href="/backend/Photo/photo">Photo</a></li>
+            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page"><a href="/admin/photo">Photo</a></li>
             <li class="breadcrumb-item active" aria-current="page">Create</li>
         </ol>
     </nav>
@@ -43,7 +43,7 @@
                     <div class="row justify-content-end">
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn-success">Add</button>
-                            <a button type="submit" class="btn btn-warning" href="/backend/Photo/photo">Back</a></button>
+                            <a button type="submit" class="btn btn-warning" href="/admin/photo">Back</a></button>
                         </div>
                     </div>
                 </form>

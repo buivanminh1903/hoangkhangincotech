@@ -102,40 +102,13 @@ Route::put('update-project/{id}', [\App\Http\Controllers\Backend\ProjectControll
 Route::get('backend/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
 
-/* New Letter */
-Route::get('backend/NewLetter/newletter', [\App\Http\Controllers\Backend\NewlettersController::class, 'index']);
-/* Create  */
-Route::get('backend/NewLetter/newletter-create', [\App\Http\Controllers\Backend\NewlettersController::class, 'create']);
-Route::POST('backend/NewLetter/newletter-create', [\App\Http\Controllers\Backend\NewlettersController::class, 'newletter_Create']);
-
+// Front end Newletter
 Route::post('/bai-viet', [\App\Http\Controllers\Backend\NewlettersController::class, 'emailadd']);
-
-// Subscribe Our Newsletter
+    // Subscribe Our Newsletter
 Route::post('/', [\App\Http\Controllers\Backend\NewlettersController::class, 'subscribe']);
-
-/* Edit  */
-Route::get('backend/NewLetter/newletter-edit/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'edit']);
-Route::put('backend/NewLetter/newletter-update/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'update']);
-
-/* Delete  */
-Route::delete('backend/NewLetter/newletter-delete/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'delete']);
-
-/* End New Letter */
+// End
 
 
-/* Photo */
-Route::get('backend/Photo/photo', [\App\Http\Controllers\Backend\PhotoController::class, 'index']);
-/* Create  */
-Route::get('backend/Photo/photo-create', [\App\Http\Controllers\Backend\PhotoController::class, 'create']);
-Route::POST('backend/Photo/photo-create', [\App\Http\Controllers\Backend\PhotoController::class, 'photo_Create']);
-
-// Route::get('bai-viet', [\App\Http\Controllers\Backend\PhotoController::class, 'photoshow']);
-/* Edit  */
-Route::get('backend/Photo/photo-edit/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'edit']);
-Route::put('backend/Photo/photo-update/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'update']);
-/* Delete  */
-Route::delete('backend/Photo/photo-delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
-/* End Photo */
 
 
 /* Admin */
@@ -158,4 +131,34 @@ Route::prefix('admin')->group(function () {
     Route::delete('/post/delete/{id}', [\App\Http\Controllers\Backend\PostController::class, 'destroy']);
 
 
+    /* New Letter */
+
+    Route::get('/newletter', [\App\Http\Controllers\Backend\NewlettersController::class, 'index']);
+    /* Create  */
+    Route::get('/newletter/create', [\App\Http\Controllers\Backend\NewlettersController::class, 'create']);
+    Route::POST('/newletter/create', [\App\Http\Controllers\Backend\NewlettersController::class, 'newletter_Create']);
+    /* Edit  */
+    Route::get('/newletter/edit/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'edit']);
+    Route::put('/newletter/update/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'update']);
+    /* Delete  */
+    Route::delete('/newletter/delete/{id}', [\App\Http\Controllers\Backend\NewlettersController::class, 'delete']);
+
+    /* End New Letter */
+
+
+    /* Photo */
+
+    Route::get('/photo', [\App\Http\Controllers\Backend\PhotoController::class, 'index']);
+    /* Create  */
+    Route::get('/photo/create', [\App\Http\Controllers\Backend\PhotoController::class, 'create']);
+    Route::POST('/photo/create', [\App\Http\Controllers\Backend\PhotoController::class, 'photo_Create']);
+
+    // Route::get('bai-viet', [\App\Http\Controllers\Backend\PhotoController::class, 'photoshow']);
+    /* Edit  */
+    Route::get('/photo/edit/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'edit']);
+    Route::put('/photo/update/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'update']);
+    /* Delete  */
+    Route::delete('/photo/delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
+
+    /* End Photo */
 });

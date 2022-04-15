@@ -3,7 +3,7 @@
     <nav aria-label="breadcrumb" class="fw-bold py-3">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a href="/backend">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page"><a href="/backend/NewLetter/newletter">NewLetter</a></li>
+            <li class="breadcrumb-item" aria-current="page"><a href="/admin/newletter">NewLetter</a></li>
             <li class="breadcrumb-item active" aria-current="page">Create</li>
         </ol>
     </nav>
@@ -20,7 +20,7 @@
                 @endif
 
 
-                <form action="{{url ('backend/NewLetter/newletter-update/' .$dataEdit->id)}}" method="POST">
+                <form action="{{url ('/admin/newletter/update/' .$dataEdit->id)}}" method="POST">
                     @method("put")
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Email</label>
@@ -35,7 +35,7 @@
                     <div class="row justify-content-end">
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn-success">Update</button>
-                            <a button type="submit" class="btn btn-warning" href="/backend/NewLetter/newletter">Back</a></button>
+                            <a button type="submit" class="btn btn-warning" href="/admin/newletter">Back</a></button>
                           
                         </div>
                         
