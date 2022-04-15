@@ -18,7 +18,7 @@
                     <div class="alert alert-danger">  Dữ liệu nhập không hợp lệ </div>
                 @endif
 
-                <form action="{{url ('backend/Contactus/contactus-update/' .$update->id)}}" method="POST">
+                <form action="{{url ('/admin/contactus/update/' .$update->id)}}" method="POST">
                     @method ("put")
                     <div class="mb-3">
                         <label for=""> Subject  </label>
@@ -82,7 +82,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-info">  Update Contact  </button>
-                    <a href="/backend/Contactus/contactus" class="btn btn-warning"> Back </a>
+                    <a href="/admin/contactus" class="btn btn-warning"> Back </a>
                 @csrf
                 </form>
              

@@ -54,37 +54,6 @@ Route::put('admin/service/update/{id}', [\App\Http\Controllers\Backend\ServiceCo
 /* Delete Sevice */
 Route::delete('admin/service/delete/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'destroy']);
 
-//Reviews
-Route::get('backend/Review/reviews', [\App\Http\Controllers\Backend\ReviewsController::class, 'index']);
-
-Route::get('backend/Review/reviews-add', [\App\Http\Controllers\Backend\ReviewsController::class, 'add']);
-
-Route::post('backend/Review/reviews-add', [\App\Http\Controllers\Backend\ReviewsController::class, 'postAdd']);
-
-// Edit Reviews
-Route::get('backend/Review/reviews-edit/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'edit_reviews']);
-Route::put('backend/Review/reviews-update/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'update']);
-Route::delete('backend/Review/reviews-delete/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'delete']);
-
-Route::get('backend/Contactus/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
-
-Route::get('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
-
-Route::post('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'postAdd']);
-
-// Edit Contactus
-Route::get('backend/Contactus/contactus-edit/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'edit_contactus']);
-Route::put('backend/Contactus/contactus-update/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'update']);
-
-// Delete Contactus
-Route::delete('backend/Contactus/contactus-delete/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'delete']);
-
-//Form contactus
-Route::post('backend/Contactus/contactus-submit', [\App\Http\Controllers\Backend\ContactusController::class, 'submit']);
-Route::get('backend/Contactus/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
-
-Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
-
 
 /* Our Project index By Tran Quan */
 Route::get('backend/ourproject', [\App\Http\Controllers\Backend\ProjectController::class, 'index']);
@@ -157,5 +126,36 @@ Route::prefix('admin')->group(function () {
     // Delete
     Route::delete('/post/delete/{id}', [\App\Http\Controllers\Backend\PostController::class, 'destroy']);
 
+    /* Contact us */
+
+    // Edit Contactus
+    Route::get('/contactus/edit/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'edit_contactus']);
+    Route::put('/contactus/update/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'update']);
+
+    // Delete Contactus
+    Route::delete('/contactus/delete/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'delete']);
+
+    //Add Contactus
+    Route::get('/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
+    Route::get('/contactus/add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
+    Route::post('/contactus/add', [\App\Http\Controllers\Backend\ContactusController::class, 'postAdd']);
+
+    //Form contactus
+    Route::post('/contactus/submit', [\App\Http\Controllers\Backend\ContactusController::class, 'submit']);
+    Route::get('/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+    Route::get('/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+    //Reviews
+    Route::get('/reviews', [\App\Http\Controllers\Backend\ReviewsController::class, 'index']);
+
+    Route::get('/reviews/add', [\App\Http\Controllers\Backend\ReviewsController::class, 'add']);
+
+    Route::post('/reviews/add', [\App\Http\Controllers\Backend\ReviewsController::class, 'postAdd']);
+
+    // Edit Reviews
+    Route::get('/reviews/edit/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'edit_reviews']);
+    Route::put('/reviews/update/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'update']);
+    Route::delete('/reviews/delete/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'delete']);
+
 
 });
+

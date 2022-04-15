@@ -34,7 +34,7 @@
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light backend_navbar">
         <div class="container-fluid">
-            <a class="navbar-brand {{'backend' == request()->path() ? 'navbar_backend_active' : ''}}" href="/backend">Hoangkhang
+            <a class="navbar-brand {{'backend' == request()->path() ? 'navbar_backend_active' : ''}}" href="/admin">Hoangkhang
                 Incotech Backend</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -66,12 +66,12 @@
                            href="/admin/Photo/photo">Photo</a>
                     </li>
                     <li>
-                        <a class="nav-link {{'admin/Contactus/contactus' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           href="/admin/Contactus/contactus">Contact Us</a>
+                        <a class="nav-link {{'admin/contactus' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           href="/admin/contactus">Contact Us</a>
                     </li>
                     <li>
-                        <a class="nav-link {{'admin/Review/reviews' == request()->path() ? 'navbar_backend_active' : ''}}"
-                           href="/admin/Review/reviews">Reviews</a>
+                        <a class="nav-link {{'admin /reviews' == request()->path() ? 'navbar_backend_active' : ''}}"
+                           href="/admin/reviews">Reviews</a>
                     </li>
                     <li>
                         <a class="nav-link {{'admin/ourproject' == request()->path() ? 'navbar_backend_active' : ''}}"
