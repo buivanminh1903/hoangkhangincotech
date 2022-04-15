@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
 
 /*
@@ -39,67 +40,86 @@ Route::get('bai-viet', [\App\Http\Controllers\Backend\PostController::class, 'sh
 /* Tìm kiếm bài viết */
 Route::get('bai-viet/search', [\App\Http\Controllers\Backend\PostController::class, 'search']);
 
-/*-----------Backend------------*/
 
-/* Sevice */
-Route::get('admin/service', [\App\Http\Controllers\Backend\ServiceController::class, 'index']);
 
-/* Add Sevice */
-Route::post('admin/service/add', [\App\Http\Controllers\Backend\ServiceController::class, 'store']);
 
-/* Update Sevice */
-Route::get('admin/service/edit/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'edit']);
-Route::put('admin/service/update/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'update']);
 
-/* Delete Sevice */
-Route::delete('admin/service/delete/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'destroy']);
+Route::post('/auth/save', [MainController::class, 'save'])->name ('auth.save');
+Route::post('/auth/check', [MainController::class, 'check'])->name ('auth.check');
+Route::get('auth/logout',[MainController::class, 'logout'])->name('auth.logout');
 
-//Reviews
-Route::get('backend/Review/reviews', [\App\Http\Controllers\Backend\ReviewsController::class, 'index']);
 
-Route::get('backend/Review/reviews-add', [\App\Http\Controllers\Backend\ReviewsController::class, 'add']);
 
-Route::post('backend/Review/reviews-add', [\App\Http\Controllers\Backend\ReviewsController::class, 'postAdd']);
 
-// Edit Reviews
-Route::get('backend/Review/reviews-edit/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'edit_reviews']);
-Route::put('backend/Review/reviews-update/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'update']);
-Route::delete('backend/Review/reviews-delete/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'delete']);
+Route::group(['middleware'=>['AuthCheck']], function(){
+    Route::get('/auth/login', [MainController::class, 'login'])->name ('auth.login');
+    Route::get('/auth/register', [MainController::class, 'register'])->name ('auth.register');
+    
+    Route::get('/admin/dashboard',[MainController::class,'dashboard']);
 
-Route::get('backend/Contactus/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
 
-Route::get('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
+//     /*-----------Backend------------*/
 
-Route::post('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'postAdd']);
+// /* Sevice */
+// Route::get('admin/service', [\App\Http\Controllers\Backend\ServiceController::class, 'index']);
 
-// Edit Contactus
-Route::get('backend/Contactus/contactus-edit/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'edit_contactus']);
-Route::put('backend/Contactus/contactus-update/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'update']);
+// /* Add Sevice */
+// Route::post('admin/service/add', [\App\Http\Controllers\Backend\ServiceController::class, 'store']);
 
-// Delete Contactus
-Route::delete('backend/Contactus/contactus-delete/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'delete']);
+// /* Update Sevice */
+// Route::get('admin/service/edit/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'edit']);
+// Route::put('admin/service/update/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'update']);
 
-//Form contactus
-Route::post('backend/Contactus/contactus-submit', [\App\Http\Controllers\Backend\ContactusController::class, 'submit']);
-Route::get('backend/Contactus/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+// /* Delete Sevice */
+// Route::delete('admin/service/delete/{id}', [\App\Http\Controllers\Backend\ServiceController::class, 'destroy']);
 
-Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+// //Reviews
+// Route::get('backend/Review/reviews', [\App\Http\Controllers\Backend\ReviewsController::class, 'index']);
+
+// Route::get('backend/Review/reviews-add', [\App\Http\Controllers\Backend\ReviewsController::class, 'add']);
+
+// Route::post('backend/Review/reviews-add', [\App\Http\Controllers\Backend\ReviewsController::class, 'postAdd']);
+
+// // Edit Reviews
+// Route::get('backend/Review/reviews-edit/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'edit_reviews']);
+// Route::put('backend/Review/reviews-update/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'update']);
+// Route::delete('backend/Review/reviews-delete/{id}', [\App\Http\Controllers\Backend\ReviewsController::class, 'delete']);
+
+// Route::get('backend/Contactus/contactus', [\App\Http\Controllers\Backend\ContactusController::class, 'index']);
+
+// Route::get('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'add']);
+
+// Route::post('backend/Contactus/contactus-add', [\App\Http\Controllers\Backend\ContactusController::class, 'postAdd']);
+
+// // Edit Contactus
+// Route::get('backend/Contactus/contactus-edit/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'edit_contactus']);
+// Route::put('backend/Contactus/contactus-update/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'update']);
+
+// // Delete Contactus
+// Route::delete('backend/Contactus/contactus-delete/{id}', [\App\Http\Controllers\Backend\ContactusController::class, 'delete']);
+
+// //Form contactus
+// Route::post('backend/Contactus/contactus-submit', [\App\Http\Controllers\Backend\ContactusController::class, 'submit']);
+// Route::get('backend/Contactus/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+
+// Route::get('backend/post/create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
 
 
 /* Our Project index By Tran Quan */
-Route::get('backend/ourproject', [\App\Http\Controllers\Backend\ProjectController::class, 'index']);
+Route::get('admin/ourproject', [\App\Http\Controllers\Backend\ProjectController::class, 'index']);
 // creare insert
-Route::get('backend/insert_project', [\App\Http\Controllers\Backend\ProjectController::class, 'create']);
+Route::get('admin/insert_project', [\App\Http\Controllers\Backend\ProjectController::class, 'create']);
 // them our project
 Route::post('input', [\App\Http\Controllers\Backend\ProjectController::class, 'store']);
 //delete project
 Route::delete('delete-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'destroy']);
 // edit project
-Route::get('backend/edit_project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'edit']);
+Route::get('admin/edit_project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'edit']);
 //update project
 Route::put('update-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'update']);
 /* End  Our Project index By Tran Quan */
-Route::get('backend/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+// Route::get('backend/post-create', [\App\Http\Controllers\Backend\PostController::class, 'create']);
+
 
 
 // Front end Newletter
@@ -107,6 +127,7 @@ Route::post('/bai-viet', [\App\Http\Controllers\Backend\NewlettersController::cl
     // Subscribe Our Newsletter
 Route::post('/', [\App\Http\Controllers\Backend\NewlettersController::class, 'subscribe']);
 // End
+
 
 
 
@@ -162,3 +183,10 @@ Route::prefix('admin')->group(function () {
 
     /* End Photo */
 });
+
+   
+});
+
+
+
+
