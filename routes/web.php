@@ -40,7 +40,7 @@ Route::get('lien-he', [\App\Http\Controllers\ContactController::class, 'index'])
 Route::get('bai-viet', [\App\Http\Controllers\Backend\PostController::class, 'show']);
 
 /* Tìm kiếm bài viết */
-Route::get('bai-viet/tim-kiem', [\App\Http\Controllers\Backend\PostController::class, 'search']);
+//Route::get('bai-viet/tim-kiem', [\App\Http\Controllers\Backend\PostController::class, 'search']);
 Route::get('bai-viet/search', [\App\Http\Controllers\Backend\PostController::class, 'search']);
 
 /*-----------Backend------------*/
@@ -63,6 +63,8 @@ Route::delete('backend/category/delete/{id}', [\App\Http\Controllers\Backend\Cat
 
 /* Post */
 Route::get('backend/post', [\App\Http\Controllers\Backend\PostController::class, 'index']);
+Route::get('backend/post/detail/{id}', [\App\Http\Controllers\Backend\PostController::class, 'backend_detail']);
+Route::get('backend/post/search', [\App\Http\Controllers\Backend\PostController::class, 'backend_search']);
 
 /* Add Post */
 Route::post('backend/add-post', [\App\Http\Controllers\Backend\PostController::class, 'store']);

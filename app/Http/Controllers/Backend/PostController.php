@@ -18,8 +18,13 @@ class PostController extends Controller
      */
     public function index()
     {
-        $categories = DB::table('categories')->orderBy('id', 'desc')->get();
-        $post = DB::table('post')->get();
+        $categories = DB::table('categories')
+            ->orderBy('id', 'desc')
+            ->get();
+
+        $post = DB::table('post')
+            ->orderByDesc('id')
+            ->get();
         return view('backend.blog.post', [
             'title' => 'Post List', 'post' => $post, 'categories' => $categories
         ]);
@@ -153,7 +158,7 @@ class PostController extends Controller
         $path = 'image/uploads/post/' . $post->image;
         File::delete($path);
 
-            Post::destroy($id);
+        Post::destroy($id);
         return redirect('/backend/post')->with('success', 'Đã Xoá Bài Đăng!');
     }
 
@@ -219,6 +224,51 @@ class PostController extends Controller
             'key' => $key,
             'result_total' => $result_total,
             'popular_post' => $popular_post
+        ]);
+    }
+
+    public function backend_detail($id = '')
+    {
+        $post_detail = DB::table('post')
+            ->join('categories', 'post.category_id', 'categories.id')
+            ->select('post.id AS post_id', 'title', 'short_content', 'content', 'image', 'categories.name AS category_name', 'post.created_at AS post_created_at')
+            ->where('post.id', $id)
+            ->first();
+
+        $categories = DB::table('categories')
+            ->orderBy('id', 'desc')
+            ->get();
+
+        return view('backend.blog.post_detail', [
+            'title' => $post_detail->title,
+            'post_detail' => $post_detail,
+            'categories' => $categories
+        ]);
+    }
+
+    public function backend_search()
+    {
+        $key = $_GET['key'];
+
+        $categories = DB::table('categories')
+            ->orderBy('id', 'desc')
+            ->get();
+
+        $post = DB::table('post')
+            ->where('title', 'LIKE', '%' . $key . '%')
+            ->get();
+
+        $result_total = DB::table('post')
+            ->select(DB::raw('COUNT(*) AS total'))
+            ->where('title', 'LIKE', '%' . $key . '%')
+            ->get();
+
+        return view('backend.blog.post_search', [
+            'title' => 'Kết quả tìm kiếm cho "' . $key . '"',
+            'post' => $post,
+            'key' => $key,
+            'result_total' => $result_total,
+            'categories' => $categories
         ]);
     }
 }

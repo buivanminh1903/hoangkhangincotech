@@ -31,8 +31,14 @@
 
                     <div class="mb-3">
                         <label for=""> star  </label>
-                        <input type="text" class="form-control" name="star" placeholder="star"
-                        value='{{$update->star}}'/>
+                        <select  class="form-control text-select" name="star" id="exampleFormControlSelect1"
+                        value="{{$update->star}}">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>        
+                        </select>
                         @error('star')
                         <span style="color: red;">{{$message}}</span>
                         @enderror
@@ -49,8 +55,14 @@
 
                     <div class="mb-3">
                         <label for=""> Position </label>
-                        <input type="text" class="form-control" name="position" placeholder="position"
-                        value='{{$update->position}}'/>
+                        <select  class="form-control text-select" name="position" id="exampleFormControlSelect1"
+                        value="{{$update->position}}">
+                            <option>Trưởng phòng</option>
+                            <option>Kế toán</option>
+                            <option>Quản lý</option>
+                            <option>Nhân viên</option>
+                            <option>Tiếp tân</option>        
+                        </select>
                         @error('position')
                         <span style="color: red;">{{$message}}</span>
                         @enderror
@@ -63,15 +75,7 @@
                         @error('image')
                             <span style="color :red;">{{$message}}</span>
                         @enderror
-                        </div>
-                        <div class="mb-3">
-                        <label for=""> star  </label>
-                        <input type="text" class="form-control" name="image" placeholder="image"
-                        value='{{$update->image}}'/>
-                        @error('image')
-                        <span style="color: red;">{{$message}}</span>
-                        @enderror
-                    </div>
+
 </div>
 
                     <button type="submit" class="btn btn-info">  Update Review  </button>
