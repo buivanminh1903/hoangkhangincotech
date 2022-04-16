@@ -62,7 +62,6 @@ class ContactusController extends Controller
 
 
                 'names.required' => 'Họ và tên không được bỏ trống',
-                'names.min' => 'Họ và tên phải từ 6 ký tự trở lên',
 
 
                 'email.required' => 'Email không được bỏ trống',
@@ -81,7 +80,7 @@ class ContactusController extends Controller
         contactus::create($dataAdd);
 
 
-        return redirect('backend/Contactus/contactus-add')->with('msg', 'Thêm người dùng thành công');
+        return redirect('/admin/contactus/add')->with('msg', 'Thêm người dùng thành công');
 
     }
 
@@ -90,7 +89,7 @@ class ContactusController extends Controller
         $update = contactus:: find($id);
 
 
-        return view('backend/Contactus/contactus-edit', ['title' => 'Update contact us'])->with('update', $update);
+        return view('backend.Contactus.contactus-edit', ['title' => 'Update contact us'])->with('update', $update);
 
     }
 
@@ -101,7 +100,7 @@ class ContactusController extends Controller
         $update->update($Edit);
 
 
-        return redirect('backend/Contactus/contactus')->with('msg', 'Update người liên hệ thành công');
+        return redirect('/admin/contactus')->with('msg', 'Update người liên hệ thành công');
     }
 
     public function delete($id)
@@ -109,7 +108,7 @@ class ContactusController extends Controller
         contactus::destroy($id);
 
 
-        return redirect('backend/Contactus/contactus')->with('msg', 'Xóa người liên hệ thành công!');
+        return redirect('/admin/contactus')->with('msg', 'Xóa người liên hệ thành công!');
     }
 
     public function submit(Request $request)
@@ -121,7 +120,7 @@ class ContactusController extends Controller
             'email' => 'required|email|unique:contactus',
             'phone' => 'required|regex:/(0)[0-9]{9}/',
             'position' => 'required|min:4',
-            
+
         ],
 
             [

@@ -131,7 +131,7 @@ class ServiceController extends Controller
             $input['image'] = $image_name;
         }
         $service->update($input);
-        return redirect('/admin/service')->with('success', 'Đã cập nhật Service!');
+        return redirect('/admin/service/detail/' . $id)->with('success', 'Đã cập nhật Service!');
     }
 
     /**

@@ -3,13 +3,16 @@
     <!--Start breadcrumb-->
     <div class="hk_breadcrumb" style="max-width: unset; padding: unset">
         <div class="hk_breadcrumb_left">
-            <span class="hk_breadcrumb__dot"></span> {{$title}}
+            <span
+                class="hk_breadcrumb__dot"></span> {{ \Illuminate\Support\Str::limit($title, $limit = 28, $end = '...')}}
         </div>
         <div class="hk_breadcrumb_right">
             <ul class="hk_menu" style="font-family: unset;">
                 <li>Admin</li>
                 <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Post</li>
-                <li><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;{{$title}}</li>
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;{{ \Illuminate\Support\Str::limit($title, $limit = 28, $end = '...')}}
+                </li>
             </ul>
         </div>
     </div>
@@ -17,6 +20,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
+                <div class="row">
+                    <div class="col-12">
+                        @if ($message = Session::get('success'))
+                            <div class="alert alert-success alert-dismissible fade show mb-3" role="alert">
+                                <strong>{{ $message }}</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                            </div>
+                        @endif
+                    </div>
+                </div>
                 <div class="row mb-3">
                     <div class="col-6">
                         <a class="btn btn-info w-100"
@@ -48,7 +62,7 @@
                             </div>
                             <!-- Post categories-->
                             Tag: <a class="badge bg-secondary text-decoration-none link-light"
-                               href="#!">{{$post_detail->category_name}}</a>
+                                    href="#!">{{$post_detail->category_name}}</a>
                         </header>
                         <!-- Preview image figure-->
                         <figure class="mb-4"><img class="img-fluid rounded"

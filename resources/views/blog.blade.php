@@ -115,40 +115,40 @@
 
 
                         <!-- 2 -->
-                    {{--                    <div class="postfile">--}}
-                    {{--                        <div class="post">--}}
-                    {{--                            <div class="post_img">--}}
-                    {{--                                <a href=""><img src="/image/img-recent-tag1.png"></a>--}}
-                    {{--                            </div>--}}
-                    {{--                            <div class="postline">--}}
-                    {{--                                <div class="textpost">--}}
-                    {{--                                    Dramatically provide access schemas without extensive back compatible--}}
-                    {{--                                </div>--}}
-                    {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
-                    {{--                                    <span>24 Jan, 2021</span>--}}
-                    {{--                                </div>--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
-                    <!-- 3 -->
+                        {{--                    <div class="postfile">--}}
+                        {{--                        <div class="post">--}}
+                        {{--                            <div class="post_img">--}}
+                        {{--                                <a href=""><img src="/image/img-recent-tag1.png"></a>--}}
+                        {{--                            </div>--}}
+                        {{--                            <div class="postline">--}}
+                        {{--                                <div class="textpost">--}}
+                        {{--                                    Dramatically provide access schemas without extensive back compatible--}}
+                        {{--                                </div>--}}
+                        {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
+                        {{--                                    <span>24 Jan, 2021</span>--}}
+                        {{--                                </div>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
+                        {{--                    </div>--}}
+                        <!-- 3 -->
 
-                    {{--                    <div class="postfull">--}}
-                    {{--                        <div class="post">--}}
-                    {{--                            <div class="post_img">--}}
-                    {{--                                <a href=""><img src="/image/img-recent-tag2.png"></a>--}}
-                    {{--                            </div>--}}
-                    {{--                            <div class="postline">--}}
-                    {{--                                <div class="textpost">--}}
-                    {{--                                    Participate in staff meet ingness manage dedicated--}}
-                    {{--                                </div>--}}
-                    {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
-                    {{--                                    <span>24 Jan, 2021</span>--}}
-                    {{--                                </div>--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
+                        {{--                    <div class="postfull">--}}
+                        {{--                        <div class="post">--}}
+                        {{--                            <div class="post_img">--}}
+                        {{--                                <a href=""><img src="/image/img-recent-tag2.png"></a>--}}
+                        {{--                            </div>--}}
+                        {{--                            <div class="postline">--}}
+                        {{--                                <div class="textpost">--}}
+                        {{--                                    Participate in staff meet ingness manage dedicated--}}
+                        {{--                                </div>--}}
+                        {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
+                        {{--                                    <span>24 Jan, 2021</span>--}}
+                        {{--                                </div>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
+                        {{--                    </div>--}}
 
-                    <!-- Catagory List -->
+                        <!-- Catagory List -->
                         <div class="catagory">Catagory List</div>
                         <div class="list">
                             <ul>
@@ -166,7 +166,6 @@
                                                           title="{{$item->title}}"></div>
                             @endforeach
                         </div>
-
                         <!-- Archives -->
                         <div class="archive">Archives</div>
                         <div class="archives">
@@ -191,56 +190,18 @@
                         <div class="tag">Tags</div>
                         <div>
                             <a href="#" class="btn-tag">Fashion</a>
-                            <a class="btn-tag">Nation</a>
-                            <a class="btn-tag">Company</a>
-                            <a class="btn-tag">Business </a>
-                            <a class="btn-tag">Computer </a>
-                            <a class="btn-tag">Travell </a>
-                            <a class="btn-tag">Company</a>
-                            <a class="btn-tag">Science </a>
+                            <a href="#" class="btn-tag">Nation</a>
+                            <a href="#" class="btn-tag">Company</a>
+                            <a href="#" class="btn-tag">Business </a>
+                            <a href="#" class="btn-tag">Computer </a>
+                            <a href="#" class="btn-tag">Travell </a>
+                            <a href="#" class="btn-tag">Company</a>
+                            <a href="#" class="btn-tag">Science </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <script type="text/javascript">
-                var paginate = 1;
-                loadMoreData(paginate);
-
-                $('#load-more').click(function () {
-                    var page = $(this).data('paginate');
-                    loadMoreData(page);
-                    $(this).data('paginate', page + 1);
-                });
-
-                // run function when user click load more button
-                function loadMoreData(paginate) {
-                    $.ajax({
-                        url: '?page=' + paginate,
-                        type: 'get',
-                        datatype: 'html',
-                        beforeSend: function () {
-                            $('#load-more').text('Loading...');
-                        }
-                    })
-                        .done(function (data) {
-                            if (data.length == 0) {
-                                $('.invisible').removeClass('invisible');
-                                $('#load-more').hide();
-                                return;
-                            } else {
-                                $('#load-more').text('Load more...');
-                                $('#post').append(data);
-                            }
-                        })
-                        .fail(function (jqXHR, ajaxOptions, thrownError) {
-                            alert('Something went wrong.');
-                        });
-                }
-            </script>
         </div>
     </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 900d401656ad96389e89f20009ca157b445205b5
 @endsection

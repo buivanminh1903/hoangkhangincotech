@@ -152,7 +152,7 @@ class PostController extends Controller
         }
 
         $post->update($input);
-        return redirect('/admin/post')->with('success', 'Đã cập nhật bài viết!');
+        return redirect('/admin/post/detail/'.$id)->with('success', 'Đã cập nhật bài viết!');
     }
 
     /**

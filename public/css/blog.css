@@ -436,8 +436,8 @@ HEAD .background {
 }
 
 .postimg img {
-    width: 116px;
-    height: 116px;
+    width: 111px;
+    height: 111px;
     object-fit: cover;
     border-radius: 5px;
 }

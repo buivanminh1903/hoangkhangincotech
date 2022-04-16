@@ -18,7 +18,7 @@
                     <div class="alert alert-danger">  Dữ liệu nhập không hợp lệ </div>
                 @endif
 
-                <form action="{{url ('backend/Review/reviews-update/' .$update->id)}}" enctype="multipart/form-data" method="POST">
+                <form action="{{url ('admin/reviews/update/' .$update->id)}}" enctype="multipart/form-data" method="POST">
                     @method ("put")
                     <div class="mb-3">
                         <label for=""> Names  </label>
@@ -79,7 +79,7 @@
 </div></div>
 
                     <button type="submit" class="btn btn-info">  Update Review  </button>
-                    <a href="/backend" class="btn btn-warning"> Back </a>
+                    <a href="/admin" class="btn btn-warning"> Back </a>
                 @csrf
                 </form>
              

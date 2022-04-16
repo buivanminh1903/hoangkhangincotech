@@ -1,7 +1,6 @@
 @extends('layouts')
 @section('content')
 
-
     <div style="background-color: #f0f4f8;">
         <!--Start breadcrumb-->
         <div class="hk_breadcrumb">
@@ -225,56 +224,56 @@
                             </a>
                         @endforeach
                     </div>
-                {{--                    <div class="recentpost">--}}
-                {{--                        <div class="post">--}}
-                {{--                            <div class="post_img">--}}
-                {{--                                <a href=""><img src="/image/img-recent-tag3.png"></a>--}}
-                {{--                            </div>--}}
-                {{--                            <div class="postline">--}}
-                {{--                                <div class="textpost">--}}
-                {{--                                    Participate in staff meet ingness manage dedicated--}}
-                {{--                                </div>--}}
-                {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
-                {{--                                    <span>24 Jan, 2021</span>--}}
-                {{--                                </div>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                    <!-- 2 -->--}}
-                {{--                    <div class="postfile">--}}
-                {{--                        <div class="post">--}}
-                {{--                            <div class="post_img">--}}
-                {{--                                <a href=""><img src="/image/img-recent-tag1.png"></a>--}}
-                {{--                            </div>--}}
-                {{--                            <div class="postline">--}}
-                {{--                                <div class="textpost">--}}
-                {{--                                    Dramatically provide access schemas without extensive back compatible--}}
-                {{--                                </div>--}}
-                {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
-                {{--                                    <span>24 Jan, 2021</span>--}}
-                {{--                                </div>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                    <!-- 3 -->--}}
+                    {{--                    <div class="recentpost">--}}
+                    {{--                        <div class="post">--}}
+                    {{--                            <div class="post_img">--}}
+                    {{--                                <a href=""><img src="/image/img-recent-tag3.png"></a>--}}
+                    {{--                            </div>--}}
+                    {{--                            <div class="postline">--}}
+                    {{--                                <div class="textpost">--}}
+                    {{--                                    Participate in staff meet ingness manage dedicated--}}
+                    {{--                                </div>--}}
+                    {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
+                    {{--                                    <span>24 Jan, 2021</span>--}}
+                    {{--                                </div>--}}
+                    {{--                            </div>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
+                    {{--                    <!-- 2 -->--}}
+                    {{--                    <div class="postfile">--}}
+                    {{--                        <div class="post">--}}
+                    {{--                            <div class="post_img">--}}
+                    {{--                                <a href=""><img src="/image/img-recent-tag1.png"></a>--}}
+                    {{--                            </div>--}}
+                    {{--                            <div class="postline">--}}
+                    {{--                                <div class="textpost">--}}
+                    {{--                                    Dramatically provide access schemas without extensive back compatible--}}
+                    {{--                                </div>--}}
+                    {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
+                    {{--                                    <span>24 Jan, 2021</span>--}}
+                    {{--                                </div>--}}
+                    {{--                            </div>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
+                    {{--                    <!-- 3 -->--}}
 
-                {{--                    <div class="postfull">--}}
-                {{--                        <div class="post">--}}
-                {{--                            <div class="post_img">--}}
-                {{--                                <a href=""><img src="/image/img-recent-tag2.png"></a>--}}
-                {{--                            </div>--}}
-                {{--                            <div class="postline">--}}
-                {{--                                <div class="textpost">--}}
-                {{--                                    Participate in staff meet ingness manage dedicated--}}
-                {{--                                </div>--}}
-                {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
-                {{--                                    <span>24 Jan, 2021</span>--}}
-                {{--                                </div>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
+                    {{--                    <div class="postfull">--}}
+                    {{--                        <div class="post">--}}
+                    {{--                            <div class="post_img">--}}
+                    {{--                                <a href=""><img src="/image/img-recent-tag2.png"></a>--}}
+                    {{--                            </div>--}}
+                    {{--                            <div class="postline">--}}
+                    {{--                                <div class="textpost">--}}
+                    {{--                                    Participate in staff meet ingness manage dedicated--}}
+                    {{--                                </div>--}}
+                    {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
+                    {{--                                    <span>24 Jan, 2021</span>--}}
+                    {{--                                </div>--}}
+                    {{--                            </div>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
 
-                <!-- Catagory List -->
+                    <!-- Catagory List -->
                     <div class="catagory">Catagory List</div>
                     <div class="list">
                         <ul>
@@ -317,13 +316,13 @@
                     <div class="tag">Tags</div>
                     <div>
                         <a href="#" class="btn-tag">Fashion</a>
-                        <a class="btn-tag">Nation</a>
-                        <a class="btn-tag">Company</a>
-                        <a class="btn-tag">Business </a>
-                        <a class="btn-tag">Computer </a>
-                        <a class="btn-tag">Travell </a>
-                        <a class="btn-tag">Company</a>
-                        <a class="btn-tag">Science </a>
+                        <a href="#" class="btn-tag">Nation</a>
+                        <a href="#" class="btn-tag">Company</a>
+                        <a href="#" class="btn-tag">Business </a>
+                        <a href="#" class="btn-tag">Computer </a>
+                        <a href="#" class="btn-tag">Travell </a>
+                        <a href="#" class="btn-tag">Company</a>
+                        <a href="#" class="btn-tag">Science </a>
                     </div>
                 </div>
             </div>

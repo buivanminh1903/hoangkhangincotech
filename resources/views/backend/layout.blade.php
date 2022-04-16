@@ -59,20 +59,20 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{'admin/NewLetter/newletter' == request()->path() ? 'navbar_backend_active' : ''}}"
-                       href="/admin/NewLetter/newletter">New Letter</a>
+                    <a class="nav-link {{'admin/newletter' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       href="/admin/newletter">New Letter</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{'admin/Photo/photo' == request()->path() ? 'navbar_backend_active' : ''}}"
-                       href="/admin/Photo/photo">Photo</a>
+                    <a class="nav-link {{'admin/photo' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       href="/admin/photo">Photo</a>
                 </li>
                 <li>
-                    <a class="nav-link {{'admin/Contactus/contactus' == request()->path() ? 'navbar_backend_active' : ''}}"
-                       href="/admin/Contactus/contactus">Contact Us</a>
+                    <a class="nav-link {{'admin/contactus' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       href="/admin/contactus">Contact Us</a>
                 </li>
                 <li>
-                    <a class="nav-link {{'admin/Review/reviews' == request()->path() ? 'navbar_backend_active' : ''}}"
-                       href="/admin/Review/reviews">Reviews</a>
+                    <a class="nav-link {{'admin/reviews' == request()->path() ? 'navbar_backend_active' : ''}}"
+                       href="/admin/reviews">Reviews</a>
                 </li>
                 <li>
                     <a class="nav-link {{'admin/ourproject' == request()->path() ? 'navbar_backend_active' : ''}}"
@@ -81,8 +81,17 @@
 
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <li class="nav-item dropdown" style="list-style: none">
+                    <a class="nav-link dropdown-toggle"
+                       href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Xin chào
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{ route('auth.logout') }}">Logout</a></li>
+                    </ul>
+                </li>
+                <label></label>
+
             </form>
         </div>
     </div>

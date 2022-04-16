@@ -58,7 +58,7 @@ class PhotoController extends Controller
         }
 
         Photo::create($dataInsert);
-        return redirect('/backend/Photo/photo')->with('msg', 'Employee Addedd!');
+        return redirect('/admin/photo')->with('msg', 'Thêm hình ảnh thành công');
 
     }
 
@@ -91,7 +91,7 @@ class PhotoController extends Controller
 
         $dataEdit->update($edit);
 
-        return redirect('backend/Photo/photo')->with('msg', 'Update photo thành công');
+        return redirect('/admin/photo')->with('msg', 'Update photo thành công');
 
     }
 
@@ -103,7 +103,7 @@ class PhotoController extends Controller
         File::delete($path);
 
         Photo::destroy($id);
-        return redirect('backend/Photo/photo')->with('msg', 'Xóa hình ảnh thành công!');  
+        return redirect('/admin/photo')->with('msg', 'Xóa hình ảnh thành công!');  
     }
 
     public function photoshow (){

@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('newletter',function(Blueprint $table){
+        Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            $table->string('email');
+            $table->text('name');
+            $table->text('email');
+            $table->text('password');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('newletter');
+        Schema::dropIfExists('admins');
     }
 };
