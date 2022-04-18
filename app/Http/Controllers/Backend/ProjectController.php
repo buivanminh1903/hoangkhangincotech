@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\ourprojectModel;
-use Faker\Core\File;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -121,6 +122,9 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
+        $project = DB::table('project')->find($id);
+        $path = 'image/uploads/ourproject/' . $project->images;
+        File::delete($path);
         ourprojectModel::destroy($id);
         return redirect('admin/ourproject')->with('success', 'Đã xoá dịch vụ!');
     }
