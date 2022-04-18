@@ -15,11 +15,10 @@
                 <!-- Search -->
                 <div class="col-md-4 col-sm-12 col-12 right">
                     <form class="form-input" type="get" action="{{url('/bai-viet/search')}}">
-                        <input type="search" placeholder="Search here..." name="key" autocomplete="off"/>
+                        <input type="search" placeholder="Search here..." name="key" autocomplete="off" required/>
                         <span id="searchicon" class="input-group-text bg-white">
                             <button type="submit" class="blog_searhicon"><i
                                     class="fa-solid fa-magnifying-glass"></i></button>
-{{--                        <img src="{{asset('image/iconsearch.png')}}">--}}
                     </span>
                     </form>
                 </div>
@@ -37,11 +36,11 @@
                         <!-- Search -->
                         <div class="col-md-4 col-sm-12 col-12 right">
                             <form class="form-input" type="get" action="{{url('/bai-viet/search')}}">
-                                <input type="search" placeholder="Search here..." name="key" autocomplete="off"/>
+                                <input type="search" placeholder="Search here..." name="key" autocomplete="off"
+                                       required/>
                                 <span id="searchicon" class="input-group-text bg-white">
                                     <button type="submit" class="blog_searhicon"><i
                                             class="fa-solid fa-magnifying-glass"></i></button>
-{{--                                    <img src="{{asset('image/iconsearch.png')}}">--}}
                                 </span>
                             </form>
                         </div>

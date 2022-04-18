@@ -27,7 +27,6 @@
                     <span id="searchicon" class="input-group-text bg-white">
                         <button type="submit" class="blog_searhicon"><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
-{{--                        <img src="{{asset('image/iconsearch.png')}}">--}}
                     </span>
                 </form>
             </div>
