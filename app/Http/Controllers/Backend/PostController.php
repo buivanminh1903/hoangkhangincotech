@@ -194,12 +194,18 @@ class PostController extends Controller
             ->groupBy('categories.name')
             ->get();
 
+        $photolist = DB::table('photos')
+            ->orderByDesc('id')
+            ->limit(6)
+            ->get();
+
         return view('blog-details', [
             'title' => $post_detail->title,
             'post_detail' => $post_detail,
             'recent_post' => $recent_post,
             'post_total_by_category' => $post_total_by_category,
-            'popular_post' => $popular_post
+            'popular_post' => $popular_post,
+            'photolist' => $photolist
         ]);
     }
 

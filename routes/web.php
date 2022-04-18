@@ -133,7 +133,7 @@ Route::group(['middleware' => ['AuthCheck']], function () {
         // Create
         Route::get('/photo/create', [\App\Http\Controllers\Backend\PhotoController::class, 'create']);
         Route::POST('/photo/create', [\App\Http\Controllers\Backend\PhotoController::class, 'photo_Create']);
-        // Route::get('bai-viet', [\App\Http\Controllers\Backend\PhotoController::class, 'photoshow']);
+        Route::get('bai-viet', [\App\Http\Controllers\Backend\PhotoController::class, 'photoshow']);
         // Edit
         Route::get('/photo/edit/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'edit']);
         Route::put('/photo/update/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'update']);
@@ -141,6 +141,19 @@ Route::group(['middleware' => ['AuthCheck']], function () {
         Route::delete('/photo/delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
 
     });
+    /* Our Project index By Tran Quan */
+            Route::get('admin/ourproject', [\App\Http\Controllers\Backend\ProjectController::class, 'index']);
+        // creare insert
+            Route::get('admin/insert_project', [\App\Http\Controllers\Backend\ProjectController::class, 'create']);
+        // them our project
+            Route::post('input', [\App\Http\Controllers\Backend\ProjectController::class, 'store']);
+        //delete project
+            Route::delete('delete-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'destroy']);
+        // edit project
+            Route::get('admin/edit_project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'edit']);
+        //update project
+            Route::put('update-project/{id}', [\App\Http\Controllers\Backend\ProjectController::class, 'update']);
+    /* End  Our Project index By Tran Quan */
 });
 
 
