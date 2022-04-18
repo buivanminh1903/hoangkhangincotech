@@ -66,14 +66,31 @@ HEAD .background {
     opacity: 0.7;
 }
 
+
 /*.background {*/
+
+
 /*    position: absolute;*/
+
+
 /*    min-height: 320px;*/
+
+
 /*    width: 100%;*/
+
+
 /*    background-color: #2f3131;*/
+
+
 /*    top: 169px;*/
+
+
 /*    opacity: 0.7;*/
+
+
 /*}*/
+
+
 /* News  */
 
 .headnew {
@@ -98,6 +115,7 @@ HEAD .background {
     color: rgb(48, 49, 50);
     font-size: 40px;
 }
+
 
 /* Input search */
 
@@ -141,6 +159,7 @@ HEAD .background {
     appearance: none;
 }
 
+
 /* Box */
 
 .item {
@@ -150,6 +169,7 @@ HEAD .background {
 .itemm {
     padding-top: 20px;
 }
+
 
 /* Blog */
 
@@ -176,6 +196,7 @@ HEAD .background {
     width: 270px;
     height: 210px;
 }
+
 
 /* Blog text */
 
@@ -219,6 +240,7 @@ HEAD .background {
     color: #028bfe;
 }
 
+
 /* Read more */
 
 .read {
@@ -228,11 +250,13 @@ HEAD .background {
     font-family: 'Istok Web', sans-serif;
 }
 
+
 /* Box */
 
 .box-main {
     display: flex;
 }
+
 
 /* Load more */
 
@@ -267,6 +291,7 @@ HEAD .background {
     background: rgb(2, 139, 242);
     background: linear-gradient(128deg, rgba(2, 139, 242, 1) 24%, rgba(2, 180, 254, 1) 100%);
 }
+
 
 /* Sign  up*/
 
@@ -321,6 +346,7 @@ HEAD .background {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
+
 /* menu */
 
 .righttitle {
@@ -333,6 +359,7 @@ HEAD .background {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 /* Recent Post */
 
@@ -393,6 +420,7 @@ HEAD .background {
     font-family: 'Istok Web', sans-serif;
 }
 
+
 /* Catagory List */
 
 .list ul li {
@@ -424,6 +452,7 @@ HEAD .background {
     font-family: 'Montserrat', sans-serif;
 }
 
+
 /* Galary */
 
 .blog_galary {
@@ -436,8 +465,8 @@ HEAD .background {
 }
 
 .postimg img {
-    width: 111px;
-    height: 111px;
+    width: 110px;
+    height: 110px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -465,6 +494,7 @@ HEAD .background {
     position: relative;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 /* Archives */
 
@@ -503,6 +533,7 @@ HEAD .background {
     left: 10px;
     font-family: 'Istok Web', sans-serif;
 }
+
 
 /* Follow us */
 
@@ -565,6 +596,7 @@ HEAD .background {
     text-decoration: none;
 }
 
+
 /* Tags */
 
 .btn-tag {
@@ -606,20 +638,16 @@ HEAD .background {
     .right {
         padding-left: 12px;
     }
-
     .blog {
         flex-direction: column;
     }
-
     .blogtext {
         margin-left: 0;
         margin-top: 30px;
     }
-
     .head {
         padding: 10px 30px;
     }
-
     .loadmore {
         margin-top: 30px;
     }

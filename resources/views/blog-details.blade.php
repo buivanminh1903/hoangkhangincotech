@@ -284,14 +284,13 @@
                     </div>
                     <!-- Galary -->
                     <div class="galary">Galary</div>
-                    <div class="blog_galary">
-                        <div class="postimg"><img src="{{asset('image/blog_galary_01.png')}}"></div>
-                        <div class="postimg"><img src="{{asset('image/blog_galary_02.png')}}"></div>
-                        <div class="postimg"><img src="{{asset('image/blog_galary_03.png')}}"></div>
-                        <div class="postimg"><img src="{{asset('image/blog_galary_04.png')}}"></div>
-                        <div class="postimg"><img src="{{asset('image/blog_galary_05.png')}}"></div>
-                        <div class="postimg"><img src="{{asset('image/blog_galary_06.png')}}"></div>
-                    </div>
+                        <div class="blog_galary">
+                            @foreach ($photolist as $item)
+                                <div class="postimg"><img src="{{asset('image/uploads/photo_blog/' .$item->images)}}"
+                                                          data-bs-toggle="tooltip" data-bs-placement="top"
+                                                          title="{{$item->title}}"></div>
+                            @endforeach
+                        </div>
                     <!-- Archives -->
                     <div class="archive">Archives</div>
                     <div class="archives">

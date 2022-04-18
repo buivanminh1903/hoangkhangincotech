@@ -133,7 +133,7 @@ Route::group(['middleware' => ['AuthCheck']], function () {
         // Create
         Route::get('/photo/create', [\App\Http\Controllers\Backend\PhotoController::class, 'create']);
         Route::POST('/photo/create', [\App\Http\Controllers\Backend\PhotoController::class, 'photo_Create']);
-        // Route::get('bai-viet', [\App\Http\Controllers\Backend\PhotoController::class, 'photoshow']);
+        Route::get('bai-viet', [\App\Http\Controllers\Backend\PhotoController::class, 'photoshow']);
         // Edit
         Route::get('/photo/edit/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'edit']);
         Route::put('/photo/update/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'update']);
