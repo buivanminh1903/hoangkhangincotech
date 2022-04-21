@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\contactus;
+use Illuminate\Support\Facades\Mail;
 
 class ContactusController extends Controller
 {
@@ -140,8 +141,17 @@ class ContactusController extends Controller
             ]);
 
         $dataAdd = $request->all();
-        contactus::create($dataAdd);
-        return redirect('/lien-he')->with('msg', 'Cảm ơn bạn, đăng ký thành công!');
+        //contactus::create($dataAdd);
+
+        // Gửi mail
+        $mail = $request->email;
+        $name = $request->names;
+        Mail::send('email.contactus-mailform', compact('mail', 'name', 'request'), function ($email) use ($mail, $name) {
+            $email->subject('Đăng ký nhận thông tin thành công');
+            $email->to($mail, $name);
+        });
+
+        return redirect('/lien-he')->with('msg', 'Cảm ơn bạn, đăng ký thành công! một email đã được gửi đến ' . $mail);
 
     }
 

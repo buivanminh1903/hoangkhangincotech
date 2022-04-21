@@ -61,11 +61,9 @@
                                             <h5 class="card-title"><a
                                                     href="/admin/post/detail/{{$item->id}}">{{$item->title}}</a>
                                             </h5>
-                                            <p class="card-text">This is a wider card with supporting text below as a
-                                                natural
-                                                lead-in to additional content. This content is a little bit longer.</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
-                                                    ago</small>
+                                            <p class="card-text">{{ \Illuminate\Support\Str::limit($item->short_content, $limit = 130, $end = '...')}}</p>
+                                            <p class="card-text"><small
+                                                    class="text-muted">{{date('d M, Y', strtotime($item->updated_at))}}</small>
                                             </p>
                                         </div>
                                     </div>

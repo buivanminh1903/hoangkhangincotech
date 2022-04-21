@@ -4,7 +4,7 @@
         <!--Start breadcrumb-->
         <div class="hk_breadcrumb" style="max-width: unset; padding: unset">
             <div class="hk_breadcrumb_left">
-                <span class="hk_breadcrumb__dot"></span>{{$categories->name}}
+                <a href="/admin/categories"><i class="fa-regular fa-circle-left"></i> Back</a>
             </div>
             <div class="hk_breadcrumb_right">
                 <ul class="hk_menu" style="font-family: unset;">
