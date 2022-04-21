@@ -24,7 +24,7 @@ class PostController extends Controller
 
         $post = DB::table('post')
             ->orderByDesc('id')
-            ->get();
+            ->paginate(5);
         return view('backend.blog.post', [
             'title' => 'Post List', 'post' => $post, 'categories' => $categories
         ]);
@@ -85,7 +85,7 @@ class PostController extends Controller
 
         $post = DB::table('post')
             ->orderByDesc('id')
-            ->get();
+            ->simplePaginate(10);
 
         $popular_post = DB::table('post')
             ->orderByDesc('id')

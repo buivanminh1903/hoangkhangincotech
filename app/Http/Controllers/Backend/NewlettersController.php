@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-
+use Illuminate\Support\Facades\Mail;
 use App\Models\Newletter;
 use Illuminate\Support\Facades\DB;
 
@@ -13,18 +12,19 @@ class NewlettersController extends Controller
 {
     private $new_letter;
 
-    public function __construct(){
-
-        $this -> new_letter = new Newletter();
-
+    public function __construct()
+    {
+        $this->new_letter = new Newletter();
     }
+
     // Newletter
 
-    public function index(){  
+    public function index()
+    {
 
         $title = 'Newletter List';
 
-        $new_letter_list = $this -> new_letter -> getAllNewletter();
+        $new_letter_list = $this->new_letter->getAllNewletter();
 
         return view('backend.NewLetter.newletter', compact('title', 'new_letter_list'));
     }
@@ -39,61 +39,75 @@ class NewlettersController extends Controller
 
     public function newletter_Create(Request $request)
     {
-      $request -> validate([
+        $request->validate([
             'email' => 'required|email|unique:newletter'
-      ], [
-        'email.required' => 'Email bắt buộc phải nhập',
-        'email.email' => 'Email không đúng định dạng',
-        'email.unique' => 'Email đã tồn tại trên hệ thống'
-      ]);
+        ], [
+            'email.required' => 'Email bắt buộc phải nhập',
+            'email.email' => 'Email không đúng định dạng',
+            'email.unique' => 'Email đã tồn tại trên hệ thống'
+        ]);
 
-      $dataInsert=$request->all();
-      Newletter::create($dataInsert);
+        $dataInsert = $request->all();
+        Newletter::create($dataInsert);
 
         return redirect('/admin/newletter/create')->with('msg', 'Thêm email thành công');
     }
 
-    public function emailadd(Request $request){
-        $request -> validate([
+    public function emailadd(Request $request)
+    {
+        $request->validate([
             'email' => 'required|email|unique:newletter'
-      ], [
-        'email.required' => 'Email bắt buộc phải nhập',
-        'email.email' => 'Email không đúng định dạng',
-        'email.unique' => 'Email đã tồn tại trên hệ thống'
-      ]);
+        ], [
+            'email.required' => 'Email bắt buộc phải nhập',
+            'email.email' => 'Email không đúng định dạng',
+            'email.unique' => 'Email đã tồn tại trên hệ thống'
+        ]);
 
-      $dataInsert=$request->all();
-      Newletter::create($dataInsert);
+        $dataInsert = $request->all();
+        Newletter::create($dataInsert);
 
-      $popular_post = DB::table('post')
-            ->orderByDesc('id')
-            ->limit('2')
-            ->get();
+        // Gửi mail
+        $mail = $request->email;
+        $name = $request->email;
+        Mail::send('email.mailform', compact('mail', 'name'), function ($email) use ($mail, $name) {
+            $email->subject('Đăng ký nhận thông tin thành công');
+            $email->to($mail, $name);
+        });
 
-        return view('submit-email-succes', ['title'=> 'Cảm ơn bạn', 'popular_post' => $popular_post, 'message'=>'Cảm ơn bạn, thêm email thành công'])->with('msg', 'Đăng ký thành công, cảm ơn bạn');
+        return redirect('/bai-viet')->with('success', 'Cảm ơn bạn, đăng ký nhận thông tin thành công, một email đã được gửi đến ' . $mail);
     }
 
-    public function subscribe(Request $request){
-      $request -> validate([
-        'email' => 'required|email|unique:newletter'
-  ], [
-    'email.required' => 'Email bắt buộc phải nhập',
-    'email.email' => 'Email không đúng định dạng',
-    'email.unique' => 'Email đã tồn tại trên hệ thống'
-  ]);
+    public function subscribe(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|unique:newletter'
+        ], [
+            'email.required' => 'Email bắt buộc phải nhập',
+            'email.email' => 'Email không đúng định dạng',
+            'email.unique' => 'Email đã tồn tại trên hệ thống'
+        ]);
 
-  $dataInsert=$request->all();
-  Newletter::create($dataInsert);
+        $dataInsert = $request->all();
+        Newletter::create($dataInsert);
 
-    return redirect('/')->with('msg', 'Thêm email thành công');
+        // Gửi mail
+        $mail = $request->email;
+        $name = $request->email;
+        Mail::send('email.mailform', compact('mail', 'name'), function ($email) use ($mail, $name) {
+            $email->subject('Đăng ký nhận thông tin thành công');
+            $email->to($mail, $name);
+        });
+
+        return back()->with('success', 'Xin cảm ơn! Một email đã được gửi đến ' . $mail);
 
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
 
-      $dataEdit = Newletter::find($id);
+        $dataEdit = Newletter::find($id);
 
-      return view('backend.Newletter.newletter-edit', ['title' => 'Edit New Letter'])->with('dataEdit', $dataEdit);
+        return view('backend.Newletter.newletter-edit', ['title' => 'Edit New Letter'])->with('dataEdit', $dataEdit);
     }
 
     public function update(Request $request, $id)
@@ -101,13 +115,13 @@ class NewlettersController extends Controller
         $dataEdit = Newletter::find($id);
         $Edit = $request->all();
         $dataEdit->update($Edit);
-        return redirect('/admin/newletter')->with('msg', 'Email update thành công');  
+        return redirect('/admin/newletter')->with('msg', 'Email update thành công');
     }
-    
+
     public function delete($id)
     {
-      Newletter::destroy($id);
-        return redirect('/admin/newletter')->with('msg', 'Xóa Email thành công!');  
+        Newletter::destroy($id);
+        return redirect('/admin/newletter')->with('msg', 'Xóa Email thành công!');
     }
 
 }

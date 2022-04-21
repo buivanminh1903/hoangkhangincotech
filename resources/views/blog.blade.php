@@ -1,5 +1,17 @@
 @extends('layouts')
 @section('content')
+    <!-- Message section -->
+    @if ($message = Session::get('success'))
+        <div class="container text-center">
+            <div
+                style="font-size: 20px; font-weight: 800; background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 48px 0">{{$message}}</div>
+        </div>
+    @endif
+    @if($errors->has('email'))
+        <div class="container text-center">
+            <p class="text-danger mb-5" style="margin-top: 48px; font-size: 20px">{{$errors->first('email')}}</p>
+        </div>
+    @endif
     <!-- Start head -->
     <div class="card">
         <img src="{{asset('image/background.png')}}" class="card-img" alt="..."/>
@@ -35,17 +47,17 @@
         <!-- item -->
         <div class="box-main row mb-5">
             <!-- 1 -->
-            <div class="col-lg-8 col-md-12 col-sm-12" style="padding-right: ">
+            <div class="col-lg-8 col-md-12 col-sm-12">
                 @foreach($post as $item)
                     <div class="itemm">
                         <div class="blog">
                             <div class="blog_img">
-                                <a href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}.html"><img
+                                <a href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}"><img
                                         src="{{'../image/uploads/post/' . $item->image}}" style="object-fit: cover"></a>
                             </div>
                             <div class="blogtext">
                                 <h3>
-                                    <a href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}.html">{{$item->title}}</a>
+                                    <a href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}">{{$item->title}}</a>
                                 </h3>
                                 <div class="blogtag"><img
                                         src="{{asset('image/iconclander.png')}}"></i> {{date('d M, Y', strtotime($item->created_at))}}
@@ -53,13 +65,17 @@
                                         class="blogfill" href="/chi-tiet-bai-viet">John Doe</a></div>
                                 <div
                                     class="blogtitle">{{ \Illuminate\Support\Str::limit($item->short_content, $limit = 130, $end = '...')}}</div>
-                                <a class="read" href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}.html">READ
+                                <a class="read" href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}">READ
                                     MORE
                                     →</a>
                             </div>
                         </div>
                     </div>
                 @endforeach
+
+                <div style="display: flex; justify-content: center; margin-top: 60px">
+                    {{ $post->links() }}
+                </div>
                 <div class="loadmore">
                     <button class="btn btn-primary" id="button-loand" type="button"><a>Load More</a></button>
                 </div>
@@ -76,10 +92,12 @@
                                 <div class="sign_text">Subscribe to our news to get the latest updates and offers</div>
                                 <div class="mess"><input class="form-control" name="email"
                                                          style="border: 1px solid transparent;"
-                                                         placeholder="Your Email"/>
-                                    @error('email')
-                                    <span style="color :red;">{{$message}}</span>
-                                    @enderror</div>
+                                                         placeholder="Your Email" value="{{old('email')}}"/>
+                                    @if($errors->has('email'))
+                                        <p class="text-danger"
+                                           style="margin-bottom: 20px">{{$errors->first('email')}}</p>
+                                    @endif
+                                </div>
                                 <button class="btn btn-primary" id="button-search" type="submit">Send Message</button>
                             </form>
                         </div>
@@ -112,42 +130,6 @@
                             @endforeach
                         </div>
 
-
-                        <!-- 2 -->
-                        {{--                    <div class="postfile">--}}
-                        {{--                        <div class="post">--}}
-                        {{--                            <div class="post_img">--}}
-                        {{--                                <a href=""><img src="/image/img-recent-tag1.png"></a>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div class="postline">--}}
-                        {{--                                <div class="textpost">--}}
-                        {{--                                    Dramatically provide access schemas without extensive back compatible--}}
-                        {{--                                </div>--}}
-                        {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
-                        {{--                                    <span>24 Jan, 2021</span>--}}
-                        {{--                                </div>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
-                        {{--                    </div>--}}
-                        <!-- 3 -->
-
-                        {{--                    <div class="postfull">--}}
-                        {{--                        <div class="post">--}}
-                        {{--                            <div class="post_img">--}}
-                        {{--                                <a href=""><img src="/image/img-recent-tag2.png"></a>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div class="postline">--}}
-                        {{--                                <div class="textpost">--}}
-                        {{--                                    Participate in staff meet ingness manage dedicated--}}
-                        {{--                                </div>--}}
-                        {{--                                <div class="designpost"><img class="clock" src="/image/icon-clock.png">--}}
-                        {{--                                    <span>24 Jan, 2021</span>--}}
-                        {{--                                </div>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
-                        {{--                    </div>--}}
-
-                        <!-- Catagory List -->
                         <div class="catagory">Catagory List</div>
                         <div class="list">
                             <ul>

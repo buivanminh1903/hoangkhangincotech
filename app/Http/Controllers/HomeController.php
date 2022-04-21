@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ourprojectModel;
 use Illuminate\Support\Facades\DB;
+use Mail;
 
 class HomeController extends Controller
 {

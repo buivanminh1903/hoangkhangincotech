@@ -45,11 +45,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{'admin/service' == request()->path() ? 'navbar_backend_active' : ''}}"
+                    <a class="nav-link {{ (request()->is('admin/service*')) ? 'navbar_backend_active' : '' }}"
                        aria-current="page" href="/admin/service">Service</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{'admin/categories' == request()->path() ? 'navbar_backend_active' : ''}} {{'admin/post' == request()->path() ? 'navbar_backend_active' : ''}}"
+                    <a class="nav-link dropdown-toggle {{ (request()->is('admin/categories*')) ? 'navbar_backend_active' : '' }} {{ (request()->is('admin/category*')) ? 'navbar_backend_active' : '' }} {{ (request()->is('admin/post*')) ? 'navbar_backend_active' : '' }}"
                        href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Post
                     </a>
@@ -59,23 +59,23 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{'admin/newletter' == request()->path() ? 'navbar_backend_active' : ''}}"
+                    <a class="nav-link {{ (request()->is('admin/newletter*')) ? 'navbar_backend_active' : '' }}"
                        href="/admin/newletter">New Letter</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{'admin/photo' == request()->path() ? 'navbar_backend_active' : ''}}"
+                    <a class="nav-link {{ (request()->is('admin/photo*')) ? 'navbar_backend_active' : '' }}"
                        href="/admin/photo">Photo</a>
                 </li>
                 <li>
-                    <a class="nav-link {{'admin/contactus' == request()->path() ? 'navbar_backend_active' : ''}}"
+                    <a class="nav-link {{ (request()->is('admin/contactus*')) ? 'navbar_backend_active' : '' }}"
                        href="/admin/contactus">Contact Us</a>
                 </li>
                 <li>
-                    <a class="nav-link {{'admin/reviews' == request()->path() ? 'navbar_backend_active' : ''}}"
+                    <a class="nav-link {{ (request()->is('admin/reviews*')) ? 'navbar_backend_active' : '' }}"
                        href="/admin/reviews">Reviews</a>
                 </li>
                 <li>
-                    <a class="nav-link {{'admin/ourproject' == request()->path() ? 'navbar_backend_active' : ''}}"
+                    <a class="nav-link {{ (request()->is('admin/ourproject*')) ? 'navbar_backend_active' : '' }} {{ (request()->is('admin/edit_project*')) ? 'navbar_backend_active' : '' }}"
                        href="/admin/ourproject">Project</a>
                 </li>
 

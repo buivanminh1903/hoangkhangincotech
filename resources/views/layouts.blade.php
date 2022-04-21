@@ -104,7 +104,8 @@
                        href="/">Home +</a>
                 </li>
                 <li class="nav-item">
-                    <a id="show-menu-new-tab" class="nav-link {{'dich-vu' == request()->path() ? 'navbar_active' : ''}}" href="/dich-vu">Services +</a>
+                    <a id="show-menu-new-tab" class="nav-link {{'dich-vu' == request()->path() ? 'navbar_active' : ''}}"
+                       href="/dich-vu">Services +</a>
                 </li>
                 <li class="nav-item">
                     <a id="show-menu-new-tab" class="nav-link" href="#room">Pages +</a>
@@ -113,10 +114,13 @@
                     <a id="show-menu-new-tab" class="nav-link" href="#blog">Shop +</a>
                 </li>
                 <li class="nav-item">
-                    <a id="show-menu-new-tab" class="nav-link {{'bai-viet' == request()->path() ? 'navbar_active' : ''}}" href="/bai-viet">News </a>
+                    <a id="show-menu-new-tab"
+                       class="nav-link {{'bai-viet' == request()->path() ? 'navbar_active' : ''}} {{ (request()->is('bai-viet*')) ? 'navbar_active' : '' }}"
+                       href="/bai-viet">News </a>
                 </li>
                 <li class="nav-item book d-flex align-items-center">
-                    <a id="show-menu-new-tab" class="nav-link {{'doi-tac' == request()->path() ? 'navbar_active' : ''}}" href="/doi-tac">About Us</a>
+                    <a id="show-menu-new-tab" class="nav-link {{'doi-tac' == request()->path() ? 'navbar_active' : ''}}"
+                       href="/doi-tac">About Us</a>
                 </li>
             </ul>
         </div>

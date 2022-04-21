@@ -110,6 +110,7 @@
                 <div class="row" style="margin-left: 0; margin-right: 0;">
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
                         <input id="your-name" name="names" type="text" class="form-control" placeholder="Your Name"
+                               required value="{{old('names')}}"
                         >
                         @error('names')
                         <div class="alert alert-danger" role="alert">{{$message}}</div>
@@ -117,7 +118,8 @@
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
-                        <input id="your-name" name="email" type="text" class="form-control" placeholder="Your Email"
+                        <input id="your-name" name="email" type="email" class="form-control" placeholder="Your Email"
+                               required value="{{old('email')}}"
                         >
                         @error('email')
                         <div class="alert alert-danger" role="alert">{{$message}}</div>
@@ -126,7 +128,7 @@
 
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
                         <input id="your-phone" name="phone" type="text" class="form-control" id="input-register"
-                               placeholder="Phone">
+                               placeholder="Phone" required value="{{old('phone')}}">
                         @error('phone')
                         <div class="alert alert-danger" role="alert">{{$message}}</div>
                         @enderror
@@ -134,7 +136,7 @@
 
                     <div class="col-lg-6 col-md-6 col-sm-12 form-name">
                         <select id="selected" class="form-control text-select" id="exampleFormControlSelect1"
-                                name="position" require="" placeholder="----">
+                                name="position" required>
                             <option>---</option>
                             <option>Trưởng phòng</option>
                             <option>Kế toán</option>
@@ -150,7 +152,7 @@
 
                     <div class="col-lg-12 col-md-12 col-sm-12 form-subject">
                         <input id="subject" type="text" class="form-control" placeholder="Subject" name=
-                            "subject">
+                            "subject" required value="{{old('subject')}}">
                         @error('subject')
                         <div class="alert alert-danger" role="alert">{{$message}}</div>
                         @enderror
@@ -158,7 +160,7 @@
 
                     <div class="col-lg-12 col-md-12 col-sm-12 form-meseage">
                         <textarea id="meseage-register" class="form-control" name="messages"
-                                  placeholder="Your Messeage: "></textarea>
+                                  placeholder="Your Messeage: " required>{{old('messages')}}</textarea>
                         @error('messages')
                         <div class="alert alert-danger" role="alert">{{$message}}</div>
                         @enderror

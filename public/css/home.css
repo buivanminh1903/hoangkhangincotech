@@ -79,7 +79,7 @@ body {
     color: #fff;
     border-radius: 3px;
     margin-right: 15px;
-    transition: .5s;
+    transition: all 0.3s;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -87,7 +87,7 @@ body {
 }
 
 .slider-button a:hover {
-    background-image: linear-gradient( to right, #028bfe, #b3e4ff);
+    background-image: linear-gradient(to right, #028bfe, #b3e4ff);
     text-decoration: none;
 }
 
@@ -95,13 +95,22 @@ a.slider-active {
     border: 1px solid #253E74;
     background: inherit;
     color: #253E74;
-    transition: .5s;
     position: relative;
+}
+
+a.slider-active span {
+    transition: all 0.3s;
 }
 
 a.slider-active:hover {
     color: #fff;
     text-decoration: none;
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+a.slider-active:hover span {
+    color: #fff;
 }
 
 .slider-thumb {
@@ -221,63 +230,72 @@ a.slider-active:hover {
 }
 
 
-    .about-thumb {
-        margin-left: -320px;
-        width: 90%;
-        position: relative;
-        z-index: 1;
-    }
-    .about .dreamit-section-sub-title h5 {
-        color: #2C4C89;
-        text-transform: capitalize;
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-    .dreamit-section-title{
-        position: relative;
-        z-index: 1;
-    }
-    .about .dreamit-section-main-title h2 {
-        font-size: 32px;
-        margin-left: 20px;
+.about-thumb {
+    margin-left: -320px;
+    width: 90%;
+    position: relative;
+    z-index: 1;
+}
 
-    }
-    .about .dreamit-section-main-title h2 span{
-        color: #2d4a8a;
-    }
-    .dreamit-section-main-title h1 {
-        position: absolute;
-        content: "";
-        top: -42px;
-        left: -6px;
-        color: #F0F1F6;
-        font-size: 70px;
-        text-transform: uppercase;
-        z-index: -1;
-        opacity: 1;
-        font-weight: 800;
-    }
-    .about-bg-bar {
-        position: relative;
-    }
-    .about-bg-bar:before {
-        position: absolute;
-        content: "";
-        top: 47px;
-        left: 0;
-        height: 57px;
-        width: 6px;
-        background: #1C2842;
-    }
-    .about-bg-bar:after {
-        position: absolute;
-        content: "";
-        top: 108px;
-        left: 0;
-        height: 9px;
-        width: 6px;
-        background: #2d4a8a;
-    }
+.about .dreamit-section-sub-title h5 {
+    color: #2C4C89;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.dreamit-section-title {
+    position: relative;
+    z-index: 1;
+}
+
+.about .dreamit-section-main-title h2 {
+    font-size: 32px;
+    margin-left: 20px;
+
+}
+
+.about .dreamit-section-main-title h2 span {
+    color: #2d4a8a;
+}
+
+.dreamit-section-main-title h1 {
+    position: absolute;
+    content: "";
+    top: -42px;
+    left: -6px;
+    color: #F0F1F6;
+    font-size: 70px;
+    text-transform: uppercase;
+    z-index: -1;
+    opacity: 1;
+    font-weight: 800;
+}
+
+.about-bg-bar {
+    position: relative;
+}
+
+.about-bg-bar:before {
+    position: absolute;
+    content: "";
+    top: 47px;
+    left: 0;
+    height: 57px;
+    width: 6px;
+    background: #1C2842;
+}
+
+.about-bg-bar:after {
+    position: absolute;
+    content: "";
+    top: 108px;
+    left: 0;
+    height: 9px;
+    width: 6px;
+    background: #2d4a8a;
+}
+
 .about-thumb {
     margin-left: -320px;
     width: 90%;
@@ -452,8 +470,7 @@ a.slider-active:hover {
 }
 
 .dreamit-section-main-title h2 span {
-    color: #00aeff;
-    ;
+    color: #00aeff;;
 }
 
 .choose-us-box {
@@ -515,6 +532,7 @@ a.slider-active:hover {
 .why-choose-us .choose-number h1 {
     font-size: 70px;
     color: #F3F4F6;
+    transition: all 0.5s;
 }
 
 .choose-us-icon i {
@@ -529,7 +547,6 @@ a.slider-active:hover {
     margin-top: 7px;
     color: #888888;
 }
-
 
 /*--------------------------------------- Portfolio----------------------------------- */
 
@@ -568,7 +585,7 @@ a.slider-active:hover {
 
 .port-button a {
     padding: 17px 35px;
-    background-image: linear-gradient( to right, #0088ff, #33b8ff);
+    background-image: linear-gradient(to right, #0088ff, #33b8ff);
     color: #fff;
     text-transform: uppercase;
     font-size: 14px;
@@ -585,7 +602,7 @@ a.slider-active:hover {
 }
 
 .port-button a:hover {
-    background-image: linear-gradient( to right, #33b8ff, #0088ff);
+    background-image: linear-gradient(to right, #33b8ff, #0088ff);
 }
 
 .port-button span {
@@ -604,7 +621,7 @@ div#portfolio {
 }
 
 .pt-2 {
-    padding-top: 0.5rem!important;
+    padding-top: 0.5rem !important;
 }
 
 .pb-90 {
@@ -620,11 +637,9 @@ div#portfolio {
 }
 
 .portfolio .dreamit-portfolio-thumb img {
+    object-fit: cover;
     border-radius: 0;
-}
-
-.portfolio .dreamit-portfolio-thumb img {
-    border-radius: 0;
+    width: 100%;
 }
 
 .portfolio .dreamit-section-content-text p {
@@ -676,7 +691,7 @@ div#portfolio {
 }
 
 .dreamit-single-portfolio:hover .dreamit-portfolio-thumb:before {
-    opacity: 1!important;
+    opacity: 1 !important;
 }
 
 .portfolio-content {
@@ -1160,12 +1175,12 @@ span.active i {
 }
 
 .review-button a:hover {
-    background-image: linear-gradient( to right, #028bfe, #b3e4ff);
+    background-image: linear-gradient(to right, #028bfe, #b3e4ff);
     color: #fff;
 }
 
 .review-button a:hover:before {
-    background-image: linear-gradient( to right, #028bfe, #b3e4ff);
+    background-image: linear-gradient(to right, #028bfe, #b3e4ff);
     opacity: 1;
 }
 
@@ -1284,7 +1299,9 @@ span.active i {
     line-height: 1.313;
     text-align: left;
 }
-.blog.style-two .dreamit-section-content-text p{}
+
+.blog.style-two .dreamit-section-content-text p {
+}
 
 .blog.style-two .dreamit-section-content-text p {
     font-size: 15px;
@@ -1380,7 +1397,7 @@ span.active i {
 }
 
 .blog.style-two .blog-button a:hover {
-    background-image: linear-gradient( to right, #0088ff, #33b8ff);
+    background-image: linear-gradient(to right, #0088ff, #33b8ff);
 }
 
 .blog.style-two .port-button a {
@@ -1394,7 +1411,7 @@ span.active i {
 }
 
 .blog.style-two .blog-button a:hover {
-    background-image: linear-gradient( to right, #0088ff, #33b8ff);
+    background-image: linear-gradient(to right, #0088ff, #33b8ff);
 }
 
 .blog.style-two .port-button a:hover:before {
@@ -1402,7 +1419,7 @@ span.active i {
 }
 
 .blog.style-two .port-button a:hover {
-    background-image: linear-gradient( to right, #33b8ff, #0088ff);
+    background-image: linear-gradient(to right, #33b8ff, #0088ff);
 }
 
 .blog-button a {
@@ -1419,7 +1436,7 @@ span.active i {
 }
 
 .blog-button a:hover {
-    background-image: linear-gradient( to right, #0088ff, #33b8ff);
+    background-image: linear-gradient(to right, #0088ff, #33b8ff);
 }
 
 

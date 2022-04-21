@@ -203,7 +203,7 @@
                     <!-- 1 -->
                     <div class="righttitle">Recent Post</div>
                     <div class="recent_post_box">
-                        @foreach($popular_post as $item)
+                        @foreach($recent_post as $item)
                             <a href="/bai-viet/{{$item->id}}-{{Str::slug($item->title, '-')}}.html">
                                 <div class="recentpost">
                                     <div class="post">
@@ -274,7 +274,7 @@
                     {{--                    </div>--}}
 
                     <!-- Catagory List -->
-                    <div class="catagory">Catagory List</div>
+                    <div class="catagory">Category List</div>
                     <div class="list">
                         <ul>
                             @foreach($post_total_by_category as $item)

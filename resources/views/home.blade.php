@@ -1,5 +1,17 @@
 @extends('layouts')
 @section('content')
+    <!-- Message section -->
+    @if ($message = Session::get('success'))
+        <div class="container text-center">
+            <div
+                style="font-size: 20px; font-weight: 800; background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 48px 0">{{$message}}</div>
+        </div>
+    @endif
+    @if($errors->has('email'))
+        <div class="container text-center">
+            <p class="text-danger mb-5" style="margin-top: 48px; font-size: 20px">{{$errors->first('email')}}</p>
+        </div>
+    @endif
     <!--Slider-->
     <div class="slider d-flex align-items-center">
         <div class="container">
@@ -19,7 +31,7 @@
                         <div class="text">
                             <div class="slider-button">
                                 <a href="/dich-vu">Learn more <span> <i class="fa fa-long-arrow-right"></i> </span></a>
-                                <a class="slider-active" href="/bai-viet">Get in touch <span
+                                <a class="slider-active" href="/lien-he">Get in touch <span
                                         class="fa fa-long-arrow-right"></span></a>
                             </div>
                         </div>
@@ -337,6 +349,7 @@
                         <div class="dreamit-single-portfolio">
                             <div class="dreamit-portfolio-thumb">
                                 <img src='image/phone1.png' alt="">
+                                {{--                                <img src="{{asset('image/uploads/ourproject/'.$item->images)}}">--}}
                             </div>
                             <div class="portfolio-content">
                                 <div class="portfolio-title">
@@ -556,92 +569,93 @@
     </div>
     <!--Start team member-->
     <div class="client-reivew pt-110 pb-162">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="dreamit-section-title text-center pb-30">
-						<div class="dreamit-section-sub-title">
-							<h5>Client Review</h5>
-						</div>
-						<div class="dreamit-section-main-title">
-							<h2>We Deliver Solution with the Goal of <br>A Trusting Relationship</h2>
-						</div>
-						<div class="dreamit-section-content-text">
-							<p>Lorem Ipsom is a dolar site amet which is
-							a large field in the world but every</p>
-						</div>
-						<div class="review-button">
-							<a href="#">VIEW ALL REVIEW</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="dreamit-section-title text-center pb-30">
+                        <div class="dreamit-section-sub-title">
+                            <h5>Client Review</h5>
+                        </div>
+                        <div class="dreamit-section-main-title">
+                            <h2>We Deliver Solution with the Goal of <br>A Trusting Relationship</h2>
+                        </div>
+                        <div class="dreamit-section-content-text">
+                            <p>Lorem Ipsom is a dolar site amet which is
+                                a large field in the world but every</p>
+                        </div>
+                        <div class="review-button">
+                            <a href="#">VIEW ALL REVIEW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-				<!--Start testimonial-->
+    <!--Start testimonial-->
 
-	<div class="testimonial pb-70">
-		<div class="container">
-			<div class="row upper">
+    <div class="testimonial pb-70">
+        <div class="container">
+            <div class="row upper">
                 @foreach ($reviews as $item)
-					<div class="col-lg-4 col-sm-12">
-						<div class="testimonial-single-box">
-							<div class="testimonial-thumb">
-                            <img src="{{ asset('image/uploads/reviews/' . $item->image) }}"  class="img img-responsive" />
-							</div>
-							<div class="testomonial-content">
-								<div class="testimonial-title">
-									<h2>{{$item->names}}</h2>
-									<span>{{$item->position}}</span>
-								</div>
-								<div class="testimonial-content-text">
-									<p>{{$item->content}}</p>
-								</div>
-								<div class="testi-icon-menu">
-									<ul style="padding-left:0">
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="testimonial-single-box">
+                            <div class="testimonial-thumb">
+                                <img src="{{ asset('image/uploads/reviews/' . $item->image) }}"
+                                     class="img img-responsive"/>
+                            </div>
+                            <div class="testomonial-content">
+                                <div class="testimonial-title">
+                                    <h2>{{$item->names}}</h2>
+                                    <span>{{$item->position}}</span>
+                                </div>
+                                <div class="testimonial-content-text">
+                                    <p>{{$item->content}}</p>
+                                </div>
+                                <div class="testi-icon-menu">
+                                    <ul style="padding-left:0">
                                         @if($item->star==1)
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fa-regular fa-star"></i></li>
-										<li><i class="fa-regular fa-star"></i></li>
-										<li><i class="fa-regular fa-star"></i></li>
-										<li><i class="fa-regular fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
                                         @endif
                                         @if($item->star==2)
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fa-regular fa-star"></i></li>
-										<li><i class="fa-regular fa-star"></i></li>
-										<li><i class="fa-regular fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
                                         @endif
                                         @if($item->star==3)
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fa-regular fa-star"></i></li>
-										<li><i class="fa-regular fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
                                         @endif
                                         @if($item->star==4)
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fa-regular fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
                                         @endif
                                         @if($item->star==5)
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
                                         @endif
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-                    @endforeach
-                    <!-- <div class="col-lg-4 col-sm-12">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                <!-- <div class="col-lg-4 col-sm-12">
 						<div class="testimonial-single-box">
 							<div class="testimonial-thumb">
                                 <img src='image/testi2.png' alt="">
@@ -699,7 +713,6 @@
 							</div>
 						</div>
 					</div> -->
-
 
 
             </div>
@@ -817,7 +830,7 @@
     <!-----------------Start Subscribe --------------------->
     <div class="bigfox-subscribe pt-40 pb-30">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center" id="emailsubscribe_section">
                 <div class="col-lg-5 col-md-5">
                     <div class="subscribe-content">
                         <div class="subscribe-title">
@@ -836,16 +849,17 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-5">
-                <form action="{{url('/')}}" method="POST">
+                    <form action="{{url('/')}}" method="POST">
                         @csrf
-						<div class="subscribe">
-							<input class="subscribe-mail-box" type="email" name="email" placeholder="Enter Your E-mail" required="">
-							<button type="submit">Subscribe</button>
+                        <div class="subscribe">
+                            <input class="subscribe-mail-box" type="email" name="email" placeholder="Enter Your E-mail"
+                                   required="" value="{{old('email')}}">
+                            <button type="submit">Subscribe</button>
                             @error('email')
                             <span style="color :red;">{{$message}}</span>
                             @enderror
-						</div>
-					</form>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

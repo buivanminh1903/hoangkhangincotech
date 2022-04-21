@@ -119,13 +119,13 @@ class ContactusController extends Controller
             'names' => 'required',
             'email' => 'required|email|unique:contactus',
             'phone' => 'required|regex:/(0)[0-9]{9}/',
-            'position' => 'required|min:4',
+            'position' => 'min:4',
 
         ],
 
             [
-                'subject.required' => 'Môn học bắt buộc phải nhập',
-                'messages.required' => 'Lời nhắn bắt buộc phải nhập',
+                'subject.required' => 'Vui lòng nhập chủ đề',
+                'messages.required' => 'Vui lòng nhập lời nhắn',
 
                 'names.required' => 'Họ và tên không được bỏ trống',
 
@@ -136,13 +136,12 @@ class ContactusController extends Controller
                 'phone.required' => 'Số điện thoại bắt buộc phải nhập',
                 'phone.regex' => 'Số điện thoại không hợp lệ',
 
-                'position.required' => 'Vị trí liên hệ không hợp lệ',
-                'position.min' => 'Chọn vị trí liên hệ',
+                'position.min' => 'Vui lòng chọn vị trí công việc của bạn'
             ]);
 
         $dataAdd = $request->all();
         contactus::create($dataAdd);
-        return redirect('/lien-he')->with('msg', 'Thêm người dùng thành công');
+        return redirect('/lien-he')->with('msg', 'Cảm ơn bạn, đăng ký thành công!');
 
     }
 

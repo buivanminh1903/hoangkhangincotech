@@ -72,6 +72,9 @@
                                 </div>
                             </div>
                         @endforeach
+                        <div style="display: flex; justify-content: center">
+                            {{ $post->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,7 +149,8 @@
                                                        for="basic-default-name">Short Content</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" id="basic-default-name"
-                                                           placeholder="*" name="short_content" value="{{old('short_content')}}" required>
+                                                           placeholder="*" name="short_content"
+                                                           value="{{old('short_content')}}" required>
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
