@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('name');
             $table->text('email');
             $table->text('password');
+            $table->string('img')->default('user.png');
             $table->timestamps();
         });
     }

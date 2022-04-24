@@ -14,14 +14,13 @@
     </div>
     <!--End breadcrumb-->
     <div class="container mb-3">
-
-
         <div class="row">
             <div class="">
                 <div class="row">
                     @if ($message = Session::get('success'))
                         <div class="col-12">
-                            <div class="alert alert-success alert-dismissible fade show mb-3" role="alert" style="margin: 8px">
+                            <div class="alert alert-success alert-dismissible fade show mb-3" role="alert"
+                                 style="margin: 8px">
                                 <strong>{{ $message }}</strong>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
                                         aria-label="Close"></button>
@@ -95,7 +94,8 @@
                                                        for="basic-default-name">Title</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" id="basic-default-name"
-                                                           placeholder="*" name="title" value="{{old('title')}}" required>
+                                                           placeholder="*" name="title" value="{{old('title')}}"
+                                                           required>
                                                     @if($errors->has('title'))
                                                         <p class="text-warning">{{$errors->first('title')}}</p>
                                                     @endif
@@ -106,7 +106,8 @@
                                                        for="basic-default-name">Short Content</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" id="basic-default-name"
-                                                           placeholder="*" name="short_content" value="{{old('short_content')}}" required>
+                                                           placeholder="*" name="short_content"
+                                                           value="{{old('short_content')}}" required>
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
@@ -140,4 +141,5 @@
                 </div>
             </div>
         </div>
+    </div>
 @endsection

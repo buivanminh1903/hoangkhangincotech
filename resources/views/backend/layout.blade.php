@@ -83,12 +83,16 @@
             </ul>
             <form class="d-flex">
                 <li class="nav-item dropdown" style="list-style: none">
-                    <a class="nav-link dropdown-toggle"
+                    <a class="nav-link dropdown-toggle" style="color: #696cff; padding: unset"
                        href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Xin chào
+                        <img class="admin__nav-userimg"
+                             src="{{ asset('image/uploads/user/' . Session::get('user_img')) }}"> {{Session::get('user_name')}}
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{ route('auth.logout') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                    <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/admin/user"><i class="fa-regular fa-pen-to-square"></i> Edit</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{{ route('auth.logout') }}"><i
+                                    class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
                     </ul>
                 </li>
                 <label></label>
@@ -97,76 +101,16 @@
         </div>
     </div>
 </nav>
-<!--<nav class="navbar navbar-expand-lg navbar-light backend_navbar">
-    <div class="container-fluid">
-        <a class="navbar-brand {{'admin' == request()->path() ? 'navbar_backend_active' : ''}}" href="/admin">Hoangkhang
-            Incotech Backend</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link {{ (request()->is('admin/service*')) ? 'navbar_backend_active' : '' }}"
-                       aria-current="page" href="/admin/service">Service</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ (request()->is('admin/categories*')) ? 'navbar_backend_active' : '' }} {{ (request()->is('admin/category*')) ? 'navbar_backend_active' : '' }} {{ (request()->is('admin/post*')) ? 'navbar_backend_active' : '' }}"
-                       href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Post
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/admin/categories">Categories</a></li>
-                        <li><a class="dropdown-item" href="/admin/post">All Post</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ (request()->is('admin/newletter*')) ? 'navbar_backend_active' : '' }}"
-                       href="/admin/newletter">New Letter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ (request()->is('admin/photo*')) ? 'navbar_backend_active' : '' }}"
-                       href="/admin/photo">Photo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ (request()->is('admin/contactus*')) ? 'navbar_backend_active' : '' }}"
-                       href="/admin/contactus">Contact Us</a>
-                </li>
-                <li>
-                    <a class="nav-link {{ (request()->is('admin/reviews*')) ? 'navbar_backend_active' : '' }}"
-                       href="/admin/reviews">Reviews</a>
-                </li>
-                <li>
-                    <a class="nav-link {{ (request()->is('admin/ourproject*')) ? 'navbar_backend_active' : '' }} {{ (request()->is('admin/edit_project*')) ? 'navbar_backend_active' : '' }}"
-                       href="/admin/ourproject">Project</a>
-                </li>
 
-            </ul>
-            <form class="d-flex">
-                <li class="nav-item dropdown" style="list-style: none">
-                    <a class="nav-link dropdown-toggle"
-                       href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Xin chào
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{ route('auth.logout') }}">Logout</a></li>
-                    </ul>
-                </li>
-                <label></label>
-
-            </form>
-        </div>
-    </div>
-</nav>-->
 <div class="container-fluid">
     <div class="backend__content_wrapper">
         <!-- Content Wrapper -->
         @yield('content')
     </div>
-    <!-- Footer -->
-    <div class="row" style="align-items: center; padding: 20px 0;">
+</div>
+<!-- Footer -->
+<div class="admin__footer">
+    <div class="row">
         <div class="col-md-6 col-6 ">
             <div class="footer-end-text " style="float: left; ">
                 <p class="mb-0">&copy; Copyright 2021. All Rights Reserved.</p>

@@ -140,6 +140,9 @@ Route::group(['middleware' => ['AuthCheck']], function () {
         // Delete
         Route::delete('/photo/delete/{id}', [\App\Http\Controllers\Backend\PhotoController::class, 'delete']);
 
+        /* User */
+        Route::get('/user', [MainController::class, 'edit']);
+
     });
     /* Our Project index By Tran Quan */
     Route::get('admin/ourproject', [\App\Http\Controllers\Backend\ProjectController::class, 'index']);

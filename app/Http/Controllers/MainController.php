@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 
 class MainController extends Controller
@@ -53,15 +55,17 @@ class MainController extends Controller
         $userInfo = Admin::where('email', '=', $request->email)->first();
 
         if (!$userInfo) {
-            return back()->with('fail', 'We do not recognize your email address');
+            return back()->with('fail', 'Chúng tôi không tìm thấy địa chỉ email của bạn')->withInput();
         } else {
             //check password
             if (Hash::check($request->password, $userInfo->password)) {
                 $request->session()->put('LoggedUser', $userInfo->id);
+                Session::put('user_name', $userInfo->name);
+                Session::put('user_img', $userInfo->img);
                 return redirect('admin/');
 
             } else {
-                return back()->with('fail', 'Incorrect password');
+                return back()->with('fail', 'Vui lòng kiểm tra lại mật khẩu')->withInput();
             }
         }
     }
@@ -78,5 +82,12 @@ class MainController extends Controller
     {
         $data = ['LoggedUserInfo' => Admin::where('id', '=', session('LoggedUser'))->first()];
         return view('backend.home', $data, ['title' => 'Dashboard']);
+    }
+
+    public function edit()
+    {
+        return view('auth.edit', [
+            'title' => 'Edit'
+        ]);
     }
 }
